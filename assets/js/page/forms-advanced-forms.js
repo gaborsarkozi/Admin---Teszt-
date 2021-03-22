@@ -1,3 +1,112 @@
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls02 form:first'),
+            currentEntry = $(this).parents('.entry02:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry02:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.entry02:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls03 form:first'),
+            currentEntry = $(this).parents('.entry03:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry03:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.entry03:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+$(function() {
+  $("#toggleAkciosAjanlat").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuAkciosAjanlat").show();
+      $("#menuAkciosAjanlatKikapcs").hide();
+    } else {
+      $("#menuAkciosAjanlat").hide();
+      $("#menuAkciosAjanlatKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleUtojelek").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuUtojelek").show();
+      $("#menuUtojelekKikapcs").hide();
+    } else {
+      $("#menuUtojelek").hide();
+      $("#menuUtojelekKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleJelolesek").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuJelolesek").show();
+      $("#menuJelolesekKikapcs").hide();
+    } else {
+      $("#menuJelolesek").hide();
+      $("#menuJelolesekKikapcs").show();
+    }
+  });
+})
+
+
 "use strict";
 
 var cleavePN = new Cleave('.phone-number', {
@@ -75,3 +184,6 @@ $(".colorpickerinput").colorpicker({
   component: '.input-group-append',
 });
 $(".inputtags").tagsinput('items');
+
+
+
