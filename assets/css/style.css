@@ -981,7 +981,8 @@ table tr:hover .table-links {
   border-bottom: none;
   padding-bottom: 5px; }
   .modal-header h5 {
-    font-size: 18px; }
+    font-size: 20px;
+    color: #EC7623; }
 
 .modal-footer {
   border-top: none;
@@ -1093,9 +1094,10 @@ table tr:hover .table-links {
   padding: 7px 12px;
   font-weight: 600;
   letter-spacing: .3px;
-  border-radius: 30px;
+  border-radius: 4px;
   font-size: 12px; }
   .badge.badge-warning {
+    background-color: #211061;
     color: #fff; }
   .badge.badge-primary {
     background-color: #6777ef; }
@@ -1327,9 +1329,9 @@ h6 .badge {
   background-color: #EC7623;
   border-color: #EC7623; }
   .btn-primary:focus, .btn-primary.disabled:focus {
-    background-color: #394eea !important; }
+    background-color: #211061 !important; }
     .btn-primary:focus:active, .btn-primary.disabled:focus:active {
-      background-color: #394eea !important; }
+      background-color: #211061 !important; }
   .btn-primary:active, .btn-primary:hover, .btn-primary.disabled:active, .btn-primary.disabled:hover {
     background-color: #211061 !important; }
 
@@ -3049,3 +3051,31 @@ button.btn.btn-remove.btn-danger {
 .kikapcsolt-resz-form {
   display:none;
   }
+
+  .modal-dialog {
+    top: 20%;
+  }
+
+
+  .modal-header i.icon-shield {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #EC7623;
+}
+
+.close:hover {
+  color: #ec7623;
+}
+
+.close {
+  color: #ec7623;
+  opacity: 1;
+}
+
+button.close {
+  outline: none;
+}
+
+#konkretAjanlatszerkesztese .modal-dialog {
+  max-width: 70%;
+}

@@ -547,45 +547,43 @@
                         <div class="form-group row mb-4">
                           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jelölések
                             <label class="switch">
-                              <input type="checkbox" id="toggleJelolesek" checked="true"
-                                class="custom-switch-input" />
+                              <input type="checkbox" id="toggleJelolesek" checked="true" class="custom-switch-input" />
                               <div class="slider round"></div>
                               <span class="custom-switch-indicator"></span>
                             </label>
                           </label>
                           <div class="col-sm-12 col-md-7">
                             <div id="menuJelolesek">
-                            <div class="form-group">
-                              <div class="input-group">
-                                <div id="fields">
-                                  <div class="controls">
-                                    <form role="form" autocomplete="off">
-                                      <div class="entry input-group mb-2">
-                                        <input class="form-control" name="fields[]" type="text"
-                                          placeholder="Adjon hozzá egy jelölést" />
-                                        <span class="input-group-btn">
-                                          <button class="btn btn-success btn-add ml-2" type="button">
-                                            <span class="icon-plus"></span>
-                                          </button>
-                                        </span>
-                                      </div>
-                                    </form>
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <div id="fields">
+                                    <div class="controls">
+                                      <form role="form" autocomplete="off">
+                                        <div class="entry input-group mb-2">
+                                          <input class="form-control" name="fields[]" type="text"
+                                            placeholder="Adjon hozzá egy jelölést" />
+                                          <span class="input-group-btn">
+                                            <button class="btn btn-success btn-add ml-2" type="button">
+                                              <span class="icon-plus"></span>
+                                            </button>
+                                          </span>
+                                        </div>
+                                      </form>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                          <div class="kikapcsolt-resz-form" id="menuJelolesekKikapcs">
-                            Tartalom kikapcsolva
-                          </div>
+                            <div class="kikapcsolt-resz-form" id="menuJelolesekKikapcs">
+                              Tartalom kikapcsolva
+                            </div>
                           </div>
                         </div>
 
                         <div class="form-group row mb-4">
                           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Utójelek hozzáadása
                             <label class="switch">
-                              <input type="checkbox" id="toggleUtojelek" checked="true"
-                                class="custom-switch-input" />
+                              <input type="checkbox" id="toggleUtojelek" checked="true" class="custom-switch-input" />
                               <div class="slider round"></div>
                               <span class="custom-switch-indicator"></span>
                             </label>
@@ -625,7 +623,8 @@
                         <div class="form-group row mb-4">
                           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Akciós ajánlat hozzáadása
                             <label class="switch">
-                              <input type="checkbox" id="toggleAkciosAjanlat" checked="true" class="custom-switch-input" />
+                              <input type="checkbox" id="toggleAkciosAjanlat" checked="true"
+                                class="custom-switch-input" />
                               <div class="slider round"></div>
                               <span class="custom-switch-indicator"></span>
                             </label>
@@ -667,7 +666,7 @@
                   </div>
                 </div>
 
-                
+
                 <h2 class="section-title">Új ajánlat mentése</h2>
                 <p class="section-lead">Mentse el az új ajánlatot, hogy megjelenhessen az oldalon</p>
                 <div class="row">
@@ -678,11 +677,13 @@
                       </div>
                       <div class="card-body">
                         <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés gombot</label>
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                            gombot</label>
                           <div class="col-sm-12 col-md-7">
                             <div class="col-6 col-sm-3 p-0">
                               <label class="imagecheck mb-4">
-                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i class="far fa-save"></i>Új ajánlat mentése</button>
+                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                    class="far fa-save"></i>Új ajánlat mentése</button>
                               </label>
                             </div>
                           </div>
@@ -693,7 +694,9 @@
                     </div>
                   </div>
                 </div>
-<!--                 <h2 class="section-title">Advanced Forms</h2>
+
+
+                <!--                 <h2 class="section-title">Advanced Forms</h2>
                 <p class="section-lead">We provide advanced input fields, such as date picker, color picker, and so on.
                 </p>
 
@@ -1174,16 +1177,495 @@
 
 
               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-
+                <h2 class="section-title">Meglévő ajánlatok kezelés</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő ajánlatokat szerkesztheti.</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Meglévő ajánlatok</h4>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-invoice">
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th>Funkció</th>
+                                <th>Rövid leírás</th>
+                                <th>Érvényesség</th>
+                                <th>Akció</th>
+                              </tr>
+                              <tr>
+                                <td><div class="badge badge-warning">Manager</div></td>
+                                <td class="font-weight-600">MÉG HOSSZABB ÜZEMIDŐ AZ IPARBAN.... (Rozsdamentes csapágyegységek)</td>
+                                <td>2019/08/01 - 2021/12/01</td>
+                                <td>
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0" data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="badge badge-warning">Manager</div></td>
+                                <td class="font-weight-600">MÉG HOSSZABB ÜZEMIDŐ AZ IPARBAN.... (Rozsdamentes csapágyegységek)</td>
+                                <td>2019/08/01 - 2021/12/01</td>
+                                <td>
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0" data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="badge badge-warning">Manager</div></td>
+                                <td class="font-weight-600">MÉG HOSSZABB ÜZEMIDŐ AZ IPARBAN.... (Rozsdamentes csapágyegységek)</td>
+                                <td>2019/08/01 - 2021/12/01</td>
+                                <td>
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0" data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="badge badge-warning">Manager</div></td>
+                                <td class="font-weight-600">MÉG HOSSZABB ÜZEMIDŐ AZ IPARBAN.... (Rozsdamentes csapágyegységek)</td>
+                                <td>2019/08/01 - 2021/12/01</td>
+                                <td>
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0" data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-
-
-
             </div>
           </div>
         </section>
       </div>
+      <div class="modal fade" id="konkretAjanlatszerkesztese" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="container d-flex pl-0">
+                </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Ajánlatunk oldali szerkesztése</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Rövid cím</label>
+                        <div class="col-sm-12 col-md-7">
+                          <input type="text" class="form-control" placeholder="Írja be az ajánlat címét">
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cím alatti rövid
+                          szöveg</label>
+                        <div class="col-sm-12 col-md-7">
+                          <textarea placeholder="Írja be az ajánlathoz tartozó kedvcsináló szöveget"
+                            rows="5"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Ajánlat oldal fénykép
+                          választása</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="col-6 col-sm-3 p-0">
+                            <label class="imagecheck mb-4">
+                              <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                              <figure class="imagecheck-figure">
+                                <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                  class="imagecheck-image">
+                              </figure>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Metaadatok szerkesztése</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Funkciók</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option value="" disabled selected>Válassza ki a funkciót</option>
+                              <option value="Szerzodott">Szerződött</option>
+                              <option value="Kereskedo">Kereskedő</option>
+                              <option value="OEM">OEM</option>
+                              <option value="Kulfoldi">Külföldi</option>
+                              <option value="PET-i">PET-i</option>
+                              <option value="Raktaros">Raktáros</option>
+                              <option value="Regisztralatlan">Regisztrálatlan</option>
+                              <option value="Beszerzo">Beszerző</option>
+                              <option value="Manager">Manager</option>
+                              <option value="UserAlManager">UserAlManager</option>
+                              <option value="Magan">Magán</option>
+                              <option value="Meghatalmazott">Meghatalmazott</option>
+                              <option value="Statisztikus">Statisztikus</option>
+                              <option value="GroupManager">CsoportAdmin</option>
+                              <option value="InfoManager">InfoManager</option>
+                              <option value="AkcioManager">AkcióManager</option>
+                              <option value="ArveresManager">ÁrverésManager</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cikkszám</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group d-flex">
+                            <input type="text" class="form-control form-control-btn"
+                              placeholder="Írja be a termék cikkszámát" aria-label="Recipient's username"
+                              aria-describedby="basic-addon2">
+                            <div class="input-group-append ml-md-2">
+                              <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                  class="fas fa-search"></i>Keresés név alapján</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Árkedvezmény</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control"
+                              placeholder="Állítsa be az árkedvezményt %-os formátumban (pl.: 15.0)">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Érvényes</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group  d-flex">
+                            <div class="col pl-0">
+                              <div class="input-group">
+                                <input class="form-control" type="date" id="startdate">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">-tól</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="input-group">
+                                <input class="form-control" type="date" id="startdate">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">-ig</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Tartalom szerkesztés</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Banner fénykép
+                          választása</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="col-6 col-sm-3 p-0">
+                            <label class="imagecheck mb-4">
+                              <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                              <figure class="imagecheck-figure">
+                                <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                  class="imagecheck-image">
+                              </figure>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Banneron megjelenő
+                          szöveg</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control"
+                              placeholder="Állítsa be a banner képen megjelenő szöveget">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Termékleírás címe</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Adja meg a termékleírás címét">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Termékleírás</label>
+                        <div class="col-sm-12 col-md-7">
+                          <textarea placeholder="Adja meg a termékleírást" rows="5"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Termékfotó
+                          kiválasztása</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="col-6 col-sm-3 p-0">
+                            <label class="imagecheck mb-4">
+                              <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                              <figure class="imagecheck-figure">
+                                <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                  class="imagecheck-image">
+                              </figure>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Felhasználási
+                          terület</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group">
+                            <input type="text" class="form-control mb-2"
+                              placeholder="Adja meg az 1. felhasználási területet">
+                            <input type="text" class="form-control mb-2"
+                              placeholder="Adja meg a 2. felhasználási területet">
+                            <input type="text" class="form-control mb-2"
+                              placeholder="Adja meg a 3. felhasználási területet">
+                            <input type="text" class="form-control mb-2"
+                              placeholder="Adja meg a 4. felhasználási területet">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Felhasználási terület
+                          képek kiválasztása</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="row gutters-sm">
+                            <div class="col-6 col-sm-3">
+                              <label class="imagecheck mb-4">
+                                <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                                <figure class="imagecheck-figure">
+                                  <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                    class="imagecheck-image">
+                                </figure>
+                              </label>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                              <label class="imagecheck mb-4">
+                                <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                                <figure class="imagecheck-figure">
+                                  <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                    class="imagecheck-image">
+                                </figure>
+                              </label>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                              <label class="imagecheck mb-4">
+                                <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                                <figure class="imagecheck-figure">
+                                  <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                    class="imagecheck-image">
+                                </figure>
+                              </label>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                              <label class="imagecheck mb-4">
+                                <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                                <figure class="imagecheck-figure">
+                                  <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                    class="imagecheck-image">
+                                </figure>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jelölések
+                          <label class="switch">
+                            <input type="checkbox" id="toggleJelolesek" checked="true" class="custom-switch-input" />
+                            <div class="slider round"></div>
+                            <span class="custom-switch-indicator"></span>
+                          </label>
+                        </label>
+                        <div class="col-sm-12 col-md-7">
+                          <div id="menuJelolesek">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div id="fields">
+                                  <div class="controls">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry input-group mb-2">
+                                        <input class="form-control" name="fields[]" type="text"
+                                          placeholder="Adjon hozzá egy jelölést" />
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-success btn-add ml-2" type="button">
+                                            <span class="icon-plus"></span>
+                                          </button>
+                                        </span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kikapcsolt-resz-form" id="menuJelolesekKikapcs">
+                            Tartalom kikapcsolva
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Utójelek hozzáadása
+                          <label class="switch">
+                            <input type="checkbox" id="toggleUtojelek" checked="true" class="custom-switch-input" />
+                            <div class="slider round"></div>
+                            <span class="custom-switch-indicator"></span>
+                          </label>
+                        </label>
+
+
+
+                        <div class="col-sm-12 col-md-7">
+
+                          <div id="menuUtojelek">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div id="fields">
+                                  <div class="controls03">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry03 input-group mb-2">
+                                        <input class="form-control" name="fields[]" type="text"
+                                          placeholder="Adjon hozzá egy utójelet" />
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-success btn-add ml-2" type="button">
+                                            <span class="icon-plus"></span>
+                                          </button>
+                                        </span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kikapcsolt-resz-form" id="menuUtojelekKikapcs">
+                            Tartalom kikapcsolva
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Akciós ajánlat hozzáadása
+                          <label class="switch">
+                            <input type="checkbox" id="toggleAkciosAjanlat" checked="true"
+                              class="custom-switch-input" />
+                            <div class="slider round"></div>
+                            <span class="custom-switch-indicator"></span>
+                          </label>
+                        </label>
+
+
+
+                        <div class="col-sm-12 col-md-7">
+
+                          <div id="menuAkciosAjanlat">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div id="fields">
+                                  <div class="controls03">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry03 input-group mb-2">
+                                        <input class="form-control" name="fields[]" type="text"
+                                          placeholder="Adjon hozzá egy akciós ajánlatot" />
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-success btn-add ml-2" type="button">
+                                            <span class="icon-plus"></span>
+                                          </button>
+                                        </span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="kikapcsolt-resz-form" id="menuAkciosAjanlatKikapcs">
+                            Tartalom kikapcsolva
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Szerkesztett ajanlat mentése</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                          gombot</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="col-6 col-sm-3 p-0">
+                            <label class="imagecheck mb-4">
+                              <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                  class="far fa-save"></i>Ajánlat mentése</button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+      <div class="modal fade" id="biztosTorli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                        <h5 class="modal-title ml-2" id="exampleModalLabel">Ajánlat törlése</h5>
+                    </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                </div>
+                <div class="modal-body">
+                    <p class="m-0">Biztosan törli az ajánlatot? Ez a művelet nem visszavonható.</p>
+                </div>
+                <div class="modal-footer"> 
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button> 
+                  <button type="button" class="btn btn-danger">Törlés</button> </div>
+            </div>
+        </div>
+    </div>
       <footer class="main-footer">
       </footer>
     </div>
