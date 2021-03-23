@@ -779,7 +779,9 @@ select.form-control:not([size]):not([multiple]) {
     padding-bottom: 0; }
   .card.card-statistic-1, .card.card-statistic-2 {
     display: inline-block;
-    width: 100%; }
+    width: 100%;
+    transition: .5s ease-in-out;
+   }
   .card.card-statistic-1 .card-icon, .card.card-statistic-2 .card-icon {
     width: 80px;
     height: 80px;
@@ -793,7 +795,8 @@ select.form-control:not([size]):not([multiple]) {
       font-size: 22px;
       color: #fff; }
   .card.card-statistic-1 .card-icon {
-    line-height: 90px; }
+    line-height: 90px;
+    transition: .5s ease-in-out; }
   .card.card-statistic-2 .card-icon {
     width: 50px;
     height: 50px;
@@ -813,12 +816,15 @@ select.form-control:not([size]):not([multiple]) {
     font-size: 13px;
     letter-spacing: .5px; }
   .card.card-statistic-1 .card-header h4 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    transition: .5s ease-in-out;
+   }
   .card.card-statistic-2 .card-header h4 {
     text-transform: none;
     margin-bottom: 0; }
   .card.card-statistic-1 .card-body {
-    font-size: 20px; }
+    font-size: 20px; 
+    transition: .5s ease-in-out;}
   .card.card-statistic-2 .card-chart {
     padding-top: 20px;
     margin-left: -9px;
@@ -3088,3 +3094,47 @@ button.close {
 .nicescroll-cursors {
   background-color: rgb(236 118 35) !important;
 }
+
+
+
+/* PROJEKTEK OLDAL */ 
+
+.main-content-projektek {
+  padding-left: 90px !important;
+  padding-right: 90px !important;
+}
+
+.card.card-statistic-1:hover {
+  background-color: #ec7623;
+}
+
+.card.card-statistic-1:hover .bg-success {
+  background-color: #ec7623 !important;
+}
+
+.card.card-statistic-1 .bg-warning {
+  background-color: #ec7623 !important;
+}
+.card.card-statistic-1:hover .bg-warning {
+  background-color: #ec7623 !important;
+}
+
+.card.card-statistic-1:hover .card-body {
+  color: white !important;
+}
+
+.card.card-statistic-1:hover .card-header h4 {
+  color: white !important;
+}
+
+
+
+.rotate-animation {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

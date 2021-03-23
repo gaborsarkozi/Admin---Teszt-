@@ -1,0 +1,456 @@
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable {
+    box-shadow: 0 10px 40px 0 rgb(62 57 107 / 7%), 0 2px 9px 0 rgb(62 57 107 / 6%);
+    border: none !important;
+    border-radius: 4px;
+    padding: 3rem;
+}
+
+.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    border: none;
+    background: #ffffff;
+    color: #39245a;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 0 1rem !important;
+}
+
+.before-table-data-table {
+    border-top: none !important;
+}
+
+#dialog-similar-product, #dialog-similar-product-small {
+    border: none !important;
+}
+
+button.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
+    border: none;
+    background: #ffffff;
+    font-weight: normal;
+    color: #ec7623 !important;
+}
+
+
+
+table {
+    overflow:hidden;
+    border:1px solid #d3d3d3;
+    background:#fefefe;
+    width:50%;
+    margin:5% auto 0;
+    -moz-border-radius:5px; /* FF1+ */
+    -webkit-border-radius:5px; /* Saf3-4 */
+    border-radius:5px;
+
+}
+
+th, td {padding:18px 28px 18px; text-align:center; }
+
+th {padding-top:22px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+
+td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+
+tr.odd-row td {background:#f6f6f6;}
+
+td.first, th.first {text-align:left}
+
+td.last {border-right:none;}
+
+/*
+Background gradients are completely unnessary but a neat effect.
+*/
+
+td {
+    background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+    background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+tr.odd-row td {
+    background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+    background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+}
+
+th {
+    background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+    background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+}
+
+/*
+I know this is annoying, but we need dditional styling so webkit will recognize rounded corners on background elements.
+Nice write up of this issue: http://www.onenaught.com/posts/266/css-inner-elements-breaking-border-radius
+
+And, since we've applied the background colors to td/th element because of IE, Gecko browsers also need it.
+*/
+
+tr:first-child th.first {
+    -moz-border-radius-topleft:5px;
+    -webkit-border-top-left-radius:5px; /* Saf3-4 */
+}
+
+tr:first-child th.last {
+    -moz-border-radius-topright:5px;
+    -webkit-border-top-right-radius:5px; /* Saf3-4 */
+}
+
+tr:last-child td.first {
+    -moz-border-radius-bottomleft:5px;
+    -webkit-border-bottom-left-radius:5px; /* Saf3-4 */
+}
+
+tr:last-child td.last {
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-bottom-right-radius:5px; /* Saf3-4 */
+}
+
+
+.max-width-kr {
+    max-width: 40rem;
+}
+
+.center-item-kep {
+    text-align: center;
+}
+
+.center-item-btn {
+    text-align: center;
+    margin: 10rem 0;
+}
+
+.btn {
+    margin: 0 3rem;
+}
+
+div#dialog-similar-product {
+    overflow: hidden;
+    height: 520px !important;
+}
+
+#dialog-similar-product td, #dialog-similar-product th {
+    border: none !important;
+    padding: 0.75rem !important;
+}
+
+#dialog-similar-product td {
+    background: #ffffff !important;
+}
+
+tr {
+    border: 1px solid #39245a2e;
+}
+
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: .4em .2em !important;
+    position: relative;
+}
+
+
+.download-btn button {
+    border: none;
+	background: #ffffff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 100px;
+    line-height: 100px;
+    margin: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.download-btn button span {
+    background: #39245a;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 1;
+    z-index: 1;
+}
+
+.download-btn button span:last-child {
+    margin-left: -20px;
+}
+
+.download-btn button:before,
+.download-btn button:after {
+    background: #ffffff;
+    border: solid 3px #e2e2e2;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 35px;
+    left: 50%;
+    margin: -17px 0 0 -12px;
+    position: absolute;
+    top: 50%;
+    /*transform:translate(-50%,-50%);*/
+    
+    width: 25px;
+}
+
+.download-btn button:hover:before,
+.download-btn button:hover:after {
+    background: #f5f5f5;
+}
+/*a:before{transform:translate(-30%,-60%);}*/
+
+.download-btn button:before {
+    margin: -23px 0 0 -5px;
+}
+
+.download-btn button:hover {
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.download-btn button:active {
+    background: #dae0e8;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .25);
+}
+
+.download-btn button span:first-child {
+    display: none;
+}
+
+.download-btn button:hover span:first-child {
+    display: inline-block;
+}
+
+.download-btn button:hover span:last-child {
+    display: none;
+}
+
+
+#dialog-similar-product td, #dialog-similar-product th {
+    text-transform: initial !important;
+    padding-left: 10px !important;
+}
+
+
+.ui-widget-header .ui-icon{
+    background-image: url(image/close-icon-lila.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* ---------------------- ELŐ UTÓ TÁBLA ---------------------------- */ 
+
+.eloutojel-tablazat .ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle {
+    padding: 0 2rem !important;
+}
+
+
+.eloutojel-tablazat table {
+    overflow: hidden;
+    border: 1px solid #d3d3d3;
+    background: #fefefe;
+    width: 100%;
+    margin: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.eloutojel-tablazat th {
+    background: #ffffff;
+}
+
+.eloutojel-tablazat .elotag select, .elotag input {
+    padding: 5px 5px !important;
+    text-transform: initial !important;
+}
+
+.eloutojel-tablazat input, select {
+    border-radius: 2px;
+    border: 1px solid #39245a21 !important;
+}
+
+.eloutojel-tablazat  .before-table {
+    border-top: 1px solid #39245a21;
+    border-left: 1px solid #39245a21;
+    border-right: 1px solid #39245a21;
+    text-transform: initial !important;
+}
+
+.eloutojel-tablazat  .before-table a {
+    padding: 20px 30px;
+}
+
+.eloutojel-tablazat .before-table a:first-child {
+    border-right: 1px solid #39245a21;
+}
+
+.eloutojel-tablazat th {
+    text-transform: initial !important;
+    font-weight: 400;
+}
+
+
+.eloutojel-tablazat .elotag td {
+    text-transform: initial;
+    font-weight: 500;
+    padding-left: 20px !important;
+    border: 0px solid #25215f;
+    height: 46px;
+    background: #ffffff
+}
+
+.eloutojel-tablazat th {
+    border: none !important;
+}
+
+.eloutojel-tablazat td img {
+    width: 180px;
+}
+
+.eloutojel-tablazat .elotag select option {
+    font-weight: 400 !important;
+}
+
+.eloutojel-tablazat select#characteristic {
+    width: 160px;
+}
+
+div#dialog-similar-product-elojel {
+    height: fit-content !important;
+}
+
+
+
+/* ------------------ MÉRETBEN MEGEGYEZÕ TERMÉKEK --------------------*/ 
+
+#meretben-megegyezotermekek-tabla table {
+    width: 100%;
+}
+
+#meretben-megegyezotermekek-tabla .order_arrows .up_arrow {
+    top: 0px;
+    left: 9px;
+    transform: rotateZ(149deg) !important;
+}
+
+#meretben-megegyezotermekek-tabla .order_arrows .down_arrow {
+    top: 9px;
+    left: 10px;
+    transform: rotateZ(90deg) !important;
+}
+
+#meretben-megegyezotermekek-tabla th {
+    padding: 15px 10px !important;
+    border: 0px solid #26265f !important;
+    background: #ffffff !important;
+    text-transform: initial !important;
+    width: 15rem !important;
+}
+
+#meretben-megegyezotermekek-tabla td {
+    border: 0px solid #26265f !important;
+    text-align: center;
+    background: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+#meretben-megegyezotermekek-tabla .helper-clearfix.ui-draggable-handle {
+    padding: 0 1.5rem !important;
+}
+
+#meretben-megegyezotermekek-tabla #dialog-similar-product p, #dialog-similar-product-small p {
+    font-weight: 600;
+    padding: 15px 0 0;
+    margin: 0 !important;
+    color: #39245a;
+    font-weight: bold;
+    
+}
+
+#meretben-megegyezotermekek-tabla #dialog-similar-product p, #dialog-similar-product-small p {
+    border-top: none !important;
+    display: inline-block;
+}
+
+#meretben-megegyezotermekek-tabla .checkbox-inline, .radio-inline {
+    margin-left: 50px !important;
+    font-weight: 700;
+    color: #39245a;
+    font-size: 14px;
+}
+
+#meretben-megegyezotermekek-tabla input[type=checkbox], input[type=radio] {
+   margin: 3px 0 0 -48px;
+}
+
+#meretben-megegyezotermekek-tabla input, select {
+    border-radius: 5px;
+    border: 4px solid #f8f9fa;
+    font-weight: 400;
+    padding: 4px 10px;
+    width: 28%;
+}
+
+
+#meretben-megegyezotermekek-tabla i.icon-basket.icon-merete {
+    color: #EC7623;
+    font-size: 20px;
+}
+
+#meretben-megegyezotermekek-tabla button.add_cart_button {
+    padding: 0 0 3px;
+    vertical-align: middle;
+}
+
+#meretben-megegyezotermekek-tabla td {
+    text-align: center !important;
+    padding-left: 5px !important;
+}
+
+#meretben-megegyezotermekek-tabla .menu-item.btn.btn-bearing {
+    width: 15rem;
+    padding: 0;
+    border-radius: 4px;
+    height: 3rem;
+}
+
+#meretben-megegyezotermekek-tabla .btn-bearing {
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+#meretben-megegyezotermekek-tabla .menu-item.btn.btn-bearing a {
+    color: #211061 !important;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+#meretben-megegyezotermekek-tabla .fa.icon-briefcase.ml-2 {
+    font-weight: 500;
+    position: relative;
+    font-size: 20px;
+    top: 2px;
+    color: #EC7623;
+    padding: 0 0 0 18px;
+}
+
+
+#meretben-megegyezotermekek-tabla i.icon-control-play {
+    color: #EC7623;
+    font-weight: 600 !important;
+    font-size: 11px;
+}
+
+#meretben-megegyezotermekek-tabla .ui-widget-content a {
+    color: #211061;
+}
+
+
+.margin-top-div {
+    margin: 10rem 0;
+}
