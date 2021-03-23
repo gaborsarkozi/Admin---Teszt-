@@ -267,6 +267,11 @@
                 <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
                   aria-controls="pills-profile" aria-selected="false">Meglévő ajánlatok szerkesztése</a>
               </li>
+            
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-pictures-tab" data-toggle="pill" href="#pills-pictures" role="tab"
+                  aria-controls="pills-pictures" aria-selected="false">Kép adminisztráció</a>
+              </li>
             </ul>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
@@ -370,7 +375,7 @@
                                 placeholder="Írja be a termék cikkszámát" aria-label="Recipient's username"
                                 aria-describedby="basic-addon2">
                               <div class="input-group-append ml-md-2">
-                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button" data-toggle="modal" data-target="#keresesCikkszamAlapjan"><i
                                     class="fas fa-search"></i>Keresés név alapján</button>
                               </div>
                             </div>
@@ -1172,7 +1177,6 @@
                 </div> -->
               </div>
 
-
               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <h2 class="section-title">Meglévő ajánlatok kezelés</h2>
                 <p class="section-lead">Ezen az oldalon a meglévő ajánlatokat szerkesztheti.</p>
@@ -1236,10 +1240,228 @@
                   </div>
                 </div>
               </div>
+
+              <div class="tab-pane fade" id="pills-pictures" role="tabpanel" aria-labelledby="pills-pictures-tab">
+               
+                
+                
+
+                <h2 class="section-title">Új kép feltöltése</h2>
+                <p class="section-lead">Ezen az oldalon az ajánlatokhoz tartozó képeket tud feltölteni és törölni</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Új kép feltöltése</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kép azonosító és feltöltése </label>
+                          <div class="col-sm-12 col-md-7">
+                            <div id="menuJelolesek">
+                              <div class="form-group">
+                                  <div id="fields">
+                                    <div class="controls">
+                                      <form role="form" autocomplete="off">
+                                        <div class="entry input-group mb-2">
+                                          <input class="form-control" name="fields" type="text" placeholder="Adjon hozzá egy azonosítót">
+                                          <span class="input-group-btn">
+                                            <label class="btn-bs-file btn btn-primary ml-0 ml-md-2"> <i class="fas fa-file-image mr-1"></i>
+                                              File kiválasztása
+                                              <input type="file" />
+                                          </label>
+                                          <label class="btn-bs-file ml-0 ml-md-2" style="bottom: 3px;">
+                                            <button type="submit" class="btn btn-primary btn-green"> <i class="fas fa-arrow-circle-up mr-1"></i> Feltöltés</button>
+                                        </label>
+                                          </span>
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <h2 class="section-title">Kép adminisztráció</h2>
+                <p class="section-lead">Itt megtekitnheti a feltöltött képeket és törölheti őket</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Képek</h4>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-invoice">
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th>Kép neve</th>
+                                <th>Kép</th>
+                                <th>Akció</th>
+                              </tr>
+                              <tr>
+                                <td>Z:\expresscommon\Akciós Képtár\2009-06-26\1210Kkicsi.jpg</td>
+                                <td> <div class="col-2 py-2 px-0"><img src="https://aruhaz.bearing.hu/Akciok/3004%202RS%20kicsi%20logo.jpg" alt="}" class="imagecheck-image"></div></td>
+                                <td>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Z:\expresscommon\Akciós Képtár\2009-06-26\1210Kkicsi.jpg</td>
+                                <td> <div class="col-2 py-2 px-0"><img src="https://aruhaz.bearing.hu/Akciok/3004%202RS%20kicsi%20logo.jpg" alt="}" class="imagecheck-image"></div></td>
+                                <td>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Z:\expresscommon\Akciós Képtár\2009-06-26\1210Kkicsi.jpg</td>
+                                <td> <div class="col-2 py-2 px-0"><img src="https://aruhaz.bearing.hu/Akciok/3004%202RS%20kicsi%20logo.jpg" alt="}" class="imagecheck-image"></div></td>
+                                <td>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Z:\expresscommon\Akciós Képtár\2009-06-26\1210Kkicsi.jpg</td>
+                                <td> <div class="col-2 py-2 px-0"><img src="https://aruhaz.bearing.hu/Akciok/3004%202RS%20kicsi%20logo.jpg" alt="}" class="imagecheck-image"></div></td>
+                                <td>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal" data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
+      <div class="modal fade" id="keresesCikkszamAlapjan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="container d-flex pl-0">
+                </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Keresés név alapján</h4>
+                  </div>
+                  <div class="card-body">           
+                    <div class="form-group row mb-0">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cikkszám</label>
+                      <div class="col-sm-12 col-md-7">
+                          <div class="form-group mb-0">
+                            <div class="form-group mb-0">
+                              <div id="fields">
+                                <div class="controls">
+                                  <form role="form" autocomplete="off">
+                                    <div class="entry input-group">
+                                      <input class="form-control" name="fields" type="text"
+                                        placeholder="Adja meg a cikkszámot" />
+                                      <span class="input-group-btn ml-2">
+                                        <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button">
+                                          <i class="fas fa-search"></i>
+                                          Keresés név alapján</button>
+                                      </span>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Összesen: 165 találat</h4>
+                  </div>
+                  <div class="card-body">           
+                    <div class="form-group row mb-4">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                  <th>Termék</th>
+                                  <th>Gyártó</th>
+                                  <th>Méret</th>
+                                  <th>Típus / Azonosító</th>
+                                  <th>Egységár</th>
+                                  <th>Kedvezményes ár</th>
+                                  <th>Megtakarítás</th>
+                                  <th>Készlet</th>
+                                  <th>Akció</th>
+                                </tr>
+                                <tr>
+                                  <td> <a href="">KR 22 B</a> </td>
+                                  <td>SKF</td>
+                                  <td> <a href="">22X10X36</a> </td>
+                                  <td> <a href="">KR22</a> </td>
+                                  <td>11057</td>
+                                  <td>9952</td>
+                                  <td>10.0</td>
+                                  <td>-</td>
+                                  <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                </tr>
+                                <tr>
+                                  <td> <a href="">KR 22 B</a> </td>
+                                  <td>SKF</td>
+                                  <td> <a href="">22X10X36</a> </td>
+                                  <td> <a href="">KR22</a> </td>
+                                  <td>11057</td>
+                                  <td>9952</td>
+                                  <td>10.0</td>
+                                  <td>-</td>
+                                  <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                </tr>
+                                <tr>
+                                  <td> <a href="">KR 22 B</a> </td>
+                                  <td>SKF</td>
+                                  <td> <a href="">22X10X36</a> </td>
+                                  <td> <a href="">KR22</a> </td>
+                                  <td>11057</td>
+                                  <td>9952</td>
+                                  <td>10.0</td>
+                                  <td>-</td>
+                                  <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
       <div class="modal fade" id="konkretAjanlatszerkesztese" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1507,7 +1729,7 @@
                         <div class="col-sm-12 col-md-7">
                           <div id="menuJelolesek">
                             <div class="form-group">
-                              <div class="input-group">
+                              <div class="form-group">
                                 <div id="fields">
                                   <div class="controls">
                                     <form role="form" autocomplete="off">
@@ -1547,7 +1769,7 @@
 
                           <div id="menuUtojelek">
                             <div class="form-group">
-                              <div class="input-group">
+                              <div class="form-group">
                                 <div id="fields">
                                   <div class="controls03">
                                     <form role="form" autocomplete="off">
@@ -1588,11 +1810,11 @@
 
                           <div id="menuAkciosAjanlat">
                             <div class="form-group">
-                              <div class="input-group">
+                              <div class="form-group">
                                 <div id="fields">
                                   <div class="controls03">
                                     <form role="form" autocomplete="off">
-                                      <div class="entry03 input-group mb-2">
+                                      <div class="entry03 form-group mb-2">
                                         <input class="form-control" name="fields[]" type="text"
                                           placeholder="Adjon hozzá egy akciós ajánlatot" />
                                         <span class="input-group-btn">

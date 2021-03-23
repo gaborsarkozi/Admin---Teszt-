@@ -65,11 +65,17 @@
   outline: none; }
 
 a {
-  color: #211061;
+  color: #EC7623;
   font-weight: 500;
   transition: all .5s;
   -webkit-transition: all .5s;
-  -o-transition: all .5s; }
+  -o-transition: all .5s; 
+}
+
+a:hover {
+  color: #EC7623;
+  text-decoration: underline;
+}
 
 a:not(.btn-social-icon):not(.btn-social):not(.page-link) .ion,
 a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fas,
@@ -2959,8 +2965,8 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     padding: 0;
     display: block; }
   .main-content {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
     width: 100% !important; }
   .main-footer {
     padding-left: 30px; }
@@ -3091,6 +3097,10 @@ button.close {
   max-width: 70%;
 }
 
+#keresesCikkszamAlapjan .modal-dialog {
+  max-width: 70%;
+}
+
 .nicescroll-cursors {
   background-color: rgb(236 118 35) !important;
 }
@@ -3100,8 +3110,12 @@ button.close {
 /* PROJEKTEK OLDAL */ 
 
 .main-content-projektek {
-  padding-left: 90px !important;
-  padding-right: 90px !important;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.card.card-statistic-1.task-done:hover {
+  background-color: #47c363;
 }
 
 .card.card-statistic-1:hover {
@@ -3109,7 +3123,7 @@ button.close {
 }
 
 .card.card-statistic-1:hover .bg-success {
-  background-color: #ec7623 !important;
+  background-color: #47c363 !important;
 }
 
 .card.card-statistic-1 .bg-warning {
@@ -3138,3 +3152,25 @@ button.close {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+.btn-bs-file{
+  cursor: pointer;
+  position:relative;
+}
+.btn-bs-file input[type="file"]{
+  position: absolute;
+  top: -9999999;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  width:0;
+  height:0;
+  outline: none;
+  cursor: inherit;
+  
+}
+
+.btn-green {
+  background-color: #47c363 !important;
+  border: #47c363 !important;
+}
