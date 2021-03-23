@@ -43,7 +43,7 @@ table {
 
 }
 
-th, td {padding:18px 28px 18px; text-align:center; }
+th, td {padding:18px 28px 18px; text-align:left; }
 
 th {padding-top:22px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
 
@@ -233,7 +233,7 @@ tr {
 
 
 .ui-widget-header .ui-icon{
-    background-image: url(image/close-icon-lila.png) !important;
+    background-image: url(/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/image/close-icon.svg) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -332,13 +332,13 @@ div#dialog-similar-product-elojel {
 
 #meretben-megegyezotermekek-tabla .order_arrows .up_arrow {
     top: 0px;
-    left: 9px;
+    left: -40px;
     transform: rotateZ(149deg) !important;
 }
 
 #meretben-megegyezotermekek-tabla .order_arrows .down_arrow {
     top: 9px;
-    left: 10px;
+    left: -39px;
     transform: rotateZ(90deg) !important;
 }
 
@@ -352,7 +352,7 @@ div#dialog-similar-product-elojel {
 
 #meretben-megegyezotermekek-tabla td {
     border: 0px solid #26265f !important;
-    text-align: center;
+    text-align: left;
     background: #ffffff !important;
     font-weight: 500 !important;
 }
@@ -406,7 +406,7 @@ div#dialog-similar-product-elojel {
 }
 
 #meretben-megegyezotermekek-tabla td {
-    text-align: center !important;
+    text-align: left !important;
     padding-left: 5px !important;
 }
 

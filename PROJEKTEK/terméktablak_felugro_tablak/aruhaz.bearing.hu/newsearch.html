@@ -6,10 +6,12 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="/js/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
         crossorigin="anonymous"></script>
-    <script type="application/javascript" src="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/main.js"></script>
+    <script type="application/javascript"
+        src="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/main.js"></script>
     <link href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/font.css" rel="stylesheet">
     <link rel="stylesheet" href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/styles.css">
+    <link rel="stylesheet" type="text/css"
+        href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/styles.css">
     <link rel="stylesheet" href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/stilus.css">
     <link rel="stylesheet" type="text/css"
         href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
@@ -95,7 +97,8 @@
                 background-color: #ffffff;
             }
         </style>
-        <link rel="stylesheet" type="text/css" href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/styles.css">
+        <link rel="stylesheet" type="text/css"
+            href="/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/css/styles.css">
     </span>
 </head>
 
@@ -127,7 +130,7 @@
                     <div class="row">
 
                         <div class="col-4" id="pdf">
-                            <table  >
+                            <table>
                                 <tbody>
                                     <tr>
                                         <td>Gyártó</td>
@@ -200,7 +203,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            
+
                         </div>
                         <div class="col-8">
                             <div class="center-item-kep">
@@ -208,18 +211,22 @@
                             </div>
                             <div class="center-item-btn download-btn">
                                 <div>
-                                   
-                                    <button id="btnExport" value="Export" onclick="Export()"><span>PDF</span><span>Letöltés</span></button>
-                                    <button onclick="printDiv('pdf','Title')"><span>Mehet!</span><span>Nyomtatás</span></button>
-                                    
+
+                                    <button id="btnExport" value="Export"
+                                        onclick="Export()"><span>PDF</span><span>Letöltés</span></button>
+                                    <button
+                                        onclick="printDiv('pdf','Title')"><span>Mehet!</span><span>Nyomtatás</span></button>
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
-                    
-                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+                    <script type="text/javascript"
+                        src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+                    <script type="text/javascript"
+                        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
                     <script type="text/javascript">
                         function Export() {
                             html2canvas(document.getElementById('tblCustomers'), {
@@ -256,7 +263,7 @@
         <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
         <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
     </div>
-    
+
 
     <span>
         <div class="dialog_box"></div>
@@ -786,9 +793,7 @@
             border-top: 1px solid #26265f;
         ">
                 <p style="text-transform: initial;">Méretben megegyezõ termékek</p>
-                <label class="checkbox-inline">
-                    <input type="checkbox" value="">Csak készleten lévő termékek mutatása
-                </label>
+
             </div>
             <div id="tabs">
                 <script type="text/javascript">
@@ -835,7 +840,11 @@
                                             class="icon-control-play fel"></i></button><button class="down_arrow"><i
                                             class="icon-control-play le"></i></button></div>
                             </th>
-                            <th></th>
+                            <th>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">Készleten
+                                </label>
+                            </th>
                         </tr>
 
                         <tr id="rpl_FBJ-001-160" class="normal">
@@ -1375,9 +1384,7 @@
         border-top: 1px solid #26265f;
     ">
                 <p style="text-transform: initial;">Helyettesítő termékek</p>
-                <label class="checkbox-inline">
-                    <input type="checkbox" value="">Csak készleten lévő termékek mutatása
-                </label>
+                
             </div>
             <div id="tabs">
                 <script type="text/javascript">
@@ -1403,32 +1410,32 @@
                 <table>
                     <tbody>
                         <tr>
-                            <th><a href="#"
-                                    >Termék</a>
-                                    <div class="order_arrows"><button class="up_arrow"><i
-                                        class="icon-control-play fel"></i></button><button class="down_arrow"><i
-                                        class="icon-control-play le"></i></button></div>
+                            <th><a href="#">Termék</a>
+                                <div class="order_arrows"><button class="up_arrow"><i
+                                            class="icon-control-play fel"></i></button><button class="down_arrow"><i
+                                            class="icon-control-play le"></i></button></div>
                             </th>
-                            <th><a href="#"
-                                    >Gyártó</a>
-                                    <div class="order_arrows"><button class="up_arrow"><i
-                                        class="icon-control-play fel"></i></button><button class="down_arrow"><i
-                                        class="icon-control-play le"></i></button></div>
+                            <th><a href="#">Gyártó</a>
+                                <div class="order_arrows"><button class="up_arrow"><i
+                                            class="icon-control-play fel"></i></button><button class="down_arrow"><i
+                                            class="icon-control-play le"></i></button></div>
                             </th>
 
-                            <th><a href="#"
-                                    >Egységár</a>
-                                    <div class="order_arrows"><button class="up_arrow"><i
-                                        class="icon-control-play fel"></i></button><button class="down_arrow"><i
-                                        class="icon-control-play le"></i></button></div>
+                            <th><a href="#">Egységár</a>
+                                <div class="order_arrows"><button class="up_arrow"><i
+                                            class="icon-control-play fel"></i></button><button class="down_arrow"><i
+                                            class="icon-control-play le"></i></button></div>
                             </th>
-                            <th><a href="#"
-                                    >Készlet</a>
-                                    <div class="order_arrows"><button class="up_arrow"><i
-                                        class="icon-control-play fel"></i></button><button class="down_arrow"><i
-                                        class="icon-control-play le"></i></button></div>
+                            <th><a href="#">Készlet</a>
+                                <div class="order_arrows"><button class="up_arrow"><i
+                                            class="icon-control-play fel"></i></button><button class="down_arrow"><i
+                                            class="icon-control-play le"></i></button></div>
                             </th>
-                            <th></th>
+                            <th>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">Készleten
+                                </label>
+                            </th>
                         </tr>
 
                         <tr id="rpl_KRX015KR16INA" class="normal">
@@ -1699,9 +1706,9 @@
         <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
     </div>
 
-<div class="container margin-top-div">
-    <div> </div>
-</div>
+    <div class="container margin-top-div">
+        <div> </div>
+    </div>
 
 </body>
 

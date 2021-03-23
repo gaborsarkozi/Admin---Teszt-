@@ -1214,7 +1214,7 @@ td {
 }
 
 .ui-dialog-titlebar-close {
-    background: url(../image/close.png) no-repeat center center;
+    background: url(/PROJEKTEK/terméktablak_felugro_tablak/aruhaz.bearing.hu/image/close-icon-lila.png) no-repeat center center;
     border: none;
     text-indent: -9999px;
     float: right;
@@ -1276,7 +1276,7 @@ td {
 .ui-tabs-panel,
 #dialog-similar-product,
 #dialog-similar-product-small {
-    overflow: auto;
+    overflow: initial;
     /*max-height: 150px !important;*/
 }
 
