@@ -962,7 +962,12 @@ table tr:hover .table-links {
   font-size: 12px; }
 
 .tooltip-inner {
-  padding: 7px 13px; }
+  padding: 7px 13px;
+  background-color: #EC7623 }
+
+  .bs-tooltip-right .arrow::before {
+    border-right-color: #EC7623
+  }
 
 /* 3.8 Modal */
 .modal-header,
@@ -3078,4 +3083,8 @@ button.close {
 
 #konkretAjanlatszerkesztese .modal-dialog {
   max-width: 70%;
+}
+
+.nicescroll-cursors {
+  background-color: rgb(236 118 35) !important;
 }
