@@ -127,6 +127,7 @@
                 <div>
 
 
+
                     <div class="row">
 
                         <div class="col-4" id="pdf">
@@ -274,6 +275,414 @@
             class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable"
             aria-describedby="dialog-similar-product" aria-labelledby="ui-id-4"
             style="position: relative; height: 100rem; width: 1000px; top: 190px; left: 504.5px;">
+            <div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span
+                    id="ui-id-4" class="ui-dialog-title">KR 16 ELÖ ÉS UTÓJELEK</span><button type="button"
+                    class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close"
+                    title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span
+                        class="ui-button-icon-space"> </span>Close</button></div>
+            <div id="dialog-similar-product-elojel" class="ui-dialog-content ui-widget-content"
+                style="width: auto; min-height: 0px; max-height: none; height: 456.438px;">
+                <script src="/js/jquery-ui.js"></script>
+                <link rel="stylesheet" href="/css/jquery-ui.css">
+                <script type="text/javascript">
+                    function getElotag(gyarto, productLine, characteristic, utojel) {
+                        $.get("/Utojelek/getUtojel", { gyarto: gyarto, isElotag: "1", productLine: productLine, characteristic: characteristic, utojel: utojel }, function (data) {
+                            $("#dialog-similar-product").html(data);
+                        })
+                            .fail(function () {
+                                alert("error");
+                            });
+                        $("#dialog-similar-product").html('Hamarosan megjelennek az előtagok <img src="/images/ui-anim_basic_16x16.gif" alt="" title="ui-anim_basic_16x16.gif" width="16" height="16">');
+                    };
+                    $("#utojelForm").submit(function (e) {
+                        e.preventDefault();
+                    });
+                    function getUtojel(gyarto, productLine, characteristic, utojel) {
+                        $.get("/Utojelek/getUtojel", { gyarto: gyarto, isUtojel: "1", productLine: productLine, characteristic: characteristic, utojel: utojel }, function (data) {
+                            $("#dialog-similar-product").html(data);
+                        })
+                            .fail(function () {
+                                alert("error");
+                            });
+                        $("#dialog-similar-product").html('Hamarosan megjelennek az utójelek <img src="/images/ui-anim_basic_16x16.gif" alt="" title="ui-anim_basic_16x16.gif" width="16" height="16">');
+                    };
+
+                    $("#utojelForm").submit(function (e) {
+                        e.preventDefault();
+                    });
+
+                    $("#elotaglink").click(function (event) {
+                        event.preventDefault();
+                        utojel = $("#utojelField").val();
+                        gyarto = $("#gyartoT").val();
+                        productLine = $("#productLine").val();
+                        characteristic = $("#characteristic").val();
+                        getElotag(gyarto, productLine, characteristic, utojel);
+                    });
+                    $("#utojellink").click(function (event) {
+                        event.preventDefault();
+                        utojel = $("#utojelField").val();
+                        gyarto = $("#gyartoT").val();
+                        productLine = $("#productLine").val();
+                        characteristic = $("#characteristic").val();
+                        getUtojel(gyarto, productLine, characteristic, utojel);
+                    });
+                    $("#gyartoT").on("change", function () {
+                        utojel = $("#utojelField").val();
+                        gyarto = $("#gyartoT").val();
+                        productLine = $("#productLine").val();
+                        characteristic = $("#characteristic").val();
+                        if ($("#elotagh").length) {
+                            getElotag(gyarto, productLine, characteristic, utojel);
+                        }
+                        if ($("#utojelh").length) {
+                            getUtojel(gyarto, productLine, characteristic, utojel);
+                        }
+                    });
+                    $("#productLine").on("change", function () {
+                        utojel = $("#utojelField").val();
+                        gyarto = $("#gyartoT").val();
+                        productLine = $("#productLine").val();
+                        characteristic = $("#characteristic").val();
+                        if ($("#elotagh").length) {
+                            getElotag(gyarto, productLine, characteristic, utojel);
+                        }
+                        if ($("#utojelh").length) {
+                            getUtojel(gyarto, productLine, characteristic, utojel);
+                        }
+                    });
+                    $("#characteristic").on("change", function () {
+                        utojel = $("#utojelField").val();
+                        gyarto = $("#gyartoT").val();
+                        productLine = $("#productLine").val();
+                        characteristic = $("#characteristic").val();
+                        if ($("#elotagh").length) {
+                            getElotag(gyarto, productLine, characteristic, utojel);
+                        }
+                        if ($("#utojelh").length) {
+                            getUtojel(gyarto, productLine, characteristic, utojel);
+                        }
+                    });
+
+                    $("#utojelField").on("keypress", function (e) {
+                        if (e.which === 13) {
+                            utojel = $("#utojelField").val();
+                            gyarto = $("#gyartoT").val();
+                            productLine = $("#productLine").val();
+                            characteristic = $("#characteristic").val();
+                            if ($("#elotagh").length) {
+                                getElotag(gyarto, productLine, characteristic, utojel);
+                            }
+                            if ($("#utojelh").length) {
+                                getUtojel(gyarto, productLine, characteristic, utojel);
+                            }
+                        }
+                    });
+                </script>
+                <script type="text/javascript">
+                    $(function () {
+                        $("#utojelField").autocomplete({
+                            appendTo: "#dialog-similar-product",
+                            source: function (request, response) {
+                                $.ajax({
+                                    url: "/Utojelek/quickSearch",
+                                    dataType: "jsonp",
+                                    data: {
+                                        term: request.term
+                                    },
+                                    success: function (data) {
+                                        response(data);
+                                    }
+                                });
+                            },
+                            minLength: 1,
+                            select: function (event, ui) {
+                                $("#utojelField").val(ui.item.label);
+                                $("#isselected").val("on");
+                                utojel = $("#utojelField").val();
+                                gyarto = $("#gyartoT").val();
+                                productLine = $("#productLine").val();
+                                characteristic = $("#characteristic").val();
+                                if ($("#elotagh").length) {
+                                    getElotag(gyarto, productLine, characteristic, utojel);
+                                }
+                                if ($("#utojelh").length) {
+                                    getUtojel(gyarto, productLine, characteristic, utojel);
+                                }
+
+                            }
+                        });
+                        console.log('autocomplete run');
+                    });
+                </script>
+                <style>
+                    .ui-autocomplete-loading {
+                        background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+                    }
+                </style>
+                <div id="tabs" class="eloutojel-tablazat">
+                    <div class="before-table"><a id="elotaglink" href="#" class="">Előtag</a><a id="utojellink" href="#"
+                            class="active-link">Utójel</a>
+                    </div>
+                    <form id="utojelForm" name="myform" action="admin2e">
+
+                        <input id="utojelh" type="hidden" name="isUtojel:ignore_empty" value="1">
+                        <input type="hidden" id="isselected" name="isSelected" value="">
+                        <div id="tabs-1" class="table-box">
+                            <table class="table table-striped table-hover elo-utojel-tabla" style="width: 100%;">
+                                <colgroup>
+                                    <col span="1" style="width: 8%;">
+                                    <col span="1" style="width: 13%;">
+                                    <col span="1" style="width: 10%;">
+                                    <col span="1" style="width: 20%;">
+                                    <col span="1" style="width: 35%;">
+                                    <col span="1" style="width: 25%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th><input type="text" style="width: 100%;">
+                                        </th>
+                                        <th>
+                                            <select style="width: 100%;">
+                                                <option value="">gyarto</option>
+                                                <option> -</option>
+                                                <option>-</option>
+                                                <option>BEX</option>
+                                                <option>BLT</option>
+                                                <option>CX</option>
+                                                <option>EZO</option>
+                                                <option>FAG</option>
+                                                <option>FBJ</option>
+                                                <option>HIWIN</option>
+                                                <option>INA</option>
+                                                <option>KOK</option>
+                                                <option>KOYO</option>
+                                                <option>LDI</option>
+                                                <option>MLX</option>
+                                                <option>MYT</option>
+                                                <option>NACHI</option>
+                                                <option>NIS</option>
+                                                <option selected="selected">NIS/Y</option>
+                                                <option>NKS</option>
+                                                <option>NSK</option>
+                                                <option>NSK </option>
+                                                <option>NTN</option>
+                                                <option>RHP</option>
+                                                <option>SAMICK</option>
+                                                <option>SKF</option>
+                                                <option>SNR</option>
+                                                <option>THP</option>
+                                                <option>TIM</option>
+                                            </select>
+                                        </th>
+                                        <th>
+                                            <select name="productLine:ignore_empty" style="width: 100%;">
+                                                <option value="" selected="selected">Típus</option>
+                                                <option></option>
+                                                <option> Hengergörgős csapágyak</option>
+                                                <option> Hordógörgős csapágyak</option>
+                                                <option> Tűgörgős csapágyak</option>
+                                                <option>Axiális golyóscsapágyak</option>
+                                                <option>Beálló golyóscsapágyak</option>
+                                                <option>Csapágyegységek</option>
+                                                <option>Egyéb termékek</option>
+                                                <option>Ferde hatásvonalú golyóscsapágy</option>
+                                                <option>Ferde hatásvonalú golyóscsapágyak</option>
+                                                <option>Golyóscsapágyak</option>
+                                                <option>Golyóspersely</option>
+                                                <option>Görgős csapágyak</option>
+                                                <option>Hengergörgős csapágyak</option>
+                                                <option>Hengergörgős csapágyak </option>
+                                                <option>Hordógörgős csapágyak</option>
+                                                <option>Hordógörgős csapágyak </option>
+                                                <option>Kúpgörgős csapágyak</option>
+                                                <option>Lineáris csapágyak</option>
+                                                <option>Mélyhornyú golyóscsapágyak</option>
+                                                <option>Precíziós ferde hatásvonalú golyóscsapágyak</option>
+                                                <option>Precíziós ferdehatásvonalú golyóscsapágyak</option>
+                                                <option>Profilsín vezetés</option>
+                                                <option>Profilsínvezetés</option>
+                                                <option>Tűgörgős csapágyak</option>
+                                                <option>Y-csapágyak</option>
+                                            </select>
+                                        </th>
+                                        <th>
+                                            <select name="characteristic:ignore_empty" style="width: 110%;">
+                                                <option value="" selected="selected">Amire vonatkozik</option>
+
+
+
+
+                                                <option>Anyag</option>
+
+
+                                                <option>Egyéb</option>
+
+
+                                                <option>Komponens</option>
+
+
+                                                <option>Méret</option>
+
+
+                                                <option>Szerkezet</option>
+
+                                            </select>
+                                        </th>
+                                        <th style="padding: 0 0 2rem 0 !important;">Mit jelent</th>
+                                        <th style="padding: 0 0 2rem 0 !important;">Kép</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>W33</td>
+                                        <td>RHP
+                                            TIM
+                                            BEX
+                                            CX
+                                            FBJ
+                                            NACHI
+                                            NIS/Y
+                                            SKF
+                                            SNR</td>
+                                        <td>Hordógörgős csapágyak, Hengergörgős csapágyak</td>
+                                        <td>Szerkezet</td>
+                                        <td style="padding: 1rem 0px 1rem 3rem !important;">Lorem ipsum dolores res. Lorem ipsum deler imanes equem. Lorem ipsum ipsum dolores res ameris. Lorem ipsum deler imanes equem. Lorem ipsum deler imanes equem.</td>
+                                        <td><a class="preview" href="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                            <img src="https://eshop.ntn-snr.com/publicmedia/formatted/167/146/3/en/ES200_1.jpg;maxh=320.jpg">
+                                        </a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front"
+                    style="display: none;"></ul>
+            </div>
+            <div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;">
+            </div>
+            <div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div>
+            <div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div>
+        </div>
+
+        <div tabindex="-1" role="dialog"
+            class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-draggable ui-resizable"
+            aria-describedby="dialog-similar-product" aria-labelledby="ui-id-4"
+            style="position: relative; height: 100rem; width: 1000px; top: 250px; left: 504.5px;">
             <div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span
                     id="ui-id-4" class="ui-dialog-title">KR 16 ELÖ ÉS UTÓJELEK</span><button type="button"
                     class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close"
@@ -1384,7 +1793,7 @@
         border-top: 1px solid #26265f;
     ">
                 <p style="text-transform: initial;">Helyettesítő termékek</p>
-                
+
             </div>
             <div id="tabs">
                 <script type="text/javascript">

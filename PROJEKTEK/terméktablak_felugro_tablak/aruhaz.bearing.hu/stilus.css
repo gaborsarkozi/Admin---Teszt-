@@ -454,3 +454,22 @@ div#dialog-similar-product-elojel {
 .margin-top-div {
     margin: 10rem 0;
 }
+
+.elo-utojel-tabla td {
+    font-size: 14px;
+    text-transform: none;
+    border-right: none;
+    background-color: #ffffff;
+    background: #ffffff;
+    padding: 1rem 3rem !important;
+}
+
+.elo-utojel-tabla th {
+    font-size: 14px;
+    text-align: center;
+}
+
+.elo-utojel-tabla td img {
+    width: 120px;
+}
+
