@@ -829,7 +829,7 @@ select.form-control:not([size]):not([multiple]) {
     text-transform: none;
     margin-bottom: 0; }
   .card.card-statistic-1 .card-body {
-    font-size: 20px; 
+    font-size: 1rem; 
     transition: .5s ease-in-out;}
   .card.card-statistic-2 .card-chart {
     padding-top: 20px;
