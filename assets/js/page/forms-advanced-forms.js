@@ -1,3 +1,80 @@
+// ÚJ MEZŐ HOZZÁADÁSA ÚJ AJÁNLAT ESETÉN // 
+
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.edit-controls form:first'),
+            currentEntry = $(this).parents('.edit-entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.edit-entry:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.edit-entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.edit-controls02 form:first'),
+            currentEntry = $(this).parents('.edit-entry02:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.edit-entry02:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.edit-entry02:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.edit-controls03 form:first'),
+            currentEntry = $(this).parents('.edit-entry03:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.edit-entry03:not(:last) .btn-add')
+            .removeClass('btn-add ').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="icon-close"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.edit-entry03:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+
+// ÚJ MEZŐ HOZZÁADÁSA SZEREKSZTÉS ESETÉN // 
+
 $(function()
 {
     $(document).on('click', '.btn-add', function(e)
@@ -70,6 +147,97 @@ $(function()
 	});
 });
 
+
+// TARTALOM KIKAPCSOLÁS ÉS BEKAPCSOLÁSA ÚJ AJÁNLAT ESETÉN // 
+
+$(function() {
+  $("#toggleArucsoport").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuArucsoport").show();
+      $("#menuArucsoportKikapcs").hide();
+    } else {
+      $("#menuArucsoport").hide();
+      $("#menuArucsoportKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleBannerKep").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuBannerKep").show();
+      $("#menuBannerSzoveg").show();
+      $("#menuBannerKepKikapcs").hide();
+    } else {
+      $("#menuBannerKep").hide();
+      $("#menuBannerSzoveg").hide();
+      $("#menuBannerKepKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekLeirasCim").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekLeirasCim").show();
+      $("#menuTermekLeirasCimKikapcs").hide();
+    } else {
+      $("#menuTermekLeirasCim").hide();
+      $("#menuTermekLeirasCimKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekLeiras").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekLeiras").show();
+      $("#menuTermekLeirasKikapcs").hide();
+    } else {
+      $("#menuTermekLeiras").hide();
+      $("#menuTermekLeirasKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekfotoKivalasztas").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekfotoKivalasztas").show();
+      $("#menuTermekfotoKivalasztasKikapcs").hide();
+    } else {
+      $("#menuTermekfotoKivalasztas").hide();
+      $("#menuTermekfotoKivalasztasKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleFelhasznalasiTerulet").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuFelhasznalasiTerulet").show();
+      $("#menuFelhasznalasiTeruletKepek").show();
+      $("#menuFelhasznalasiTeruletKikapcs").hide();
+    } else {
+      $("#menuFelhasznalasiTerulet").hide();
+      $("#menuFelhasznalasiTeruletKepek").hide();
+      $("#menuFelhasznalasiTeruletKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleJelolesek").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuJelolesek").show();
+      $("#menuJelolesekKikapcs").hide();
+    } else {
+      $("#menuJelolesek").hide();
+      $("#menuJelolesekKikapcs").show();
+    }
+  });
+})
+
 $(function() {
   $("#toggleAkciosAjanlat").click(function() {
     if ($(this).is(":checked")) {
@@ -94,17 +262,121 @@ $(function() {
   });
 })
 
+
+// TARTALOM KIKAPCSOLÁS ÉS BEKAPCSOLÁSA SZERKESZTÉS ESETÉN // 
+
 $(function() {
-  $("#toggleJelolesek").click(function() {
+  $("#toggleArucsoportEdit").click(function() {
     if ($(this).is(":checked")) {
-      $("#menuJelolesek").show();
-      $("#menuJelolesekKikapcs").hide();
+      $("#menuArucsoportEdit").show();
+      $("#menuArucsoportEditKikapcs").hide();
     } else {
-      $("#menuJelolesek").hide();
-      $("#menuJelolesekKikapcs").show();
+      $("#menuArucsoportEdit").hide();
+      $("#menuArucsoportEditKikapcs").show();
     }
   });
 })
+
+$(function() {
+  $("#toggleBannerKepEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuBannerKepEdit").show();
+      $("#menuBannerSzovegEdit").show();
+      $("#menuBannerKepEditKikapcs").hide();
+    } else {
+      $("#menuBannerKepEdit").hide();
+      $("#menuBannerSzovegEdit").hide();
+      $("#menuBannerKepEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekLeirasCimEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekLeirasCimEdit").show();
+      $("#menuTermekLeirasCimEditKikapcs").hide();
+    } else {
+      $("#menuTermekLeirasCimEdit").hide();
+      $("#menuTermekLeirasCimEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekLeirasEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekLeirasEdit").show();
+      $("#menuTermekLeirasEditKikapcs").hide();
+    } else {
+      $("#menuTermekLeirasEdit").hide();
+      $("#menuTermekLeirasEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleTermekfotoKivalasztasEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuTermekfotoKivalasztasEdit").show();
+      $("#menuTermekfotoKivalasztasEditKikapcs").hide();
+    } else {
+      $("#menuTermekfotoKivalasztasEdit").hide();
+      $("#menuTermekfotoKivalasztasEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleFelhasznalasiTeruletEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuFelhasznalasiTeruletEdit").show();
+      $("#menuFelhasznalasiTeruletKepekEdit").show();
+      $("#menuFelhasznalasiTeruletEditKikapcs").hide();
+    } else {
+      $("#menuFelhasznalasiTeruletEdit").hide();
+      $("#menuFelhasznalasiTeruletKepekEdit").hide();
+      $("#menuFelhasznalasiTeruletEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleJelolesekEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuJelolesekEdit").show();
+      $("#menuJelolesekEditKikapcs").hide();
+    } else {
+      $("#menuJelolesekEdit").hide();
+      $("#menuJelolesekEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleAkciosAjanlatEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuAkciosAjanlatEdit").show();
+      $("#menuAkciosAjanlatEditKikapcs").hide();
+    } else {
+      $("#menuAkciosAjanlatEdit").hide();
+      $("#menuAkciosAjanlatEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleUtojelekEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuUtojelekEdit").show();
+      $("#menuUtojelekEditKikapcs").hide();
+    } else {
+      $("#menuUtojelekEdit").hide();
+      $("#menuUtojelekEditKikapcs").show();
+    }
+  });
+})
+
 
 
 "use strict";
