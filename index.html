@@ -137,10 +137,6 @@
                   aria-controls="pills-profile" aria-selected="false">Meglévő ajánlatok szerkesztése</a>
               </li>
 
-              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
-                <a class="nav-link" id="pills-pictures-tab" data-toggle="pill" href="#pills-pictures" role="tab"
-                  aria-controls="pills-pictures" aria-selected="false">Kép adminisztráció</a>
-              </li>
             </ul>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
@@ -234,6 +230,36 @@
                             </div>
                           </div>
                         </div>
+                        <div class="form-group row mb-4">
+
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Katalógós választása
+                            <label class="switch">
+                              <input type="checkbox" id="toggleKatalogusFeltoltes" checked="true" class="custom-switch-input">
+                              <div class="slider round"></div>
+                              <span class="custom-switch-indicator"></span>
+                            </label>
+                          </label>
+
+                          <div class="col-sm-12 col-md-7">
+                            <div id="menuKatalogusFeltoltes">
+                              <div class="form-group">
+                                <div id="fields">
+                                  <div class="controls">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry input-group mb-2">
+                                        <input type="file" class="custom-file-input btn btn-primary" id="customFile" name="filename">
+                                        <label class="custom-file-label" for="customFile">Katalógus kiválasztása</label>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="kikapcsolt-resz-form" id="menuKatalogusFeltoltesKikapcs">
+                              Tartalom kikapcsolva
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -277,30 +303,7 @@
                           </div>
                         </div>
 
-                        <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cikkszám</label>
-                          <div class="col-sm-12 col-md-7">
-                            <div class="form-group d-flex">
-                              <input type="text" class="form-control form-control-btn"
-                                placeholder="Írja be a termék cikkszámát" aria-label="Recipient's username"
-                                aria-describedby="basic-addon2">
-                              <div class="input-group-append ml-md-2">
-                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"
-                                  data-toggle="modal" data-target="#keresesCikkszamAlapjan"><i
-                                    class="fas fa-search"></i>Keresés név alapján</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Árkedvezmény</label>
-                          <div class="col-sm-12 col-md-7">
-                            <div class="form-group">
-                              <input type="text" class="form-control"
-                                placeholder="Állítsa be az árkedvezményt %-os formátumban (pl.: 15.0)">
-                            </div>
-                          </div>
-                        </div>
+
                         <div class="form-group row mb-4">
                           <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Érvényes</label>
                           <div class="col-sm-12 col-md-7">
@@ -743,7 +746,7 @@
                 </div>
               </div>
 
-              <div class="tab-pane fade" id="pills-pictures" role="tabpanel" aria-labelledby="pills-pictures-tab">
+ <!--              <div class="tab-pane fade" id="pills-pictures" role="tabpanel" aria-labelledby="pills-pictures-tab">
 
 
 
@@ -830,7 +833,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -1042,6 +1045,36 @@
                         </div>
                       </div>
                     </div>
+                    <div class="form-group row mb-4">
+
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Katalógós választása
+                        <label class="switch">
+                          <input type="checkbox" id="toggleKatalogusFeltoltesEdit" checked="true" class="custom-switch-input">
+                          <div class="slider round"></div>
+                          <span class="custom-switch-indicator"></span>
+                        </label>
+                      </label>
+
+                      <div class="col-sm-12 col-md-7">
+                        <div id="menuKatalogusFeltoltesEdit">
+                          <div class="form-group">
+                            <div id="fields">
+                              <div class="controls">
+                                <form role="form" autocomplete="off">
+                                  <div class="entry input-group mb-2">
+                                    <input type="file" class="custom-file-input btn btn-primary" id="customFile" name="filename">
+                                    <label class="custom-file-label" for="customFile">Katalógus kiválasztása</label>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="kikapcsolt-resz-form" id="menuKatalogusFeltoltesEditKikapcs">
+                          Tartalom kikapcsolva
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1081,29 +1114,6 @@
                       </div>
                     </div>
 
-                    <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cikkszám</label>
-                      <div class="col-sm-12 col-md-7">
-                        <div class="form-group d-flex">
-                          <input type="text" class="form-control form-control-btn"
-                            placeholder="Írja be a termék cikkszámát" aria-label="Recipient's username"
-                            aria-describedby="basic-addon2" value="CK-230130">
-                          <div class="input-group-append ml-md-2">
-                            <button class="btn btn-primary daterange-btn icon-left btn-icon" data-toggle="modal" data-target="#keresesCikkszamAlapjanEdit" type="button"><i
-                                class="fas fa-search"></i>Keresés név alapján</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Árkedvezmény</label>
-                      <div class="col-sm-12 col-md-7">
-                        <div class="form-group">
-                          <input type="text" class="form-control" value="13.5"
-                            placeholder="Állítsa be az árkedvezményt %-os formátumban (pl.: 15.0)">
-                        </div>
-                      </div>
-                    </div>
                     <div class="form-group row mb-4">
                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Érvényes</label>
                       <div class="col-sm-12 col-md-7">

@@ -260,11 +260,21 @@ select.form-control:not([size]):not([multiple]) {
   background-color: #EC7623 !important; }
 
 .custom-file-label {
-  line-height: 2.2; }
+  line-height: 2.2;
+  cursor: pointer;
+ }
+
   .custom-file-label:after {
+    content: 'Kiválasztás';
+    cursor: pointer;
     height: calc(2.25rem + 4px);
     line-height: 2.2;
-    border-color: transparent; }
+    border-color: transparent;
+    background: #ec7623;
+    color: #fff;
+    font-weight: 600;
+  }
+
   .custom-file-label:focus, .custom-file-label:active {
     box-shadow: none;
     outline: none; }

@@ -1,3 +1,10 @@
+// LINK MEGJELENÍTÉSE FELTÖLTÉSNÉL //
+
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+
 // ÚJ MEZŐ HOZZÁADÁSA ÚJ AJÁNLAT ESETÉN // 
 
 $(function()
@@ -163,6 +170,18 @@ $(function() {
 })
 
 $(function() {
+  $("#toggleKatalogusFeltoltes").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuKatalogusFeltoltes").show();
+      $("#menuKatalogusFeltoltesKikapcs").hide();
+    } else {
+      $("#menuKatalogusFeltoltes").hide();
+      $("#menuKatalogusFeltoltesKikapcs").show();
+    }
+  });
+})
+
+$(function() {
   $("#toggleBannerKep").click(function() {
     if ($(this).is(":checked")) {
       $("#menuBannerKep").show();
@@ -273,6 +292,18 @@ $(function() {
     } else {
       $("#menuArucsoportEdit").hide();
       $("#menuArucsoportEditKikapcs").show();
+    }
+  });
+})
+
+$(function() {
+  $("#toggleKatalogusFeltoltesEdit").click(function() {
+    if ($(this).is(":checked")) {
+      $("#menuKatalogusFeltoltesEdit").show();
+      $("#menuKatalogusFeltoltesEditKikapcs").hide();
+    } else {
+      $("#menuKatalogusFeltoltesEdit").hide();
+      $("#menuKatalogusFeltoltesEditKikapcs").show();
     }
   });
 })
