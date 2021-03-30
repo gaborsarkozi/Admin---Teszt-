@@ -25548,6 +25548,10 @@ input:-webkit-autofill:active
     color: #fff;
   }
 
+  #sticky .help-box-registration {
+    border-radius: 4px;
+  }
+
   .icon-user-follow {
     color: #ec7c04;
     text-decoration: none;
