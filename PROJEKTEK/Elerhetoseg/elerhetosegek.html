@@ -89,23 +89,24 @@
 		margin-bottom: 60px !important
 	}
 
-	::placeholder {
-		color: #000 !important;
-		opacity: 1
-	}
-
-	:-ms-input-placeholder {
-		color: #000 !important
-	}
-
-	::-ms-input-placeholder {
-		color: #000 !important
-	}
 
 	.form-control-label {
 		font-size: 12px;
 		margin-left: 15px
 	}
+
+	.form-control {
+		font-weight: 700;
+		color: #EC7623;
+		font-size: 15px;
+	}
+
+
+	.form-control:focus {
+		color: #EC7623 !important;
+
+}
+
 
 	.msg-info {
 		font-family: 'Inter', sans-serif !important;
@@ -339,6 +340,7 @@ input:checked + .slider {
 input::placeholder {
     color: #bbbbbb !important;
 	font-size: 15px;
+	font-weight: 500;
 }
 
 .form-group {
@@ -364,10 +366,19 @@ a {
 	padding: 0 4.9rem 0 5.2rem;  
 }
 
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #EC7623 !important;
+}
+
 </style>
 
 <body>
-	<div class="container px-4 py-5 mx-auto mt-5">
+	<div class="container py-5 mx-auto mt-5">
 		<div class="card card0 shadow">
 			<div class="d-flex flex-lg-row flex-column-reverse">
 				<div class="card card1">
