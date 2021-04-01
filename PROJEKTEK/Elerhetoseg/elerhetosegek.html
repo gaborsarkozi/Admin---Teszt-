@@ -49,11 +49,11 @@
 
 
 	label {
-    font-weight: 500;
+		font-weight: 500;
 	}
 
 	.nav-pills .nav-link {
-    font-weight: 500;
+		font-weight: 500;
 	}
 
 	button:focus {
@@ -105,7 +105,7 @@
 	.form-control:focus {
 		color: #EC7623 !important;
 
-}
+	}
 
 
 	.msg-info {
@@ -218,163 +218,323 @@
 		background: #EC7623;
 		transition: 0.3s;
 	}
-	.switch input { 
-    display:none;
-}
-.switch {
-    display:inline-block;
-    width:60px;
-    height:30px;
-    margin:8px;
-    transform:translateY(50%);
-    position:relative;
-}
-/* Style Wired */
-.slider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    cursor: pointer;
-    border: 4px solid transparent;
-    overflow: hidden;
-    transition: .4s;
-    border-radius: 2.5rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #e4e4e4;
-    background-color: #f7f7f7;
-    transition: background-color 0.2s cubic-bezier(0.34, 0.93, 0.85, 0.91);
-    height: 22px;
-    width: 44px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
-}
-.slider:before {
-    background: #ecf0f3;
-    border-radius: 15px;
-    box-shadow: none;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #e9e9e9;
-    border-radius: 30px;
-    transform: translateX(-22px);
-    transition: .4s;
-}
 
-input:checked + .slider:before {
-	transform: translateX(22px);
-    background: #ecf0f3;
-}
+	.switch input {
+		display: none;
+	}
 
-input:checked + .slider {
-	transition: 1.5s;
-    border-color: #ffffff;
-    background-color: #ec7623;
-    box-shadow: -6px -4px 0px 0px #ffffff, 8px 4px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6, 1px 0px 4px 0px #ffffff inset;
-}
+	.switch {
+		display: inline-block;
+		width: 60px;
+		height: 30px;
+		margin: 8px;
+		transform: translateY(50%);
+		position: relative;
+	}
 
-.leiras-adatvedelem {
-	text-align: left;
-	font-size: 13px;
-}
+	/* Style Wired */
+	.slider {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		cursor: pointer;
+		border: 4px solid transparent;
+		overflow: hidden;
+		transition: .4s;
+		border-radius: 2.5rem;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #e4e4e4;
+		background-color: #f7f7f7;
+		transition: background-color 0.2s cubic-bezier(0.34, 0.93, 0.85, 0.91);
+		height: 22px;
+		width: 44px;
+		border-radius: 15px;
+		overflow: hidden;
+		box-shadow: 0px -1px 0px 0px #ffffff, 1px 1px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
+	}
 
-.toggle-switch-helye {
-	position: relative;
-    top: -20px;
-}
+	.slider:before {
+		background: #ecf0f3;
+		border-radius: 15px;
+		box-shadow: none;
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #e9e9e9;
+		border-radius: 30px;
+		transform: translateX(-22px);
+		transition: .4s;
+	}
 
-.btn-kuldes {
-	color: white;
-    font-size: 15px;
-    font-weight: 600;
-    height: 50px;
-    border-radius: 3px;
-    display: inline-flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    -webkit-transition: .4s;
-    transition: .4s;
-    background-color: #ec7623;
-	width: 20.7rem;
-    -moz-animation: pulsebtn 2s infinite;
-    -webkit-animation: pulsebtn 2s infinite;
-    animation: pulsebtn 2s infinite;
-}
+	input:checked+.slider:before {
+		transform: translateX(22px);
+		background: #ecf0f3;
+	}
 
-@keyframes pulsebtn {
-    0% {
-        box-shadow: 0 0 0 0 #EC7623;
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(88, 120, 243, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 50px rgba(88, 120, 243, 0);
-    }
-}
+	input:checked+.slider {
+		transition: 1.5s;
+		border-color: #ffffff;
+		background-color: #ec7623;
+		box-shadow: -1px 0px 0px 0px #ffffff00, 0px 1px 3px 0px #d1d9e6, 3px 2px 20px 0px #d1d9e6, 0px 1px 0px 0px #ffffff inset;
+	}
 
-.btn-kuldes:hover {
-	cursor: pointer;
-	color: #fff;
-}
+	.leiras-adatvedelem {
+		text-align: left;
+		font-size: 13px;
+	}
 
-.form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    border-color: #ec772338;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem #ec772338;
-}
+	.toggle-switch-helye {
+		position: relative;
+		top: -20px;
+	}
 
-input::placeholder {
-    color: #bbbbbb !important;
-	font-size: 15px;
-	font-weight: 500;
-}
+	.btn-kuldes {
+		color: white;
+		font-size: 15px;
+		font-weight: 600;
+		height: 50px;
+		border-radius: 3px;
+		display: inline-flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		padding-left: 30px;
+		padding-right: 30px;
+		-webkit-transition: .4s;
+		transition: .4s;
+		background-color: #ec7623;
+		width: 20.7rem;
+		-moz-animation: pulsebtn 2s infinite;
+		-webkit-animation: pulsebtn 2s infinite;
+		animation: pulsebtn 2s infinite;
+	}
 
-.form-group {
-	font-size: 15px !important;
-}
+	@keyframes pulsebtn {
+		0% {
+			box-shadow: 0 0 0 0 #EC7623;
+		}
 
-p.mb-0 {
-    font-size: 15px;
-	font-weight: 500;
-}
+		70% {
+			box-shadow: 0 0 0 10px rgba(88, 120, 243, 0);
+		}
 
-a:hover {
-    color: #EC7623;
-    text-decoration: underline;
-}
+		100% {
+			box-shadow: 0 0 0 50px rgba(88, 120, 243, 0);
+		}
+	}
 
-a {
-    color: #EC7623;
-	font-weight: 600;
-}
+	.btn-kuldes:hover {
+		cursor: pointer;
+		color: #fff;
+	}
 
-.padding-adatvedelem {
-	padding: 0 4.9rem 0 5.2rem;  
-}
+	.form-control:focus {
+		color: #495057;
+		background-color: #fff;
+		border-color: #ec772338;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem #ec772338;
+	}
+
+	input::placeholder {
+		color: #bbbbbb !important;
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	.form-group {
+		font-size: 15px !important;
+	}
+
+	p.mb-0 {
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	a:hover {
+		color: #EC7623;
+		text-decoration: underline;
+	}
+
+	a {
+		color: #EC7623;
+		font-weight: 600;
+	}
+
+	.padding-adatvedelem {
+		padding: 0 4.9rem 0 5.2rem;
+	}
 
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-  transition: background-color 5000s;
-  -webkit-text-fill-color: #EC7623 !important;
-}
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		transition: background-color 5000s;
+		-webkit-text-fill-color: #EC7623 !important;
+	}
 
+	#banner1 h1,
+	#banner1 h2,
+	#banner1 h3,
+	#banner1 h4,
+	#banner1 h5,
+	#banner1 h6 {
+		color: #3e4555;
+	}
+
+	#banner1 {
+		background-image: url(newsletter_02.png);
+		background-size: cover;
+		background-position-y: 71%;
+	}
+
+	#banner1 .bg-light {
+		background-color: #f4f8fa !important;
+	}
+
+	#banner1 h2 {
+		letter-spacing: -1px;
+		color: #ffffff;
+		font-family: 'Inter';
+	}
+
+	#banner1 .line-height {
+		height: 72px;
+	}
+
+	#banner1 .form-control.text-email {
+		color: #8d97ad;
+		border-radius: 4px 0 0 4px;
+		text-indent: 35px;
+		width: 61%;
+		-webkit-box-shadow: -5px 0 30px 0 rgba(0, 0, 0, 0.05);
+		box-shadow: -5px 0 30px 0 rgba(0, 0, 0, 0.05);
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	}
+
+	#banner1 .form-control.text-email:focus {
+		box-shadow: none;
+	}
+
+	#banner1 .btn-sub {
+		border-radius: 0 4px 4px 0;
+		width: auto;
+		padding: 0 16px;
+		cursor: pointer;
+		margin-left: -4px;
+		-webkit-box-shadow: 5px 0 30px 0 rgba(0, 0, 0, 0.05);
+		box-shadow: 5px 0 30px 0 rgba(0, 0, 0, 0.05);
+		-webkit-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+	}
+
+
+	@media (min-width: 2301px) and (max-width: 2700px) {
+		#banner1 {
+			background-image: url(newsletter_02.png);
+			background-size: cover;
+			background-position-y: 71%;
+		}
+	}
+
+	@media (min-width: 1900px) and (max-width: 2300px) {
+		#banner1 {
+			/* background-position: 80% center; */
+		}
+	}
+
+	@media (min-width: 1500px) and (max-width: 1680px) {
+		#banner1 {
+			background-position: right center;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		#banner1 {
+			background-position: right -14em center;
+		}
+
+		#banner1 h2 {
+			font-size: 40px;
+		}
+
+		#banner1 .form-control.text-email {
+			width: 59%;
+		}
+
+		#banner1 .btn-sub {
+			padding: 0 20px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.banner {
+			padding: 30px 0;
+		}
+
+		#banner1 {
+			background-image: none;
+		}
+
+		#banner1 .line-height {
+			font-size: 14px;
+			line-height: 50px;
+		}
+
+		#banner1 .form-control.text-email {
+			border-radius: 4px;
+			text-indent: 20px;
+		}
+
+		#banner1 .btn-sub {
+			border-radius: 0 4px 4px 0;
+			padding: 0 15px;
+		}
+
+		#banner1 img {
+			margin-top: 25px;
+		}
+	}
+
+	@media (max-width: 320px) {
+		#banner1 .btn-sub {
+			padding: 0 10px;
+		}
+	}
+
+	#banner1 .btn-success-gradiant {
+		background: #ffffff;
+		color: #EC7623 !important;
+		font-weight: 600 !important;
+	}
+
+	#banner1 .font-weight-medium {
+		font-weight: 500;
+	}
+
+	#banner1 .font-16 {
+		font-size: 16px;
+	}
+
+	.img-fluid {
+		max-width: 75%;
+		height: auto;
+	}
+
+	.hirlevel-szoveg {
+		font-weight: 500;
+		color: #ffffff;
+	}
 </style>
 
 <body>
@@ -412,36 +572,42 @@ input:-webkit-autofill:active  {
 								<div class="tab-pane fade show active" id="pills-home" role="tabpanel"
 									aria-labelledby="pills-home-tab">
 									<form>
-									<div class="form-group">
-									  <label for="exampleInputEmail1">Termék adatai</label>
-									  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Adja meg a termék adatait">
-									</div>
-									<div class="form-group">
-									  <label for="exampleInputPassword1">Telefonszám vagy email cím</label>
-									  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Adjon meg egy elérhetőséget">
-									</div>
-								  </form>
+										<div class="form-group">
+											<label for="exampleInputEmail1">Termék adatai</label>
+											<input type="text" class="form-control" id="exampleInputEmail1"
+												aria-describedby="emailHelp" placeholder="Adja meg a termék adatait">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">Telefonszám vagy email cím</label>
+											<input type="text" class="form-control" id="exampleInputPassword1"
+												placeholder="Adjon meg egy elérhetőséget">
+										</div>
+									</form>
 								</div>
 								<div class="tab-pane fade" id="pills-profile" role="tabpanel"
 									aria-labelledby="pills-profile-tab">
 									<form>
 										<div class="form-group">
-										  <label for="exampleInputPassword1">Telefonszám</label>
-										  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Adja meg a telefonszámát!">
+											<label for="exampleInputPassword1">Telefonszám</label>
+											<input type="text" class="form-control" id="exampleInputPassword1"
+												placeholder="Adja meg a telefonszámát!">
 										</div>
-									  </form></div>
+									</form>
+								</div>
 								<div class="tab-pane fade" id="pills-contact" role="tabpanel"
 									aria-labelledby="pills-contact-tab">
 									<form>
 										<div class="form-group">
-										  <label for="exampleInputEmail1">Megjegyzés</label>
-										  <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
+											<label for="exampleInputEmail1">Megjegyzés</label>
+											<textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
 										</div>
 										<div class="form-group">
-										  <label for="exampleInputPassword1">Telefonszám vagy email cím</label>
-										  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Adjon meg egy elérhetőséget">
+											<label for="exampleInputPassword1">Telefonszám vagy email cím</label>
+											<input type="text" class="form-control" id="exampleInputPassword1"
+												placeholder="Adjon meg egy elérhetőséget">
 										</div>
-									  </form></div>
+									</form>
+								</div>
 							</div>
 
 						</div>
@@ -452,12 +618,14 @@ input:-webkit-autofill:active  {
 								<label class="switch">
 									<input type="checkbox" checked>
 									<span class="slider"></span>
-							</div>	
+								</label>
+							</div>
 							<div class="col-sm-10 leiras-adatvedelem mb-5">
-							</label>Kijelentem, hogy a <a href="">rövidített adatvédelmi tájékoztatót</a> elolvastam, 
-							annak tartalmát megismertem, megértettem, tudomásul vettem, valamint a fent megadott adataim kezeléséhez önkéntesen hozzájárulok.
-							</div>				
-						  </div>
+								Kijelentem, hogy a <a href="">rövidített adatvédelmi tájékoztatót</a> elolvastam,
+								annak tartalmát megismertem, megértettem, tudomásul vettem, valamint a fent megadott
+								adataim kezeléséhez önkéntesen hozzájárulok.
+							</div>
+						</div>
 						<div class="g-recaptcha d-flex justify-content-center" data-sitekey="=== Your site key ===">
 						</div>
 						<button class="btn my-5 btn-kuldes">Kérés küldése</button>
@@ -539,18 +707,30 @@ input:-webkit-autofill:active  {
 								</div>
 								<div class="col-md-9 pl-4 align-items-center">
 									<div class="row mx-0">
-										<div class="col p-0"><p class="mb-0 text-left">Hétfő-Csütörtök</p></div>
-										<div class="col p-0"><p class="mb-0 text-left">8:00 - 16:30</p></div>									
+										<div class="col p-0">
+											<p class="mb-0 text-left">Hétfő-Csütörtök</p>
+										</div>
+										<div class="col p-0">
+											<p class="mb-0 text-left">8:00 - 16:30</p>
+										</div>
 									</div>
 
 									<div class="row mx-0">
-										<div class="col p-0"><p class="mb-0 text-left">Péntek</p></div>
-										<div class="col p-0"><p class="mb-0 text-left">8:00 - 16:00</p></div>	
+										<div class="col p-0">
+											<p class="mb-0 text-left">Péntek</p>
+										</div>
+										<div class="col p-0">
+											<p class="mb-0 text-left">8:00 - 16:00</p>
+										</div>
 									</div>
 
 									<div class="row mx-0">
-										<div class="col p-0"><p class="mb-0 text-left">Szombat-Vasárnap</p></div>
-										<div class="col p-0"><p class="mb-0 text-left">zárva</p></div>
+										<div class="col p-0">
+											<p class="mb-0 text-left">Szombat-Vasárnap</p>
+										</div>
+										<div class="col p-0">
+											<p class="mb-0 text-left">zárva</p>
+										</div>
 									</div>
 
 								</div>
@@ -576,7 +756,51 @@ input:-webkit-autofill:active  {
 			</div>
 		</div>
 	</div>
+
+	<div class="container py-5 mx-auto mt-5">
+		<div class="bg-light">
+			<div id="banner1" class="banner shadow">
+				<div class="container">
+					<div class="row p-5">
+						<div class="col-md-7 col-lg-7 align-self-center">
+							<h2 class="title my-3 font-weight-bold">Iratkozzon fel hírlevelünkre!</h2>
+							<p class="mt-1 mb-3 hirlevel-szoveg">Hogy elsőkézből értesüljön legújabb ajánlatainkról,
+								újdonságainkról.</p>
+
+							<div class="mt-1 d-inline">
+								<label class="switch" style="    width: 40px;
+							height: 20px;
+							margin: 8px 8px 8px 0;">
+									<input type="checkbox" checked="">
+									<span class="slider"></span>
+								</label>
+
+							</div>
+							<div class="d-inline" style="font-size: 13px;
+						color: #ffffff;">Hozzájárulok ahhoz, hogy a Bearing Kft. a nevemet és e-mail címemet hírlevelezési céllal kezelje
+								és a részemre gazdasági reklámot is tartalmazó email hírleveleket küldjön.</div>
+							<div class="mt-4">
+								<div class="input-group mb-3">
+									<input type="email" class="form-control border-0 line-height text-email"
+										placeholder="Adja meg az email címét">
+									<div class="input-group-append shadow">
+										<button
+											class="btn btn-success-gradiant line-height font-16 shadow border-0 btn-sub"
+											type="submit" id="button-addon2">Feliratkozom</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-5 col-lg-5 d-flex justify-content-center ml-auto">
+							<!-- 	<img src="newsletter_small_01.png" alt="We are Digital Agency" class="img-fluid" /> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 </body>
 
 </html>
