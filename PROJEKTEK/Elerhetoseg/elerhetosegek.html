@@ -249,8 +249,8 @@
 		border-color: #e4e4e4;
 		background-color: #f7f7f7;
 		transition: background-color 0.2s cubic-bezier(0.34, 0.93, 0.85, 0.91);
-		height: 22px;
-		width: 44px;
+		height: 15px;
+		width: 37px;
 		border-radius: 15px;
 		overflow: hidden;
 		box-shadow: 0px -1px 0px 0px #ffffff, 1px 1px 12px 0px #d1d9e6, 4px 4px 4px 0px #d1d9e6 inset, -4px -4px 4px 0px #ffffff inset;
@@ -407,13 +407,13 @@
 	}
 
 	#banner1 .line-height {
-		height: 72px;
+		height: 40px;
 	}
 
 	#banner1 .form-control.text-email {
 		color: #8d97ad;
-		border-radius: 4px 0 0 4px;
-		text-indent: 35px;
+		border-radius: 4px;
+		text-indent: 0;
 		width: 61%;
 		-webkit-box-shadow: -5px 0 30px 0 rgba(0, 0, 0, 0.05);
 		box-shadow: -5px 0 30px 0 rgba(0, 0, 0, 0.05);
@@ -426,11 +426,11 @@
 	}
 
 	#banner1 .btn-sub {
-		border-radius: 0 4px 4px 0;
+		border-radius: 4px;
 		width: auto;
 		padding: 0 16px;
 		cursor: pointer;
-		margin-left: -4px;
+		margin-left: 0;
 		-webkit-box-shadow: 5px 0 30px 0 rgba(0, 0, 0, 0.05);
 		box-shadow: 5px 0 30px 0 rgba(0, 0, 0, 0.05);
 		-webkit-transition: all 0.5s ease-in-out;
@@ -459,23 +459,7 @@
 		}
 	}
 
-	@media (max-width: 1100px) {
-		#banner1 {
-			background-position: right -14em center;
-		}
 
-		#banner1 h2 {
-			font-size: 40px;
-		}
-
-		#banner1 .form-control.text-email {
-			width: 59%;
-		}
-
-		#banner1 .btn-sub {
-			padding: 0 20px;
-		}
-	}
 
 	@media (max-width: 767px) {
 		.banner {
@@ -535,6 +519,10 @@
 		font-weight: 500;
 		color: #ffffff;
 	}
+
+	div#banner1 {
+    border-radius: 4px;
+}
 </style>
 
 <body>
@@ -764,13 +752,11 @@
 					<div class="row p-5">
 						<div class="col-md-7 col-lg-7 align-self-center">
 							<h2 class="title my-3 font-weight-bold">Iratkozzon fel hírlevelünkre!</h2>
-							<p class="mt-1 mb-3 hirlevel-szoveg">Hogy elsőkézből értesüljön legújabb ajánlatainkról,
+							<p class="mt-1 mb-5 hirlevel-szoveg">Hogy elsőkézből értesüljön legújabb ajánlatainkról,
 								újdonságainkról.</p>
 
 							<div class="mt-1 d-inline">
-								<label class="switch" style="    width: 40px;
-							height: 20px;
-							margin: 8px 8px 8px 0;">
+								<label class="switch" style="width: 32px; height: 9px; margin: 8px 8px 8px 0;">
 									<input type="checkbox" checked="">
 									<span class="slider"></span>
 								</label>
@@ -781,12 +767,18 @@
 								és a részemre gazdasági reklámot is tartalmazó email hírleveleket küldjön.</div>
 							<div class="mt-4">
 								<div class="input-group mb-3">
+									<input type="text" class="form-control border-0 line-height text-email"
+										placeholder="Adja meg a nevét">
+								</div>
+								<div class="input-group mb-3">
 									<input type="email" class="form-control border-0 line-height text-email"
 										placeholder="Adja meg az email címét">
+								</div>
+								<div class="input-group mb-3">
 									<div class="input-group-append shadow">
 										<button
 											class="btn btn-success-gradiant line-height font-16 shadow border-0 btn-sub"
-											type="submit" id="button-addon2">Feliratkozom</button>
+											type="submit" id="button-addon2">Feliratkozás</button>
 									</div>
 								</div>
 
