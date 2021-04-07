@@ -2232,3 +2232,67 @@ p.card-title {
 i {
     line-height: 0 !important;
 }
+
+h3 i {
+    font-size: 1.25rem;
+}
+
+.tab-pane .card-header {
+  padding: 3rem 1.5rem 2rem  !important;
+}
+
+.card-body {
+  padding: 2.25rem !important;
+}
+
+.btn.focus, .btn:focus {
+  box-shadow: 0 0 0 0.2rem rgb(236 118 35 / 25%) !important;
+}
+
+/* 
+@media (min-width: 576px)
+{.modal-dialog {
+    margin: 3rem !important;
+}}
+
+
+.modal-dialog {
+  position: absolute !important;
+  right: 0;
+  bottom: 0;
+} */
+
+.alert{
+  display: none;
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+}
+
+.popup {
+  box-shadow: 0 0px 40px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 25px 50px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.popup.success .popup-title {
+  background: #00c6ff;
+  background: -webkit-linear-gradient(to top, #ec7623 #ec7623);
+  background: linear-gradient(to top, #ec7623, #ec7623);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popup p.popup-title {
+  margin: 5px 0;
+  font-weight: 700;
+  display: block !important;
+  font-size: 20px !important;
+  letter-spacing: 0 !important;
+}
+.popup p.popup-content {
+  font-size: 16px;
+  font-weight: 400;
+}
