@@ -2151,6 +2151,7 @@ input:checked+.slider:before {
     padding-left: 30px;
     padding-right: 30px;
     background-color: #ec7623;
+
 }
 
 .card-custom {
@@ -2289,6 +2290,7 @@ h3 i {
 }
 
 .popup p.popup-title {
+  text-align: left;
   margin: 5px 0;
   font-weight: 700;
   display: block !important;
@@ -2301,3 +2303,6 @@ h3 i {
   color: #211061;
 }
 
+select.form-control:not([size]):not([multiple]) {
+  height: calc(2.75rem + 2px) !important;
+}
