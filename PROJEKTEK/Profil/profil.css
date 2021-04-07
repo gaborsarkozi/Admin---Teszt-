@@ -2151,7 +2151,6 @@ input:checked+.slider:before {
     padding-left: 30px;
     padding-right: 30px;
     background-color: #ec7623;
-    width: inherit
 }
 
 .card-custom {
@@ -2241,6 +2240,10 @@ h3 i {
   padding: 3rem 1.5rem 2rem  !important;
 }
 
+.card-header-megrendelesek {
+  padding: 3rem 1.5rem 2rem  !important;
+}
+
 .card-body {
   padding: 2.25rem !important;
 }
@@ -2293,6 +2296,8 @@ h3 i {
   letter-spacing: 0 !important;
 }
 .popup p.popup-content {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: .875rem;
+  font-weight: 600;
+  color: #211061;
 }
+
