@@ -125,7 +125,7 @@
   
   a {
     text-decoration: none;
-    color: #5e72e4;
+    color: #25205e !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
   }
@@ -2305,4 +2305,74 @@ h3 i {
 
 select.form-control:not([size]):not([multiple]) {
   height: calc(2.75rem + 2px) !important;
+}
+
+.table-responsive {
+  overflow-x: inherit !important;
+}
+
+
+.eddigi-rendelesek td {
+font-size: 16px !important;
+font-weight: 500;
+}
+
+tr.hide-table-padding td {
+  padding: 0;
+}
+
+.expand-button {
+	position: relative;
+}
+
+.accordion-toggle .expand-button:after
+{
+  position: absolute;
+  left:.75rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  content: '-';
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.accordion-toggle.collapsed .expand-button:after
+{
+  content: '+';
+}
+
+
+
+/* TÁBLÁZAT */ 
+
+td.border-0.align-middle {
+  text-align: left !important;
+  padding: 4px 8px;
+  line-height: 1;
+  color: #211061 !important;
+}
+
+td input, select {
+  border-radius: 5px;
+  border: 4px solid #f8f9fa;
+  font-weight: 400;
+  padding: 4px 10px;
+  width: 47%;
+}
+
+td label {
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+td i.icon-basket.icon-merete {
+  color: #EC7623;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+td .add_cart_button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

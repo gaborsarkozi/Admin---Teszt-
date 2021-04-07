@@ -8,6 +8,7 @@
     <title>aruhaz.bearing.hu - Profil oldal</title>
 
     <link rel="stylesheet" href="profil.css">
+<!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
 
     <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -466,140 +467,126 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form>
-                                <h6 class="heading-small text-muted mb-4">Keresési filterek beállítása</h6>
-                                <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-username">Állapot</label>
-                                                  <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option value="">Összes</option>
-                                                    <option>Lezárt</option>
-                                                    <option selected="selected">Nyitott</option>
-                                                    <option>Sztornó</option>
-                                                    <option>Új</option>
-                                                  </select>
+                            <div class="table-responsive">
+                                <table class="table eddigi-rendelesek">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" style="width: 40%;" class="border-0 bg-light">
+                                        <div class="p-2 px-3 ">Dátum</div>
+                                      </th>
+                                      <th scope="col" style="width: 30%;" class="border-0 bg-light">
+                                        <div class="py-2 ">Állapot</div>
+                                      </th>
+                                      <th scope="col" style="width: 30%;" class="border-0 bg-light">
+                                        <div class="py-2 ">Akció</div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row" class="border-0">
+                                        <div class="p-2">
+                                          <div class="ml-3 d-inline-block align-middle">
+                                            <h6 class="mb-0">2021/04/07 13:03:19.733 GMT+2</h6>
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <td class="border-0 align-middle">Új</td>
+                                      <td class="border-0 align-middle"><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="
+                                        icon-magnifier-add mr-3"></i>Rendelés megtekintése</a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="">
+                                        <div class="row justify-content-center ">
+                                            <div class="col-xl-12">
+                                                <div class="card shadow-lg ">
+                                                    <div class="row p-2 mt-3 justify-content-between mx-sm-2">
+                                                        <div class="col">
+                                                            <p class="text-muted space mb-0 shop">Megrendelés dátuma: 2021/04/07 13:03:19.733 GMT+2</p>
+                                                            <p class="text-muted space mb-0 shop">BP-001 rakártból</p>
+                                                            <p class="text-muted space mb-0 shop">Státusz: Új</p>
+                                                        </div>  
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-email">Termékek</label>
-                                                <input type="text" id="input-product"
-                                                    class="form-control form-control-alternative"
-                                                    placeholder="Írjon be egy terméknevet">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                 
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-first-name">Vásárlási időszak kezdete</label>
-                                                <input type="date" id="input-first-name"
-                                                    class="form-control form-control-alternative"
-                                                    >
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-last-name">Vásárlási időszak vége</label>
-                                                <input type="date" id="input-last-name"
-                                                    class="form-control form-control-alternative"
-                                                    >
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-12 text-center">
-                                            <button type="button"class="btn my-5 px-3 btn-modositas">Megrendelések lekérdezése</button>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <h6 class="heading-small text-muted mb-4">A szűrési feltételek alapján kapott megrendelések</h6>
-                                <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-username">Dátum</label>
-                                                  <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option value="">Összes</option>
-                                                    <option>Lezárt</option>
-                                                    <option selected="selected">Nyitott</option>
-                                                    <option>Sztornó</option>
-                                                    <option>Új</option>
-                                                  </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-email">Állapot</label>
-                                                <input type="text" id="input-product"
-                                                    class="form-control form-control-alternative"
-                                                    placeholder="Írjon be egy terméknevet">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-<!--                                 <hr class="my-4">
+                                        <div class="row">
+                                            <div class="col-lg-12 p-0 shadow mb-5">
+                                
+                                                <!-- Shopping cart table -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2 px-3">Kép</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width: 120px;">Termék</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Gyártó</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width: 80px;">Méret</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2 px-3">Gyártói azonosító</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Listaár (HUF/db)</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Mennyiség</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2 px-3">Ár (HUF)</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width: 150px;">Kosár</div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bow-wrap-body">
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" title=""><img style="max-width: 70%;" src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a></div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a href="">6000 2RS</a></td>
+                                                                <td class="border-0 align-middle">CX</td>
+                                                                <td class="border-0 align-middle">10X26X8X</td>
+                                                                <td class="border-0 align-middle  ikon-kozepre-zár">6000-2RS</td>
+                                                                <td class="border-0 align-middle">202</td>
+                                                                <td class="border-0 align-middle">2</td>
+                                                                <td class="border-0 align-middle">405</td>
+                                                                
+                                                                <td style="white-space:nowrap" class="border-0 align-middle">
+                                                                    <input type="number" class="span1" value="1">
+                                                                    <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                                                                    <label class="piece_label">DB</label>
+                                                                    <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
+                                                                </td>
+                                
+                                                            </tr>
 
-                                <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                                <div class="pl-lg-4">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-address">Address</label>
-                                                <input id="input-address" class="form-control form-control-alternative"
-                                                    placeholder="Home Address"
-                                                    value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
-                                                    type="text">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- End -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-lg-4">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-city">City</label>
-                                                <input type="text" id="input-city"
-                                                    class="form-control form-control-alternative" placeholder="City"
-                                                    value="New York">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group focused">
-                                                <label class="form-control-label" for="input-country">Country</label>
-                                                <input type="text" id="input-country"
-                                                    class="form-control form-control-alternative" placeholder="Country"
-                                                    value="United States">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <div class="form-group">
-                                                <label class="form-control-label" for="input-country">Postal
-                                                    code</label>
-                                                <input type="number" id="input-postal-code"
-                                                    class="form-control form-control-alternative"
-                                                    placeholder="Postal code">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr class="my-4">
-
-                                <h6 class="heading-small text-muted mb-4">About me</h6>
-                                <div class="pl-lg-4">
-                                    <div class="form-group focused">
-                                        <label>About Me</label>
-                                        <textarea rows="4" class="form-control form-control-alternative"
-                                            placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                                    </div>
-                                </div> -->
-                            </form>
+                                  </div>
+                              </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
              <div class="row py-5">
                 <div class="col-xl-12">
                     <div class="card shadow">
@@ -610,9 +597,540 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                           
-                        </div>
+                       <!--  <div class="col-lg-12 py-5 bg-white rounded shadow mb-5">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="p-2 px-3">Kép</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2" style="width: 120px;">Termék</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2">Gyártó</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2" style="width: 80px;">Méret</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="p-2 px-3">Helyettesítő termék</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2">Listaár (HUF/db)</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2" style="width: 125px;">Online kedvezmény %
+                                                </div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="p-2 px-3">Ár net (HUF/db)</div>
+                                            </th>
+                                            <th scope="col" class="border-0 bg-light">
+                                                <div class="py-2" style="width: 150px;">Kosár</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bow-wrap-body">
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 16</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">NIS/Y</td>
+                                            <td class="border-0 align-middle">16X6X28 <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">1605</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">1605
+                                                <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 16 PP A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">NTN</td>
+                                            <td class="border-0 align-middle">16X6X28
+                                                <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">9814</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">9814 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 16 X</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">-</td>
+                                            <td class="border-0 align-middle">16X6X28<div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">4868</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">4868 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 16 PP A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">INA</td>
+                                            <td class="border-0 align-middle">16X8X32
+                                                <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">10038</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">10038 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">NTN</td>
+                                            <td class="border-0 align-middle">22X10X36<div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">7195</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">7195 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">INA</td>
+                                            <td class="border-0 align-middle">22X10X36
+                                                <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">0</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">0 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 22 PP X A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">NTN</td>
+                                            <td class="border-0 align-middle">22X10X36<div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">10793</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">10793 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 22 PP</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">-</td>
+                                            <td class="border-0 align-middle">26X10X36
+                                                <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">7896</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">7896 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+            
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 26 PP A</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">További KR 16 elő és utójelek megtekintése</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">NTN</td>
+                                            <td class="border-0 align-middle">26X10X36<div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">11053</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">11053 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="box-tr">
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <a target="_new" class="preview" href="/static/arukepek/KR.jpg"><img src="/static/arukepek/small/KR_s.jpg" alt=""></a>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle"><a href="">KR 30 PP</a>
+                                                <div class="wrapper">
+                                                    <i class="icon-settings"></i>
+                                                    <div class="tooltip tooltip-utojelek">
+                                                        <a href="search.html">Elő- és utójelek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle">-</td>
+                                            <td class="border-0 align-middle">30X12X40
+                                                <div class="wrapper">
+                                                    <i class="icon-crop"></i>
+                                                    <div class="tooltip ">
+                                                        Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső
+                                                        szerkezet eltérhet!<a href="search.html">Termékek mutatása <i class="icon-crop" style="position: inherit;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="border-0 align-middle  ikon-kozepre-zár">
+                                                <div class="wrapper">
+                                                    <i class="icon-refresh"></i>
+                                                    <div class="tooltip tooltip-helyettesito">
+                                                        <a href="search.html">Helyettesítő termékek</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+            
+                                            <td class="border-0 align-middle">4202</td>
+                                            <td class="border-0 align-middle">0.0</td>
+                                            <td class="border-0 align-middle">4202 <div class="wrapper">
+                                                    <i class="icon-tag"></i>
+                                                    <div class="tooltip tooltip-kedvezmeny">
+                                                        <a href="search.html">30% kedvezmény</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td style="white-space:nowrap" class="border-0 align-middle">
+                                                <div class="menu-item btn btn-bearing" id="cart-padding"><a href="#" id="cart">Ajánlatkérés
+                                                        <span class="kosarak-ikon"><i class="fa icon-briefcase ml-2" aria-hidden="true"></i> </span></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
