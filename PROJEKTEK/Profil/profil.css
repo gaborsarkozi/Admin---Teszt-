@@ -2280,6 +2280,10 @@ h3 i {
   right: 2rem;
 }
 
+.alert.fade.show {
+  z-index: 9999;
+}
+
 .popup {
   box-shadow: 0 0px 40px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
