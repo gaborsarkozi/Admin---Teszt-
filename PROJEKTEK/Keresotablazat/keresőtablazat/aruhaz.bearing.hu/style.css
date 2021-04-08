@@ -206,8 +206,17 @@ th.border-0.bg-light {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
+
+.wrapper .tooltip-szallitas a {
+    color: #2B0BF1;
+}
+
 .wrapper .tooltip a:hover {
     color: #EC7623 !important;
+}
+
+.wrapper .tooltip-szallitas a:hover {
+    color: #2B0BF1 !important;
 }
 .wrapper .tooltip-small {
     width: auto;
@@ -300,6 +309,11 @@ th.border-0.bg-light {
 
 .tooltip-kedvezmeny {
     width: 15rem !important;
+    height: 4.5rem !important;
+}
+
+.tooltip-szallitas {
+    width: 20rem !important;
     height: 4.5rem !important;
 }
 
