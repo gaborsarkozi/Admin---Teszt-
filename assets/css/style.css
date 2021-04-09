@@ -3144,6 +3144,8 @@ button.close {
 
 .card.card-statistic-1.task-done:hover {
   background-color: #47c363;
+  box-shadow: none !important;
+    transform: translateY(3px);
 }
 
 .card.card-statistic-1:hover {
