@@ -3595,7 +3595,7 @@ input:checked:parent(div) {
     box-shadow: 0px 0px 40px -15px rgb(0 0 0 / 15%);
     border-radius: 4px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: none;
     padding: 3px 0 3px 3px;
     display: inline-block;
@@ -5793,7 +5793,7 @@ label {
 
 
 .form-control {
-    width: 50rem !important;
+    width: 32rem !important;
     font-size: 14px !important;
     font-weight: 500 !important;
 }
@@ -5812,9 +5812,7 @@ label {
 }
 
 #collapseExample  input {
-
-    width: 50rem !important;
-
+    width: 32rem !important;
 }
 
 .alert{

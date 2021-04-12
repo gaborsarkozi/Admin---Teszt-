@@ -468,10 +468,10 @@
                 
                 <div class="col-xl-6 col-lg-6 col-md-6">
                     <div class="content-section-text">
-                        <h2 class="title py-5">Hoppácska!</h2>
+                        <h2 class="title py-5">Hoppá!</h2>
                         <p class="p-404 mb-0">Az Ön által keresett terméket nem találtuk meg...</p>
-                        <p class="p-404">Kérjük töltse ki az űrlapot, hogy kollégáink segíteni tudjanak!</p>
-                        <div class="offer_request_btn_box mt-5 urlap-elohivas-gomb"><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" class="offer_request_btn">Űrlap kitöltése<i class="fa icon-doc ml-2" aria-hidden="true"></i></a></div>
+                        <p class="p-404">Kérjük regisztráljon oldalunkra, hogy kollégáink segíteni tudjanak!</p>
+                        <div class="offer_request_btn_box mt-5 urlap-elohivas-gomb"><a class="offer_request_btn">Regisztrálni szeretnék<i class="fa icon-user-follow ml-2" aria-hidden="true"></i></a></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 d-flex justify-content-center">
@@ -479,12 +479,38 @@
                   <lottie-player src="lf30_editor_fr1krnfc.json" style="width: 300px; height: 300px;"   background="transparent"  speed="1"   loop autoplay></lottie-player>
                                                         </div>
             </div>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body shadow">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="dynamic-table search_results results_after_login interchange py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-title">Keresett cikk INA / FAG gyártmányú helyettesítője</div>
+        <div class="table-box">
+          <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="content-section-text">
+                        <h2 class="title py-5">Hoppá!</h2>
+                        <p class="p-404 mb-0">Az Ön által keresett terméket nem találtuk meg...</p>
+                        <p class="p-404">Kérjük töltse ki az űrlapot, hogy kollégáink segíteni tudjanak!</p>
+                        </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex justify-content-center">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <lottie-player src="lf30_editor_fr1krnfc.json" style="width: 300px; height: 300px;"   background="transparent"  speed="1"   loop autoplay></lottie-player>
+                                                        </div>
+            </div>
+
+              <div class="card card-body shadow urlap-bejelentkezve" id="collapseExample">
                 <form>
                   <div class="pl-lg-4">
                       <div class="row">
-                          <div class="col-lg-6">
+                          <div class="col-lg-4">
                               <div class="form-group">
                                   <label class="form-control-label" for="exampleFormControlSelect1">Mivel kapcsolatos az Ön kérése?</label>
                                   <select class="form-control" id="exampleFormControlSelect1">
@@ -494,10 +520,16 @@
                                   </select>
                               </div>
                           </div>
-                          <div class="col-lg-6">
+                          <div class="col-lg-4">
                               <div class="form-group">
                                   <label class="form-control-label" for="termekek">Mi az Ön neve?</label>
-                                  <input type="text" class="form-control form-control-alternative" placeholder="Kérjük írja be a nevét">
+                                  <input type="text" class="form-control form-control-alternative" value="Sárközi Gábor">
+                              </div>
+                          </div>
+                          <div class="col-lg-4">
+                              <div class="form-group">
+                                  <label class="form-control-label" for="termekek">A keresett kifejezés</label>
+                                  <input type="text" class="form-control form-control-alternative" value='"Homokkőcsapágy"'>
                               </div>
                           </div>
                       </div>
@@ -512,8 +544,7 @@
                       </div>
                       <div class="row" id="megrendelesekListaKereso">
                           <div class="col-lg-12 d-flex justify-content-center">
-                            <div class="offer_request_btn_box my-5 urlap-elohivas-gomb"><a class="offer_request_btn sendButtonKeres" onclick="myFunction()">Kérés küldése<i class="fa 
-                              icon-envelope ml-2" aria-hidden="true"></i></a></div>
+                            <div class="offer_request_btn_box my-5 urlap-elohivas-gomb"><a class="offer_request_btn">Űrlap küldése<i class="fa icon-doc ml-2" aria-hidden="true"></i></a></div>
                           </div>
                           <div class="alert fade" id="myDIV" role="alert">
                             <div class="main">
@@ -528,7 +559,7 @@
 
               </form>
               </div>
-            </div>
+
         </div>
         </div>
       </div>
