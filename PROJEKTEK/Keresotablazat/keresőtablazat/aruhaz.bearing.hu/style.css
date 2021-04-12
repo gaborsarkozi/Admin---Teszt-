@@ -2119,8 +2119,6 @@ td.border-0.align-middle.ikon-kozepre-zár-tablet {
     font-size: 14px;
     text-transform: inherit;
     font-weight: 600;
-    text-align: center;
-
 }
 
 #page-content input{
@@ -2134,6 +2132,8 @@ td.border-0.align-middle.ikon-kozepre-zár-tablet {
     background-color: #ec7723;
     padding: 0.5rem 1rem;
     position: relative;
+    font-weight: 600;
+    font-size: 14px;
     top: 2px;
     border-radius: 4px;
     color: white !important;
@@ -2148,4 +2148,13 @@ td.border-0.align-middle.ikon-kozepre-zár-tablet {
     font-size: 24px;
     color: #ec7723;
     cursor: pointer;
+}
+
+
+.helyettesito-pipa {
+    width: 18px;
+}
+
+.helyettesito-error {
+    width: 30px;
 }
