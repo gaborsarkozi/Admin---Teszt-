@@ -1,0 +1,628 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bearing</title>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+<script type="application/javascript" src="js/main.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script>
+		this.imagePreview = function(){	
+		xOffset = 10;
+		yOffset = 10;
+	$("a.preview").hover(function(e){
+		this.t = this.title;
+		this.title = "";	
+		var c = (this.t != "") ? "<br/>" + this.t : "";
+		$("body").append("<p id='preview'><img src='"+ this.href +"' alt='Image preview' />"+ c +"</p>");								 
+		$("#preview")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px").css("z-index", "10")
+			.fadeIn("fast");						
+    },
+	function(){
+		this.title = this.t;	
+		$("#preview").remove();
+    });	
+	$("a.preview").mousemove(function(e){
+		$("#preview")
+			.css("top",(e.pageY - xOffset) + "px")
+			.css("left",(e.pageX + yOffset) + "px");
+	});			
+};
+
+		$( document ).ready(function() {
+			$(".advance-search .toggle-state").click(function() {
+				$(this).parent().toggleClass("orange-bg");
+			});
+			$(".mobil-navigation .close-menu").click(function() {
+				$(".mobil-navigation").animate({right:'-390px'},1000, "easeInOutQuad");
+			});
+			$(".mobil-profil .profil-btn").click(function() {
+				$(".mobil-navigation").animate({right:'0'},1000, "easeInOutQuad");
+			});
+			$('#demo').carousel({
+        //pause: true,
+        //interval: false
+    });
+			imagePreview();
+		});
+	</script>
+</head>
+
+<body class="logged-in">
+<div class="dialog_box"></div>
+<!--div class="user-box"><span>Üdvözöljük, Sárközi Gábor!</span><a href="#"><i class="icon-power"></i><i class="icon-power"></i><span>Kilépés</span></a></div-->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mobil-logo"><a href="#"><img src="../image/logo.png" alt="Bearing logo"/></a></div>
+        <div class="mobil-profil">
+          <div class="profil-btn"><i class="icon-list"></i> </div>
+          <div class="cart-outer"><a href="#" id="cart"><span class="cart-text">Kosarak:</span><span class="kosarak-ikon"> 6 <i class="fa fa-shopping-cart"></i> </span></a></div>
+        </div>
+        <div class="mobil-navigation">
+          <div class="user-name">Sárközi Gábor<span>felhasználó</span></div>
+          <div class="close-menu"><i class="icon-close" aria-hidden="true"></i>Bezárás</div>
+          <ul class="main-menu">
+            <li class="menu-item active"><a href="#">
+              <div class="icon"> <i class="icon-home" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Kezdőlap</span> </div>
+              </a> </li>
+            <li class="menu-item"><a href="#">
+              <div class="icon"> <i class="icon-user" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Fiókom</span> </div>
+              </a> </li>
+            <li class="menu-item"><a href="#">
+              <div class="icon"> <i class="icon-tag" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Ajánlatunk</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-lock" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Admin</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-hourglass" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Árverések</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-envelope" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Kapcsolat</span> </div>
+              </a> </li>
+            <li class="company-info"><a href="#">
+              <div class="icon"> <i class="icon-info" aria-hidden="true"></i></div>
+              <div class="icon"><span class="text-span">Cégünkről</span> </div>
+              </a>
+              <ul>
+                <li><i class="icon-flag"></i>Bemutatkozás</li>
+                <li><i class="icon-docs"></i>Ált. szerződési feltételek</li>
+                <li><i class="icon-doc"></i>Adatvédelmi nyilatkozat</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="logout-btn"><i class="icon-power" aria-hidden="true"></i> <span>Kijelentkezés</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="logo col-md-3"><a href="#"><img src="../image/logo.png" alt="Bearing logo"/></a> </div>
+      <nav class="col-md-5">
+        <div class="main-navigation ">
+          <ul class="main-menu">
+            <li class="menu-item"><a href="#">
+              <div class="icon"> <i class="icon-home" aria-hidden="true"></i> <i class="icon-home" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Kezdőlap</span> </div>
+              </a> </li>
+            <li class="menu-item"><a href="#">
+              <div class="icon"> <i class="icon-user" aria-hidden="true"></i> <i class="icon-user-follow" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Fiókom</span> </div>
+              </a> </li>
+            <li class="menu-item"><a href="#">
+              <div class="icon"> <i class="icon-tag" aria-hidden="true"></i> <i class="icon-tag" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Ajánlatunk</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-lock" aria-hidden="true"></i> <i class="icon-lock-open" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Admin</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-hourglass" aria-hidden="true"></i> <i class="icon-hourglass" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Árverések</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-envelope" aria-hidden="true"></i> <i class="icon-envelope-letter" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Kapcsolat</span> </div>
+              </a> </li>
+            <li><a href="#">
+              <div class="icon"> <i class="icon-power" aria-hidden="true"></i> <i class="icon-power" aria-hidden="true"></i> </div>
+              <div class="icon"> <span class="text-span"></span> <span class="text-span">Kilépés</span> </div>
+              </a> </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="col-md-4">
+        <div class="main-profil">
+          <div class="profil-btn"><i class="icon-user-unfollow"></i>
+            <div class="profil-text-box">Ön jelenleg nincsen bejelentkezve!</div>
+          </div>
+          <div class="cart-outer"><a href="#" id="cart">Belépés/Regisztráció <i class="icon-login"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="search-section">
+  <div class="container">
+    <div class="row">
+    <form>
+      <div class="col-md-12">
+        <div class="basic-search">
+          <div class="input-field">
+            <input id="search" type="text" placeholder="Termék neve vagy jelölése..">
+            <div class="icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"> </path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="advance-search">
+          <div class="container">
+            <div class="row second">
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Furat átmérő összes</option>
+                    <option>0</option>
+                    <option>06/M12</option>
+                    <option>1</option>
+                    <option>1"</option>
+                    <option>1,1/8"</option>
+                    <option>1/2</option>
+                    <option>1/2"</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Külső átmérő összes</option>
+                    <option> 0,8 MM </option>
+                    <option> 1" 1/2"</option>
+                    <option> 1" KÜL </option>
+                    <option> 10 M</option>
+                    <option> 15 MM </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Szélesség összes</option>
+                    <option> 1" BELSŐ</option>
+                    <option> 1" KÜL</option>
+                    <option> 1" KÜLSŐ</option>
+                    <option> 1/2" BEL</option>
+                    <option> 1/2" KÜL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul" placeholder="Árucsoport">
+                    <option placeholder="" value="">Árucsoport összes</option>
+                    <option value="Autós csapágyak">Autós csapágyak</option>
+                    <option value="Bilincsek">Bilincsek</option>
+                    <option value="CX csapágyak és tartozékok">CX csapágyak és
+                    tartozékok</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Gyártó összes</option>
+                    <option value="AAMS">AAMS</option>
+                    <option value="ABRA">ABRA</option>
+                    <option value="AEG">AEG</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4 input-field">
+                <div class="input-select">
+                  <select data-trigger="" name="choices-single-defaul">
+                    <option placeholder="" value="">Raktárak összes</option>
+                    <option>BP-001</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row third">
+              <div class="input-field">
+                <div class="result-count">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                        <label class="label">
+                        <div class="label-text">Készleten</div>
+                        <div class="toggle">
+                          <input class="toggle-state" type="checkbox" name="check" value="check">
+                          <div class="indicator"></div>
+                        </div>
+                        </label>
+                      </div>
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                        <label class="label">
+                        <div class="label-text">Premium</div>
+                        <div class="toggle">
+                          <input class="toggle-state" type="checkbox" name="check" value="check">
+                          <div class="indicator"></div>
+                        </div>
+                        </label>
+                      </div>
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                        <label class="label">
+                        <div class="label-text">Standard</div>
+                        <div class="toggle">
+                          <input class="toggle-state" type="checkbox" name="check" value="check">
+                          <div class="indicator"></div>
+                        </div>
+                        </label>
+                      </div>
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                        <label class="label">
+                        <div class="label-text">Eco</div>
+                        <div class="toggle">
+                          <input class="toggle-state" type="checkbox" name="check" value="check">
+                          <div class="indicator"></div>
+                        </div>
+                        </label>
+                      </div>
+                      <div class="col-lg-4 col-md-12">
+                        <div class="group-btn">
+                          <button class="btn-delete" id="delete">Szűrők törlése</button>
+                          <button class="btn-search">Új keresés</button>
+                          <button class="btn-search">Keresés</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="logged-in-btns">
+  <div class="container">
+    <div class="row row-eq-height">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-fire icons"></i><span>Speciális akciók</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-present icons"></i><span>Bónuszok</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-star icons"></i><span>Népszerű termékek</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-refresh icons"></i><span>Interchange</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-badge icons"></i><span>Képviselt márkák</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-book-open icons"></i><span>Utójel katalógus</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-support icons"></i><span>Gyártói oldalak</span></div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+        <div class="logged-in-btns-items"><i class="icon-drawer icons"></i><span>Hírlevél</span></div>
+        </a> </div>
+    </div>
+  </div>
+</section>
+<section class="dynamic-table search_results results_after_login interchange">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-title">Keresett cikk NTN SNR helyettesítője</div>
+        <div class="table-box">
+          <table width="100%" border="0">
+            <tbody>
+              <tr id="headerth">
+                <th class="hide-mobil">Keresett gyártó és jelölés</th>
+                <th class="hide-tablet">Méret</th>
+                <th>Helyettesítő gyártó és<br>
+                  jelölés</th>
+                <th class="hide-tablet">Leírás</th>
+                <th class="hide-tablet">Kép</th>
+                <th class="hide-tablet">Műszaki<br>
+                  rajz</th>
+				  <th class="hide-mobil">Egyezés</th>
+                <th>Ár</th>
+                <th class="hide-tablet">Készlet</th>
+                <th>Kosár</th>
+              </tr>
+              <tr gyarto="FBJ" suppcatnum="6203" title="6203" internal_kod="01-01-02-00493" class="normal" azonosito="17X40X12" id="tr_01-01-02-00493" tipus="6203">
+                <td class="hide-mobil">Timken / RA014rr+col.</td>
+                <td class="hide-tablet">14 knx7.88 knx-20 C</td>
+                <td><a href="#">Snr / ces.205-14</a></td>
+                <td class="hide-tablet"><div class="wrapper"> <i class="icon-printer"></i>
+                    <div class="tooltip tooltip-helyettesito">
+                      <div class="info_icon_replacement">Adatlap letöltése</div>
+                    </div>
+                  </div></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" title=""><img src="https://aruhaz.bearing.hu/static/arukepek/small/6000_s.jpg" alt=""></a></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="../image/muszaki-rajz.jpg" title=""><img src="../image/muszaki-rajz.jpg" alt=""></a></td>
+				  <td class="hide-mobil"><div class="square green"><a href="#"><img src="../image/alert-icon.jpg" alt=""></a></div></td>
+                <td>5408</td>
+                <td class="hide-tablet">8</td>
+                <td style="white-space:nowrap"><div class="offer_request_btn_box"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div></td>
+              </tr>
+              <tr gyarto="FBJ" suppcatnum="6203" title="6203" internal_kod="01-01-02-00493" class="normal" azonosito="17X40X12" id="tr_01-01-02-00493" tipus="6203">
+                <td class="hide-mobil">Timken / RA014rr+col.</td>
+                <td class="hide-tablet">14 knx7.88 knx-20 C</td>
+				  <td><a href="#">Snr / ces.205-14</a></td>
+                <td class="hide-tablet"><div class="wrapper"> <i class="icon-printer"></i>
+                    <div class="tooltip tooltip-helyettesito">
+                      <div class="info_icon_replacement">Adatlap letöltése</div>
+                    </div>
+                  </div></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" title=""><img src="https://aruhaz.bearing.hu/static/arukepek/small/6000_s.jpg" alt=""></a></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="../image/muszaki-rajz.jpg" title=""><img src="../image/muszaki-rajz.jpg" alt=""></a></td>
+				  <td class="hide-mobil"><div class="square yellow"><a href="#"><img src="../image/alert-icon.jpg" alt=""></a></div></td>
+                <td>-</td>
+                <td class="hide-tablet">-</td>
+                <td style="white-space:nowrap"><input id="a_01-01-02-00493" class="piece" name="orders.quantity:records" type="text" value="1">
+                  <input type="hidden" name="orders.id:records" value="01-01-02-00493">
+                  <input type="hidden" name="orders.price:records" id="p_01-01-02-00493" value="792.0">
+                  <label class="piece_label">DB</label>
+                  <button class="add_cart_button" onclick="addToCart('01-01-02-00493', 'HUF')"><i class="icon-basket icon-merete"></i></button></td>
+              </tr>
+              <tr gyarto="FBJ" suppcatnum="6203" title="6203" internal_kod="01-01-02-00493" class="normal" azonosito="17X40X12" id="tr_01-01-02-00493" tipus="6203">
+                <td class="hide-mobil">Timken / RA014rr+col.</td>
+                <td class="hide-tablet">14 knx7.88 knx-20 C</td>
+				  <td><a href="#">Snr / ces.205-14</a></td>
+                <td class="hide-tablet"><div class="wrapper"> <i class="icon-printer"></i>
+                    <div class="tooltip tooltip-helyettesito">
+                      <div class="info_icon_replacement">Adatlap letöltése</div>
+                    </div>
+                  </div></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" title=""><img src="https://aruhaz.bearing.hu/static/arukepek/small/6000_s.jpg" alt=""></a></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="../image/muszaki-rajz.jpg" title=""><img src="../image/muszaki-rajz.jpg" alt=""></a></td>
+				  <td class="hide-mobil"><div class="square red"></div></td>
+                <td>5408</td>
+                <td class="hide-tablet">8</td>
+                <td style="white-space:nowrap"><div class="offer_request_btn_box"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div></td>
+              </tr>
+              <tr gyarto="FBJ" suppcatnum="6203" title="6203" internal_kod="01-01-02-00493" class="normal" azonosito="17X40X12" id="tr_01-01-02-00493" tipus="6203">
+                <td class="hide-mobil">Timken / RA014rr+col.</td>
+                <td class="hide-tablet">14 knx7.88 knx-20 C</td>
+				  <td><a href="#">Snr / ces.205-14</a></td>
+                <td class="hide-tablet"><div class="wrapper"> <i class="icon-printer"></i>
+                    <div class="tooltip tooltip-helyettesito">
+                      <div class="info_icon_replacement">Adatlap letöltése</div>
+                    </div>
+                  </div></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" title=""><img src="https://aruhaz.bearing.hu/static/arukepek/small/6000_s.jpg" alt=""></a></td>
+                <td class="hide-tablet"><a target="_new" class="preview" href="../image/muszaki-rajz.jpg" title=""><img src="../image/muszaki-rajz.jpg" alt=""></a></td>
+				  <td class="hide-mobil"><div class="square green"><a href="#"><img src="../image/alert-icon.jpg" alt=""></a></div></td>
+                <td>-</td>
+                <td class="hide-tablet">-</td>
+                <td style="white-space:nowrap"><input id="a_01-01-02-00493" class="piece" name="orders.quantity:records" type="text" value="1">
+                  <input type="hidden" name="orders.id:records" value="01-01-02-00493">
+                  <input type="hidden" name="orders.price:records" id="p_01-01-02-00493" value="792.0">
+                  <label class="piece_label">DB</label>
+                  <button class="add_cart_button" onclick="addToCart('01-01-02-00493', 'HUF')"><i class="icon-basket icon-merete"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+		  
+        <div class="pagination-box">
+          <ul class="pagination" role="menubar" aria-label="Pagination">
+            <li><a rel="nofollow" href="" onclick="gotoPage(event, 0)"><i class="icon-control-rewind"></i></a></li>
+            <li><a rel="nofollow" onclick="return false;" href=""><i id="icon-control-play" class="icon-control-play"></i></a></li>
+            <li><a class="current" onclick="return false;" rel="nofollow" href="">1</a></li>
+            <li><a rel="nofollow" href="" onclick="gotoPage(event, 10)">2</a></li>
+            <li><a rel="nofollow" href="" onclick="gotoPage(event, 20)">3</a></li>
+            <li><a rel="nofollow" href="" onclick="gotoPage(event, 10)"><i class="icon-control-play"></i></a></li>
+            <li><a rel="nofollow" href="" onclick="gotoPage(event, 14)"><i class="icon-control-forward"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="dynamic-table search_results results_after_login interchange py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-title">Keresett cikk INA / FAG gyártmányú helyettesítője</div>
+        <div class="table-box">
+          <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="content-section-text">
+                        <h2 class="title py-5">Hoppácska!</h2>
+                        <p class="p-404 mb-0">Az Ön által keresett terméket nem találtuk meg...</p>
+                        <p class="p-404">Kérjük töltse ki az űrlapot, hogy kollégáink segíteni tudjanak!</p>
+                        <div class="offer_request_btn_box mt-5 urlap-elohivas-gomb"><a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample" class="offer_request_btn">Űrlap kitöltése<i class="fa icon-doc ml-2" aria-hidden="true"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 d-flex justify-content-center">
+                  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                  <lottie-player src="lf30_editor_fr1krnfc.json" style="width: 300px; height: 300px;"   background="transparent"  speed="1"   loop autoplay></lottie-player>
+                                                        </div>
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body shadow">
+                <form>
+                  <div class="pl-lg-4">
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <div class="form-group">
+                                  <label class="form-control-label" for="exampleFormControlSelect1">Mivel kapcsolatos az Ön kérése?</label>
+                                  <select class="form-control" id="exampleFormControlSelect1">
+                                      <option>Termék rendelés</option>
+                                      <option>Termék információ</option>
+                                      <option>Termék kérés</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="form-group">
+                                  <label class="form-control-label" for="termekek">Mi az Ön neve?</label>
+                                  <input type="text" class="form-control form-control-alternative" placeholder="Kérjük írja be a nevét">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                              <label class="form-control-label" for="exampleFormControlTextarea1">Az Ön megjegyzése</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Pl.: "Szeretném, ha az Önök kínálatában rendelkezésre állna az XY csapágy." vagy "Szeretnék Önöktől rendelni egy XY csapágyat, de nem találtam meg a kínálatban"' rows="3"></textarea>
+                            </div>
+                          </div>
+
+                      </div>
+                      <div class="row" id="megrendelesekListaKereso">
+                          <div class="col-lg-12 d-flex justify-content-center">
+                            <div class="offer_request_btn_box my-5 urlap-elohivas-gomb"><a class="offer_request_btn sendButtonKeres" onclick="myFunction()">Kérés küldése<i class="fa 
+                              icon-envelope ml-2" aria-hidden="true"></i></a></div>
+                          </div>
+                          <div class="alert fade" id="myDIV" role="alert">
+                            <div class="main">
+
+                                <div class="popup success">
+                                    <img src="success_send.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+              </form>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="new-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <div><img src="../image/bearinglogo_web.png" alt="Bearing kft."/></div>
+        <div class="footer-logos"><img src="../image/megbizhato-bolt.png"/><img src="../image/megbizhato-bolt1.png"/></div>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <h3>Webáruház</h3>
+        <ul>
+          <li><a href="#">Fiókom</a> </li>
+          <li><a href="#">Bónuszok</a> </li>
+          <li><a href="#">Árverés</a> </li>
+          <li><a href="#">Utójel katalógus</a> </li>
+          <li><a href="#">Interchange</a> </li>
+          <li><a href="#">Képviselt márkák</a> </li>
+          <li><a href="#">Gyártói oldalak</a> </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <h3>Cégünkről</h3>
+        <ul>
+          <li><a href="#">Kapcsolat</a> </li>
+          <li><a href="#">Hírlevél</a> </li>
+          <li><a href="#">Bemutatkozás</a> </li>
+          <li><a href="#">Aktuális ajánlatok</a> </li>
+          <li><a href="#">Általános szerződési feltételek</a> </li>
+          <li><a href="#">Adatvédelmi nyilatkozat</a> </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <h3>Nyitvatartás</h3>
+        <ul>
+          <li>Hétfő: 8:00 - 16:30</li>
+          <li>Kedd: 8:00 - 16:30</li>
+          <li>Szerda: 8:00 - 16:30</li>
+          <li>Csütörtök: 8:00 - 16:30</li>
+          <li>Péntek: 8:00 - 16:30</li>
+          <li>Szombat: zárva</li>
+          <li>Vasárnap: zárva</li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-12">
+        <h3>Ügyfélszolgálatunk</h3>
+        <ul>
+          <li><i class="icon-screen-tablet"></i><a href="tel:+3612035000">+36 1 203 5000</a> </li>
+          <li><i class="icon-paper-plane"></i><a href="mailto:info@bearing.hu">info@bearing.hu</a> </li>
+          <li><i class="icon-direction"></i>1033 Budapest, Szőlőkert u. 5.</li>
+          <li>Webáruházunk: 0-24 nyitva!</li>
+          <li class="social-icons"> <a href="#"><img src="../image/facebook.png"/></a> <a href="#"><img src="../image/twitter.png"/></a> <a href="#"><img src="../image/instagram.png"/></a> <a href="#"><img src="../image/linkedin.png"/></a> <a href="#"><img src="../image/whatsup.png"/></a> <a href="#"><img src="../image/messenger.png"/></a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 copyright-text">© 1993-2021 Bearing Express. A weboldalon található anyagok kizárólag a BearingKft. hozzájárulásával és a forrás megjelölésével használhatóak fel.</div>
+    </div>
+  </div>
+</footer>
+<script>
+
+$(".sendButtonKeres").click(function () {
+    $(".alert").show('medium');
+    setTimeout(function () {
+        $(".alert").hide('medium');
+    }, 5000);
+});
+
+$(".sendButtonKeres .close").click(function () {
+    $(".alert").hide('medium');
+});
+
+
+</script>
+
+
+<script>
+
+  function myFunction() {
+     var element = document.getElementById("myDIV");
+     element.classList.add("show");
+     setTimeout( function(){ element.classList.remove("show"); 
+    }, 5000 ); 
+  }
+
+  </script>
+
+
+  
+</body>
+
+</html>
