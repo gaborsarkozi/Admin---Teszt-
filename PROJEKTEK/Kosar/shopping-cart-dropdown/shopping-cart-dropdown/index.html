@@ -3,21 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Shopping Cart Dropdown</title>
+  <title>Kosár bearing</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
 
 
+  <link rel="stylesheet" href="/PROJEKTEK/Profil/profil.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <nav>
     <div class="container">
       <ul class="navbar-right">
-        <li><a href="#" id="cart">Kosarak száma: <span class="kosarak-ikon"> 6 <i class="fa fa-shopping-cart"></i> </a>
+        <li class="btn-cart"><a href="#" id="cart">Kosarak száma: <span class="kosarak-ikon"> 6 <i
+                class="icon-basket"></i> </a>
         </li>
       </ul>
       <!--end navbar-right -->
@@ -27,556 +44,1144 @@
 
 
   <div class="container">
-    <div class="shopping-cart">
-      <div class="cart-wrapper">
-        <div class="cart-panel">
-          <header class="cart-header">
-            <div class="cart-tabs">
-              <ul class="cart-tab-table">
-                <li class="cart-tab-cell selected">
-                  <span class="cart-tab">
-                    <span class="tab-ic tab-cart-ic"></span>
-                    <span class="tab-label">Bearing kosár <span class="kosar-termek">3 termék</span></span>
-                  </span>
-                </li>
-                <li class="cart-tab-cell selected">
-                  <span class="cart-tab">
-                    <span class="tab-ic tab-cart-ic"></span>
-                    <span class="tab-label">Bearing kosár <span class="kosar-termek">3 termék</span></span>
-                  </span>
-                </li>
-              </ul>
-              <span class="tab-selector"></span>
-            </div>
-          </header>
-          <div class="cart-content">
-            <div class="cart-sections">
-              <section class="cart-section nano">
-                <ul class="cart-list overthrow nano-content">
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/6000_2z.jpg');">
-                    </div>
-                    <div class="cart-item pl-3">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6202 2Z</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">15X35X11</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 1215 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 405 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/st_kor.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">ST491A</p>
-                          <p class="cart-item-price"></p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">44X127X42</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 14120 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 5760 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/P_open.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6204J30</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">20X47X14</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 145100 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 1451 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-footer"></li>
-                </ul>
-                <footer class="cart-footer">
-                  <div class="cart-checkout-btn-price">
-                    <span class="checkout-label">Végösszeg: 160 435 Ft</span>
-                  </div>
-                  <div class="cart-checkout-btn">
-                    <span class="checkout-label">Kasszához</span>
-                  </div>
-                </footer>
-              </section>
-              <section class="cart-section nano">
-                <ul class="cart-list overthrow nano-content">
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/6000_2z.jpg');">
-                    </div>
-                    <div class="cart-item pl-3">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6202 2Z</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">15X35X11</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 1215 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 405 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/st_kor.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">ST491A</p>
-                          <p class="cart-item-price"></p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">44X127X42</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 14120 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 5760 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/P_open.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6204J30</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">20X47X14</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 145100 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 1451 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/6000_2z.jpg');">
-                    </div>
-                    <div class="cart-item pl-3">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6202 2Z</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">15X35X11</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 1215 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 405 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/st_kor.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">ST491A</p>
-                          <p class="cart-item-price"></p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">44X127X42</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 14120 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 5760 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/P_open.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6204J30</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">20X47X14</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 145100 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 1451 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/6000_2z.jpg');">
-                    </div>
-                    <div class="cart-item pl-3">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6202 2Z</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">15X35X11</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 1215 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 405 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/st_kor.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">ST491A</p>
-                          <p class="cart-item-price"></p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">44X127X42</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 14120 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 5760 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-item">
-                    <div class="cart-item-img"
-                      style="background-image: url('https://aruhaz.bearing.hu/static/arukepek/P_open.jpg');">
-                    </div>
-                    <div class="cart-item">
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">6204J30</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">20X47X14</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <fieldset data-quantity="">
-                            <legend></legend>
-                            <input type="number" name="quantity" pattern="[0-9]+">
-                          </fieldset>
-                        </span>
-                      </div>
-                      <div class="cart-item-description">
-                        <span>
-                          <p class="cart-item-label">Ár: 145100 Ft</p>
-                          <p class="cart-item-price">Egys. ár: 1451 Ft</p>
-                        </span>
-                      </div>
-                      <div class="cart-item-favorites">
-                        <span class="item-heart-ic">
-                          <img src="close.svg" alt="">
-                        </span>
-                      </div>
-                      <div class="cart-item-trash">
-                        <span class="item-trash-ic">
-                          <img src="star.svg" alt="">
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="cart-list-footer">
+    <div class="shopping-cart shadow">
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+            aria-controls="pills-home" aria-selected="true">Kosár 1<span class="cart-item-number">(18 termék)</span></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+            aria-controls="pills-profile" aria-selected="false">Kosár 2<span class="cart-item-number">(3
+              termék)</span></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+            aria-controls="pills-contact" aria-selected="false">Kosár 3<span class="cart-item-number">(51
+              termék)</span></a>
+        </li>
+      </ul>
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home-2" role="tab"
+            aria-controls="pills-home" aria-selected="true">Kosár 4<span class="cart-item-number">(0 termék)</span> </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile-2" role="tab"
+            aria-controls="pills-profile" aria-selected="false">Kosár 5<span class="cart-item-number">(3
+              termék)</span></a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact-3" role="tab"
+            aria-controls="pills-contact" aria-selected="false">Kosár 6<span class="cart-item-number">(14
+              termék)</span></a>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+           <div class="row justify-content-center pt-5">
+          <div class="col-lg-12 cart-content">
+            <div class="table-responsive shadow">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" style="
+                          width: 70px !important;
+                      " class="border-0 bg-light">
+                      <div class="p-2">Kép</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2" style="width: 87px;">Termék</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2" style="width: 80px;">Méret</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2" style="width: 130px;">Listaár (HUF/db)
+                      </div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2">db</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2" style="width: 135px;">Kosár</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bow-wrap-body">
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                    </td>
 
-                  </li>
-                </ul>
-                <footer class="cart-footer">
-                  <div class="cart-checkout-btn-price">
-                    <span class="checkout-label">Végösszeg: 481 305 Ft</span>
-                  </div>
-                  <div class="cart-checkout-btn">
-                    <span class="checkout-label">Kasszához</span>
-                  </div>
-                </footer>
-              </section>
+                    <td class="border-0 align-middle">10X26X8X</td>
+
+                    <td class="border-0 align-middle">202</td>
+                    <td class="border-0 align-middle">2</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="2">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">6202</a></td>
+                    <td class="border-0 align-middle">15X35X11</td>
+                    <td class="border-0 align-middle">304</td>
+                    <td class="border-0 align-middle">1</td>
+
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                    </td>
+                    <td class="border-0 align-middle">22X10X36X</td>
+                    <td class="border-0 align-middle">0</td>
+                    <td class="border-0 align-middle">1</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                    </td>
+
+                    <td class="border-0 align-middle">10X26X8X</td>
+
+                    <td class="border-0 align-middle">202</td>
+                    <td class="border-0 align-middle">2</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="2">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">6202</a></td>
+                    <td class="border-0 align-middle">15X35X11</td>
+                    <td class="border-0 align-middle">304</td>
+                    <td class="border-0 align-middle">1</td>
+
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                    </td>
+                    <td class="border-0 align-middle">22X10X36X</td>
+                    <td class="border-0 align-middle">0</td>
+                    <td class="border-0 align-middle">1</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                    </td>
+
+                    <td class="border-0 align-middle">10X26X8X</td>
+
+                    <td class="border-0 align-middle">202</td>
+                    <td class="border-0 align-middle">2</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="2">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">6202</a></td>
+                    <td class="border-0 align-middle">15X35X11</td>
+                    <td class="border-0 align-middle">304</td>
+                    <td class="border-0 align-middle">1</td>
+
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                    </td>
+                    <td class="border-0 align-middle">22X10X36X</td>
+                    <td class="border-0 align-middle">0</td>
+                    <td class="border-0 align-middle">1</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                    </td>
+
+                    <td class="border-0 align-middle">10X26X8X</td>
+
+                    <td class="border-0 align-middle">202</td>
+                    <td class="border-0 align-middle">2</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="2">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">6202</a></td>
+                    <td class="border-0 align-middle">15X35X11</td>
+                    <td class="border-0 align-middle">304</td>
+                    <td class="border-0 align-middle">1</td>
+
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+                  <tr class="box-tr">
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                          title=""><img style="max-width: 70%;"
+                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                    </td>
+                    <td class="border-0 align-middle">22X10X36X</td>
+                    <td class="border-0 align-middle">0</td>
+                    <td class="border-0 align-middle">1</td>
+                    <td style="white-space:nowrap" class="border-0 align-middle">
+                      <input type="number" class="span1" value="1">
+                      <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                      <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                      <label class="piece_label">DB</label>
+                      <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                          class="icon-basket icon-merete"></i></button>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
           </div>
 
+        </div>
+        <div class="row justify-content-center footer-fixed-cart pt-0">
+          <div class="col-lg-12 ">
+            <div class="card py-3">
+              <div class="row">
+                <div class="col-lg-12 mt-2">
+                  <div class="row d-flex justify-content-between px-4">
+                    <p class="mb-1 text-left">Kosár értéke</p>
+                    <h6 class="mb-1 text-right">76.042 Ft</h6>
+                  </div>
+                  <div class="row d-flex justify-content-between px-4">
+                    <p class="mb-1 text-left">Kedvezmény</p>
+                    <h6 class="mb-1 text-right">-4.000 Ft</h6>
+                  </div>
+                  <div class="row d-flex justify-content-between px-4" id="tax">
+                    <p class="mb-1 text-left">Végösszeg</p>
+                    <h6 class="mb-1 text-right">72.042 Ft</h6>
+                  </div> <button class="order-btn-cart">Kasszához<i class="icon-basket-loaded"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"> 
+          <div class="row justify-content-center pt-5">
+            <div class="col-lg-12 cart-content">
+              <div class="table-responsive shadow">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="
+                            width: 70px !important;
+                        " class="border-0 bg-light">
+                        <div class="p-2">Kép</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 87px;">Termék</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 80px;">Méret</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 130px;">Listaár (HUF/db)
+                        </div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2">db</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 135px;">Kosár</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bow-wrap-body">
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <div class="row justify-content-center footer-fixed-cart pt-0">
+            <div class="col-lg-12 ">
+              <div class="card py-3">
+                <div class="row">
+                  <div class="col-lg-12 mt-2">
+                    <div class="row d-flex justify-content-between px-4">
+                      <p class="mb-1 text-left">Kosár értéke</p>
+                      <h6 class="mb-1 text-right">20.042 Ft</h6>
+                    </div>
+                    <div class="row d-flex justify-content-between px-4">
+                      <p class="mb-1 text-left">Kedvezmény</p>
+                      <h6 class="mb-1 text-right">0.000 Ft</h6>
+                    </div>
+                    <div class="row d-flex justify-content-between px-4" id="tax">
+                      <p class="mb-1 text-left">Végösszeg</p>
+                      <h6 class="mb-1 text-right">20.042 Ft</h6>
+                    </div> <button class="order-btn-cart">Kasszához<i class="icon-basket-loaded"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+          <div class="row justify-content-center pt-5">
+            <div class="col-lg-12 cart-content">
+              <div class="table-responsive shadow">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="
+                            width: 70px !important;
+                        " class="border-0 bg-light">
+                        <div class="p-2">Kép</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 87px;">Termék</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 80px;">Méret</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 130px;">Listaár (HUF/db)
+                        </div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2">db</div>
+                      </th>
+                      <th scope="col" class="border-0 bg-light">
+                        <div class="py-2" style="width: 135px;">Kosár</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="bow-wrap-body">
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">01234567890123456789</a>
+                      </td>
+
+                      <td class="border-0 align-middle">10X26X8X</td>
+
+                      <td class="border-0 align-middle">202</td>
+                      <td class="border-0 align-middle">2</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="2">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">6202</a></td>
+                      <td class="border-0 align-middle">15X35X11</td>
+                      <td class="border-0 align-middle">304</td>
+                      <td class="border-0 align-middle">1</td>
+
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+                    <tr class="box-tr">
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                            title=""><img style="max-width: 70%;"
+                              src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                      </td>
+                      <td class="border-0 align-middle">22X10X36X</td>
+                      <td class="border-0 align-middle">0</td>
+                      <td class="border-0 align-middle">1</td>
+                      <td style="white-space:nowrap" class="border-0 align-middle">
+                        <input type="number" class="span1" value="1">
+                        <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                        <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
+                        <label class="piece_label">DB</label>
+                        <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                            class="icon-basket icon-merete"></i></button>
+                      </td>
+
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+          <div class="row justify-content-center footer-fixed-cart pt-0">
+            <div class="col-lg-12 ">
+              <div class="card py-3">
+                <div class="row">
+                  <div class="col-lg-12 mt-2">
+                    <div class="row d-flex justify-content-between px-4">
+                      <p class="mb-1 text-left">Kosár értéke</p>
+                      <h6 class="mb-1 text-right">76.042 Ft</h6>
+                    </div>
+                    <div class="row d-flex justify-content-between px-4">
+                      <p class="mb-1 text-left">Kedvezmény</p>
+                      <h6 class="mb-1 text-right">-4.000 Ft</h6>
+                    </div>
+                    <div class="row d-flex justify-content-between px-4" id="tax">
+                      <p class="mb-1 text-left">Végösszeg</p>
+                      <h6 class="mb-1 text-right">72.042 Ft</h6>
+                    </div> <button class="order-btn-cart">Kasszához<i class="icon-basket-loaded"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
