@@ -251,9 +251,9 @@
                                     <div class="col-xl-7 col-lg-6 col-md-6">
                                         <div class="content-section-text">
                                             <h2 class="title">Hoppá!</h2>
-                                            <p>Az Ön által keresett oldalt nem találtuk meg! Kérjük regisztráljon, hogy segíteni tudjunk!</p>
-                                            <a class="btn btn-primary--opacity hvr-bounce-to-right" href="#">Regisztrálok <i class="fa 
-                                                icon-user-follow ml-2" aria-hidden="true"></i></a>
+                                            <p>Az Ön által keresett oldalt nem találtuk meg! Kérjük töltse ki az űrlapot, hogy segíteni tudjunk!</p>
+                                            <a class="btn btn-primary--opacity hvr-bounce-to-right" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Űrlap kitöltése <i class="fa 
+                                                icon-doc ml-2" aria-hidden="true"></i></a>
                                             <a class="btn btn-primary--opacity hvr-bounce-to-right" href="#">Elérhetőségek <i class="fa 
                                                 icon-call-out ml-2" aria-hidden="true"></i></a>
                                             <a class="btn btn-primary--opacity hvr-bounce-to-right" href="#">Vissza a főoldalra <i class="fa 
@@ -274,7 +274,67 @@
             </div>
         </div>
         
-
+        <div class="content-section bg-light-white section-padding pt-0">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                          <div class="card card-body shadow urlap-bejelentkezve collapse" id="collapseExample">
+                            <form>
+                              <div class="pl-lg-4">
+                                  <div class="row">
+                                      <div class="col-lg-4">
+                                          <div class="form-group">
+                                              <label class="form-control-label" for="exampleFormControlSelect1">Mivel kapcsolatos az Ön kérése?</label>
+                                              <select class="form-control" id="exampleFormControlSelect1">
+                                                  <option>Termék rendelés</option>
+                                                  <option>Termék információ</option>
+                                                  <option>Termék kérés</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-4">
+                                          <div class="form-group">
+                                              <label class="form-control-label" for="termekek">Mi az Ön neve?</label>
+                                              <input type="text" class="form-control form-control-alternative" value="Sárközi Gábor">
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-4">
+                                          <div class="form-group">
+                                              <label class="form-control-label" for="termekek">A keresett kifejezés</label>
+                                              <input type="text" class="form-control form-control-alternative" value='"Homokkőcsapágy"'>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                        <div class="form-group">
+                                          <label class="form-control-label" for="exampleFormControlTextarea1">Az Ön megjegyzése</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Pl.: "Szeretném, ha az Önök kínálatában rendelkezésre állna az XY csapágy." vagy "Szeretnék Önöktől rendelni egy XY csapágyat, de nem találtam meg a kínálatban"' rows="3"></textarea>
+                                        </div>
+                                      </div>
+            
+                                  </div>
+                                  <div class="row" id="megrendelesekListaKereso">
+                                      <div class="col-lg-12 d-flex justify-content-center">
+                                        <div class="offer_request_btn_box my-5 urlap-elohivas-gomb"><a class="sendButtonKeres offer_request_btn">Űrlap küldése<i class="fa icon-doc ml-2" aria-hidden="true"></i></a></div>
+                                      </div>
+                                      <div class="alert fade" id="myDIV" role="alert">
+                                        <div class="main">
+            
+                                            <div class="popup success">
+                                                <img src="success_send.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+            
+                          </form>
+                          </div>
+                  </div>
+                </div>
+              </div>
+        </div>
 
         <!-- Content Section 2 -->
 

@@ -1,6 +1,3 @@
-
-
-
 (function(){
  
   $("#cart").on("click", function() {
@@ -36,18 +33,6 @@ jQuery(function($)
 	});
 
 });
-
-$(function() {
-	$("#provide-muffins").click(function() {
-	  if ($(this).is(":checked")) {
-		$("#menuSzallitasicimKikapcs").show();
-		$("#menuSzallitasicim").hide();
-	  } else {
-		$("#menuSzallitasicimKikapcs").hide();
-		$("#menuSzallitasicim").show();
-	  }
-	});
-  })
 
 
 /*! nanoScrollerJS - v0.8.7 - (c) 2015 James Florentino; Licensed MIT */

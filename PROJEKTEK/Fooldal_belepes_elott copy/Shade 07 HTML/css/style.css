@@ -21616,7 +21616,7 @@
 }
 
 .btn {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   height: 50px;
   border-radius: 3px;
@@ -21629,14 +21629,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .btn:hover {
-  color: #211061;
+  animation: pulse 2s infinite;
+  color: #ffffff !important;
   text-decoration: none;
 }
 
@@ -22825,7 +22826,10 @@ input.toggle-state {
 
 .content-section-text .btn {
   margin-top: 30px;
+  margin-right: 18px;
 }
+
+
 
 /* /////////////////////////// 
     Video section
@@ -25631,6 +25635,91 @@ input:-webkit-autofill:active
  }
   
 
- .padding-extra {
-   padding: 15rem 0;
+ .content-section-text p {
+  color: #211061 !important;
  }
+
+ h2.title {
+  color: #211061;
+}
+
+
+.btn-primary--opacity {
+  color: #ffffff !important;
+}
+
+
+ .offer_request_btn_box {
+  margin-left: 0rem;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 0 rgb(88 120 243 / 40%);
+  -moz-animation: pulse 2s infinite;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+  width: 100%;
+  max-width: 150px;
+}
+
+.urlap-elohivas-gomb {
+  max-width: fit-content !important;
+  padding: 1rem !important;
+  cursor: pointer;
+}
+
+ .offer_request_btn {
+  border: none;
+  -webkit-box-shadow: 0px 0px 40px -15px rgb(0 0 0 / 15%);
+  -moz-box-shadow: 0px 0px 40px -15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 40px -15px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+  padding: 3px 0 3px 3px;
+  display: inline-block;
+}
+
+.urlap-elohivas-gomb a {
+  color: #25205e !important;
+  text-decoration: none;
+}
+
+.offer_request_btn i {
+  color: #ec7623;
+  font-size: 18px;
+}
+
+
+a {
+  color: #ffffff !important;
+
+}
+
+ul li a .icon .icon-home {
+  height: 0%;
+  width: 100%;
+  line-height: 50px;
+  font-size: 30px;
+  transition: 0.5s;
+  color: transparent;
+  display: inline-block;
+}
+
+ul li a .icon .fa {
+  height: 0;
+  width: 100%;
+  line-height: 50px;
+  font-size: 30px;
+  transition: 0.5s;
+  color: transparent;
+}
+
+span.fa.text-span {
+  display: none;
+}
+
+i.fa.icon-user-follow.ml-2 {
+  color: white;
+}
