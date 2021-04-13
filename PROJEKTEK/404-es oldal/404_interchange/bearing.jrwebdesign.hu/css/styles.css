@@ -5761,8 +5761,10 @@ h2.title {
 
 .p-404 {  
     text-transform: none;
-    font-weight: 500;
     font-size: 15px;
+    font-weight: 600;
+    color: #211061;
+    margin: .5rem 0;
 }
 
 .urlap-elohivas-gomb {
@@ -5863,3 +5865,46 @@ label {
     box-shadow: 0 0 0 0.2rem #ec77236e !important;
 }
   
+
+
+
+/* Input */ 
+
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, .6) !important;
+  }
+
+  .form-control:-ms-input-placeholder {
+    opacity: 1;
+    color: #adb5bd !important;
+  }
+
+  .form-control::placeholder {
+    opacity: 1;
+    color: #adb5bd !important;
+    padding: 1rem;
+    font-weight: 500;
+  }
+
+  input::placeholder, select::placeholder {
+    opacity: 1;
+    color: #adb5bd !important;
+    padding: 1rem;
+    font-weight: 500;
+  }
+
+
+  .form-control.form-control-alternative::placeholder {
+    opacity: 1 !important;
+    color: #adb5bd !important;
+    padding: 1rem !important;
+    font-weight: 500 !important;
+  }
+
+  .form-control::-ms-value {
+    opacity: 1 !important;
+    color: #adb5bd !important;
+    padding: 1rem !important;
+    font-weight: 500 !important;
+  }
