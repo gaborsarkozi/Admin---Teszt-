@@ -46,6 +46,22 @@ nav ul li a:hover {
     color: #211061;
 }
 
+#shopping-cart-container .table th {
+    padding: .6rem 1.6rem !important;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#shopping-cart-container .table td, .table th {
+    padding: .6rem 1.6rem !important;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#shopping-cart-container td label {
+    font-weight: 500;
+    font-size: 15px;
+}
 
 .container {
     margin: auto;
@@ -70,15 +86,16 @@ nav ul li a:hover {
     background: rgb(255, 255, 255) none repeat scroll 0 0;
     border-radius: 3px;
     float: right;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     padding: 2rem 2rem 0;
     position: relative;
-    right: -12.5rem;
-    width: min-content;
+    right: 1rem;
+    width: auto;
 }
 
 #tablet-cart-container .shopping-cart {
     right: 1.5rem;
+    margin: 5rem 0;
 }
 
 #telefon-cart-container .shopping-cart {
@@ -721,7 +738,7 @@ span.item-trash-ic {
 
 .nav-link {
     padding: .5rem 1rem !important;
-    margin: .5rem 1rem !important;
+    margin: .5rem 2rem !important;
     border-radius: 4px;
     cursor: pointer;
     background: #fff;
@@ -918,6 +935,7 @@ button:focus {
     line-height: 48px;
     display: block;
     font-weight: 600;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 .icon-basket-loaded {
@@ -925,13 +943,13 @@ button:focus {
 }
 
 p.mb-1.text-left {
-    font-size: 14px;
+    font-size: 15px !important;
     font-weight: 500;
     color: #211061;
 }
 
 h6.mb-1.text-right {
-    font-size: 14px;
+    font-size: 15px !important;
     font-weight: 600;
     color: #211061;
 }
@@ -963,18 +981,20 @@ td i.icon-close.icon-merete {
     color: #EC7623;
     font-size: 20px;
     cursor: pointer;
+    font-weight: 700;
     position: relative;
     top: 3px;
 }
 
 .szallitas-kedvezmeny-kosar {
-    max-width: 22rem;
-    font-size: 12px !important;
+    max-width: max-content;
+    font-size: 13px !important;
     background-color: #eb7624;
     border-radius: 4px;
     padding: .25rem .5rem;
     font-weight: 600 !important;
     color: #fff !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 #telefon-cart-container .szallitas-kedvezmeny-kosar {
@@ -986,17 +1006,17 @@ td i.icon-close.icon-merete {
 /* tooltip */ 
 
 .tool-tip {
+
     position: relative;
-    left: -10rem;
-    margin-left: 0.5em;
+    top: 2px;
   }
+
   .tool-tip .tool-tip__icon {
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    width: 20px;
     font-weight: 600;
-    color: #eb7624;;
+    font-size: 16px;
   }
   .tool-tip .tool-tip__info {
     display: none;
@@ -1004,24 +1024,21 @@ td i.icon-close.icon-merete {
     font-size: 0.875em;
     padding: 1em;
     position: absolute;
-    left: 15px;
-    top: -20px;
-    width: 275px;
+    left: 13px;
+    top: -19px;
+    width: max-content;
+    z-index: 2;
   }
   .tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
     content: "";
     position: absolute;
     left: 8px;
-    top: 20px;
+    top: 16px;
     border-style: solid;
     border-width: 10px 10px 10px 0;
     border-color: transparent #eb7624;
   }
-  .tool-tip .tool-tip__info:after {
-    left: 7px;
-    top: 20px;
-    border-right-color: #eb7624;
-  }
+
   .tool-tip .tool-tip__info .info {
     display: block;
   }
@@ -1038,6 +1055,17 @@ td i.icon-close.icon-merete {
   
 
   .shopping-cart td input, select {
-    padding: 0;
-    width: 70%;
+    width: 75%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+ #tablet-cart-container .shopping-cart td input, select {
+    width: 20%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+p.mb-2.mb-1.text-left.szallitas-kedvezmeny-kosar {
+    font-size: 13px !important;
 }
