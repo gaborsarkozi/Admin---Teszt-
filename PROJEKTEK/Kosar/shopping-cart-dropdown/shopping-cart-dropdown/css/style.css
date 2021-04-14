@@ -1036,3 +1036,8 @@ td i.icon-close.icon-merete {
     display: inline-block;
   }
   
+
+  .shopping-cart td input, select {
+    padding: 0;
+    width: 70%;
+}

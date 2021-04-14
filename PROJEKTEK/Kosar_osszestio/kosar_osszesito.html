@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aruhaz.bearing.hu - Profil oldal</title>
+
+    <link rel="stylesheet" href="kosar_osszesito.css">
+    <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+
+    <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="profil.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container pt-5">
+
+            <div class="row">
+                <div class="col-xl-12 py-5">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0"> <i
+                                            class="icon-basket-loaded fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Kosaraim tartalma</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="pl-lg-4">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <a class="nav-link btn-bearing shadow" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                                            </div>
+                                        <div class="col-lg-6">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                              <div class="card card-body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12" id="megrendelesekLista" style="display: none;">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0"> <i
+                                            class="icon-bag fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Megrendeléseim
+                                        a szűrési feltételek alapján</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table eddigi-rendelesek">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="width: 40%;" class="border-0 bg-light">
+                                                <div class="p-2 px-3 ">Dátum</div>
+                                            </th>
+                                            <th scope="col" style="width: 30%;" class="border-0 bg-light">
+                                                <div class="py-2 ">Állapot</div>
+                                            </th>
+                                            <th scope="col" style="width: 30%;" class="border-0 bg-light">
+                                                <div class="py-2 ">Akció</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="border-0">
+                                                <div class="p-2">
+                                                    <div class="ml-3 d-inline-block align-middle">
+                                                        <h6 class="mb-0">2021/04/07 13:03:19.733 GMT+2</h6>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <td class="border-0 align-middle">Lezárt</td>
+                                            <td class="border-0 align-middle"><a data-toggle="collapse"
+                                                    href="#collapseExample" role="button" aria-expanded="false"
+                                                    aria-controls="collapseExample"><i class="
+                                        icon-magnifier-add mr-3"></i>Rendelés megtekintése</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="collapse" id="collapseExample">
+
+                                    <div>
+                                        <div class="col-lg-12 p-0 shadow mb-5">
+                                            <!-- Shopping cart table -->
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="p-2">Kép</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 87px;">Termék</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2">Gyártó</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 80px;">Méret</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 140px;">Gyártói
+                                                                    azonosító</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 130px;">Listaár (HUF/db)
+                                                                </div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2">Mennyiség</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 80px;">Ár (HUF)</div>
+                                                            </th>
+                                                            <th scope="col" class="border-0 bg-light">
+                                                                <div class="py-2" style="width: 135px;">Kosár</div>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="bow-wrap-body">
+                                                        <tr class="box-tr">
+                                                            <th scope="row" class="border-0">
+                                                                <div class="p-2">
+                                                                    <a target="_new" class="preview"
+                                                                        href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                        title=""><img style="max-width: 70%;"
+                                                                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            alt=""></a>
+                                                                </div>
+                                                            </th>
+                                                            <td class="border-0 align-middle"><a href="">6000 2RS</a>
+                                                            </td>
+                                                            <td class="border-0 align-middle">CX</td>
+                                                            <td class="border-0 align-middle">10X26X8X</td>
+                                                            <td class="border-0 align-middle  ikon-kozepre-zár">6000-2RS
+                                                            </td>
+                                                            <td class="border-0 align-middle">202</td>
+                                                            <td class="border-0 align-middle">2</td>
+                                                            <td class="border-0 align-middle">405</td>
+
+                                                            <td style="white-space:nowrap"
+                                                                class="border-0 align-middle">
+                                                                <input type="number" class="span1" value="2">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-07-01-00002">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="p_01-07-01-00002" value="9814.44">
+                                                                <label class="piece_label">DB</label>
+                                                                <button class="add_cart_button"
+                                                                    onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                        class="icon-basket icon-merete"></i></button>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr class="box-tr">
+                                                            <th scope="row" class="border-0">
+                                                                <div class="p-2">
+                                                                    <a target="_new" class="preview"
+                                                                        href="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                                                                        title=""><img style="max-width: 70%;"
+                                                                            src="https://aruhaz.bearing.hu/static/arukepek/6000.jpg"
+                                                                            alt=""></a>
+                                                                </div>
+                                                            </th>
+                                                            <td class="border-0 align-middle"><a href="">6202</a></td>
+                                                            <td class="border-0 align-middle">FBJ</td>
+                                                            <td class="border-0 align-middle">15X35X11</td>
+                                                            <td class="border-0 align-middle  ikon-kozepre-zár">6202
+                                                            </td>
+                                                            <td class="border-0 align-middle">304</td>
+                                                            <td class="border-0 align-middle">1</td>
+                                                            <td class="border-0 align-middle">347</td>
+
+                                                            <td style="white-space:nowrap"
+                                                                class="border-0 align-middle">
+                                                                <input type="number" class="span1" value="1">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-07-01-00002">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="p_01-07-01-00002" value="9814.44">
+                                                                <label class="piece_label">DB</label>
+                                                                <button class="add_cart_button"
+                                                                    onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                        class="icon-basket icon-merete"></i></button>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr class="box-tr">
+                                                            <th scope="row" class="border-0">
+                                                                <div class="p-2">
+                                                                    <a target="_new" class="preview"
+                                                                        href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                        title=""><img style="max-width: 70%;"
+                                                                            src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            alt=""></a>
+                                                                </div>
+                                                            </th>
+                                                            <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                            </td>
+                                                            <td class="border-0 align-middle">INA</td>
+                                                            <td class="border-0 align-middle">22X10X36X</td>
+                                                            <td class="border-0 align-middle  ikon-kozepre-zár">KR22-PP
+                                                            </td>
+                                                            <td class="border-0 align-middle">0</td>
+                                                            <td class="border-0 align-middle">1</td>
+                                                            <td class="border-0 align-middle">0</td>
+
+                                                            <td style="white-space:nowrap"
+                                                                class="border-0 align-middle">
+                                                                <input type="number" class="span1" value="1">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-07-01-00002">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="p_01-07-01-00002" value="9814.44">
+                                                                <label class="piece_label">DB</label>
+                                                                <button class="add_cart_button"
+                                                                    onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                        class="icon-basket icon-merete"></i></button>
+                                                            </td>
+
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- End -->
+                                        </div>
+                                    </div>
+                                    <div class="justify-content-center shadow">
+                                        <div class="col-lg-12 py-5">
+                                            <div class="card">
+                                                <div class="row">
+                                                    <div class="col-lg-6 px-5">
+                                                        <div class="row p-1">
+                                                            <p class="mb-0 shop"> <strong>Megrendelés dátuma:</strong>
+                                                                2021/04/07 13:03:19.733 GMT+2</p>
+                                                        </div>
+                                                        <div class="row p-1">
+                                                            <p class="mb-0 shop"> <strong>BP-001 rakártból</strong></p>
+                                                        </div>
+                                                        <div class="row p-1">
+                                                            <p class="mb-0 shop"> <strong>Státusz:</strong> Lezárt</p>
+                                                        </div>
+                                                        <div class="row p-1">
+                                                            <p class=" mb-0 shop"><strong>Megjegyzés: </strong> Teszt
+                                                                rendelés 01 - Sárközi Gábor - Csak a tesztelés érdekében
+                                                                történik a rendelés - Figyelmen kívül hagyni
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 px-5">
+                                                        <div class="row d-flex justify-content-between px-4">
+                                                            <p class="mb-1 text-left">Szállítási költség</p>
+                                                            <h6 class="mb-1 text-right">0.0</h6>
+                                                        </div>
+                                                        <div class="row d-flex justify-content-between px-4">
+                                                            <p class="mb-1 text-left">Szállítás módja</p>
+                                                            <h6 class="mb-1 text-right">Partner saját gépjármű</h6>
+                                                        </div>
+                                                        <div class="row d-flex justify-content-between px-4">
+                                                            <p class="mb-1 text-left">Megrendelés értéke</p>
+                                                            <h6 class="mb-1 text-right">751 HUF + ÁFA</h6>
+                                                        </div>
+                                                        <div class="row d-flex justify-content-between px-4" id="tax">
+                                                            <p class="mb-1 text-left">Teljes összeg</p>
+                                                            <h6 class="mb-1 text-right">751 HUF + ÁFA</h6>
+                                                        </div> <button class="sendButtonRendeles btn-block btn my-3 btn-modositas"> <i
+                                                                class="icon-action-redo mr-2"></i> Újrarendelés</button>
+                                                            <div class="alert-02 fade show" role="alert">
+                                                                    <div class="main">
+                    
+                                                                        <div class="popup success">
+                                                                            <img src="succes_order.svg" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-4 order-xl-1 mb-5 mb-xl-5">
+                    <div class="card card-profile shadow">
+                        <div class="card-body pt-md-5">
+                            <h3> <i class="
+                                    icon-user fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Személyes adataim
+                            </h3>
+                        </div>
+                        <div class="card-body pt-0 pt-md-4 data-actual">
+                            <p>Bearing KFt </p>
+                            <p>Sárközi Gábor</p>
+                            <p>Sülysáp</p>
+                            <p>Kápolna utca 16/A</p>
+                            <p>2241</p>
+                        </div>
+                        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                            <div class="d-flex justify-content-center">
+                                <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
+                                    <li class="nav-item ">
+                                        <a class="nav-link btn-bearing shadow" id="pills-edit-tab" data-toggle="pill"
+                                            href="#pills-edit" role="tab" aria-controls="pills-edit-tab"
+                                            aria-selected="true">Módosítás</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link  btn-bearing shadow" id="pills-profile-tab"
+                                            data-toggle="pill" href="#pills-profile" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Címjegyzék</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link btn-bearing shadow" id="pills-contact-tab" data-toggle="pill"
+                                            href="#pills-contact" role="tab" aria-controls="pills-contact"
+                                            aria-selected="false">Új cím</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link  btn-bearing shadow" id="pills-password-tab"
+                                            data-toggle="pill" href="#pills-password" role="tab"
+                                            aria-controls="pills-password" aria-selected="false">Jelszócsere</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8 order-xl-2">
+                    <div class="card shadow">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade" id="pills-edit" role="tabpanel"
+                                aria-labelledby="pills-home-edit">
+                                <div class="card-header bg-white border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h3 class="mb-0"> <i
+                                                    class="icon-user-follow fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>
+                                                Személyes adatok módosítása</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group focused">
+                                                <label class="form-control-label" for="input-username">Név</label>
+                                                <input type="text" id="input-username"
+                                                    class="form-control form-control-alternative" placeholder="Username"
+                                                    value="Sárközi Gábor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Cégnév</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative" value="Bearing KFt">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Adószám</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative" value="0123456789">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Irányítószám</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative" value="2241">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Város</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative" value="Sülysáp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Cím</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    value="Kápolna utca 16/a">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Email</label>
+                                                <input type="email" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    value="sarkozigabor13@gmail.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Telefon</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative" value="06306561253">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked="">
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <p class="d-inline"> Alapértelmezett cím? </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <button type="button"
+                                                class="sendButton btn my-5 btn-modositas">Módosítás</button>
+                                            <div class="alert fade show" role="alert">
+                                                <div class="main">
+
+                                                    <div class="popup success">
+                                                        <img src="succes_save.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                <div class="card-header bg-white border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h3 class="mb-0"><i
+                                                    class="icon-directions fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Címjegyzék
+                                                módosítása</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="card card-custom border-white mt-3">
+                                        <div class="card-custom-img p-3 text-center">
+                                            <h3> <i class="icon-direction fa-2x p-2 mr-3"></i>Címjegyzék</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="card-title">Sárközi Gábor</p>
+                                                    <p class="card-title">+36306561253</p>
+                                                    <p class="card-title">Kápolna utca 16/a</p>
+                                                    <p class="card-title">2241</p>
+                                                    <p class="card-title">Sülysáp</p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-center"
+                                            style="background: inherit; border-color: inherit;">
+                                            <a href="#" class="btn btn-bearing shadow btn-bearing-active">Módosítás</a>
+                                            <a href="#" class="btn btn-bearing shadow">Törlés</a>
+                                        </div>
+                                    </div>
+                                    <div class="card card-custom border-white mt-5">
+                                        <div class="card-custom-img p-3 text-center">
+                                            <h3> <i class="icon-direction fa-2x p-2 mr-3"></i>Címjegyzék</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="card-title">Bearing KFt</p>
+                                                    <p class="card-title">+36306561253</p>
+                                                    <p class="card-title">Kápolna utca 16/a</p>
+                                                    <p class="card-title">2241</p>
+                                                    <p class="card-title">Sülysáp</p>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="card-footer d-flex justify-content-center"
+                                            style="background: inherit; border-color: inherit;">
+                                            <a href="#" class="btn btn-bearing shadow btn-bearing-active">Módosítás</a>
+                                            <a href="#" class="btn btn-bearing shadow">Törlés</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-password" role="tabpanel"
+                                aria-labelledby="pills-password-tab">
+                                <div class="card-header bg-white border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h3 class="mb-0"> <i
+                                                    class="icon-key fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Jelszó
+                                                módosítása</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group focused">
+                                                <label class="form-control-label" for="input-username">Új jelszó</label>
+                                                <input type="text" id="input-username"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adjon meg egy új jelszót">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Jelszó
+                                                    megerősítése</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Erősítse meg a jelszót">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <button class="btn my-5 btn-modositas">
+                                                Jelszó módosítása
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">
+                                <div class="card-header bg-white border-0">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h3 class="mb-0"> <i
+                                                    class="icon-user-female fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Új
+                                                cím felvétele</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group focused">
+                                                <label class="form-control-label" for="input-username">Név</label>
+                                                <input type="text" id="input-username"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a nevét">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Cégnév</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a cég nevét">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Adószám</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg az adószámát">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Irányítószám</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg az irányítószámát">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Város</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a cég címét">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Cím</label>
+                                                <input type="text" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a szállítási címet">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Email</label>
+                                                <input type="email" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a kapcsollattartási emalit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="input-email">Telefon</label>
+                                                <input type="number" id="input-email"
+                                                    class="form-control form-control-alternative"
+                                                    placeholder="Adja meg a kapcsollattartási telefonszámot">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked="">
+                                                    <span class="slider"></span>
+                                                </label>
+                                                <p class="d-inline"> Alapértelmezett cím? </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <button class="btn my-5 btn-modositas">
+                                                Hozzáadás
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row py-5">
+                <div class="col-xl-12">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0"> <i
+                                            class="icon-badge fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Kedvencek
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-lg-12 p-0 shadow mb-5">
+                                <!-- Shopping cart table -->
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="p-2">Kép</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2" style="width:85px">Termék</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Gyártó</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Méret</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2" style="width:105px">Helyettesítő termék</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Gyártói azonosító
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2" style="width:110px">Raktárak</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Ár (HUF)</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Készlet</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2" style="width:110px">Kosár</div>
+                                                </th>
+                                                <th scope="col" class="border-0 bg-light">
+                                                    <div class="py-2">Törlés</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bow-wrap-body">
+                                            <tr class="box-tr">
+                                                <th scope="row" class="border-0">
+                                                    <div class="p-2">
+                                                        <a target="_new" class="preview"
+                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                            title=""><img style="max-width: 70%;"
+                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                alt=""></a>
+                                                    </div>
+                                                </th>
+                                                <td class="border-0 align-middle"><a href="">6202</a>
+                                                </td>
+                                                <td class="border-0 align-middle">FBJ</td>
+                                                <td class="border-0 align-middle">15X35X11</td>
+                                                <td class="border-0 align-middle">6202
+                                                </td>
+                                                <td class="border-0 align-middle">6202</td>
+                                                <td class="border-0 align-middle">BP-001: 134</td>
+                                                <td class="border-0 align-middle">345</td>
+                                                <td class="border-0 align-middle">134</td>
+
+                                                <td style="white-space:nowrap" class="border-0 align-middle">
+                                                    <input type="number" class="span1" value="2">
+                                                    <input type="hidden" name="orders.id:records"
+                                                        value="01-07-01-00002">
+                                                    <input type="hidden" name="orders.price:records"
+                                                        id="p_01-07-01-00002" value="9814.44">
+                                                    <label class="piece_label">DB</label>
+                                                    <button class="add_cart_button"
+                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                            class="icon-basket icon-merete"></i></button>
+                                                </td>
+                                                <td class="border-0 align-middle" id="text-center-eros"> <i class="icon-close"></i> </td>
+
+                                            </tr>
+                                            <tr class="box-tr">
+                                                <th scope="row" class="border-0">
+                                                    <div class="p-2">
+                                                        <a target="_new" class="preview"
+                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                            title=""><img style="max-width: 70%;"
+                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                alt=""></a>
+                                                    </div>
+                                                </th>
+                                                <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                </td>
+                                                <td class="border-0 align-middle">INA</td>
+                                                <td class="border-0 align-middle">22X10X36</td>
+                                                <td class="border-0 align-middle">KR22
+                                                </td>
+                                                <td class="border-0 align-middle">KR22-PP</td>
+                                                <td class="border-0 align-middle">BP-001: 3</td>
+                                                <td class="border-0 align-middle">0</td>
+                                                <td class="border-0 align-middle">3</td>
+
+                                                <td style="white-space:nowrap" class="border-0 align-middle">
+                                                    <input type="number" class="span1" value="2">
+                                                    <input type="hidden" name="orders.id:records"
+                                                        value="01-07-01-00002">
+                                                    <input type="hidden" name="orders.price:records"
+                                                        id="p_01-07-01-00002" value="9814.44">
+                                                    <label class="piece_label">DB</label>
+                                                    <button class="add_cart_button"
+                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                            class="icon-basket icon-merete"></i></button>
+                                                </td>
+                                                <td class="border-0 align-middle" id="text-center-eros"> <i class="icon-close"></i> </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function tartalomMegjelenitese() {
+            var x = document.getElementById("megrendelesekLista");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        $(".sendButton").click(function () {
+            $(".alert").show('medium');
+            setTimeout(function () {
+                $(".alert").hide('medium');
+            }, 5000);
+        });
+        $(".sendButton .close").click(function () {
+            $(".alert").hide('medium');
+        });
+    </script>
+
+    <script>
+        $(".sendButtonRendeles").click(function () {
+            $(".alert-02").show('medium-02');
+            setTimeout(function () {
+                $(".alert-02").hide('medium-02');
+            }, 5000);
+        });
+        $(".sendButtonRendeles .close").click(function () {
+            $(".alert-02").hide('medium-02');
+        });
+    </script>
+
+
+</body>
+
+</html>
