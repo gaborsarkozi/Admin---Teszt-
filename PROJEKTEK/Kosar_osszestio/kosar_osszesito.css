@@ -2495,7 +2495,21 @@ p.mb-0.shop {
   color: #211061;
 }
 
-a.btn.my-5.btn-modositas {
+a.btn.mt-5.btn-modositas {
   color: white !important;
   padding: .75rem .75rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+
+
+button i {
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-link.btn-bearing.mt-5 {
+  width: fit-content;
+  cursor: pointer;
+} 

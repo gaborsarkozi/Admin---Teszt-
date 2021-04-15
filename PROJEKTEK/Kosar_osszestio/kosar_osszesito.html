@@ -66,8 +66,8 @@
                             <div class="row justify-content-center">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active btn-bearing " id="pills-home-tab"
-                                            data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+                                        <a class="nav-link active btn-bearing " id="pills-home-tab" data-toggle="pill"
+                                            href="#pills-home" role="tab" aria-controls="pills-home"
                                             aria-selected="true">Kosár 1 (18 termék)</a>
                                     </li>
                                     <li class="nav-item">
@@ -101,85 +101,198 @@
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                         aria-labelledby="pills-home-tab">
-                                    <div class="card-body">
-                                        <div class="col-lg-12 p-0 shadow mb-5">
-                                            <!-- Shopping cart table -->
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="p-2">Kép</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2" style="width:130px">Termék</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2">Gyártó</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2" >Méret</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2" style="
-                                                                width: 70px;
-                                                            ">Tömeg</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2" >Listaár</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2">DB
-                                                                </div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2" style="width:110px">Raktárak</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div class="py-2">Végösszeg</div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div  ></div>
-                                                            </th>
-                                                            <th scope="col" class="border-0 bg-light">
-                                                                <div ></div>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody class="bow-wrap-body">
-                                                        <tr class="box-tr">
-                                                            <th scope="row" class="border-0">
-                                                                <div class="p-2">
-                                                                    <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" title=""><img style="max-width: 70%;" src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
-                                                                </div>
-                                                            </th>
-                                                            <td class="border-0 align-middle"><a href="">01234567890123456789</a>
-                                                            </td>
-                                                            <td class="border-0 align-middle">FBJ</td>
-                                                            <td class="border-0 align-middle">15X35X11</td>
-                                                            <td class="border-0 align-middle">34.56 kg</td>
-                                                            <td class="border-0 align-middle">6202
-                                                            </td>
-                                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                                <input type="number" class="span1" value="2">
-                                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                                <label class="piece_label">DB</label>
-                                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="
+                                        <div class="card-body">
+                                            <div class="col-lg-12 p-0 shadow mb-5">
+                                                <!-- Shopping cart table -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 6%;">
+                                                                    <div class="p-2">Kép</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Termék</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 7%;">
+                                                                    <div class="py-2">Gyártó</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
+                                                                    <div class="py-2">Méret</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Tömeg</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Listaár</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
+                                                                    <div class="py-2">DB</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Raktárak</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Végösszeg</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 1%;">
+                                                                    <div></div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 1%;">
+                                                                    <div></div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bow-wrap-body">
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview"
+                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            title=""><img style="max-width: 100%;"
+                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                                alt=""></a>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a
+                                                                        href="">01234567890123456789</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle">FBJ</td>
+                                                                <td class="border-0 align-middle">15X35X11</td>
+                                                                <td class="border-0 align-middle">34.56 kg</td>
+                                                                <td class="border-0 align-middle">62020
+                                                                </td>
+                                                                <td style="white-space:nowrap"
+                                                                    class="border-0 align-middle">
+                                                                    <input type="number" class="span1" value="2">
+                                                                    <input type="hidden" name="orders.id:records"
+                                                                        value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records"
+                                                                        id="p_01-07-01-00002" value="9814.44">
+                                                                    <label class="piece_label">DB</label>
+                                                                    <button class="add_cart_button"
+                                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                            class="
                                                                     icon-refresh icon-merete"></i></button>
-                                                            </td>
-                                                            <td class="border-0 align-middle">BP-001: 134</td>
-                                                            <td class="border-0 align-middle">6202</td>   
-                                                            <td class="border-0 align-middle" id="text-center-eros"> <i class="icon-close"></i> </td>
-                                                            <td class="border-0 align-middle" id="text-center-eros"> <i class="icon-star"></i> </td>
-            
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    KRX016<br>BP-001<br>DB-001</td>
+                                                                <td class="border-0 align-middle">12040</td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-close"></i> </td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-star"></i> </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview"
+                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            title=""><img style="max-width: 100%;"
+                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                                alt=""></a>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a
+                                                                        href="">01234567890123456789</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle">FBJ</td>
+                                                                <td class="border-0 align-middle">15X35X11</td>
+                                                                <td class="border-0 align-middle">34.56 kg</td>
+                                                                <td class="border-0 align-middle">62020
+                                                                </td>
+                                                                <td style="white-space:nowrap"
+                                                                    class="border-0 align-middle">
+                                                                    <input type="number" class="span1" value="2">
+                                                                    <input type="hidden" name="orders.id:records"
+                                                                        value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records"
+                                                                        id="p_01-07-01-00002" value="9814.44">
+                                                                    <label class="piece_label">DB</label>
+                                                                    <button class="add_cart_button"
+                                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                            class="
+                                                                    icon-refresh icon-merete"></i></button>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    KRX016<br>BP-001<br>DB-001</td>
+                                                                <td class="border-0 align-middle">12040</td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-close"></i> </td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-star"></i> </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview"
+                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            title=""><img style="max-width: 100%;"
+                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                                alt=""></a>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a
+                                                                        href="">01234567890123456789</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle">FBJ</td>
+                                                                <td class="border-0 align-middle">15X35X11</td>
+                                                                <td class="border-0 align-middle">34.56 kg</td>
+                                                                <td class="border-0 align-middle">62020
+                                                                </td>
+                                                                <td style="white-space:nowrap"
+                                                                    class="border-0 align-middle">
+                                                                    <input type="number" class="span1" value="2">
+                                                                    <input type="hidden" name="orders.id:records"
+                                                                        value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records"
+                                                                        id="p_01-07-01-00002" value="9814.44">
+                                                                    <label class="piece_label">DB</label>
+                                                                    <button class="add_cart_button"
+                                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                            class="
+                                                                    icon-refresh icon-merete"></i></button>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    KRX016<br>BP-001<br>DB-001</td>
+                                                                <td class="border-0 align-middle">12040</td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-close"></i> </td>
+                                                                <td class="border-0 align-middle" id="text-center-eros">
+                                                                    <i class="icon-star"></i> </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- End -->
                                             </div>
-                                            <!-- End -->
+                                            <div class="row">
+
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="termekek">Project kedvezmény megadása</label>
+                                                        <input type="number" id="input-termekek" class="form-control form-control-alternative" placeholder="Kérjük adja meg a projecthez tartozó kedvezményt mértékét! Pl.: 13.50">
+                                                    </div>
+                                                </div>
+                                        
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-3 d-flex align-items-end"> <a type="button" class="nav-link btn-bearing mt-5 "
+                                                  >Vásárlás folytatása <i class="icon-action-undo ml-1"></i> </a>
+                                            </div>
+                                            <div class="col-lg-3 d-flex align-items-end"> <a type="button" class="nav-link btn-bearing mt-5 "
+                                                  >Alkosár törlés <i class="icon-close ml-1"></i> </a>
+                                            </div>
+                                            <div class="col-lg-4 offset-lg-2 text-right"> <a type="button" class="btn mt-5 btn-modositas"
+                                                    >Tovább a pénztárhoz <i class="icon-wallet ml-1"></i> </a>
+                                            </div>
+                                            </div>
+                                            
+
                                         </div>
-                                    </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                         aria-labelledby="pills-profile-tab">...</div>
@@ -453,7 +566,8 @@
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0"> <i
-                                            class="icon-fire fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Mások még ezeket is vásárolták
+                                            class="icon-fire fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Mások
+                                        még ezeket is vásárolták
                                     </h3>
                                 </div>
                             </div>
