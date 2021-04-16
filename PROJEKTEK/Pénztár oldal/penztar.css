@@ -2529,6 +2529,7 @@ button i {
   border-radius: 3px;
   color: #fff !important;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  
 }
 
 
@@ -2537,6 +2538,13 @@ i.icon-info {
   position: relative;
   top: 3px;
   font-weight: 500;
+}
+
+.order-icon-info {
+  position: inherit !important;
+  color: #fff;
+  top: 0 !important;
+  
 }
 
 
@@ -2623,5 +2631,35 @@ td i.icon-close.icon-merete {
   padding: .25rem .5rem;
   font-weight: 600 !important;
   color: #fff !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.megjegyzes-order-done {
+  padding: 1rem !important;
+  background: #ec7623;
+  border-radius: 3px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.megjegyzes-order-done p {
+  color: #fff !important;
+}
+
+
+.tool-tip-price-discount {
+  top: 0px !important;
+}
+
+.tool-tip__icon-price-discount {
+  font-size: 16px !important;
+  font-style: normal !important;
+}
+
+
+.tool-tip__info-price-discount {
+  top: -22px !important;
+}
+
+.sendButtonRendeles {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
