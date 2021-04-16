@@ -1141,3 +1141,7 @@ i.icon-info.mr-2 {
     top: 1px;
     font-weight: 600;
 }
+
+.nav-link:hover {
+    color: #eb7625 !important;
+}
