@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>aruhaz.bearing.hu - Profil oldal</title>
+    <title>aruhaz.bearing.hu - Pénztár</title>
 
     <link rel="stylesheet" href="penztar.css">
     <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
@@ -96,31 +96,103 @@
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 6%;">
-                                                                    <div class="p-2">Kép</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 7%;">
-                                                                    <div class="py-2">Gyártó</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 10%;">
-                                                                    <div class="py-2">Méret</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Tömeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Listaár</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                                    <div class="py-2">DB</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-list"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Listaár</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Raktárak</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-calculator"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Darabszám
+                                                                                    (db)</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Végösszeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-social-dropbox"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Raktárak</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -145,7 +217,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -170,7 +242,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -195,7 +267,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -220,7 +292,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -245,7 +317,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -269,31 +341,103 @@
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 6%;">
-                                                                    <div class="p-2">Kép</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 7%;">
-                                                                    <div class="py-2">Gyártó</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light" style="width: 10%;">
-                                                                    <div class="py-2">Méret</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Tömeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Listaár</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                                    <div class="py-2">DB</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-list"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Listaár</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Raktárak</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-calculator"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Darabszám
+                                                                                    (db)</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Végösszeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-social-dropbox"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Raktárak</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -318,7 +462,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -343,7 +487,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -365,19 +509,23 @@
                     </div>
                 </div>
             </div>
-           <!--  <div class="row">
+        </div>
+        
+        <div class="container px-0">
+            <div class="row">
                 <div class="col-xl-12 py-5 px-0">
                     <div class="card shadow">
                         <div class="card-header bg-white border-0 card-header-megrendelesek">
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0"> <i
-                                            class="icon-social-dropbox fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Rendelés összesítése</h3>
+                                            class="icon-briefcase fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Ajánlatkérések
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body justify-content-center">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center d-none">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active btn-bearing " id="pills-home-tab" data-toggle="pill"
@@ -411,42 +559,120 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="row pt-5">
+                            <div class="">
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
                                         aria-labelledby="pills-home-tab">
-                                        <div class="card-body">
+                                        <div class="card-body py-0">
                                             <div class="col-lg-12 p-0 shadow mb-5">
+                                                <!-- Shopping cart table -->
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 6%;">
-                                                                    <div class="p-2">Kép</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 6%;">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 7%;">
-                                                                    <div class="py-2">Gyártó</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 7%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
-                                                                    <div class="py-2">Méret</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 10%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Tömeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Listaár</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-list"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Listaár</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                                    <div class="py-2">DB</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 15%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-calculator"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Darabszám
+                                                                                    (db)</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Raktárak</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Végösszeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -471,10 +697,9 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
-                                                                    KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
-                                                            
+                                                              
+
                                                             </tr>
                                                             <tr class="box-tr">
                                                                 <th scope="row" class="border-0">
@@ -496,24 +721,38 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
-                                                                    KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
+                                                              
                                                             
+
                                                             </tr>
-                                                         
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview"
+                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            title=""><img style="max-width: 100%;"
+                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                                alt=""></a>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a
+                                                                        href="">01234567890123456789</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle">FBJ</td>
+                                                                <td class="border-0 align-middle">15X35X11</td>
+                                                                <td class="border-0 align-middle">34.56 kg</td>
+                                                                <td class="border-0 align-middle">62020
+                                                                </td>
+                                                                <td class="border-0 align-middle">2 DB
+                                                                </td>
+                                                                <td class="border-0 align-middle">12040</td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
+                                                <!-- End -->
                                             </div>
-
-                                            <div class="row">
-                                            <div class="col-lg-4 offset-lg-8 text-right"> <a type="button" class="btn mt-5 btn-modositas">
-                                                Rendelés leadása<i class="icon-wallet ml-1"></i> </a>
-                                            </div>
-                                            </div>
-                                            
-
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="pills-profile" role="tabpanel"
@@ -525,7 +764,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="container px-0"  id="AlapertelmezettRendeles">
             <div class="row">
@@ -699,7 +938,7 @@
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0"> <i
-                                            class="icon-social-dropbox fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Rendelés összesítése</h3>
+                                            class="icon-social-dropbox fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Rendelés leadása</h3>
                                 </div>
                             </div>
                         </div>
@@ -715,32 +954,120 @@
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 6%;">
-                                                                    <div class="p-2">Kép</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 6%;">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 7%;">
-                                                                    <div class="py-2">Gyártó</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 7%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
-                                                                    <div class="py-2">Méret</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 10%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Tömeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Listaár</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                                    <div class="py-2">DB</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-list"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Listaár</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Raktárak</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-calculator"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Darabszám
+                                                                                    (db)</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Végösszeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-social-dropbox"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Raktárak</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -765,7 +1092,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -790,7 +1117,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -815,7 +1142,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -841,7 +1168,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -866,7 +1193,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1066,7 +1393,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1091,7 +1418,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1130,7 +1457,7 @@
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0"> <i
-                                            class="icon-social-dropbox fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Rendelés összesítése</h3>
+                                            class="icon-social-dropbox fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Rendelés leadása</h3>
                                 </div>
                             </div>
                         </div>
@@ -1146,32 +1473,120 @@
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 6%;">
-                                                                    <div class="p-2">Kép</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 6%;">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 7%;">
-                                                                    <div class="py-2">Gyártó</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 7%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
-                                                                    <div class="py-2">Méret</div>
+                                                                <th scope="col" class="border-0 bg-light"
+                                                                    style="width: 10%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Tömeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Listaár</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                                    <div class="py-2">DB</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-list"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Listaár</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Raktárak</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-calculator"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Darabszám
+                                                                                    (db)</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Végösszeg</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-social-dropbox"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Raktárak</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
                                                             </tr>
                                                         </thead>
@@ -1196,7 +1611,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1222,7 +1637,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1444,7 +1859,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             
@@ -1469,7 +1884,7 @@
                                                                 </td>
                                                                 <td class="border-0 align-middle">2 DB
                                                                 </td>
-                                                                <td class="border-0 align-middle">
+                                                                <td class="border-0 align-middle"  style="font-size: 15px;">
                                                                     KRX016<br>BP-001<br>DB-001</td>
                                                                 <td class="border-0 align-middle">12040</td>
                                                             

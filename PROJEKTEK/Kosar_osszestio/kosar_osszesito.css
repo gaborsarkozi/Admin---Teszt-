@@ -934,7 +934,7 @@
   }
   
   .nav-link {
-    margin: 0 1rem !important;
+    margin: 0 .85rem !important;
     display: block;
     padding: .5rem 0.8rem !important;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
@@ -2042,7 +2042,7 @@
     border-radius: 4px !important;
     color: #211061 !important;
     font-weight: 600 !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
     margin: 0 4px;
   }
 
@@ -2527,7 +2527,7 @@ button i {
   display: inline-block;
   text-align: center;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 17px;
 }
 .tool-tip .tool-tip__info {
   display: none;
@@ -2552,9 +2552,7 @@ button i {
 .tool-tip .tool-tip__info .info {
   display: block;
 }
-.tool-tip .tool-tip__info .info__title {
-  color: #fa00f3;
-}
+
 .tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
   display: inline-block;
 }
@@ -2614,4 +2612,27 @@ th .py-2 {
 
 th .p-2 {
   text-align: center;
+}
+
+
+.btn-bearing i {
+  font-size: 16px;
+  position: relative;
+  top: 1px;
+  font-weight: 600;
+}
+
+
+.tool-tip-price-discount {
+  top: 0px !important;
+}
+
+.tool-tip__icon-price-discount {
+  font-size: 16px !important;
+  font-style: normal !important;
+}
+
+
+.tool-tip__info-price-discount {
+  top: -22px !important;
 }
