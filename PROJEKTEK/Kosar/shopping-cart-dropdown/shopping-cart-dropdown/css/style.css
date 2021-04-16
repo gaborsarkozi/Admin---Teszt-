@@ -1119,3 +1119,25 @@ p.mb-2.mb-1.text-left.szallitas-kedvezmeny-kosar {
   .tool-tip__info-price-discount {
     top: -22px !important;
   }
+
+
+  .szallitolevel-figyelem {
+    padding: .5rem 1rem;
+    background-color: #ec7623;
+    border-radius: 3px;
+    color: #fff !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  }
+  
+  p.mb-2.mb-1.text-left.szallitolevel-figyelem {
+    font-size: 13px !important;
+    font-weight: 600;
+}
+
+
+i.icon-info.mr-2 {
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+    font-weight: 600;
+}
