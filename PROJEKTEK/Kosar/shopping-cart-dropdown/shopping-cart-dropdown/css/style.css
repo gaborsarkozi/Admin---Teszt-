@@ -48,6 +48,7 @@ nav ul li a:hover {
 
 #shopping-cart-container .table th {
     padding: .6rem 1.6rem !important;
+    text-align: center;
     font-size: 15px;
     font-weight: 600;
 }
@@ -1010,47 +1011,82 @@ td i.icon-close.icon-merete {
     position: relative;
     top: 2px;
   }
-
+  
   .tool-tip .tool-tip__icon {
     cursor: pointer;
     display: inline-block;
     text-align: center;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
   }
   .tool-tip .tool-tip__info {
     display: none;
     border-radius: 3px;
     font-size: 0.875em;
-    padding: 1em;
+    padding: 1rem 0.85rem;
     position: absolute;
-    left: 13px;
-    top: -19px;
+    top: -20px;
     width: max-content;
     z-index: 2;
   }
   .tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
     content: "";
     position: absolute;
-    left: 8px;
-    top: 16px;
+    left: 7px;
+    top: 20px;
     border-style: solid;
     border-width: 10px 10px 10px 0;
     border-color: transparent #eb7624;
   }
-
+  
   .tool-tip .tool-tip__info .info {
     display: block;
   }
-  .tool-tip .tool-tip__info .info__title {
-    color: #fa00f3;
-  }
+  
   .tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
     display: inline-block;
   }
   
   a:focus + .tool-tip .tool-tip__info {
     display: inline-block;
+  }
+  
+  
+  .shopping-cart td input, select {
+    width: 75%;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  #tablet-cart-container .shopping-cart td input, select {
+    width: 20%;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  p.mb-2.mb-1.text-left.szallitas-kedvezmeny-kosar {
+    font-size: 13px !important;
+  }
+  
+  
+  td i.icon-close.icon-merete {
+    color: #EC7623;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+  }
+  
+  .szallitas-kedvezmeny-kosar {
+    max-width: max-content;
+    font-size: 13px !important;
+    background-color: #eb7624;
+    border-radius: 4px;
+    padding: .25rem .5rem;
+    font-weight: 600 !important;
+    color: #fff !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   }
   
 
@@ -1069,3 +1105,17 @@ td i.icon-close.icon-merete {
 p.mb-2.mb-1.text-left.szallitas-kedvezmeny-kosar {
     font-size: 13px !important;
 }
+
+.tool-tip-price-discount {
+    top: 0px !important;
+  }
+  
+  .tool-tip__icon-price-discount {
+    font-size: 16px !important;
+    font-style: normal !important;
+  }
+  
+  
+  .tool-tip__info-price-discount {
+    top: -22px !important;
+  }
