@@ -121,20 +121,20 @@
                                                 </div>
                                             </div>  
                                         </div>
-                                        <div class="row" id="megrendelesekListaKereso">
+                                        <div class="row">
                                             <div class="col-lg-12 text-center">
-                                                <a type="button" class="btn my-5 btn-modositas">Termékek keresése</a>
+                                                <a type="button" class="btn my-5 btn-modositas" onclick="interchangeLekerdezes()">Termékek keresése</a>
                                                 <!-- <a type="button" class="btn my-5 btn-modositas" href="#megrendelesekListaKereso" onclick="tartalomMegjelenitese()">Megrendelések lekérdezése</a> -->
                                             </div>
                                         </div>
                                     </div>
                                 </form>
-                                <div class="col-xl-12 py-5">
+                                <div class="col-xl-12 py-5 d-none" id="azonnalHelyettesitoTermekTabla">
                                     <div class="card shadow">
                                         <div class="card-header bg-white border-0 card-header-megrendelesek">
                                             <div class="row align-items-center">
                                                 <div class="col-8">
-                                                    <h3 class="mb-0"> <i class="icon-badge fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Kedvencek
+                                                    <h3 class="mb-0"> <i class="icon-shuffle fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Azonnal kiszolgálható tételek
                                                     </h3>
                                                 </div>
                                             </div>
@@ -146,80 +146,396 @@
                                                     <table class="table">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="p-2">Kép</div>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 6%;">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-picture"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termékfotó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2" style="width:85px">Termék</div>
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Termék</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Gyártó</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Egyezés</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Méret</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2" style="width:105px">Helyettesítő termék</div>
-                                                                </th>
-                                                                <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Gyártói azonosító
+                                                                <th scope="col" class="border-0 bg-light" style="width: 7%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wrench"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Gyártó és gyártói azonosító</span>
+                                                                            </p>
+                                                                        </div>
+
                                                                     </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2" style="width:110px">Raktárak</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <img src="square 1.svg" style="width: 17px;" class="tool-tip__icon" alt="">
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Egyezés</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th> 
+                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-cursor-move"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Méret</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light" style="width: 10%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-speedometer"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Tömeg</span>
+                                                                            </p>
+                                                                        </div>
+
+
+
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Ár (HUF)</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-tag"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Kedvezményes ár (HUF)</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2">Készlet</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-social-dropbox"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Raktárak</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
                                                                 </th>
                                                                 <th scope="col" class="border-0 bg-light">
-                                                                    <div class="py-2" style="width:110px">Kosár</div>
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-wallet"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Végösszeg</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </th>
-                                                                
+                                                                <th scope="col" class="border-0 bg-light" style="width: 20%;">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-basket"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Kosár</span>
+                                                                            </p>
+                                                                        </div>
+                
+                                                                    </div>
+                                                                </th>
+                                                                  
                                                             </tr>
                                                         </thead>
                                                         <tbody class="bow-wrap-body">
                                                             <tr class="box-tr">
                                                                 <th scope="row" class="border-0">
                                                                     <div class="p-2">
-                                                                        <a target="_new" class="preview"
-                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
-                                                                            title=""><img style="max-width: 70%;"
-                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
-                                                                                alt=""></a>
+                                                                        <a target="_new" class="preview" href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" title=""><img style="max-width: 100%;" src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg" alt=""></a>
                                                                     </div>
                                                                 </th>
-                                                                <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                                <td class="border-0 align-middle"><a href="">01234567890123456789</a>
                                                                 </td>
-                                                                <td class="border-0 align-middle">INA</td>
-                                                                <td class="border-0 align-middle" id="text-center-eros"> <i
-                                                                    class="icon-close"></i> </td>
-                                                                <td class="border-0 align-middle">22X10X36</td>
-                                                                <td class="border-0 align-middle">KR22
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i class="tool-tip__icon tool-tip__icon-price-discount">FBJ</i>
+                                                                        <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span class="info szallitas-kedvezmeny-kosar">Gyártói azonosító: 6205-2RSP636EMQ</span>
+                                                                        </p>
+                                                                    </div>
                                                                 </td>
-                                                                <td class="border-0 align-middle">KR22-PP</td>
-                                                                <td class="border-0 align-middle">BP-001: 3</td>
-                                                                <td class="border-0 align-middle">0</td>
-                                                                <td class="border-0 align-middle">3</td>
-                
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">15X35X11</td>
+                                                                <td class="border-0 align-middle">34.56 kg</td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
+                                                                        <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span class="info szallitas-kedvezmeny-kosar">Eredeti listaár: 68222 (-10%)</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle" style="font-size: 15px;">
+                                                                    KRX016<br>BP-001<br>DB-001</td>
+                                                                <td class="border-0 align-middle">12040</td>
                                                                 <td style="white-space:nowrap" class="border-0 align-middle">
                                                                     <input type="number" class="span1" value="2">
-                                                                    <input type="hidden" name="orders.id:records"
-                                                                        value="01-07-01-00002">
-                                                                    <input type="hidden" name="orders.price:records"
-                                                                        id="p_01-07-01-00002" value="9814.44">
+                                                                    <input type="hidden" name="orders.id:records" value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
                                                                     <label class="piece_label">DB</label>
-                                                                    <button class="add_cart_button"
-                                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                            class="icon-basket icon-merete"></i></button>
+                                                                    <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
                                                                 </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- End -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 py-5 d-none" id="helyettesitoTermekTabla">
+                                    <div class="card shadow">
+                                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                                            <div class="row align-items-center">
+                                                <div class="col-8">
+                                                    <h3 class="mb-0"> <i class="icon-shuffle fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Helyettesítők
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 p-0 shadow mb-5">
+                                                <!-- Shopping cart table -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                    Gyártó
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        INA / FAG jelölés 
+                                                                    </div>
+                                                                </th> 
+
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        Gyártói jelölés
+
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <img src="square 1.svg" style="width: 17px;" class="tool-tip__icon" alt="">
+                                                                            <p class="tool-tip__info">
+                                                                                <span class="info szallitas-kedvezmeny-kosar">Egyezés</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th> 
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bow-wrap-body">
+                                                            <tr class="box-tr">
                                                                 
-                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="Group.svg" class= "tool-tip__icon tool-tip__icon-price-discount" title="Important note: see detail" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Fontos megjegyzés!</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="Group.svg" class= "tool-tip__icon tool-tip__icon-price-discount" title="Important note: see detail" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Fontos megjegyzés!</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
+                                                            </tr>
+                                                            <tr class="box-tr">
+                                                                
+                                                                <td class="border-0 align-middle">FAG
+                                                                </td>
+                                                                <td class="border-0 align-middle">6205
+                                                                </td>
+
+                                                                <td class="border-0 align-middle">
+                                                                    <a href="">6205</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle allapot-td">
+                                                                   
+                                                                   <div class="tool-tip tool-tip-price-discount">
+                                                                    <img src="square 1.svg" class= "tool-tip__icon tool-tip__icon-price-discount" alt="">
+                                                                    <p class="tool-tip__info tool-tip__info-price-discount">
+                                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
+                                                                    </p>
+                                                                </div>
+                                                                </td>
+                                                               
+    
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -249,15 +565,13 @@
         });
     </script>
 
-    <script>
-        function tartalomMegjelenitese() {
-            var x = document.getElementById("megrendelesekLista");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
+<script>
+    function interchangeLekerdezes() {
+       var element = document.getElementById("azonnalHelyettesitoTermekTabla");
+       element.classList.remove("d-none");
+       var element = document.getElementById("helyettesitoTermekTabla");
+       element.classList.remove("d-none");      
+    }
     </script>
 
     <script>
