@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aruhaz.bearing.hu - Interchange</title>
+
+    <link rel="stylesheet" href="interchange.css">
+    <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+
+    <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="interchange.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container pt-5">
+
+            <div class="row">
+                <div class="col-xl-12" id="megrendelesekLista">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">
+                                        <i
+                                            class="icon-magnifier-add fa-2x p-4 rounded bg-light rounded-circle mr-3"></i><a
+                                            data-toggle="collapse" href="#collapseExample" role="button"
+                                            aria-expanded="false" aria-controls="collapseExample"
+                                            class="collapsed">NTN-SNR és FAG termékkereső</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="termekek">Termék neve/jelölése</label>
+                                                    <input type="text" id="input-termekek" class="form-control form-control-alternative" placeholder="Írja be a termék nevét vagy jelölését">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="exampleFormControlSelect1">Gyártó</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">						
+                                                        <option selected="selected" value="">Összes</option>
+                                                        <option value="ASAHI">ASAHI</option>
+                                                        <option value="BCA">BCA</option>
+                                                        <option value="CATERPILLAR">CATERPILLAR</option>
+                                                        <option value="DODGE">DODGE</option>
+                                                        <option value="FAFNIR">FAFNIR</option>
+                                                        <option value="FAG">FAG</option>
+                                                        <option value="FYH">FYH</option>
+                                                        <option value="GPZ">GPZ</option>
+                                                        <option value="IBC">IBC</option>
+                                                        <option value="IKO">IKO</option>
+                                                        <option value="INA">INA</option>
+                                                        <option value="KOYO">KOYO</option>
+                                                        <option value="MC GILL">MC GILL</option>
+                                                        <option value="MRC">MRC</option>
+                                                        <option value="NACHI">NACHI</option>
+                                                        <option value="NADELLA">NADELLA</option>
+                                                        <option value="NBR">NBR</option>
+                                                        <option value="NDH">NDH</option>
+                                                        <option value="NEW DEPARTURE">NEW DEPARTURE</option>
+                                                        <option value="NKE">NKE</option>
+                                                        <option value="NMB">NMB</option>
+                                                        <option value="NSK">NSK</option>
+                                                        <option value="NTN">NTN</option>
+                                                        <option value="RHP">RHP</option>
+                                                        <option value="RINGBALL">RINGBALL</option>
+                                                        <option value="RKB">RKB</option>
+                                                        <option value="SEALMASTER">SEALMASTER</option>
+                                                        <option value="SKF">SKF</option>
+                                                        <option value="SNR">SNR</option>
+                                                        <option value="Schaeffler">Schaeffler</option>
+                                                        <option value="THK">THK</option>
+                                                        <option value="TIMKEN">TIMKEN</option>
+                                                        <option value="TORRINGTON">TORRINGTON</option>
+                                                        <option value="ZKL">ZKL</option>						
+                                            </select>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="row" id="megrendelesekListaKereso">
+                                            <div class="col-lg-12 text-center">
+                                                <a type="button" class="btn my-5 btn-modositas">Termékek keresése</a>
+                                                <!-- <a type="button" class="btn my-5 btn-modositas" href="#megrendelesekListaKereso" onclick="tartalomMegjelenitese()">Megrendelések lekérdezése</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-xl-12 py-5">
+                                    <div class="card shadow">
+                                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                                            <div class="row align-items-center">
+                                                <div class="col-8">
+                                                    <h3 class="mb-0"> <i class="icon-badge fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Kedvencek
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 p-0 shadow mb-5">
+                                                <!-- Shopping cart table -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2">Kép</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width:85px">Termék</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Gyártó</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Egyezés</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Méret</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width:105px">Helyettesítő termék</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Gyártói azonosító
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width:110px">Raktárak</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Ár (HUF)</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">Készlet</div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2" style="width:110px">Kosár</div>
+                                                                </th>
+                                                                
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bow-wrap-body">
+                                                            <tr class="box-tr">
+                                                                <th scope="row" class="border-0">
+                                                                    <div class="p-2">
+                                                                        <a target="_new" class="preview"
+                                                                            href="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                            title=""><img style="max-width: 70%;"
+                                                                                src="https://aruhaz.bearing.hu/static/arukepek/6000_2rs.jpg"
+                                                                                alt=""></a>
+                                                                    </div>
+                                                                </th>
+                                                                <td class="border-0 align-middle"><a href="">KR 22 PP A</a>
+                                                                </td>
+                                                                <td class="border-0 align-middle">INA</td>
+                                                                <td class="border-0 align-middle" id="text-center-eros"> <i
+                                                                    class="icon-close"></i> </td>
+                                                                <td class="border-0 align-middle">22X10X36</td>
+                                                                <td class="border-0 align-middle">KR22
+                                                                </td>
+                                                                <td class="border-0 align-middle">KR22-PP</td>
+                                                                <td class="border-0 align-middle">BP-001: 3</td>
+                                                                <td class="border-0 align-middle">0</td>
+                                                                <td class="border-0 align-middle">3</td>
+                
+                                                                <td style="white-space:nowrap" class="border-0 align-middle">
+                                                                    <input type="number" class="span1" value="2">
+                                                                    <input type="hidden" name="orders.id:records"
+                                                                        value="01-07-01-00002">
+                                                                    <input type="hidden" name="orders.price:records"
+                                                                        id="p_01-07-01-00002" value="9814.44">
+                                                                    <label class="piece_label">DB</label>
+                                                                    <button class="add_cart_button"
+                                                                        onclick="addToCart('01-07-01-00002', 'HUF')"><i
+                                                                            class="icon-basket icon-merete"></i></button>
+                                                                </td>
+                                                                
+                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- End -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function tartalomMegjelenitese() {
+            var x = document.getElementById("megrendelesekLista");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        $(".sendButton").click(function () {
+            $(".alert").show('medium');
+            setTimeout(function () {
+                $(".alert").hide('medium');
+            }, 5000);
+        });
+        $(".sendButton .close").click(function () {
+            $(".alert").hide('medium');
+        });
+    </script>
+
+    <script>
+        $(".sendButtonRendeles").click(function () {
+            $(".alert-02").show('medium-02');
+            setTimeout(function () {
+                $(".alert-02").hide('medium-02');
+            }, 5000);
+        });
+        $(".sendButtonRendeles .close").click(function () {
+            $(".alert-02").hide('medium-02');
+        });
+    </script>
+
+
+</body>
+
+</html>
