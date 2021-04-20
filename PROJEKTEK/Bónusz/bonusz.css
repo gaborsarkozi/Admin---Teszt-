@@ -2359,7 +2359,7 @@ th {
 }
 
 td.border-0.align-middle {
-  text-align: left !important;
+  text-align: center !important;
   padding: 4px 8px;
   line-height: 1;
   color: #211061 !important;
@@ -2394,6 +2394,7 @@ td .add_cart_button {
 
 .table td, .table th {
   padding: .6rem !important;
+  text-align: center;
 }
 
 #text-center-eros {
@@ -2512,4 +2513,368 @@ blockquote p {
 
 .narancs-span {
   color: #ec7623 !important;
+}
+
+
+.wrapper {
+  height: 420px;
+  border-radius: 4px;
+  /* VIA CSS MATIC https://goo.gl/cIbnS */
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+  height: 420px;
+  width: 327px;
+}
+
+.product-img img {
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-info {
+  float: left;
+  height: 420px;
+  width: 327px;
+  border-radius: 0 7px 10px 7px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  height: 300px;
+  width: 327px;
+}
+
+.product-text h1 {
+  text-align: center;
+  font-size: 26px;
+  color: #211061;
+  font-weight: 700;
+}
+
+.product-text h2 {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #ec7623;
+}
+
+.product-text p {
+  font-size: .875rem;
+  font-weight: 600;
+  color: #211061;
+  margin: 1.5rem 1rem .5rem 2rem;
+}
+
+.product-price-btn {
+  justify-content: center;
+}
+
+.product-price-btn p {
+  display: inline-block;
+  position: absolute;
+  top: -13px;
+  height: 50px;
+  font-family: 'Trocchi', serif;
+  margin: 0 0 0 38px;
+  font-size: 28px;
+  font-weight: lighter;
+  color: #474747;
+}
+
+.product-price-btn button {
+  box-sizing: border-box;
+  border: transparent;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  min-width: 10rem;
+  
+}
+
+
+.product-price-btn button:hover {
+  -moz-animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 0 0 #EC7623;
+  }
+  70% {
+      box-shadow: 0 0 0 10px rgba(88, 120, 243, 0);
+  }
+  100% {
+      box-shadow: 0 0 0 50px rgba(88, 120, 243, 0);
+  }
+}
+
+
+
+
+/* Tooltip */ 
+
+
+.tool-tip {
+
+  position: relative;
+  top: 2px;
+}
+
+.tool-tip .tool-tip__icon {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+}
+.tool-tip .tool-tip__info {
+  display: none;
+  border-radius: 3px;
+  font-size: 0.875em;
+  padding: 1rem 0.85rem;
+  position: absolute;
+  top: -20px;
+  width: max-content;
+  z-index: 2;
+}
+.tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eb7624;
+}
+
+.tool-tip .tool-tip__info .info {
+  display: block;
+}
+
+.tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
+  display: inline-block;
+}
+
+a:focus + .tool-tip .tool-tip__info {
+  display: inline-block;
+}
+
+
+.shopping-cart td input, select {
+  width: 75%;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#tablet-cart-container .shopping-cart td input, select {
+  width: 20%;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+p.mb-2.mb-1.text-left.szallitas-kedvezmeny-kosar {
+  font-size: 13px !important;
+}
+
+
+td i.icon-close.icon-merete {
+  color: #EC7623;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+  top: 3px;
+}
+
+.szallitas-kedvezmeny-kosar {
+  max-width: max-content;
+  font-size: 13px !important;
+  background-color: #eb7624;
+  border-radius: 4px;
+  padding: .25rem .5rem;
+  font-weight: 600 !important;
+  color: #fff !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.megjegyzes-order-done {
+  padding: 1rem !important;
+  background: #ec7623;
+  border-radius: 3px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.megjegyzes-order-done p {
+  color: #fff !important;
+}
+
+
+.tool-tip-price-discount {
+  top: 0px !important;
+}
+
+.tool-tip__icon-price-discount {
+  font-size: 16px !important;
+  font-style: normal !important;
+}
+
+
+.tool-tip__info-price-discount {
+  top: -22px !important;
+}
+
+.sendButtonRendeles {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+
+
+
+/* modal */ 
+
+
+.modal-header {
+  border: none
+}
+
+.modal-footer {
+  border: none
+}
+
+.close {
+  outline: 0
+}
+
+.fa-folder-open {
+  color: #5E55E2;
+  background: #D8D6FF;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 14px
+}
+
+.form-control::placeholder {
+  font-size: 14px
+}
+
+.form-control {
+  border: 1px solid #EFEFF1
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #EFEFF1
+}
+
+.badge-success {
+  background: #87E5D5;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 9px
+}
+
+.fa-globe-asia {
+  color: #A1A7B5;
+  padding-top: 6px
+}
+
+.fa-slack {
+  color: #A1A7B5;
+  padding-top: 6px
+}
+
+.d-flex.justify-content-between {
+  font-size: 14px
+}
+
+.footer {
+  background: #F2F3F7
+}
+
+.btn-primary {
+  background: #5B51FF;
+  font-size: 13px
+}
+
+.btn-primary:focus {
+  box-shadow: none
+}
+
+.btn-primary:hover {
+  background: #5B51FF
+}
+
+.fa-sort-down {
+  transform: translateY(-2px);
+  cursor: pointer
+}
+
+@media (min-width: 576px)
+{.modal-dialog {
+    max-width: 1000px !important;
+    margin: 1.75rem auto;
+    position: relative;
+    top: 6rem;
+}}
+
+
+button.close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: #ec7623;
+}
+
+
+
+
+
+.megrendeles-leadas-ikon{
+  position: relative;
+  top: 2px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.szallitolevel-figyelem {
+  padding: 1rem;
+  background-color: #ec7623;
+  border-radius: 3px;
+  color: #fff !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  
+}
+
+
+i.icon-info {
+  font-size: 17px;
+  position: relative;
+  top: 3px;
+  font-weight: 500;
+}
+
+.order-icon-info {
+  position: inherit !important;
+  color: #fff;
+  top: 0 !important;
+  
+}
+
+.close:focus, .close:hover {
+  color: #ec7623 !important;
+  text-decoration: none;
+  opacity: 1 !important;
+  outline: none;
 }
