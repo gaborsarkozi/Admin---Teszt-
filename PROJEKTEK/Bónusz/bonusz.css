@@ -2878,3 +2878,8 @@ i.icon-info {
   opacity: 1 !important;
   outline: none;
 }
+
+
+.modal-content {
+  border: none !important;
+}
