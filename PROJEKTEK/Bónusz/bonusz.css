@@ -2516,6 +2516,14 @@ blockquote p {
   font-weight: 700;
 }
 
+.narancs-span-big {
+  display: inherit;
+  color: #ec7623 !important;
+  font-weight: 700;
+  padding: 1rem;
+  font-size: 17px;
+}
+
 
 .wrapper {
   height: 420px;
@@ -2883,4 +2891,40 @@ i.icon-info {
 
 .modal-content {
   border: none !important;
+}
+
+
+@media (min-width: 1200px)
+{.col-xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20% !important;
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+}}
+
+.bonusz-bevaltas-kep {
+  background-image: url(taska_bonusz_01.jpg);
+  background-size: cover;
+  background-position-y: 44%;
+  box-shadow: 0px 14px 32px 0px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+  height: 13rem;
+}
+
+.nav-link.btn-bearing {
+  border: 1px solid transparent;
+  border-radius: 4px !important;
+  color: #211061 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin: 0 .85rem !important;
+  display: initial;
+  background: transparent;
+  padding: .5rem 0.8rem !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+
+.nav-link.btn-bearing:hover {
+  color: #ec7623 !important;
 }
