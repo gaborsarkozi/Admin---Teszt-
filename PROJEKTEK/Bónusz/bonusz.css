@@ -2928,3 +2928,7 @@ i.icon-info {
 .nav-link.btn-bearing:hover {
   color: #ec7623 !important;
 }
+
+.fixme {
+  position: fixed !important;
+}
