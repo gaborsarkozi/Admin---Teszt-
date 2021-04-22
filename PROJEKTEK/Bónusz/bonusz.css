@@ -2895,12 +2895,22 @@ i.icon-info {
 
 
 @media (min-width: 1200px)
-{.col-xl-3 {
+{.col-xl-3.order-xl-1.mb-5.mb-xl-5.fixme{
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20% !important;
     flex: 0 0 20% !important;
     max-width: 20% !important;
 }}
+
+@media (max-width: 1200px)
+{.col-xl-3.order-xl-1.mb-5.mb-xl-5.fixme {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25% !important;
+    flex: 0 0 25% !important;
+    max-width: 25% !important;
+}}
+
+
 
 .bonusz-bevaltas-kep {
   background-image: url(taska_bonusz_01.jpg);
@@ -2931,4 +2941,10 @@ i.icon-info {
 
 .fixme {
   position: fixed !important;
+}
+
+
+.koszono-cim {
+  position: relative;
+  left: -2rem;
 }
