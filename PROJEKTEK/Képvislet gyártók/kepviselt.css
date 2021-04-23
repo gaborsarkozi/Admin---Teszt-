@@ -1,0 +1,24 @@
+/* overlay hidden row on large screen to make it full width */
+@media (min-width:992px) {
+    .row {
+        position:relative;
+        padding-bottom: 30px;
+    }
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+    }
+}
+
+
+/* in order for accordion behavior of collapse to work
+.panel must be used this CSS is to hide the shadow */
+.panel {
+    box-shadow:initial;
+}
+
+/* change style of selected image */
+a[data-toggle=collapse]:not(.collapsed)>img {
+    opacity: 0.6;
+}
