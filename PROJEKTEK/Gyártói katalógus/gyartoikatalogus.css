@@ -2359,7 +2359,7 @@ th {
 }
 
 td.border-0.align-middle {
-  text-align: center !important;
+  text-align: left !important;
   padding: 4px 8px;
   line-height: 1;
   color: #211061 !important;
@@ -2596,12 +2596,9 @@ td i.icon-close.icon-merete {
 
 
 th .py-2 {
-  text-align: center;
+  text-align: left;
 }
 
-th .p-2 {
-  text-align: center;
-}
 
 
 .btn-bearing i {
