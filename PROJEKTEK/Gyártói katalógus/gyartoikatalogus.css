@@ -2632,3 +2632,59 @@ th .p-2 {
     font-weight: 600;
     color: #211061;
 }
+
+
+
+/* PAGINATION */ 
+
+.pagination, .pagination li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  padding: 3px 10px;
+  align-items: center;
+}
+
+.pagination li {
+  background: #ec7623;
+  margin-left: 5px;
+  padding: 2px;
+  border-radius: 3px;
+  background: none !important;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.pagination li a {
+  background: transparent;
+  color: rgba(255, 255, 255, 1.00);
+  padding: 3px 10px;
+}
+
+
+.pag-icon {
+  padding: 9px 1px !important;
+}
+
+
+.pagination li a:hover {
+  background: #ec7623;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.pagination li:hover  {
+  background: #ec7623 !important;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.pagination li:hover i  {
+  color: #fff !important;
+}
