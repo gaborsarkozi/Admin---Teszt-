@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aruhaz.bearing.hu - Gyártói katalógus</title>
+
+    <link rel="stylesheet" href="gyartoikatalogus.css">
+    <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+
+    <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="interchange.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="container pt-5">
+
+            <div class="row">
+                <div class="col-xl-12" id="megrendelesekLista">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">
+                                        <i class="icon-book-open fa-2x p-4 rounded bg-light rounded-circle mr-3"></i><a
+                                            data-toggle="collapse" href="#collapseExample" role="button"
+                                            aria-expanded="false" aria-controls="collapseExample"
+                                            class="collapsed">Gyártói katalógus kereső</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-12 pb-5">
+                                                <p class="leiras-gyarto-katalogus">
+                                                    Több mint 300 csapágykatalógus elektronikus változatban. Rendszerünk
+                                                    korrekt segítséget nyújt ipari, mezőgazdasági és autóipari csapágyak
+                                                    beazonosításához. A csapágyak kiválasztása gyakran komoly
+                                                    nehézségekbe ütközik, mert minden gyártó saját jelölésekkel látja el
+                                                    a csapágyakat. A BEX által kifejlesztett információs rendszer segít
+                                                    kiválasztani a megfelelő terméket.
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="termekek">Keresett
+                                                        kifejezés</label>
+                                                    <input type="text" id="inputInterchangeEnter"
+                                                        class="form-control form-control-alternative"
+                                                        placeholder="Írja be a keresés kulcsszavát">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label"
+                                                        for="exampleFormControlSelect1">Gyártó</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option selected="selected" value="">Összes</option>
+                                                        <option value="ASAHI">ASAHI</option>
+                                                        <option value="BCA">BCA</option>
+                                                        <option value="CATERPILLAR">CATERPILLAR</option>
+                                                        <option value="DODGE">DODGE</option>
+                                                        <option value="FAFNIR">FAFNIR</option>
+                                                        <option value="FAG">FAG</option>
+                                                        <option value="FYH">FYH</option>
+                                                        <option value="GPZ">GPZ</option>
+                                                        <option value="IBC">IBC</option>
+                                                        <option value="IKO">IKO</option>
+                                                        <option value="INA">INA</option>
+                                                        <option value="KOYO">KOYO</option>
+                                                        <option value="MC GILL">MC GILL</option>
+                                                        <option value="MRC">MRC</option>
+                                                        <option value="NACHI">NACHI</option>
+                                                        <option value="NADELLA">NADELLA</option>
+                                                        <option value="NBR">NBR</option>
+                                                        <option value="NDH">NDH</option>
+                                                        <option value="NEW DEPARTURE">NEW DEPARTURE</option>
+                                                        <option value="NKE">NKE</option>
+                                                        <option value="NMB">NMB</option>
+                                                        <option value="NSK">NSK</option>
+                                                        <option value="NTN">NTN</option>
+                                                        <option value="RHP">RHP</option>
+                                                        <option value="RINGBALL">RINGBALL</option>
+                                                        <option value="RKB">RKB</option>
+                                                        <option value="SEALMASTER">SEALMASTER</option>
+                                                        <option value="SKF">SKF</option>
+                                                        <option value="SNR">SNR</option>
+                                                        <option value="Schaeffler">Schaeffler</option>
+                                                        <option value="THK">THK</option>
+                                                        <option value="TIMKEN">TIMKEN</option>
+                                                        <option value="TORRINGTON">TORRINGTON</option>
+                                                        <option value="ZKL">ZKL</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label" for="termekek">Termék
+                                                        választása</label>
+                                                    <select data-trigger="" id="arucsoport"
+                                                        name="arucsoport:ignore_empty" class="form-control"
+                                                        placeholder="Árucsoport">
+                                                        <option placeholder="" value="">Összes</option>
+                                                        <option value="Autós csapágyak">Autós csapágyak</option>
+                                                        <option value="Bilincsek">Bilincsek</option>
+                                                        <option value="CX csapágyak és tartozékok">CX csapágyak és
+                                                            tartozékok</option>
+                                                        <option value="Csapágyak CX">Csapágyak CX</option>
+                                                        <option value="Csapágyak FAG">Csapágyak FAG</option>
+                                                        <option value="Csapágyak FBJ">Csapágyak FBJ</option>
+                                                        <option value="Csapágyak HIWIN">Csapágyak HIWIN</option>
+                                                        <option value="Csapágyak INA">Csapágyak INA</option>
+                                                        <option value="Csapágyak NACHI">Csapágyak NACHI</option>
+                                                        <option value="Csapágyak NIS">Csapágyak NIS</option>
+                                                        <option value="Csapágyak NTN">Csapágyak NTN</option>
+                                                        <option value="Csapágyak SKF">Csapágyak SKF</option>
+                                                        <option value="Csapágyak SNR">Csapágyak SNR</option>
+                                                        <option value="Csapágyak TIMKEN">Csapágyak TIMKEN</option>
+                                                        <option value="Csapágyak ipari prémium">Csapágyak ipari prémium
+                                                        </option>
+                                                        <option value="Csapágyak ipari standard">Csapágyak ipari
+                                                            standard</option>
+                                                        <option value="Csapágyak lineáris">Csapágyak lineáris</option>
+                                                        <option value="Csapágyak megzőgazdasági prémium">Csapágyak
+                                                            megzőgazdasági prémium</option>
+                                                        <option value="Csapágyak mezőgazdasági standard">Csapágyak
+                                                            mezőgazdasági standard</option>
+                                                        <option value="FAG csapágyak">FAG csapágyak</option>
+                                                        <option value="Fúvókák LECHLER">Fúvókák LECHLER</option>
+                                                        <option value="GEOLINE permetezéstecnika">GEOLINE
+                                                            permetezéstecnika</option>
+                                                        <option value="Golyó">Golyó</option>
+                                                        <option value="INA csapágyak">INA csapágyak</option>
+                                                        <option value="Kenéstechnika">Kenéstechnika</option>
+                                                        <option value="LECHLER fúvókák">LECHLER fúvókák</option>
+                                                        <option value="LOCTITE termékek">LOCTITE termékek</option>
+                                                        <option value="Lineáris fogasléc">Lineáris fogasléc</option>
+                                                        <option value="Lineáris golyóshüvelyek">Lineáris golyóshüvelyek
+                                                        </option>
+                                                        <option value="Lineáris profilvezetés">Lineáris profilvezetés
+                                                        </option>
+                                                        <option value="Lineáris technika">Lineáris technika</option>
+                                                        <option value="NILOS tömítések">NILOS tömítések</option>
+                                                        <option value="NTN csapágyak">NTN csapágyak</option>
+                                                        <option value="NTN-SNR Rozsdamentes csapágyegységek">NTN-SNR
+                                                            Rozsdamentes csapágyegységek</option>
+                                                        <option value="Permetezéstechnika">Permetezéstechnika</option>
+                                                        <option value="Permetezéstechnika GEOLINE">Permetezéstechnika
+                                                            GEOLINE</option>
+                                                        <option value="Permetezőgép alkatrészek">Permetezőgép
+                                                            alkatrészek</option>
+                                                        <option value="Permetezőgép fittingek">Permetezőgép fittingek
+                                                        </option>
+                                                        <option value="Permetezőgép fúvókák">Permetezőgép fúvókák
+                                                        </option>
+                                                        <option value="Permetezőgép szűrők">Permetezőgép szűrők</option>
+                                                        <option value="Permetezőgép vezérlők">Permetezőgép vezérlők
+                                                        </option>
+                                                        <option value="Ragasztástechnika">Ragasztástechnika</option>
+                                                        <option value="SIMALUB kenési rendszer">SIMALUB kenési rendszer
+                                                        </option>
+                                                        <option value="SIMALUBE">SIMALUBE</option>
+                                                        <option value="SIMATHERM csapágymelegítők">SIMATHERM
+                                                            csapágymelegítők</option>
+                                                        <option value="SIMATOOLS szerelőszerszámok">SIMATOOLS
+                                                            szerelőszerszámok</option>
+                                                        <option value="SNR csapágyak">SNR csapágyak</option>
+                                                        <option value="SZINTER fém csapágyak">SZINTER fém csapágyak
+                                                        </option>
+                                                        <option value="Siklócsapágyak">Siklócsapágyak</option>
+                                                        <option value="TIMKEN ipari csapágyak">TIMKEN ipari csapágyak
+                                                        </option>
+                                                        <option value="Tömítések">Tömítések</option>
+                                                        <option value="Tömítések NILOS gyűrű">Tömítések NILOS gyűrű
+                                                        </option>
+                                                        <option value="Tömítések SZIMERING">Tömítések SZIMERING</option>
+                                                        <option value="Tömítéstechnika">Tömítéstechnika</option>
+                                                        <option value="Tömítéstechnika DEN BRAVEN">Tömítéstechnika DEN
+                                                            BRAVEN</option>
+                                                        <option value="Tömítéstechnika LOCTITE">Tömítéstechnika LOCTITE
+                                                        </option>
+                                                        <option value="Zsírzógomb">Zsírzógomb</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label class="form-control-label"
+                                                        for="exampleFormControlSelect1">Kiadvány típusa</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1">
+                                                        <option selected="selected" value="">Összes</option>
+                                                        <option value="katalogus">Katalógus</option>
+                                                        <option value="kiadvany">Kiadvány</option>
+                                                        <option value="cikk">Cikk</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <a type="button" class="btn my-5 btn-modositas"
+                                                    id="inputInterchangeEnterButton"
+                                                    onclick="interchangeLekerdezes()">Termékek keresése</a>
+                                                <!-- <a type="button" class="btn my-5 btn-modositas" href="#megrendelesekListaKereso" onclick="tartalomMegjelenitese()">Megrendelések lekérdezése</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-xl-12 py-5 d-none" id="azonnalHelyettesitoTermekTabla">
+                                    <div class="card shadow">
+                                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                                            <div class="row align-items-center">
+                                                <div class="col-12">
+                                                    <h3 class="mb-0"> <i
+                                                            class="icon-book-open fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Találati
+                                                        eredmények
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="col-lg-12 p-0 shadow mb-5">
+                                                <!-- Shopping cart table -->
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-settings"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Gyártó</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="p-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-globe"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Nyelv</span>
+                                                                            </p>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-book-open"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Cím és a hozzá tartozó leírás</span>
+                                                                            </p>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i class="tool-tip__icon icon-docs"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Kategória</span>
+                                                                            </p>
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                </th>
+                                                                <th scope="col" class="border-0 bg-light">
+                                                                    <div class="py-2">
+                                                                        <div class="tool-tip">
+                                                                            <i
+                                                                                class="tool-tip__icon icon-arrow-down"></i>
+                                                                            <p class="tool-tip__info">
+                                                                                <span
+                                                                                    class="info szallitas-kedvezmeny-kosar">Fájl</span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+
+
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="bow-wrap-body">
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">FBJ</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="hungary.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Magyar</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">INA-FAG</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="england.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Angol</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">INA FAG 2021 Tűgörgős csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">NTN-SNR</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="germany.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Német</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Kiadvány</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">FBJ</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="hungary.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Magyar</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">INA-FAG</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="england.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Angol</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">INA FAG 2021 Tűgörgős csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">NTN-SNR</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="germany.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Német</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Kiadvány</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">FBJ</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="hungary.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Magyar</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">INA-FAG</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="england.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Angol</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">INA FAG 2021 Tűgörgős csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Katalógus</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr class="box-tr">
+
+
+                                                                <td class="border-0 align-middle">NTN-SNR</td>
+
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <img src="germany.svg"
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount"
+                                                                            alt="">
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Német</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <i
+                                                                            class="tool-tip__icon tool-tip__icon-price-discount">Hengergörgős
+                                                                            csapágyak</i>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Markes
+                                                                                GmbH & Co. KG Metallwarenfabrik. Fém
+                                                                                gördülőcsapágyak, műanyag gördülőcsapágyak, korcsolyakerekek,
+                                                                                rögzítő a standard csapágyakhoz, lánckerék, alkatrészek, speciális
+                                                                                csapágyak, kiegészítő termékek</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+                                                                <td class="border-0 align-middle">Kiadvány</td>
+                                                                <td class="border-0 align-middle allapot-td">
+
+                                                                    <div class="tool-tip tool-tip-price-discount">
+                                                                        <a href="Golyós csapágyak.pdf"
+                                                                            target="_blank"><i
+                                                                                class="tool-tip__icon icon-arrow-down"></i></a>
+                                                                        <p
+                                                                            class="tool-tip__info tool-tip__info-price-discount">
+                                                                            <span
+                                                                                class="info szallitas-kedvezmeny-kosar">Letöltés</span>
+                                                                        </p>
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!-- End -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function interchangeLekerdezes() {
+            var element = document.getElementById("azonnalHelyettesitoTermekTabla");
+            element.classList.remove("d-none");
+            var element = document.getElementById("helyettesitoTermekTabla");
+            element.classList.remove("d-none");
+        }
+    </script>
+
+    <script>
+        $(".sendButton").click(function () {
+            $(".alert").show('medium');
+            setTimeout(function () {
+                $(".alert").hide('medium');
+            }, 5000);
+        });
+        $(".sendButton .close").click(function () {
+            $(".alert").hide('medium');
+        });
+    </script>
+
+    <script>
+        $(".sendButtonRendeles").click(function () {
+            $(".alert-02").show('medium-02');
+            setTimeout(function () {
+                $(".alert-02").hide('medium-02');
+            }, 5000);
+        });
+        $(".sendButtonRendeles .close").click(function () {
+            $(".alert-02").hide('medium-02');
+        });
+    </script>
+
+
+</body>
+
+</html>
