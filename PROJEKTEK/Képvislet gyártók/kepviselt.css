@@ -88,11 +88,9 @@
 .course h6 {
     font-weight: 700;
 	margin: 0;
-	letter-spacing: 1px;
 }
 
 .course h2 {
-	letter-spacing: 1px;
 	margin: 10px 0;
 }
 
@@ -148,4 +146,8 @@
     transition: 1s ease-in-out;
 -moz-transition: 1s ease-in-out;
 -webkit-transition: 1s ease-in-out;
+}
+
+.quality-star {
+    max-width: 16px;
 }
