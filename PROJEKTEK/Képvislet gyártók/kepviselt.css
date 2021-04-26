@@ -53,3 +53,99 @@
 .svg-logok {
     max-width: 100%;
 }
+
+
+.nav-link.btn-bearing {
+    border: 1px solid transparent;
+    border-radius: 4px !important;
+    color: #211061 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    margin: 0 .85rem !important;
+    display: initial;
+    background: #fff;
+    padding: .5rem 0.8rem !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+.nav-link.btn-bearing:hover {
+    color: #ec7623 !important;
+}
+
+/* kepviselt gyarto kis ablak */ 
+
+
+.course {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.course h6 {
+    font-weight: 700;
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #EC7623;
+	color: #fff;
+	padding: 30px;
+	max-width: 325px;
+    min-width: 200px;
+}
+
+.course-preview a {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	text-align: right;
+	width: 150px;
+}
+
+
+.icon-arrow-down {
+    font-size: 16px;
+}
+
+.icon-arrow-down:hover {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+
+.download-a {
+    color: #fff !important; 
+}
+
+
+
+
+
+.tovabbiKatalogusok{
+    transition: 1s ease-in-out;
+-moz-transition: 1s ease-in-out;
+-webkit-transition: 1s ease-in-out;
+}
