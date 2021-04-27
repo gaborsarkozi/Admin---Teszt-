@@ -151,3 +151,21 @@
 .quality-star {
     max-width: 16px;
 }
+
+
+.quality-info {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.head-cim {
+    color: #211061;
+}
+
+.head-szoveg {
+    font-weight: 600;
+    color: #211061;
+    text-align: justify;
+}
