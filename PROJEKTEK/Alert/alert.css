@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.modal {
+    top: 25% !important;
+}
+
+.btn-white {
+    color: #5e676f;
+    background-color: #fff;
+    border-color: transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05)
+}
+
+.alert {
+    margin-bottom: 0 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    background-color: white;
+    border-left: 7px solid #EC7623 !important;
+
+}
+
+.modal-content {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.danger-alert {
+    width: 54px;
+}
+
+.alert-heading {
+    color: #EC7623 !important;
+    font-weight: 700;
+}
+
+.alert-body-p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #211061;
+    padding-bottom: 2.5rem;
+}
+
+
+.btn-bearing {
+    border: 1px solid transparent;
+    border-radius: 4px !important;
+    color: #211061 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    margin: 0 4px;
+    box-shadow: 0 0 2rem 0 rgb(136 152 170 / 15%) !important;
+}
+
+.btn-bearing:hover {
+    color: #EC7623 !important;
+}
+
+.gomb-hely {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.icon-check {
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+}

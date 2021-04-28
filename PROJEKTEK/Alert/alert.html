@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>aruhaz.bearing.hu - Alert</title>
+      
+        <link rel="stylesheet" href="alert.css">
+        <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+      
+        <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+      
+        <!-- Icons -->
+        <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+        <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+      
+        <!-- Argon CSS -->
+        <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+      
+        <!-- Core -->
+        <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      
+        <link rel="stylesheet" type="text/css"
+          href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+      
+        <!-- Argon JS -->
+        <script src="/assets/js/argon.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+      
+        <script src="interchange.js"></script>
+      </head>
+      
+<body>
+    <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="row">
+            <div class="col-12">
+                <button type="button" class="btn btn-bearing" data-toggle="modal" data-target="#exampleModal">
+                   Figyelmeztetés
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="col-12 container p-0">
+            <div class="alert py-4" role="alert">
+                <div class="d-flex row"> 
+                    <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
+                        <img src="danger_orange.svg" class="danger-alert" alt="">
+                    </div>
+                    <div class="col-10">
+                        <h5 class="alert-heading">Figyelem!</h5>
+                        <p class="mb-0 alert-body-p">Az elérhető készleten felüli mennyiséget adott meg, a maradékot ajánlatkérésre módosítottuk!</p>  
+                </div>
+                <div class="gomb-hely">
+                    <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Rendben <i class="icon-check ml-2"></i></a>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
