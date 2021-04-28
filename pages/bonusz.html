@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>BEX Admin - Bónusz</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../node_modules/selectric/public/selectric.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
+                  class="fas fa-search"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <div class="d-sm-none d-lg-inline-block">Üdv, Sárközi Gábor</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="/pages/munkak-menu.html" class="dropdown-item has-icon">
+                <i class="fas fa-project-diagram"></i> Többi projekt
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">BEX - Admin</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">BEX</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-user-following"></i><span>Rendelés
+                  másik felhasználó nevében</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Felhasználók
+                  adminisztrációja</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-pie-chart"></i><span>Statisztikai
+                  adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier-add"></i><span>Kereső
+                  statisztikai adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-info"></i><span>Információs oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-wrench "></i><span>Gyártói info oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="/index.html" class="nav-link"><i class="fas icon-tag"></i><span>Akciók /
+                  Újdonságok
+                  szerkesztése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-cloud-download"></i><span>Kedvezmények
+                  frissítése az SAP-ból</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-picture"></i><span>Termékfotók
+                  kiválasztása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Karrier
+                  admin</span></a></li>
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas icon-present"></i><span>Bónusz
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-fire"></i><span>Újdonság
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i
+                  class="fas icon-bag"></i><span>Árucsoportosítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-plane"></i><span>Ingyenes
+                  szállítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-target"></i><span>Árverés</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-basket"></i><span>Kosár oldal
+                  ajánlatok</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-note"></i><span>Külső raktár
+                  adminisztráció</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-puzzle"></i><span>Utójelek</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier"></i><span>Autós SNR csapágy
+                  kereső</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-settings"></i><span>SNR ipari
+                  csapágy</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-eye"></i><span>Autós SKF csapágy
+                  keresö</span></a></li>
+
+
+
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini d-flex justify-content-center">
+            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas icon-logout pr-5"></i>Vissza az áruházba
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Bónusz</h1>
+
+            <ul class="nav nav-pills ml-0 ml-sm-5" id="pills-tab" role="tablist">
+              <li class="nav-item mr-2 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                  aria-controls="pills-home" aria-selected="true">Új bónusz felvétele</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                  aria-controls="pills-profile" aria-selected="false">Meglévő bónuszok szerkesztése</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-users-tab" data-toggle="pill" href="#pills-users" role="tab"
+                  aria-controls="pills-users" aria-selected="false">Bónusszal rendelkező felhasználók</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-userspoints-tab" data-toggle="pill" href="#pills-userspoints" role="tab"
+                  aria-controls="pills-userspoints" aria-selected="false">Pontbeváltások listája</a>
+              </li>
+
+            </ul>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
+              <div class="breadcrumb-item"><a href="/pages/bonusz.html">Bónusz</a></div>
+
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+
+                <h2 class="section-title">Bónusz adminisztráció</h2>
+                <p class="section-lead">Itt beállíthatja a bónusz pontértékét</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Bónusz pont beváltás</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Beváltás mértéke</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="form-group d-flex kedvezmeny-breakpoint">
+                              <div class="col-md-12 col-lg-6 pb-3 pb-lg-0 pl-0">
+                                <div class="input-group">
+                                  <input class="form-control" value="1000" min="0" type="number">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text">Ft-onként</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-12 col-lg-6 pl-0">
+                                <div class="input-group">
+                                  <input class="form-control" value="1" type="number" min="0">
+                                  <div class="input-group-append">
+                                    <span class="input-group-text">bónuszpont jár</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <div class="col-sm-12 text-center">
+                            <label class="imagecheck mb-4">
+                              <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                  class="far fa-save gift-btn"></i>Bónusz átváltások mentése</button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="section-title">Új bónusz felvétele</h2>
+                <p class="section-lead">Itt beállíthat egy új bónuszt, ami az "Bónusz" menüfülre kattintva jelenik
+                  meg.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Bónusz oldali szerkesztése</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz cím</label>
+                          <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" placeholder="Írja be a bónusz címét">
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz ára</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="input-group">
+                              <input type="number" min="1" class="form-control"
+                                placeholder="Adja meg mennyi bónuszpontért válthatják be az ajándékot">
+                              <div class="input-group-append">
+                                <span class="input-group-text">bónuszpont</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Készlet</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="input-group">
+                              <input type="number" min="1" class="form-control"
+                                placeholder="Adja meg a rendelkezésre álló készlet mennyiségét">
+                              <div class="input-group-append">
+                                <span class="input-group-text">db</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz alatti rövid
+                            szöveg</label>
+                          <div class="col-sm-12 col-md-7">
+                            <textarea placeholder="Írja be a bónuszhoz tartozó kedvcsináló szöveget"
+                              rows="5"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz fénykép
+                            választása</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="col-6 col-sm-3 p-0">
+                              <label class="imagecheck mb-4">
+                                <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                                <figure class="imagecheck-figure">
+                                  <img src="../assets/img/form/valasszon_kepet (1).png" alt="}"
+                                    class="imagecheck-image">
+                                </figure>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <h2 class="section-title">Új bónusz mentése</h2>
+                <p class="section-lead">Mentse el az új bónuszt, hogy megjelenhessen az oldalon</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Új bónusz mentése</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                            gombot</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="col-6 col-sm-3 p-0">
+                              <label class="imagecheck mb-4">
+                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                    class="far fa-save"></i>Új bónusz mentése</button>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <h2 class="section-title">Meglévő bónuszok kezelés</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő bónuszokat szerkesztheti.</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Meglévő bónuszok</h4>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-invoice">
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th>Cím</th>
+                                <th>Ár</th>
+                                <th>Készlet</th>
+                                <th></th>
+                              </tr>
+                              <tr>
+                                <td>Vászontáska</td>
+                                <td>1200 bónuszpont</td>
+                                <td>14 db</td>
+                                <td class="td-last">
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0"
+                                    data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Makita fúrógép</td>
+                                <td>8500 bónuszpont</td>
+                                <td>7 db</td>
+                                <td class="td-last">
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0"
+                                    data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Zseblámpa</td>
+                                <td>2000 bónuszpont</td>
+                                <td>10 db</td>
+                                <td class="td-last">
+                                  <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0"
+                                    data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                                  <a href="#biztosTorli" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#biztosTorli">Törlés</a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-users" role="tabpanel" aria-labelledby="pills-users-tab">
+                <h2 class="section-title">Bónusszal rendelkező felhasználók</h2>
+                <p class="section-lead">Ezen az oldalon megtekintheti mely felhasználók rendelkeznek bónuszzal.</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Bónusz - felhasználók</h4>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-invoice">
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th>Név</th>
+                                <th>Bónuszpont</th>
+                              </tr>
+                              <tr>
+                                <td>Angyal Attila (Angyal-Szerszám-Outlet)</td>
+                                <td>391</td>
+                              </tr>
+                              <tr>
+                                <td>AXIÁLIS 95 EGYÉNI CÉG (KIS KÁROLY EV.AXIÁLIS)</td>
+                                <td>32031</td>
+                              </tr>
+                              <tr>
+                                <td>Ádám Antal (Start Agro Kft.)</td>
+                                <td>57</td>
+                              </tr>
+                              <tr>
+                                <td>Bajtay László (Bajtay László EV.)</td>
+                                <td>534</td>
+                              </tr>
+                              <tr>
+                                <td>Bajzáth Krisztián (PRÍMA CSAPÁGY KFT)</td>
+                                <td>3</td>
+                              </tr>
+                              <tr>
+                                <td>BAKONDI KFT. (BAKONDI KFT.)</td>
+                                <td>1594</td>
+                              </tr>
+                              <tr>
+                                <td>Bearing Kft.Nagyker (Bearing Kft.Nagyker)</td>
+                                <td>23</td>
+                              </tr>
+                              <tr>
+                                <td>Bernáth Tamás (Autex Kft. Budapest)</td>
+                                <td>246</td>
+                              </tr>
+                              <tr>
+                                <td>Berta Ferenc (Hulita és Társai Bt.)</td>
+                                <td>2176</td>
+                              </tr>
+                              <tr>
+                                <td>Borsos Balázs (Plusz &amp; Roll Kft)</td>
+                                <td>551</td>
+                              </tr>
+                              <tr>
+                                <td>Brantmüller Zsolt (Karb-Tech Kft)</td>
+                                <td>2151</td>
+                              </tr>
+                              <tr>
+                                <td>Budapest Raktár (Bearing Kft.)</td>
+                                <td>13</td>
+                              </tr>
+                              <tr>
+                                <td>Bukor László (Nagykáta) (BUKOR-CSAPÁGY 2002 KFT)</td>
+                                <td>2004</td>
+                              </tr>
+                              <tr>
+                                <td>Burai Csaba (Goyo-Ladány Kft.)</td>
+                                <td>503</td>
+                              </tr>
+                              <tr>
+                                <td>Buza Norbert (CAPRIBELT TECHNIC SRL)</td>
+                                <td>34</td>
+                              </tr>
+                              <tr>
+                                <td>Czeglédi Sándor (SKF ÜZLETHÁZ CZEGLÉDI SÁNDOR)</td>
+                                <td>60614</td>
+                              </tr>
+                              <tr>
+                                <td>Csizmadia Aletta (Havancsák Kft.)</td>
+                                <td>156</td>
+                              </tr>
+                              <tr>
+                                <td>Dávid ákos (Klein Park Kft.)</td>
+                                <td>384</td>
+                              </tr>
+                              <tr>
+                                <td>DÉKÁNY NÁNDOR (PARTNER-AGRO KFT)</td>
+                                <td>205</td>
+                              </tr>
+                              <tr>
+                                <td>Dobi László (Csige-Csapágy kft.)</td>
+                                <td>356</td>
+                              </tr>
+                              <tr>
+                                <td>Fábián Tibor (Agro-Portéka kft)</td>
+                                <td>7706</td>
+                              </tr>
+                              <tr>
+                                <td>Földi-Vágó Ferenc (Agro-Fluvius Kft.)</td>
+                                <td>245</td>
+                              </tr>
+                              <tr>
+                                <td>Galambos Gábor (Krisz-Roll Kft.)</td>
+                                <td>17729</td>
+                              </tr>
+                              <tr>
+                                <td>Gnám Tamás (Söke Hungária Kft.)</td>
+                                <td>1519</td>
+                              </tr>
+                              <tr>
+                                <td>Golyha Ferenc (GÖRDÜLŐ KFT)</td>
+                                <td>3227</td>
+                              </tr>
+                              <tr>
+                                <td>Gökler Judit (BEX Bearing  Express Kft)</td>
+                                <td>367</td>
+                              </tr>
+                              <tr>
+                                <td>GRAUSZA ZOLTÁN (AGRO-TWIN 92 KFT)</td>
+                                <td>13080</td>
+                              </tr>
+                              <tr>
+                                <td>Greszler Jeno (GRESZLER MG. BOLT)</td>
+                                <td>219</td>
+                              </tr>
+                              <tr>
+                                <td>Grünfelder László (CSAPÁGYVÁR KFT)</td>
+                                <td>6716</td>
+                              </tr>
+                              <tr>
+                                <td>Halász Nelli (TNN TRADE Kft)</td>
+                                <td>1775</td>
+                              </tr>
+                              <tr>
+                                <td>HARKÁNYI CSABA (KARB-TECH KFT.)</td>
+                                <td>1908</td>
+                              </tr>
+                              <tr>
+                                <td>Hegedűs Zoltán Béla (NF MIKROTECH KFT)</td>
+                                <td>267</td>
+                              </tr>
+                              <tr>
+                                <td>Herczku Péter (Bearing Kft.)</td>
+                                <td>84</td>
+                              </tr>
+                              <tr>
+                                <td>Hetei Attila (Hydrex Kft)</td>
+                                <td>8645</td>
+                              </tr>
+                              <tr>
+                                <td>Hetei Tamás (Het-Band Kft.)</td>
+                                <td>22505</td>
+                              </tr>
+                              <tr>
+                                <td>Holló Márta (Hepenix Kft)</td>
+                                <td>3</td>
+                              </tr>
+                              <tr>
+                                <td>HORVÁTH MIHÁLY (VADKERT KFT)</td>
+                                <td>95</td>
+                              </tr>
+                              <tr>
+                                <td>Horváth Péter (BDI HUNGARY KFT)</td>
+                                <td>172</td>
+                              </tr>
+                              <tr>
+                                <td>Horváth Zsolt (HR CSAPÁGY KFT)</td>
+                                <td>6</td>
+                              </tr>
+                              <tr>
+                                <td>Ivanics László (IMB-vadkert kft)</td>
+                                <td>1185</td>
+                              </tr>
+                              <tr>
+                                <td>Juhász András (Bearing Kft)</td>
+                                <td>9569</td>
+                              </tr>
+                              <tr>
+                                <td>Kakuk András (Fischof és Társai Gépjavító és Szolgáltató Kft. Mezőgazdasági műszaki bolt)</td>
+                                <td>1250</td>
+                              </tr>
+                              <tr>
+                                <td>Kardos Gábor (Banoresz Bt.)</td>
+                                <td>3</td>
+                              </tr>
+                              <tr>
+                                <td>Király Géza (Agro-Alfa Kft.)</td>
+                                <td>317</td>
+                              </tr>
+                              <tr>
+                                <td>Kisnémet Zoltán (Rolling Kft. Érd )</td>
+                                <td>817</td>
+                              </tr>
+                              <tr>
+                                <td>Kohlhoffer Zoltán (KOLI KFT)</td>
+                                <td>3208</td>
+                              </tr>
+                              <tr>
+                                <td>Kollár György (KONFEKCIONÁLÓ GÉP KFT.)</td>
+                                <td>495</td>
+                              </tr>
+                              <tr>
+                                <td>Komaromi Balázs (Tar Kft. Győr)</td>
+                                <td>45</td>
+                              </tr>
+                              <tr>
+                                <td>Kovács Ferenc (Technik Oil Kkt)</td>
+                                <td>1920</td>
+                              </tr>
+                              <tr>
+                                <td>Kovács László (Ko-Va Gép Kft.)</td>
+                                <td>122</td>
+                              </tr>
+                              <tr>
+                                <td>KOVÁCS MIHÁLY (JUMI-ROLL MŰVEK KFT)</td>
+                                <td>33</td>
+                              </tr>
+                              <tr>
+                                <td>Kósik László (AXIÁL KFT)</td>
+                                <td>43</td>
+                              </tr>
+                              <tr>
+                                <td>Körmendi András (Paulus-Zemplén kft.)</td>
+                                <td>133</td>
+                              </tr>
+                              <tr>
+                                <td>Körmendi Péter (Agro-Felcsút Kft.)</td>
+                                <td>1337</td>
+                              </tr>
+                              <tr>
+                                <td>Környei Ákos (AQUASOLV SYSYTEM KFT.)</td>
+                                <td>196</td>
+                              </tr>
+                              <tr>
+                                <td>Kujbusné Molnár Erzsébet (RUMED KFT)</td>
+                                <td>822</td>
+                              </tr>
+                              <tr>
+                                <td>KULIK TAMÁS (SUBUR IMPEX KFT.)</td>
+                                <td>683</td>
+                              </tr>
+                              <tr>
+                                <td>Mannó Zsuzsanna (M-Roll Kft.)</td>
+                                <td>584</td>
+                              </tr>
+                              <tr>
+                                <td>Martnincsevics László (Varga Szárnyas Kft)</td>
+                                <td>2</td>
+                              </tr>
+                              <tr>
+                                <td>Mányó Zsolt (GÖRDÜLŐ KFT)</td>
+                                <td>1575</td>
+                              </tr>
+                              <tr>
+                                <td>Márté László (Csongrádi Acél Szerszám Kft.)</td>
+                                <td>289</td>
+                              </tr>
+                              <tr>
+                                <td>Mestyák Tamás (ADIX-TRADE KFT.)</td>
+                                <td>1</td>
+                              </tr>
+                              <tr>
+                                <td>Méhész Viktor (Klavio Kft)</td>
+                                <td>31834</td>
+                              </tr>
+                              <tr>
+                                <td>Mészáros Gábor (Cserháti Trade Kft)</td>
+                                <td>3208</td>
+                              </tr>
+                              <tr>
+                                <td>Micsik Pál (Teher-Pont KFT)</td>
+                                <td>99</td>
+                              </tr>
+                              <tr>
+                                <td>Miklay Edit (Bearing Kft)</td>
+                                <td>1514</td>
+                              </tr>
+                              <tr>
+                                <td>Nagy Gábor (Rolle 3 Kft)</td>
+                                <td>6257</td>
+                              </tr>
+                              <tr>
+                                <td>Nagy Milán (Bearing Express Kft.)</td>
+                                <td>4</td>
+                              </tr>
+                              <tr>
+                                <td>Németh Sándor (GERMALEX KFT)</td>
+                                <td>5783</td>
+                              </tr>
+                              <tr>
+                                <td>norpan.tmk (Norpan Sátoraljaújhelyi Sütőipari Kft.)</td>
+                                <td>191</td>
+                              </tr>
+                              <tr>
+                                <td>ORBAN ZSOLT (RULHAUS SRL)</td>
+                                <td>459</td>
+                              </tr>
+                              <tr>
+                                <td>Pap Lajos (Modul-Bake Kft.)</td>
+                                <td>6724</td>
+                              </tr>
+                              <tr>
+                                <td>Pellei Sándor (RILL CSAPÁGY KFT)</td>
+                                <td>9701</td>
+                              </tr>
+                              <tr>
+                                <td>Péhl Csaba (Jenox Hungária Kft.)</td>
+                                <td>10235</td>
+                              </tr>
+                              <tr>
+                                <td>Pók Ferenc (Autex Kft. Dunaújváros)</td>
+                                <td>2323</td>
+                              </tr>
+                              <tr>
+                                <td>Regéczy Gusztáv (REGÉCZY GUSZTÁV EGYÉNI VÁLLALKOZÓ)</td>
+                                <td>373</td>
+                              </tr>
+                              <tr>
+                                <td>Richter László (Richter László csapágyszaküzlet)</td>
+                                <td>832</td>
+                              </tr>
+                              <tr>
+                                <td>RIZÁN PÉTER (AGROKERI KFT)</td>
+                                <td>292</td>
+                              </tr>
+                              <tr>
+                                <td>Róka Norbert (Ro és Roné Csapágy Bt.)</td>
+                                <td>8830</td>
+                              </tr>
+                              <tr>
+                                <td>Rudolf Ákos (S.I.S. Kft.)</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <td>Sárdi György (Quasi-Modo Kft.)</td>
+                                <td>251</td>
+                              </tr>
+                              <tr>
+                                <td>Sárközi Gábor (BearingKFT)</td>
+                                <td>289</td>
+                              </tr>
+                              <tr>
+                                <td>Schaffer György (NIKKEL KERESKEDŐHÁZ KFT)</td>
+                                <td>1368</td>
+                              </tr>
+                              <tr>
+                                <td>Sebesiné Ildikó (Tar Kft. Sárvár)</td>
+                                <td>364</td>
+                              </tr>
+                              <tr>
+                                <td>Seres Máté (Speciál Csapágy KFT.)</td>
+                                <td>1128</td>
+                              </tr>
+                              <tr>
+                                <td>Somogyi János (KALO-MOBIL KFT.)</td>
+                                <td>11806</td>
+                              </tr>
+                              <tr>
+                                <td>Söjtör Gábor (DIGITAS KFT.)</td>
+                                <td>201</td>
+                              </tr>
+                              <tr>
+                                <td>Süke Zsolt (Bearing Kft.)</td>
+                                <td>16</td>
+                              </tr>
+                              <tr>
+                                <td>Szabados Zsolt (Bearing Kft)</td>
+                                <td>5826</td>
+                              </tr>
+                              <tr>
+                                <td>Sziládi Ferenc (Nagytraktor Kft.)</td>
+                                <td>1018</td>
+                              </tr>
+                              <tr>
+                                <td>Szuperszíj Kft. (Szuperszíj Kft.)</td>
+                                <td>692</td>
+                              </tr>
+                              <tr>
+                                <td>Szűcs Lajos (KUCSA-KER KFT)</td>
+                                <td>2624</td>
+                              </tr>
+                              <tr>
+                                <td>Takács Tibor (Tar Kft. Szombathely)</td>
+                                <td>2901</td>
+                              </tr>
+                              <tr>
+                                <td>Tar András (Tar Kft. Pápa)</td>
+                                <td>1051</td>
+                              </tr>
+                              <tr>
+                                <td>Teleky András (TELE BT)</td>
+                                <td>3118</td>
+                              </tr>
+                              <tr>
+                                <td>Teszt Vásárló (Bearing Kft.)</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <td>Thomas Mentzel (FRABEX GmbH)</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <td>tóth attila (ata 9 bt.)</td>
+                                <td>17</td>
+                              </tr>
+                              <tr>
+                                <td>Tóth Balázs (Karb-Tech Kft.)</td>
+                                <td>1257</td>
+                              </tr>
+                              <tr>
+                                <td>Tóvári Szabolcs (Bdi Hungary Kft.)</td>
+                                <td>1627</td>
+                              </tr>
+                              <tr>
+                                <td>Török Mihály (Török Kft)</td>
+                                <td>479</td>
+                              </tr>
+                              <tr>
+                                <td>Trescsik Károly (TRENAKER IPARI GYÁRTÓ KER.SZOLG.KFT)</td>
+                                <td>837</td>
+                              </tr>
+                              <tr>
+                                <td>Varga Bettina (KÖNIGIN-TRADE KFT.)</td>
+                                <td>1627</td>
+                              </tr>
+                              <tr>
+                                <td>Varga Lajos (Agroteam 97 Bt.)</td>
+                                <td>14796</td>
+                              </tr>
+                              <tr>
+                                <td>Vágó István (cégem)</td>
+                                <td>1</td>
+                              </tr>
+                              <tr>
+                                <td>Vágó István (Lilo 2000 bt)</td>
+                                <td>32</td>
+                              </tr>
+                              <tr>
+                                <td>Váradi Ferenc (Drescher Magyarországi Direct mailing Kft.)</td>
+                                <td>79</td>
+                              </tr>
+                              <tr>
+                                <td>Végi András (Complex Csapágy Kft.)</td>
+                                <td>3511</td>
+                              </tr>
+                              <tr>
+                                <td>Vig Zoltán (Radax-60 Kft.)</td>
+                                <td>1592</td>
+                              </tr>
+                              <tr>
+                                <td>Waldinger Eszter (Frank Csapágy Hungary Kft.)</td>
+                                <td>212</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-userspoints" role="tabpanel" aria-labelledby="pills-userspoints-tab">
+                <h2 class="section-title">Pontbeváltások listája</h2>
+                <p class="section-lead">Ezen az oldalon megtekintheti az eddigi pontbeváltásokat.</p>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Pontbeváltások listája</h4>
+                      </div>
+                      <div class="card-body p-0">
+                        <div class="table-responsive table-invoice">
+                          <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th>Felhasználó</th>
+                                <th>Dátum</th>
+                                <th>Ajándék</th>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2021/03/12 10:20:21 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2021/02/09 08:34:05 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>mroll</td>
+                                <td>2020/12/01 10:37:12 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>Radax</td>
+                                <td>2020/10/29 14:44:47 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/10/28 08:52:53 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/10/27 13:01:39 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/10/27 09:52:07 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2020/10/13 08:25:06 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/09/29 13:23:28 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/09/28 12:01:31 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/09/21 13:02:21 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>greszler</td>
+                                <td>2020/09/16 11:25:54 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/09/16 11:05:14 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>gordulo1</td>
+                                <td>2020/09/16 10:42:10 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2020/07/15 08:15:35 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>Tbalazs</td>
+                                <td>2020/04/14 12:04:12 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>feri</td>
+                                <td>2020/01/22 13:47:24 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2019/11/29 10:27:11 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2019/11/29 10:26:51 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2019/11/29 10:25:49 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>agrokeri01</td>
+                                <td>2019/11/02 11:31:43 GMT+1</td>
+                                <td>Sencor SEP-252 fejhallgató mikrofonnal</td>
+                              </tr>
+                              <tr>
+                                <td>KARB</td>
+                                <td>2019/06/05 13:28:23 GMT+2</td>
+                                <td>Omega FIS1010 fejhallgató+mikrofon</td>
+                              </tr>
+                              <tr>
+                                <td>bukorcsapagy</td>
+                                <td>2019/05/23 11:55:33 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>feri</td>
+                                <td>2019/05/16 14:28:27 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>feri</td>
+                                <td>2019/05/16 14:28:27 GMT+2</td>
+                                <td>Omega FIS1010 fejhallgató+mikrofon</td>
+                              </tr>
+                              <tr>
+                                <td>daniel.tamas</td>
+                                <td>2019/04/29 16:29:38 GMT+2</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>KARB</td>
+                                <td>2019/02/15 12:44:29 GMT+1</td>
+                                <td>Extol LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2018/11/28 13:24:46 GMT+1</td>
+                                <td>Trust Primo Powerbank 8800mAh vésztöltő, zseblámpa funkcióval</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2018/11/28 13:24:46 GMT+1</td>
+                                <td>Kulcstartós LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>2K Csapágy</td>
+                                <td>2018/08/07 14:33:05 GMT+2</td>
+                                <td>Kulcstartós LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>KARB</td>
+                                <td>2018/04/03 14:30:18 GMT+2</td>
+                                <td>Trust Primo Powerbank 8800mAh vésztöltő zseblámpa funkcióval</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2018/03/30 16:41:01 GMT+2</td>
+                                <td>Trust Primo Powerbank 8800mAh vésztöltő zseblámpa funkcióval</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2018/03/30 16:41:01 GMT+2</td>
+                                <td>Kulcstartós LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2018/03/30 15:42:22 GMT+2</td>
+                                <td>Trust Primo Powerbank 8800mAh vésztöltő zseblámpa funkcióval</td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2018/03/28 15:11:22 GMT+2</td>
+                                <td>Kulcstartós LED lámpa</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2018/03/25 17:49:17 GMT+2</td>
+                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2018/03/25 17:49:17 GMT+2</td>
+                                <td>Emos P3508 fejlámpa</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2018/03/25 17:43:44 GMT+2</td>
+                                <td>Yenkee YSM 402M univerzális mobiltelefon tartó</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2018/03/25 17:43:44 GMT+2</td>
+                                <td>Emos P3508 fejlámpa</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2018/03/25 17:43:44 GMT+2</td>
+                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A</td>
+                              </tr>
+                              <tr>
+                                <td>rillcsapagy</td>
+                                <td>2018/03/13 08:46:33 GMT+1</td>
+                                <td>Kingston Data Traveller 101 Genereation, 16 GB Pendrive  (3690), , Rill Csapágy Kft. 4100 Berettyóújfalu Kossuth u.48.</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2018/03/03 08:59:19 GMT+1</td>
+                                <td>NAVON univerzális autós tartó 3,5" - 6" készülékekhez (3490), , </td>
+                              </tr>
+                              <tr>
+                                <td>bzsolt</td>
+                                <td>2017/08/17 09:52:30 GMT+2</td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), , </td>
+                              </tr>
+                              <tr>
+                                <td>TWIN</td>
+                                <td>2017/08/10 09:11:29 GMT+2</td>
+                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS KLAPKA GYÖRGY U.9.</td>
+                              </tr>
+                              <tr>
+                                <td>TWIN</td>
+                                <td>2017/08/10 09:09:41 GMT+2</td>
+                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS KLAPKA GYÖRGY U. 9</td>
+                              </tr>
+                              <tr>
+                                <td>axiális</td>
+                                <td>2017/07/10 14:07:37 GMT+2</td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), axialis@t-online.hu, Németh Norbert
+                            6400.Kiskunhalas 
+                            Kismarton u.15</td>
+                              </tr>
+                              <tr>
+                                <td>axiális</td>
+                                <td>2017/07/10 14:06:47 GMT+2</td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), axialis@t-online.hu, Németh Norbert
+                            6400.Kiskunhalas
+                            Kismarton u.15</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2016/11/14 09:23:10 GMT+1</td>
+                                <td>Pentax 8x21 Jupiter III távcső, zöld (9990), hpit@index.hu, Horváth Péter
+                            9407 Sopron, Menta utca 69.</td>
+                              </tr>
+                              <tr>
+                                <td>fulop</td>
+                                <td>2016/09/06 10:45:24 GMT+2</td>
+                                <td>Sencor SLL 50 fejlámpa (1290), , Fülöp és Társa Kft. 7300, Komló, Kossuth Lajos utca 85.</td>
+                              </tr>
+                              <tr>
+                                <td>TWIN</td>
+                                <td>2016/06/29 19:11:57 GMT+2</td>
+                                <td>Overmax CamRoad 2.3 autós menetrögzítő kamera (9490), agro-twin92@koroskabel.hu, AGRO-TWIN92KFT GRAUSZA ZOLTÁN 6200 KISKŐRÖS KLAPKA GYÖRGY U.9</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/11/26 09:30:07 GMT+1</td>
+                                <td>Extol Premium fejlámpa (8862100) (1290), hpit@index.hu, Horváth Péter
+                            9407 Sopron, Menta utca 69.</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/11/20 10:45:19 GMT+1</td>
+                                <td>iGear univerzális telefon tartó szélvédőre, hosszú karral, "Nanopad" rögzítéssel (2990), , Horváth Péter
+                            9407 Sopron Menta utca 69.
+                            hpit@index.hu</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/04/29 07:12:32 GMT+2</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), magasi.karoly@upcmail.hu, Magasi Károly
+                            9400 Sopron, Brennbergi út 4/a.</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/04/02 07:15:59 GMT+2</td>
+                                <td>Extol Premium fejlámpa (8862100) (1290), karoly.magasi@bdi.hu, Magasi Károly
+                            9400 Sopron, Brennbergi út 4/a.</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/04/02 07:15:02 GMT+2</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), karoly.magasi@bdi.hu, Magasi Károly
+                            9400 Sopron, Brennbergi út 4/a.</td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2015/03/10 06:57:30 GMT+1</td>
+                                <td>Sony DVP-SR370 DVD Lejátszó +8GB Pendrive a dobozban (11900), karoly.magasi@bdi.hu, Magasi Károly
+                            9400 Sopron, Brennbergi út 4/a.</td>
+                              </tr>
+                              <tr>
+                                <td>rillcsapagy</td>
+                                <td>2015/01/28 14:26:36 GMT+1</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2590), , </td>
+                              </tr>
+                              <tr>
+                                <td>fulop</td>
+                                <td>2015/01/23 13:34:28 GMT+1</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2590), , Fülöp és Társa Kft. Csapágybolt
+                            7300, Komló, Kossuth Lajos utca 85.</td>
+                              </tr>
+                              <tr>
+                                <td>axiális</td>
+                                <td>2014/12/18 12:16:41 GMT+1</td>
+                                <td>Genius HS-04SU mikrofonos fejhallgató (2990), norbert.axialis@gmail.hu, Németh Norbert  6400.Kiskunhalas  Széchenyi utca 16 / 5.</td>
+                              </tr>
+                              <tr>
+                                <td>bzsolt</td>
+                                <td>2014/09/23 09:40:25 GMT+2</td>
+                                <td>Kingston DataTraveler 101 Generation 2 (DT101G2) 16GB pendrive (4990), , </td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/10/29 08:14:41 GMT+1</td>
+                                <td>Logic LM-20 mini egér, fekete (2290), edit.miklay@bearing.hu, </td>
+                              </tr>
+                              <tr>
+                                <td>bdimagosi</td>
+                                <td>2013/10/29 06:44:40 GMT+1</td>
+                                <td>Kingston DataTraveler 101 Generation 2 (DT101G2) 16GB pendrive (4990), karoly.magasi@bdi.hu, Magasi Károly
+                            9400 Sopron, Brennbergi út 4/a.</td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/10/16 09:14:36 GMT+2</td>
+                                <td>Logic LM-20 mini egér, fekete (2290), edit.miklay@bearing.hu, </td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2013/07/04 12:39:31 GMT+2</td>
+                                <td>Genius SW 2.1 800 hangszóró szett (6790), , </td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/06/14 09:06:19 GMT+2</td>
+                                <td>Proba (10), edit.miklay@bearing.hu, Miklay Edit</td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/06/13 16:45:37 GMT+2</td>
+                                <td>Logic LM-20 mini egér, fekete (2290), edit.miklay@bearing.hu, Miklay Edit</td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/06/12 15:10:32 GMT+2</td>
+                                <td>Logic LM-20 mini egér, fekete (2290), edir.miklay@bearing.hu, Miklay Edit, 1119 Budapest, Fehérvári út 44.</td>
+                              </tr>
+                              <tr>
+                                <td>reirou</td>
+                                <td>2013/05/29 14:24:21 GMT+2</td>
+                                <td>pendrive (2000), edit.miklay@bearing.hu, Miklay Edit</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2013/05/29 14:21:57 GMT+2</td>
+                                <td>pendrive (2000), , Vágó István, 1121. Budapest Denevér út 64</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/08/15 16:04:06 GMT+2</td>
+                                <td>Simalube borsszóró (1100), szabados@bearing.hu, bonusz beváltás</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/08/15 16:03:25 GMT+2</td>
+                                <td>Kurblis mobiltelefon töltő (1850), , </td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/03/14 14:30:20 GMT+1</td>
+                                <td>Kurblis mobiltelefon töltő (1850), szabados@bearing.hu, 2085 Pilisvörövár, Rákóczi u. 9.</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/02/17 16:17:15 GMT+1</td>
+                                <td>Simalube borsszóró (1100), szabados@bearing.hu, 1119 budapest fehérvári út 44</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2010/02/15 21:31:27 GMT+1</td>
+                                <td>BEX golyóstoll narancs (150), istvan.vago@gmail.com, Vágó István, 1121. Budapest Denevér út 64.</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/02/15 14:05:32 GMT+1</td>
+                                <td>CX manuális telefon akkumulátor töltő (1750)</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/02/15 14:05:28 GMT+1</td>
+                                <td>Simalube borsszóró (1100)</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/02/15 11:46:11 GMT+1</td>
+                                <td>Simalube borsszóró (1100)</td>
+                              </tr>
+                              <tr>
+                                <td>szabados</td>
+                                <td>2010/02/15 11:45:41 GMT+1</td>
+                                <td>Simalube baseball sapka (510)</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2010/02/11 23:25:35 GMT+1</td>
+                                <td>Simalube baseball sapka</td>
+                              </tr>
+                              <tr>
+                                <td>ivago</td>
+                                <td>2010/02/11 22:51:40 GMT+1</td>
+                                <td>Simalube baseball sapka</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+         
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal fade" id="keresesCikkszamAlapjan" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0">
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Keresés név alapján</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-0">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Név</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="form-group mb-0">
+                          <div class="form-group mb-0">
+                            <div id="fields">
+                              <div class="controls">
+                                <form role="form" autocomplete="off">
+                                  <div class="entry input-group">
+                                    <input class="form-control" name="fields" type="text"
+                                      placeholder="Adja meg a termék nevét" />
+                                    <span class="input-group-btn ml-2">
+                                      <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button">
+                                        <i class="fas fa-search"></i>
+                                        Keresés név alapján</button>
+                                    </span>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Összesen: 165 találat</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th>Termék</th>
+                                    <th>Gyártó</th>
+                                    <th>Méret</th>
+                                    <th>Típus / Azonosító</th>
+                                    <th>Egységár</th>
+                                    <th>Kedvezményes ár</th>
+                                    <th>Megtakarítás</th>
+                                    <th>Készlet</th>
+                                    <th>Akció</th>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="konkretAjanlatszerkesztese" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0">
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Bónusz oldali szerkesztése</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz cím</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input type="text" class="form-control" placeholder="Írja be a bónusz címét"
+                          value="Vászontáska">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz ára</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="input-group">
+                          <input type="number" min="1" class="form-control"
+                            placeholder="Adja meg mennyi bónuszpontért válthatják be az ajándékot" value="1200">
+                          <div class="input-group-append">
+                            <span class="input-group-text">bónuszpont</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Készlet</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="input-group">
+                          <input type="number" min="1" class="form-control"
+                            placeholder="Adja meg a rendelkezésre álló készlet mennyiségét" value="14">
+                          <div class="input-group-append">
+                            <span class="input-group-text">db</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz alatti rövid
+                        szöveg</label>
+                      <div class="col-sm-12 col-md-7">
+                        <textarea placeholder="Írja be a bónuszhoz tartozó kedvcsináló szöveget"
+                          rows="5">Vászontáska két rövid füllel, hogy akár a bevásárlást is egyedivé tudd tenni! A pamutból készült rövid fülű vászontáskát kényelmesen tudod hordani, legyen szó vásárlásról vagy baráti összejövetelkről.</textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz fénykép
+                        választása</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="col-6 col-sm-3 p-0">
+                          <label class="imagecheck mb-4">
+                            <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                            <figure class="imagecheck-figure">
+                              <img src="/assets/img/bonusz_termek/taska_bonusz_01.jpg" alt="" class="imagecheck-image">
+                            </figure>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Bónusz módosítás</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                        gombot</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="col-6 col-sm-3 p-0">
+                          <label class="imagecheck mb-4">
+                            <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                class="far fa-save"></i>Bónusz módosítás</button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="keresesCikkszamAlapjanEdit" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="container d-flex pl-0">
+                </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Keresés név alapján</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-0">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Név</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group mb-0">
+                            <div class="form-group mb-0">
+                              <div id="fields">
+                                <div class="controls">
+                                  <form role="form" autocomplete="off">
+                                    <div class="entry input-group">
+                                      <input class="form-control" name="fields" type="text"
+                                        placeholder="Adja meg a termék nevét" />
+                                      <span class="input-group-btn ml-2">
+                                        <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button">
+                                          <i class="fas fa-search"></i>
+                                          Keresés név alapján</button>
+                                      </span>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Összesen: 165 találat</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <div class="col-12">
+                          <div class="card">
+                            <div class="card-body p-0">
+                              <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <tbody>
+                                    <tr>
+                                      <th>Termék</th>
+                                      <th>Gyártó</th>
+                                      <th>Méret</th>
+                                      <th>Típus / Azonosító</th>
+                                      <th>Egységár</th>
+                                      <th>Kedvezményes ár</th>
+                                      <th>Megtakarítás</th>
+                                      <th>Készlet</th>
+                                      <th>Akció</th>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Ajánlat törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli az ajánlatot? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorliFenykep" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Fénykép törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli ezt a fényképet? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
+  <script src="../node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../node_modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../node_modules/selectric/public/jquery.selectric.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/forms-advanced-forms.js"></script>
+</body>
+
+</html>
