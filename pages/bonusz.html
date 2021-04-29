@@ -82,11 +82,13 @@
                   szerkesztése</span></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-cloud-download"></i><span>Kedvezmények
                   frissítése az SAP-ból</span></a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-picture"></i><span>Termékfotók
+            <li class="nav-item"><a href="/pages/fenykepkezelo.html" class="nav-link"><i
+                  class="fas icon-picture"></i><span>Termékfotók
                   kiválasztása</span></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Karrier
                   admin</span></a></li>
-            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas icon-present"></i><span>Bónusz
+            <li class="nav-item active"><a href="/pages/bonusz.html" class="nav-link"><i
+                  class="fas icon-present"></i><span>Bónusz
                   admin</span></a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-fire"></i><span>Újdonság
                   admin</span></a></li>
@@ -114,7 +116,7 @@
           </ul>
 
           <div class="mt-4 mb-4 p-3 hide-sidebar-mini d-flex justify-content-center">
-            <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
+            <a href="https://aruhaz.bearing.hu/" class="btn btn-primary btn-lg btn-block btn-icon-split">
               <i class="fas icon-logout pr-5"></i>Vissza az áruházba
             </a>
           </div>
@@ -165,11 +167,13 @@
                   <div class="col-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4>Bónusz pont beváltás</h4>
+                        <h4>Bónuszpont beváltás</h4>
                       </div>
                       <div class="card-body">
+
                         <div class="form-group row mb-4">
-                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Beváltás mértéke</label>
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Általános beváltás
+                            mértéke</label>
                           <div class="col-sm-12 col-md-7">
                             <div class="form-group d-flex kedvezmeny-breakpoint">
                               <div class="col-md-12 col-lg-6 pb-3 pb-lg-0 pl-0">
@@ -196,6 +200,210 @@
                             <label class="imagecheck mb-4">
                               <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
                                   class="far fa-save gift-btn"></i>Bónusz átváltások mentése</button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="section-title">Bónusz árucsoportok</h2>
+                <p class="section-lead">Itt beállíthatja az árucsoportonként járó bónuszt</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Bónuszpont beváltás</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Beváltás árucsoportonként</label>
+
+                          <div class="col-sm-12 col-md-7">
+                            <div id="menuAkciosAjanlat">
+                              <div class="form-group">
+                                <div id="fields">
+                                  <div class="controls03">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry03 input-group mb-2">
+                                        <div class="col-3 p-0">
+                                          <select name="fields[]" id="" class="form-control">
+                                                  <option selected value="none">Nincs kiválasztva</option>
+                                                  <option value="Autós csapágyak">Autós csapágyak</option>
+                                                  <option value="Bilincsek">Bilincsek</option>
+                                                  <option value="CX csapágyak és tartozékok">CX csapágyak és tartozékok</option>
+                                                  <option value="Csapágyak CX">Csapágyak CX</option>
+                                                  <option value="Csapágyak FAG">Csapágyak FAG</option>
+                                                  <option value="Csapágyak FBJ">Csapágyak FBJ</option>
+                                                  <option value="Csapágyak HIWIN">Csapágyak HIWIN</option>
+                                                  <option value="Csapágyak INA">Csapágyak INA</option>
+                                                  <option value="Csapágyak NACHI">Csapágyak NACHI</option>
+                                                  <option value="Csapágyak NIS">Csapágyak NIS</option>
+                                                  <option value="Csapágyak NTN">Csapágyak NTN</option>
+                                                  <option value="Csapágyak SKF">Csapágyak SKF</option>
+                                                  <option value="Csapágyak SNR">Csapágyak SNR</option>
+                                                  <option value="Csapágyak TIMKEN">Csapágyak TIMKEN</option>
+                                                  <option value="Csapágyak ipari prémium">Csapágyak ipari prémium</option>
+                                                  <option value="Csapágyak ipari standard">Csapágyak ipari standard</option>
+                                                  <option value="Csapágyak lineáris">Csapágyak lineáris</option>
+                                                  <option value="Csapágyak megzőgazdasági prémium">Csapágyak megzőgazdasági prémium</option>
+                                                  <option value="Csapágyak mezőgazdasági standard">Csapágyak mezőgazdasági standard</option>
+                                                  <option value="FAG csapágyak">FAG csapágyak</option>
+                                                  <option value="Fúvókák LECHLER">Fúvókák LECHLER</option>
+                                                  <option value="GEOLINE permetezéstecnika">GEOLINE permetezéstecnika</option>
+                                                  <option value="Golyó">Golyó</option>
+                                                  <option value="INA csapágyak">INA csapágyak</option>
+                                                  <option value="Kenéstechnika">Kenéstechnika</option>
+                                                  <option value="LECHLER fúvókák">LECHLER fúvókák</option>
+                                                  <option value="LOCTITE termékek">LOCTITE termékek</option>
+                                                  <option value="Lineáris fogasléc">Lineáris fogasléc</option>
+                                                  <option value="Lineáris golyóshüvelyek">Lineáris golyóshüvelyek</option>
+                                                  <option value="Lineáris profilvezetés">Lineáris profilvezetés</option>
+                                                  <option value="Lineáris technika">Lineáris technika</option>
+                                                  <option value="NILOS tömítések">NILOS tömítések</option>
+                                                  <option value="NTN csapágyak">NTN csapágyak</option>
+                                                  <option value="NTN-SNR Rozsdamentes csapágyegységek">NTN-SNR Rozsdamentes csapágyegységek</option>
+                                                  <option value="Permetezéstechnika">Permetezéstechnika</option>
+                                                  <option value="Permetezéstechnika GEOLINE">Permetezéstechnika GEOLINE</option>
+                                                  <option value="Permetezőgép alkatrészek">Permetezőgép alkatrészek</option>
+                                                  <option value="Permetezőgép fittingek">Permetezőgép fittingek</option>
+                                                  <option value="Permetezőgép fúvókák">Permetezőgép fúvókák</option>
+                                                  <option value="Permetezőgép szűrők">Permetezőgép szűrők</option>
+                                                  <option value="Permetezőgép vezérlők">Permetezőgép vezérlők</option>
+                                                  <option value="Ragasztástechnika">Ragasztástechnika</option>
+                                                  <option value="SIMALUB kenési rendszer">SIMALUB kenési rendszer</option>
+                                                  <option value="SIMALUBE">SIMALUBE</option>
+                                                  <option value="SIMATHERM csapágymelegítők">SIMATHERM csapágymelegítők</option>
+                                                  <option value="SIMATOOLS szerelőszerszámok">SIMATOOLS szerelőszerszámok</option>
+                                                  <option value="SNR csapágyak">SNR csapágyak</option>
+                                                  <option value="SZINTER fém csapágyak">SZINTER fém csapágyak</option>
+                                                  <option value="Siklócsapágyak">Siklócsapágyak</option>
+                                                  <option value="TIMKEN ipari csapágyak">TIMKEN ipari csapágyak</option>
+                                                  <option value="Tömítések">Tömítések</option>
+                                                  <option value="Tömítések NILOS gyűrű">Tömítések NILOS gyűrű</option>
+                                                  <option value="Tömítések SZIMERING">Tömítések SZIMERING</option>
+                                                  <option value="Tömítéstechnika">Tömítéstechnika</option>
+                                                  <option value="Tömítéstechnika DEN BRAVEN">Tömítéstechnika DEN BRAVEN</option>
+                                                  <option value="Tömítéstechnika LOCTITE">Tömítéstechnika LOCTITE</option>
+                                                  <option value="Zsírzógomb">Zsírzógomb</option>   
+                                          </select>
+                                        </div>
+                                        <div class="col-4">
+                                          <div class="input-group">
+                                            <input class="form-control"  min="0" type="number">
+                                            <div class="input-group-append">
+                                              <span class="input-group-text">Ft-onként</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-4">
+                                          <div class="input-group">
+                                            <input class="form-control"  type="number" min="0">
+                                            <div class="input-group-append">
+                                              <span class="input-group-text">bónuszpont jár</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-success btn-add ml-2" type="button">
+                                            <span class="icon-plus"></span>
+                                          </button>
+                                        </span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <div class="col-sm-12 text-center">
+                            <label class="imagecheck mb-4">
+                              <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                  class="far fa-save gift-btn"></i>Bónusz árucsoportok mentése</button>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-title">Bónusz vevőcsoportok</h2>
+                <p class="section-lead">Itt beállíthatja a vevőcsoportonként járó bónuszt</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Bónuszpont beváltás</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Beváltás vevőcsoportonként</label>
+
+                          <div class="col-sm-12 col-md-7">
+                            <div id="menuAkciosAjanlat">
+                              <div class="form-group">
+                                <div id="fields">
+                                  <div class="controls03">
+                                    <form role="form" autocomplete="off">
+                                      <div class="entry03 input-group mb-2">
+                                        <div class="col-3 p-0">
+                                          <select name="fields[]" id="" class="form-control">
+                                            <option value="Szerzodott">Szerződött</option>
+                                            <option value="Kereskedo">Kereskedő</option>
+                                            <option value="OEM">OEM</option>
+                                            <option value="Kulfoldi">Külföldi</option>
+                                            <option value="PET-i">PET-i</option>
+                                            <option value="Raktaros">Raktáros</option>
+                                            <option value="Regisztralatlan">Regisztrálatlan</option>
+                                            <option value="Beszerzo">Beszerző</option>
+                                            <option selected="selected" value="Manager">Manager</option>
+                                            <option value="UserAlManager">UserAlManager</option>
+                                            <option value="Magan">Magán</option>
+                                            <option value="Meghatalmazott">Meghatalmazott</option>
+                                            <option value="Statisztikus">Statisztikus</option>
+                                            <option value="GroupManager">CsoportAdmin</option>
+                                            <option value="InfoManager">InfoManager</option>
+                                            <option value="AkcioManager">AkcióManager</option>
+                                            <option value="ArveresManager">ÁrverésManager</option>
+                                          </select>
+                                        </div>
+                                        <div class="col-4">
+                                          <div class="input-group">
+                                            <input class="form-control"  min="0" type="number">
+                                            <div class="input-group-append">
+                                              <span class="input-group-text">Ft-onként</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-4">
+                                          <div class="input-group">
+                                            <input class="form-control"  type="number" min="0">
+                                            <div class="input-group-append">
+                                              <span class="input-group-text">bónuszpont jár</span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-success btn-add ml-2" type="button">
+                                            <span class="icon-plus"></span>
+                                          </button>
+                                        </span>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <div class="col-sm-12 text-center">
+                            <label class="imagecheck mb-4">
+                              <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                  class="far fa-save gift-btn"></i>Bónusz vevőcsoportok mentése</button>
                             </label>
                           </div>
                         </div>
@@ -481,7 +689,7 @@
                                 <td>3227</td>
                               </tr>
                               <tr>
-                                <td>Gökler Judit (BEX Bearing  Express Kft)</td>
+                                <td>Gökler Judit (BEX Bearing Express Kft)</td>
                                 <td>367</td>
                               </tr>
                               <tr>
@@ -545,7 +753,8 @@
                                 <td>9569</td>
                               </tr>
                               <tr>
-                                <td>Kakuk András (Fischof és Társai Gépjavító és Szolgáltató Kft. Mezőgazdasági műszaki bolt)</td>
+                                <td>Kakuk András (Fischof és Társai Gépjavító és Szolgáltató Kft. Mezőgazdasági műszaki
+                                  bolt)</td>
                                 <td>1250</td>
                               </tr>
                               <tr>
@@ -1024,7 +1233,8 @@
                               <tr>
                                 <td>ivago</td>
                                 <td>2018/03/25 17:49:17 GMT+2</td>
-                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A</td>
+                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A
+                                </td>
                               </tr>
                               <tr>
                                 <td>ivago</td>
@@ -1044,12 +1254,14 @@
                               <tr>
                                 <td>ivago</td>
                                 <td>2018/03/25 17:43:44 GMT+2</td>
-                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A</td>
+                                <td>iGear univerzális szivargyújtó töltő okostelefon és tablet töltésére, 2 USB, 3,1A
+                                </td>
                               </tr>
                               <tr>
                                 <td>rillcsapagy</td>
                                 <td>2018/03/13 08:46:33 GMT+1</td>
-                                <td>Kingston Data Traveller 101 Genereation, 16 GB Pendrive  (3690), , Rill Csapágy Kft. 4100 Berettyóújfalu Kossuth u.48.</td>
+                                <td>Kingston Data Traveller 101 Genereation, 16 GB Pendrive (3690), , Rill Csapágy Kft.
+                                  4100 Berettyóújfalu Kossuth u.48.</td>
                               </tr>
                               <tr>
                                 <td>szabados</td>
@@ -1059,84 +1271,92 @@
                               <tr>
                                 <td>bzsolt</td>
                                 <td>2017/08/17 09:52:30 GMT+2</td>
-                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), , </td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive (3590), , </td>
                               </tr>
                               <tr>
                                 <td>TWIN</td>
                                 <td>2017/08/10 09:11:29 GMT+2</td>
-                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS KLAPKA GYÖRGY U.9.</td>
+                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS
+                                  KLAPKA GYÖRGY U.9.</td>
                               </tr>
                               <tr>
                                 <td>TWIN</td>
                                 <td>2017/08/10 09:09:41 GMT+2</td>
-                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS KLAPKA GYÖRGY U. 9</td>
+                                <td>Emos P3508 fejlámpa (1990), agro-twin92@koroskabel.hu, AGRO-TWIN92 KFT 6200 KISKŐRÖS
+                                  KLAPKA GYÖRGY U. 9</td>
                               </tr>
                               <tr>
                                 <td>axiális</td>
                                 <td>2017/07/10 14:07:37 GMT+2</td>
-                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), axialis@t-online.hu, Németh Norbert
-                            6400.Kiskunhalas 
-                            Kismarton u.15</td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive (3590), axialis@t-online.hu, Németh Norbert
+                                  6400.Kiskunhalas
+                                  Kismarton u.15</td>
                               </tr>
                               <tr>
                                 <td>axiális</td>
                                 <td>2017/07/10 14:06:47 GMT+2</td>
-                                <td>Goodram "Twister" 8GB USB2.0 pendrive  (3590), axialis@t-online.hu, Németh Norbert
-                            6400.Kiskunhalas
-                            Kismarton u.15</td>
+                                <td>Goodram "Twister" 8GB USB2.0 pendrive (3590), axialis@t-online.hu, Németh Norbert
+                                  6400.Kiskunhalas
+                                  Kismarton u.15</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2016/11/14 09:23:10 GMT+1</td>
                                 <td>Pentax 8x21 Jupiter III távcső, zöld (9990), hpit@index.hu, Horváth Péter
-                            9407 Sopron, Menta utca 69.</td>
+                                  9407 Sopron, Menta utca 69.</td>
                               </tr>
                               <tr>
                                 <td>fulop</td>
                                 <td>2016/09/06 10:45:24 GMT+2</td>
-                                <td>Sencor SLL 50 fejlámpa (1290), , Fülöp és Társa Kft. 7300, Komló, Kossuth Lajos utca 85.</td>
+                                <td>Sencor SLL 50 fejlámpa (1290), , Fülöp és Társa Kft. 7300, Komló, Kossuth Lajos utca
+                                  85.</td>
                               </tr>
                               <tr>
                                 <td>TWIN</td>
                                 <td>2016/06/29 19:11:57 GMT+2</td>
-                                <td>Overmax CamRoad 2.3 autós menetrögzítő kamera (9490), agro-twin92@koroskabel.hu, AGRO-TWIN92KFT GRAUSZA ZOLTÁN 6200 KISKŐRÖS KLAPKA GYÖRGY U.9</td>
+                                <td>Overmax CamRoad 2.3 autós menetrögzítő kamera (9490), agro-twin92@koroskabel.hu,
+                                  AGRO-TWIN92KFT GRAUSZA ZOLTÁN 6200 KISKŐRÖS KLAPKA GYÖRGY U.9</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/11/26 09:30:07 GMT+1</td>
                                 <td>Extol Premium fejlámpa (8862100) (1290), hpit@index.hu, Horváth Péter
-                            9407 Sopron, Menta utca 69.</td>
+                                  9407 Sopron, Menta utca 69.</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/11/20 10:45:19 GMT+1</td>
-                                <td>iGear univerzális telefon tartó szélvédőre, hosszú karral, "Nanopad" rögzítéssel (2990), , Horváth Péter
-                            9407 Sopron Menta utca 69.
-                            hpit@index.hu</td>
+                                <td>iGear univerzális telefon tartó szélvédőre, hosszú karral, "Nanopad" rögzítéssel
+                                  (2990), , Horváth Péter
+                                  9407 Sopron Menta utca 69.
+                                  hpit@index.hu</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/04/29 07:12:32 GMT+2</td>
-                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), magasi.karoly@upcmail.hu, Magasi Károly
-                            9400 Sopron, Brennbergi út 4/a.</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), magasi.karoly@upcmail.hu, Magasi
+                                  Károly
+                                  9400 Sopron, Brennbergi út 4/a.</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/04/02 07:15:59 GMT+2</td>
                                 <td>Extol Premium fejlámpa (8862100) (1290), karoly.magasi@bdi.hu, Magasi Károly
-                            9400 Sopron, Brennbergi út 4/a.</td>
+                                  9400 Sopron, Brennbergi út 4/a.</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/04/02 07:15:02 GMT+2</td>
-                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), karoly.magasi@bdi.hu, Magasi Károly
-                            9400 Sopron, Brennbergi út 4/a.</td>
+                                <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2290), karoly.magasi@bdi.hu, Magasi
+                                  Károly
+                                  9400 Sopron, Brennbergi út 4/a.</td>
                               </tr>
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2015/03/10 06:57:30 GMT+1</td>
-                                <td>Sony DVP-SR370 DVD Lejátszó +8GB Pendrive a dobozban (11900), karoly.magasi@bdi.hu, Magasi Károly
-                            9400 Sopron, Brennbergi út 4/a.</td>
+                                <td>Sony DVP-SR370 DVD Lejátszó +8GB Pendrive a dobozban (11900), karoly.magasi@bdi.hu,
+                                  Magasi Károly
+                                  9400 Sopron, Brennbergi út 4/a.</td>
                               </tr>
                               <tr>
                                 <td>rillcsapagy</td>
@@ -1147,12 +1367,13 @@
                                 <td>fulop</td>
                                 <td>2015/01/23 13:34:28 GMT+1</td>
                                 <td>SanDisk Cruzer Blade 8GB pendrive, fekete (2590), , Fülöp és Társa Kft. Csapágybolt
-                            7300, Komló, Kossuth Lajos utca 85.</td>
+                                  7300, Komló, Kossuth Lajos utca 85.</td>
                               </tr>
                               <tr>
                                 <td>axiális</td>
                                 <td>2014/12/18 12:16:41 GMT+1</td>
-                                <td>Genius HS-04SU mikrofonos fejhallgató (2990), norbert.axialis@gmail.hu, Németh Norbert  6400.Kiskunhalas  Széchenyi utca 16 / 5.</td>
+                                <td>Genius HS-04SU mikrofonos fejhallgató (2990), norbert.axialis@gmail.hu, Németh
+                                  Norbert 6400.Kiskunhalas Széchenyi utca 16 / 5.</td>
                               </tr>
                               <tr>
                                 <td>bzsolt</td>
@@ -1167,8 +1388,9 @@
                               <tr>
                                 <td>bdimagosi</td>
                                 <td>2013/10/29 06:44:40 GMT+1</td>
-                                <td>Kingston DataTraveler 101 Generation 2 (DT101G2) 16GB pendrive (4990), karoly.magasi@bdi.hu, Magasi Károly
-                            9400 Sopron, Brennbergi út 4/a.</td>
+                                <td>Kingston DataTraveler 101 Generation 2 (DT101G2) 16GB pendrive (4990),
+                                  karoly.magasi@bdi.hu, Magasi Károly
+                                  9400 Sopron, Brennbergi út 4/a.</td>
                               </tr>
                               <tr>
                                 <td>reirou</td>
@@ -1193,7 +1415,8 @@
                               <tr>
                                 <td>reirou</td>
                                 <td>2013/06/12 15:10:32 GMT+2</td>
-                                <td>Logic LM-20 mini egér, fekete (2290), edir.miklay@bearing.hu, Miklay Edit, 1119 Budapest, Fehérvári út 44.</td>
+                                <td>Logic LM-20 mini egér, fekete (2290), edir.miklay@bearing.hu, Miklay Edit, 1119
+                                  Budapest, Fehérvári út 44.</td>
                               </tr>
                               <tr>
                                 <td>reirou</td>
@@ -1218,7 +1441,8 @@
                               <tr>
                                 <td>szabados</td>
                                 <td>2010/03/14 14:30:20 GMT+1</td>
-                                <td>Kurblis mobiltelefon töltő (1850), szabados@bearing.hu, 2085 Pilisvörövár, Rákóczi u. 9.</td>
+                                <td>Kurblis mobiltelefon töltő (1850), szabados@bearing.hu, 2085 Pilisvörövár, Rákóczi
+                                  u. 9.</td>
                               </tr>
                               <tr>
                                 <td>szabados</td>
@@ -1228,7 +1452,8 @@
                               <tr>
                                 <td>ivago</td>
                                 <td>2010/02/15 21:31:27 GMT+1</td>
-                                <td>BEX golyóstoll narancs (150), istvan.vago@gmail.com, Vágó István, 1121. Budapest Denevér út 64.</td>
+                                <td>BEX golyóstoll narancs (150), istvan.vago@gmail.com, Vágó István, 1121. Budapest
+                                  Denevér út 64.</td>
                               </tr>
                               <tr>
                                 <td>szabados</td>
@@ -1269,7 +1494,7 @@
                 </div>
               </div>
 
-         
+
             </div>
           </div>
         </section>

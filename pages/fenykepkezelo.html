@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>BEX Admin - Fényképkezelő</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../node_modules/selectric/public/selectric.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
+                  class="fas fa-search"></i></a></li>
+          </ul>
+          
+        </form>
+        <ul class="navbar-nav navbar-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <div class="d-sm-none d-lg-inline-block">Üdv, Sárközi Gábor</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="/pages/munkak-menu.html" class="dropdown-item has-icon">
+                <i class="fas fa-project-diagram"></i>Többi projekt
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">BEX - Admin</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">BEX</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-user-following"></i><span>Rendelés
+                  másik felhasználó nevében</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Felhasználók
+                  adminisztrációja</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-pie-chart"></i><span>Statisztikai
+                  adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier-add"></i><span>Kereső
+                  statisztikai adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-info"></i><span>Információs oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-wrench "></i><span>Gyártói info oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="/index.html" class="nav-link"><i class="fas icon-tag"></i><span>Akciók /
+                  Újdonságok szerkesztése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-cloud-download"></i><span>Kedvezmények
+                  frissítése az SAP-ból</span></a></li>
+            <li class="nav-item active"><a href="/pages/fenykepkezelo.html" class="nav-link"><i
+                  class="fas icon-picture"></i><span>Termékfotók
+                  kiválasztása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Karrier
+                  admin</span></a></li>
+            <li class="nav-item"><a href="/pages/bonusz.html" class="nav-link"><i
+                  class="fas icon-present"></i><span>Bónusz
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-fire"></i><span>Újdonság
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i
+                  class="fas icon-bag"></i><span>Árucsoportosítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-plane"></i><span>Ingyenes
+                  szállítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-target"></i><span>Árverés</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-basket"></i><span>Kosár oldal
+                  ajánlatok</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-note"></i><span>Külső raktár
+                  adminisztráció</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-puzzle"></i><span>Utójelek</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier"></i><span>Autós SNR csapágy
+                  kereső</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-settings"></i><span>SNR ipari
+                  csapágy</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-eye"></i><span>Autós SKF csapágy
+                  keresö</span></a></li>
+
+
+
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini d-flex justify-content-center">
+            <a href="https://aruhaz.bearing.hu/" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas icon-logout pr-5"></i>Vissza az áruházba
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Fényképkezelő</h1>
+
+            <ul class="nav nav-pills ml-0 ml-sm-5" id="pills-tab" role="tablist">
+              <li class="nav-item mr-2 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link active" id="pills-photo-tab" data-toggle="pill" href="#pills-photo" role="tab"
+                  aria-controls="pills-photo" aria-selected="true">Új fénykép feltöltése</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-photoedit-tab" data-toggle="pill" href="#pills-photoedit" role="tab"
+                  aria-controls="pills-photoedit" aria-selected="false">Meglévő fényképek szerkesztése</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-filemanager-tab" data-toggle="pill" href="#pills-filemanager" role="tab"
+                  aria-controls="pills-filemanager" aria-selected="false">Meglévő fényképek szerkesztése_03</a>
+              </li>
+              <li class="nav-item mx-0 mx-sm-2 my-2 my-sm-1 mb-3 mb-lg-3 mb-xl-0">
+                <a class="nav-link" id="pills-filemanager_02-tab" data-toggle="pill" href="#pills-filemanager_02" role="tab"
+                  aria-controls="pills-filemanager_02" aria-selected="false">Meglévő fényképek szerkesztése_04</a>
+              </li>
+            </ul>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
+              <div class="breadcrumb-item"><a href="/pages/fenykepkezelo.html">Fénykép</a></div>
+
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active" id="pills-photo" role="tabpanel" aria-labelledby="pills-photo-tab">
+
+
+                <h2 class="section-title">Új fénykép feltöltés</h2>
+                <p class="section-lead">Itt feltölthet egy új fényképet a szerverre</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Új fénykép feltöltés</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Új mappa
+                            létrhehozása</label>
+                          <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" placeholder="Adja meg a mappa nevét"
+                              id="inputNewFolder">
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Fénykép mentésének
+                            helye</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="form-group">
+                              <select class="form-control" id="inputChooseFolder">
+                                <option value="" disabled="" selected="">Válassza ki hová kerüljön mentésre a kép
+                                </option>
+                                <option value="termek-foto">Termékfotók</option>
+                                <option value="bonusz-foto">Bónuszok</option>
+                                <option value="ajanlatok-foto">Ajánlatok</option>
+
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+
+
+                          <div class="container py-5">
+                            <div class="row py-4">
+                              <div class="col-lg-12 mx-auto">
+
+                                <!-- Upload image input-->
+                                <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm">
+                                  <input id="upload" type="file" onchange="readURL(this);" multiple
+                                    class="form-control border-0">
+                                  <label id="upload-label" for="upload" class="font-weight-light text-muted">Fénykép
+                                    választása</label>
+                                  <div class="input-group-append">
+                                    <label for="upload" class="btn btn-primary feltoltes-gomb"><small
+                                        class="font-weight-bold">Kép keresése</small></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <!-- Uploaded image area-->
+                                <p class="font-italic text-white text-center">The image uploaded will be rendered inside
+                                  the box below.</p>
+                                <div class="image-area mt-4"><img id="imageResult" src="#" alt=""
+                                    class="img-fluid shadow-sm mx-auto d-block"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="section-title">Új fénykép mentése</h2>
+                <p class="section-lead">Mentse el az új fényképet, hogy megjelenhessen az oldalon</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Új fénykép mentése</h4>
+                      </div>
+                      <div class="card-body">
+
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                            gombot</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="col-6 col-sm-3 p-0">
+                              <label class="imagecheck mb-4">
+                                <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                    class="far fa-save"></i>Új fénykép mentése</button>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="pills-photoedit" role="tabpanel" aria-labelledby="pills-photoedit-tab">
+
+                <div class="search-element d-flex justify-content-end">
+                  <input class="form-control d-inline" type="search" placeholder="Search" aria-label="Search" data-width="250" style="width: 250px;">
+                  <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                  <div class="search-backdrop"></div>
+                  <div class="search-result">
+                    <div class="search-header">
+                      Histories
+                    </div>
+                    <div class="search-item">
+                      <a href="#">How to hack NASA using CSS</a>
+                      <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="search-item">
+                      <a href="#">Kodinger.com</a>
+                      <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="search-item">
+                      <a href="#">#Stisla</a>
+                      <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="search-header">
+                      Result
+                    </div>
+                    <div class="search-item">
+                      <a href="#">
+                        <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
+                        oPhone S9 Limited Edition
+                      </a>
+                    </div>
+                    <div class="search-item">
+                      <a href="#">
+                        <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
+                        Drone X2 New Gen-7
+                      </a>
+                    </div>
+                    <div class="search-item">
+                      <a href="#">
+                        <img class="mr-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
+                        Headphone Blitz
+                      </a>
+                    </div>
+                    <div class="search-header">
+                      Projects
+                    </div>
+                    <div class="search-item">
+                      <a href="#">
+                        <div class="search-icon bg-danger text-white mr-3">
+                          <i class="fas fa-code"></i>
+                        </div>
+                        Stisla Admin Template
+                      </a>
+                    </div>
+                    <div class="search-item">
+                      <a href="#">
+                        <div class="search-icon bg-primary text-white mr-3">
+                          <i class="fas fa-laptop"></i>
+                        </div>
+                        Create a new Homepage Design
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="section-title">Meglévő fényképek kezelése</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő fényképeket szerkesztheti.</p>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card">
+
+                      <div class="card-header d-flex justify-content-between">
+                        <div class="p-2">
+                          <h4>Bónusz mappa</h4>
+                        </div>
+                        <div class="p-2">
+                          <a href="#konkretAjanlatszerkesztese" class="btn btn-primary mr-md-2 my-2 my-xl-0 rounded" data-toggle="modal" data-target="#konkretAjanlatszerkesztese">Szerkesztés</a>
+                          <a href="#biztosTorli" class="btn btn-primary rounded" data-toggle="modal" data-target="#biztosTorli">Törlés</a></div>
+                      </div>
+
+
+
+
+                      <div class="card-body">
+                        <div class="gallery">
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 1"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 2"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 3"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 4"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 5"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 6"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 7"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          <div class="gallery-item" data-image="/assets/img/bonusz_termek/taska_bonusz_01.jpg" data-title="Image 8"
+                            href="/assets/img/bonusz_termek/taska_bonusz_01.jpg" title="Image 1"
+                            style="background-image: url(/assets/img/bonusz_termek/taska_bonusz_01.jpg);"></div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-filemanager" role="tabpanel" aria-labelledby="pills-filemanager-tab">
+
+                
+                <h2 class="section-title">Meglévő fényképek kezelése</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő fényképeket szerkesztheti.</p>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card">
+                      <div class="file-manager-wrapper">
+                        <div class="file-manager-header">
+                          <h4 class="file-manager-head"><i class="fa fa-folder" aria-hidden="true"></i> Fájlmenedzser</h4>
+                          <div class="form-group">
+                            <input type="search" class="form-control file-manager-search" id="file_search" name="file-search" placeholder="Search all files">
+                            <button class="btn btn-primary search-files-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                          </div>
+                        </div>                     
+                      </div>
+                      <div class="row p-3">
+                        <div class="col-md-2">
+                            <!-- Tabs nav -->
+                            <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link mb-3 py-1 px-2 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                    
+                                    <span class="font-weight-bold small text-uppercase">Personal information</span></a>
+            
+                                <a class="nav-link mb-3 py-1 px-2" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                                  
+                                    <span class="font-weight-bold small text-uppercase">Bookings</span></a>
+            
+                                <a class="nav-link mb-3 py-1 px-2" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                             
+                                    <span class="font-weight-bold small text-uppercase">Reviews</span></a>
+            
+                                <a class="nav-link mb-3 py-1 px-2" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                                   
+                                    <span class="font-weight-bold small text-uppercase">Confirm booking</span></a>
+                                </div>
+                        </div>
+            
+            
+                        <div class="col-md-10">
+                            <!-- Tabs content -->
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade  rounded bg-white show active p-5" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <h4 class="font-italic mb-4">Personal information</h4>
+                                    <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                
+                                <div class="tab-pane fade  rounded bg-white p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                    <h4 class="font-italic mb-4">Bookings</h4>
+                                    <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                
+                                <div class="tab-pane fade  rounded bg-white p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                    <h4 class="font-italic mb-4">Reviews</h4>
+                                    <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                
+                                <div class="tab-pane fade  rounded bg-white p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                                    <h4 class="font-italic mb-4">Confirm booking</h4>
+                                    <p class="font-italic text-muted mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-filemanager_02" role="tabpanel" aria-labelledby="pills-filemanager_02-tab">
+
+                
+                <h2 class="section-title">Meglévő fényképek kezelése</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő fényképeket szerkesztheti.</p>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card">
+                      <div class="ui upload-drop">
+
+                        <aside class="ui__sidebar">
+                    
+                            <ul class="file-tree">
+                                <li class="file-tree__item">
+                                    <div class="folder">
+                                      <i class="icon-folder mr-2"></i>
+                                      Ajánlatok</div>
+                                </li>
+                                <li class="file-tree__item file-tree__item--open">
+                                    <div class="folder folder--open">
+                                      <i class="icon-folder mr-2"></i>Bónusz</div>
+                    
+                                    <ul class="file-tree__subtree">
+                                        <li class="file-tree__item">
+                                            <div class="folder">
+                                              <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_01</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder folder--open">
+                                              <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_02</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder">
+                                              <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_03</div>
+                                        </li>
+                                    </ul>
+                                    <!-- /.file-subtree -->
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                    <ul class="file-tree__subtree">
+                                        <li class="file-tree__item">
+                                            <div class="folder">Planfolder</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder folder--open">Holiday</div>
+                    
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder">Shared</div>
+                    
+                                        </li>
+                                    </ul>
+                                    <!-- /.file-subtree -->
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project XYS</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project F</div>
+                                    <ul class="file-tree__subtree">
+                                        <li class="file-tree__item">
+                                            <div class="folder">Planfolder</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder folder--open">Holiday</div>
+                    
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder">Shared</div>
+                    
+                                        </li>
+                                    </ul>
+                                    <!-- /.file-subtree -->
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project C</div>
+                                    <ul class="file-tree__subtree">
+                                        <li class="file-tree__item">
+                                            <div class="folder">Planfolder</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder folder--open">Holiday</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder">Shared</div>
+                                        </li>
+                                    </ul>
+                                    <!-- /.file-subtree -->
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project A</div>
+                                    <ul class="file-tree__subtree">
+                                        <li class="file-tree__item">
+                                            <div class="folder">Planfolder</div>
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder folder--open">Holiday</div>
+                    
+                                        </li>
+                                        <li class="file-tree__item">
+                                            <div class="folder">Shared</div>
+                                        </li>
+                                    </ul>
+                                    <!-- /.file-subtree -->
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Project X</div>
+                                </li>
+                                <li class="file-tree__item">
+                                    <div class="folder">Letztes Projekt Z</div>
+                                </li>
+                            </ul>
+                            <!-- /.file-tree -->
+                    
+                        </aside>
+                        <!-- /.sidebar -->
+                    
+                        <main class="ui__main">
+                    
+                            <div class="ui__menu">
+                    
+                                <a href="javascript:void(0);" class="ui__btn sidebar-toggle"></a>
+                                <a href="javascript:void(0);" data-modal="upload-modal" class="ui__btn upload-btn"></a>
+                    
+                                <ul class="file-path">
+                                    <li><a href="#">UI</a></li>
+                                    <li><a href="#">Project A</a></li>
+                                </ul>
+                                <!-- /.file-path -->
+                    
+                                <a href="javascript:void(0);" class="ui__btn options-toggle"></a>
+                                <a href="javascript:void(0);" class="ui__btn help-btn" data-overlay="help"></a>
+                    
+                            </div>
+                            <!-- /.ui__menu -->
+                            
+                            <div class="ui__info info-modal" id="upload-modal">
+                                <h2>Upload</h2>
+                                <p>Simply drag & drop a file here or select one with the button below.</p>
+                                <form action="#" method="POST">
+                                    <div><input type="file" required></div>
+                                    <button type="submit" class="btn">Upload</button>
+                                </form>
+                                
+                            </div>
+                            <!-- /.ui__info -->
+                    
+                            <table class="file-list" id="file-table">
+                    
+                                <tr class="file-list__header">
+                                    <th onClick="sortTable(0)">Name <i class="fa fa-long-arrow-down"></i></th>
+                                    <th onClick="sortTable(1)">Typ</th>
+                                    <th onClick="sortTable(2, '123')">Size</th>
+                                    <th>Tags</th>
+                                </tr>
+                    
+                                <tr class="file-list__file">
+                                    <td>Holiday Photos</td>
+                                    <td>zip</td>
+                                    <td>1.2MB</td>
+                                    <td>privat</td>
+                                </tr>
+                                <tr class="file-list__file">
+                                    <td>Secrets</td>
+                                    <td>zip</td>
+                                    <td>1GB</td>
+                                    <td>privat</td>
+                                </tr>
+                                <tr class="file-list__file">
+                                    <td>Something else</td>
+                                    <td>jpeg</td>
+                                    <td>5MB</td>
+                                    <td>privat</td>
+                                </tr>
+                                <tr class="file-list__file">
+                                    <td>Short trip</td>
+                                    <td>txt</td>
+                                    <td>2kb</td>
+                                    <td>privat</td>
+                                </tr>
+                                <tr class="file-list__file">
+                                    <td>What a file name is that?</td>
+                                    <td>txt</td>
+                                    <td>3.1MB</td>
+                                    <td>privat</td>
+                                </tr>
+                                <tr class="file-list__file">
+                                    <td>Holidy Plan</td>
+                                    <td>txt</td>
+                                    <td>5MB</td>
+                                    <td>privat</td>
+                                </tr>
+                            </table>
+                            <!-- /.file-list -->
+                    
+                        </main>
+                        <!-- /.ui__main -->
+                    
+                    </div>
+                    <!-- /.ui -->
+                    
+                    <div class="ui__overlay overlay" id="help">
+                        <div class="overlay__inner">
+                            
+                            <h2>🎂</h2>
+                            <p>The cake is a lie...</p>
+                            
+                            <a href="javascript:void(0)" class="btn overlay__close">Oh no!</a>
+                            
+                        </div>
+                        <!-- /.overlay__inner -->
+                    </div>
+                    <!-- /.overlay -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal fade" id="keresesCikkszamAlapjan" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0">
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Keresés név alapján</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-0">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Név</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="form-group mb-0">
+                          <div class="form-group mb-0">
+                            <div id="fields">
+                              <div class="controls">
+                                <form role="form" autocomplete="off">
+                                  <div class="entry input-group">
+                                    <input class="form-control" name="fields" type="text"
+                                      placeholder="Adja meg a termék nevét" />
+                                    <span class="input-group-btn ml-2">
+                                      <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button">
+                                        <i class="fas fa-search"></i>
+                                        Keresés név alapján</button>
+                                    </span>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Összesen: 165 találat</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body p-0">
+                            <div class="table-responsive">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th>Termék</th>
+                                    <th>Gyártó</th>
+                                    <th>Méret</th>
+                                    <th>Típus / Azonosító</th>
+                                    <th>Egységár</th>
+                                    <th>Kedvezményes ár</th>
+                                    <th>Megtakarítás</th>
+                                    <th>Készlet</th>
+                                    <th>Akció</th>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td> <a href="">KR 22 B</a> </td>
+                                    <td>SKF</td>
+                                    <td> <a href="">22X10X36</a> </td>
+                                    <td> <a href="">KR22</a> </td>
+                                    <td>11057</td>
+                                    <td>9952</td>
+                                    <td>10.0</td>
+                                    <td>-</td>
+                                    <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="konkretAjanlatszerkesztese" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0">
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Bónusz oldali szerkesztése</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz cím</label>
+                      <div class="col-sm-12 col-md-7">
+                        <input type="text" class="form-control" placeholder="Írja be a bónusz címét"
+                          value="Vászontáska">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz ára</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="input-group">
+                          <input type="number" min="1" class="form-control"
+                            placeholder="Adja meg mennyi bónuszpontért válthatják be az ajándékot" value="1200">
+                          <div class="input-group-append">
+                            <span class="input-group-text">bónuszpont</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Készlet</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="input-group">
+                          <input type="number" min="1" class="form-control"
+                            placeholder="Adja meg a rendelkezésre álló készlet mennyiségét" value="14">
+                          <div class="input-group-append">
+                            <span class="input-group-text">db</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz alatti rövid
+                        szöveg</label>
+                      <div class="col-sm-12 col-md-7">
+                        <textarea placeholder="Írja be a bónuszhoz tartozó kedvcsináló szöveget"
+                          rows="5">Vászontáska két rövid füllel, hogy akár a bevásárlást is egyedivé tudd tenni! A pamutból készült rövid fülű vászontáskát kényelmesen tudod hordani, legyen szó vásárlásról vagy baráti összejövetelkről.</textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bónusz fénykép
+                        választása</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="col-6 col-sm-3 p-0">
+                          <label class="imagecheck mb-4">
+                            <input name="imagecheck" type="file" value="1" class="imagecheck-input" />
+                            <figure class="imagecheck-figure">
+                              <img src="/assets/img/bonusz_termek/taska_bonusz_01.jpg" alt="" class="imagecheck-image">
+                            </figure>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Bónusz módosítás</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="form-group row mb-4">
+                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg a mentés
+                        gombot</label>
+                      <div class="col-sm-12 col-md-7">
+                        <div class="col-6 col-sm-3 p-0">
+                          <label class="imagecheck mb-4">
+                            <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button"><i
+                                class="far fa-save"></i>Bónusz módosítás</button>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="keresesCikkszamAlapjanEdit" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="container d-flex pl-0">
+                </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                    aria-hidden="true">&times;</span> </button>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Keresés név alapján</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-0">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Név</label>
+                        <div class="col-sm-12 col-md-7">
+                          <div class="form-group mb-0">
+                            <div class="form-group mb-0">
+                              <div id="fields">
+                                <div class="controls">
+                                  <form role="form" autocomplete="off">
+                                    <div class="entry input-group">
+                                      <input class="form-control" name="fields" type="text"
+                                        placeholder="Adja meg a termék nevét" />
+                                      <span class="input-group-btn ml-2">
+                                        <button class="btn btn-primary daterange-btn icon-left btn-icon" type="button">
+                                          <i class="fas fa-search"></i>
+                                          Keresés név alapján</button>
+                                      </span>
+                                    </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4>Összesen: 165 találat</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="form-group row mb-4">
+                        <div class="col-12">
+                          <div class="card">
+                            <div class="card-body p-0">
+                              <div class="table-responsive">
+                                <table class="table table-striped">
+                                  <tbody>
+                                    <tr>
+                                      <th>Termék</th>
+                                      <th>Gyártó</th>
+                                      <th>Méret</th>
+                                      <th>Típus / Azonosító</th>
+                                      <th>Egységár</th>
+                                      <th>Kedvezményes ár</th>
+                                      <th>Megtakarítás</th>
+                                      <th>Készlet</th>
+                                      <th>Akció</th>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td> <a href="">KR 22 B</a> </td>
+                                      <td>SKF</td>
+                                      <td> <a href="">22X10X36</a> </td>
+                                      <td> <a href="">KR22</a> </td>
+                                      <td>11057</td>
+                                      <td>9952</td>
+                                      <td>10.0</td>
+                                      <td>-</td>
+                                      <td><a href="#" class="btn btn-primary">Kijelölés</a></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Bónusz törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli ezt a bónuszt? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorliFenykep" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Fénykép törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli ezt a fényképet? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
+  <script src="../node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../node_modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../node_modules/selectric/public/jquery.selectric.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/forms-advanced-forms.js"></script>
+</body>
+
+</html>
