@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>BEX Admin - Fájlmenedzser</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../node_modules/selectric/public/selectric.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://unpkg.com/file-upload-with-preview@4.1.0/dist/file-upload-with-preview.min.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
+                  class="fas fa-search"></i></a></li>
+          </ul>
+
+        </form>
+        <ul class="navbar-nav navbar-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <div class="d-sm-none d-lg-inline-block">Üdv, Sárközi Gábor</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="/pages/munkak-menu.html" class="dropdown-item has-icon">
+                <i class="fas fa-project-diagram"></i>Többi projekt
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="index.html">BEX - Admin</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="index.html">BEX</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-user-following"></i><span>Rendelés
+                  másik felhasználó nevében</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Felhasználók
+                  adminisztrációja</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-pie-chart"></i><span>Statisztikai
+                  adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier-add"></i><span>Kereső
+                  statisztikai adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-info"></i><span>Információs oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-wrench "></i><span>Gyártói info oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="/index.html" class="nav-link"><i class="fas icon-tag"></i><span>Akciók /
+                  Újdonságok szerkesztése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-cloud-download"></i><span>Kedvezmények
+                  frissítése az SAP-ból</span></a></li>
+            <li class="nav-item"><a href="/pages/fenykepkezelo.html" class="nav-link"><i
+                  class="fas icon-picture"></i><span>Termékfotók
+                  kiválasztása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Karrier
+                  admin</span></a></li>
+            <li class="nav-item"><a href="/pages/bonusz.html" class="nav-link"><i
+                  class="fas icon-present"></i><span>Bónusz
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-fire"></i><span>Újdonság
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i
+                  class="fas icon-bag"></i><span>Árucsoportosítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-plane"></i><span>Ingyenes
+                  szállítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-target"></i><span>Árverés</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-basket"></i><span>Kosár oldal
+                  ajánlatok</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-note"></i><span>Külső raktár
+                  adminisztráció</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-puzzle"></i><span>Utójelek</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier"></i><span>Autós SNR csapágy
+                  kereső</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-settings"></i><span>SNR ipari
+                  csapágy</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-eye"></i><span>Autós SKF csapágy
+                  keresö</span></a></li>
+            <li class="nav-item active"><a href="/pages/fajlkezelo.html" class="nav-link"><i
+                  class="fas icon-folder"></i><span>Fájlmenedzser</span></a></li>
+
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini d-flex justify-content-center">
+            <a href="https://aruhaz.bearing.hu/" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas icon-logout pr-5"></i>Vissza az áruházba
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Fájlmenedzser</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
+              <div class="breadcrumb-item"><a href="/pages/fajlkezelo.html">Fájlmenedzser</a></div>
+
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade" id="pills-photo" role="tabpanel" aria-labelledby="pills-photo-tab">
+
+
+                <h2 class="section-title">Új fénykép feltöltés</h2>
+                <p class="section-lead">Itt feltölthet egy új fényképet a szerverre</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Új fénykép feltöltés</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Új mappa
+                            létrhehozása</label>
+                          <div class="col-sm-12 col-md-7">
+                            <input type="text" class="form-control" placeholder="Adja meg a mappa nevét"
+                              id="inputNewFolder">
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Fénykép mentésének
+                            helye</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="form-group">
+                              <select class="form-control" id="inputChooseFolder">
+                                <option value="" disabled="" selected="">Válassza ki hová kerüljön mentésre a kép
+                                </option>
+                                <option value="termek-foto">Termékfotók</option>
+                                <option value="bonusz-foto">Bónuszok</option>
+                                <option value="ajanlatok-foto">Ajánlatok</option>
+
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row mb-4">
+
+
+                          <div class="container py-5">
+                            <div class="row py-4">
+                              <div class="col-lg-12 mx-auto">
+
+                                <!-- Upload image input-->
+                                <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm">
+                                  <input id="upload" type="file" onchange="readURL(this);" multiple
+                                    class="form-control border-0">
+                                  <label id="upload-label" for="upload" class="font-weight-light text-muted">Fénykép
+                                    választása</label>
+                                  <div class="input-group-append">
+                                    <label for="upload" class="btn btn-primary feltoltes-gomb"><small
+                                        class="font-weight-bold">Kép keresése</small></label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <!-- Uploaded image area-->
+                                <p class="font-italic text-white text-center">The image uploaded will be rendered inside
+                                  the box below.</p>
+                                <div class="image-area mt-4"><img id="imageResult" src="#" alt=""
+                                    class="img-fluid shadow-sm mx-auto d-block"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade show active" id="pills-filemanager_02" role="tabpanel"
+                aria-labelledby="pills-filemanager_02-tab">
+
+
+                <h2 class="section-title">Meglévő fájlok kezelése</h2>
+                <p class="section-lead">Ezen az oldalon a meglévő fájlokat kezelheti.</p>
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-lg-12">
+                    <div class="card">
+                      <div class="ui upload-drop">
+
+                        <aside class="ui__sidebar">
+
+                          <ul class="file-tree">
+                            <li class="file-tree__item">
+                              <div class="folder">
+                                <i class="icon-folder mr-2"></i>Ajánlatok
+                              </div>
+                            </li>
+                            <li class="file-tree__item file-tree__item--open">
+                              <div class="folder folder--open">
+                                <i class="icon-folder mr-2"></i>Bónusz
+                              </div>
+
+                              <ul class="file-tree__subtree">
+                                <li class="file-tree__item">
+                                  <div class="folder">
+                                    <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_01
+                                  </div>
+                                </li>
+                                <li class="file-tree__item">
+                                  <div class="folder folder--open">
+                                    <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_02
+                                  </div>
+                                </li>
+                                <li class="file-tree__item">
+                                  <div class="folder">
+                                    <i class="
+                                              icon-folder-alt mr-2"></i>Bónusz_03
+                                  </div>
+                                </li>
+                              </ul>
+                              <!-- /.file-subtree -->
+                            </li>
+                            <li class="file-tree__item">
+                              <div class="folder">
+                                <i class="icon-folder mr-2"></i>Egyéb képek
+                              </div>
+                              <ul class="file-tree__subtree">
+                                <li class="file-tree__item">
+                                  <div class="folder">Termék</div>
+                                </li>
+                                <li class="file-tree__item">
+                                  <div class="folder folder--open">Egyéb</div>
+
+                                </li>
+                                <li class="file-tree__item">
+                                  <div class="folder">Marketing</div>
+
+                                </li>
+                              </ul>
+                              <!-- /.file-subtree -->
+                            </li>
+                            <li class="file-tree__item">
+                              <div class="folder">
+                                <i class="icon-folder mr-2"></i>Árverés
+                              </div>
+                            </li>
+
+                          </ul>
+                          <!-- /.file-tree -->
+
+                        </aside>
+                        <!-- /.sidebar -->
+
+                        <main class="ui__main">
+
+                          <div class="ui__menu d-flex pt-2 pl-3">
+
+                            <a href="javascript:void(0);" class="ui__btn sidebar-toggle"></a>
+                            <div class="search-element">
+                              <input class="form-control d-inline file-search-input btn-primary" id="Search"
+                                type="search" placeholder="Keresés.." aria-label="Search" data-width="250"
+                                style="width: 250px;">
+                              <button class="btn align-baseline file-search-btn btn-primary" type="submit"><i
+                                  class="fas fa-search"></i></button>
+                            </div>
+                            <div class="search-element-delete pl-2">
+                              <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                data-target="#fajFeltoltes">Új file feltöltése<i class="fas fa-cloud-upload-alt pl-2"></i></button>
+                            </div>
+                            <div class="search-element-delete pr-3 ml-auto">
+                              <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                data-target="#fajlMozgatas">Kijelölt elemek áthelyezése <i
+                                  class="fas fa-random pl-2"></i></button>
+                            </div>
+                            <div class="search-element-delete pr-3 ml-0">
+                              <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                data-target="#biztosTorliFenykepMind">Kijelölt elemek törlése <i
+                                  class="fa fa-trash pl-2"></i></button>
+                            </div>
+                          </div>
+                          <!-- /.ui__menu -->
+
+                          <div class="ui__info info-modal" id="upload-modal">
+                            <h2>Upload</h2>
+                            <p>Simply drag & drop a file here or select one with the button below.</p>
+                            <form action="#" method="POST">
+                              <div><input type="file" required></div>
+                              <button type="submit" class="btn">Upload</button>
+                            </form>
+
+                          </div>
+                          <!-- /.ui__info -->
+
+                          <table class="file-list" id="file-table">
+
+                            <tr class="file-list__header">
+                              <th onClick="sortTable(0)">Kép <img src="/assets/img/arrows.svg" alt=""></th>
+                              <th onClick="sortTable(1)">Név <img src="/assets/img/arrows.svg" alt=""></th>
+                              <th onClick="sortTable(2)">Típus <img src="/assets/img/arrows.svg" alt=""></th>
+                              <th onClick="sortTable(3, '123')">Méret <img src="/assets/img/arrows.svg" alt=""></th>
+                              <th>Akció</th>
+                              <th></th>
+                            </tr>
+
+                            <tr class="file-list__file">
+                              <td><img class="file-list-photo" src="/assets/img/bonusz_termek/taska_bonusz_01.jpg"
+                                  alt=""></td>
+                              <td>bex.png</td>
+                              <td>png</td>
+                              <td>12MB</td>
+                              <td>
+                                <!-- Call to action buttons -->
+                                <ul class="list-inline m-0">
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajlMozgatasSingle"><i class="fa fa-table"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajAtnevezes"><i class="fa fa-edit"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#biztosTorliFenykep"><i class="fa fa-trash"></i></button>
+                                  </li>
+                                </ul>
+                              </td>
+                              <td>
+                                <label class="control control-checkbox">
+                                      <input type="checkbox" />
+                                  <div class="control_indicator"></div>
+                              </label>
+                              </td>
+                            </tr>
+                            <tr class="file-list__file">
+                              <td><img class="file-list-photo" src="/assets/img/bonusz_termek/taska_bonusz_01.jpg"
+                                  alt=""></td>
+                              <td>hatterkep.jpg</td>
+                              <td>jpg</td>
+                              <td>32MB</td>
+                              <td>
+                                <!-- Call to action buttons -->
+                                <ul class="list-inline m-0">
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajlMozgatasSingle"><i class="fa fa-table"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajAtnevezes"><i class="fa fa-edit"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#biztosTorliFenykep"><i class="fa fa-trash"></i></button>
+                                  </li>
+                                </ul>
+                              </td>
+                              <td>
+                                <label class="control control-checkbox">
+                                      <input type="checkbox" />
+                                  <div class="control_indicator"></div>
+                              </label>
+                              </td>
+                            </tr>
+                            <tr class="file-list__file">
+                              <td><img class="file-list-photo" src="/assets/img/p-50.png" alt=""></td>
+                              <td>Something else</td>
+                              <td>jpeg</td>
+                              <td>5MB</td>
+                              <td>
+                                <!-- Call to action buttons -->
+                                <ul class="list-inline m-0">
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajlMozgatasSingle"><i class="fa fa-table"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajAtnevezes"><i class="fa fa-edit"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#biztosTorliFenykep"><i class="fa fa-trash"></i></button>
+                                  </li>
+                                </ul>
+                              </td>
+                              <td>
+                                <label class="control control-checkbox">
+                                      <input type="checkbox" />
+                                  <div class="control_indicator"></div>
+                              </label>
+                              </td>
+                            </tr>
+                            <tr class="file-list__file">
+                              <td><img class="file-list-photo" src="/assets/img/bonusz_termek/taska_bonusz_01.jpg"
+                                  alt=""></td>
+                              <td>bonusz_01.png</td>
+                              <td>png</td>
+                              <td>2.3MB</td>
+                              <td>
+                                <!-- Call to action buttons -->
+                                <ul class="list-inline m-0">
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajlMozgatasSingle"><i class="fa fa-table"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajAtnevezes"><i class="fa fa-edit"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#biztosTorliFenykep"><i class="fa fa-trash"></i></button>
+                                  </li>
+                                </ul>
+                              </td>
+                              <td>
+                                <label class="control control-checkbox">
+                                      <input type="checkbox" />
+                                  <div class="control_indicator"></div>
+                              </label>
+                              </td>
+                            </tr>
+                            <tr class="file-list__file">
+                              <td><img class="file-list-photo" src="/assets/img/example-image-50.jpg" alt=""></td>
+                              <td>ajanlatok_elso.png</td>
+                              <td>png</td>
+                              <td>3.1MB</td>
+                              <td>
+                                <!-- Call to action buttons -->
+                                <ul class="list-inline m-0">
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajlMozgatasSingle"><i class="fa fa-table"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#fajAtnevezes"><i class="fa fa-edit"></i></button>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal"
+                                      data-target="#biztosTorliFenykep"><i class="fa fa-trash"></i></button>
+                                  </li>
+                                </ul>
+                              </td>
+                              <td>
+                                <label class="control control-checkbox">
+                                      <input type="checkbox" />
+                                  <div class="control_indicator"></div>
+                              </label>
+                              </td>
+                            </tr>
+                          </table>
+                          <!-- /.file-list -->
+
+                        </main>
+                        <!-- /.ui__main -->
+
+                      </div>
+                      <!-- /.ui -->
+
+                      <!-- /.overlay -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal fade" id="fajFeltoltes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-cloud-upload"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Új file feltöltése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row mb-0">
+                <div class="col-sm-12 col-md-12 d-flex justify-content-center">
+                  <div class="form-group mb-0 d-flex justify-content-center">
+                    <div class="custom-file-container" data-upload-id="myUniqueUploadId">
+                      <label>Fáj feltöltés
+                        <a href="javascript:void(0)" class="custom-file-container__image-clear"
+                          title="Clear Image">&times;</a></label>
+                      <label class="custom-file-container__custom-file imagecheck">
+                        <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*"
+                          multiple aria-label="Choose File"/>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+                        <span class="custom-file-container__custom-file__custom-file-control">Feltöltés</span>
+                      </label>
+                      <div class="custom-file-container__image-preview"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Fájlok feltöltése</button>
+              <button type="button" class="btn btn-danger">Mégsem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorliFenykep" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Fájl törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli ezt a file-t? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorliFenykepMind" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Kijelölt file-ok törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli a kijelölt file-okat? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="fajlMozgatas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shuffle"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Kijelölt file-ok áthelyezése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0 pb-3">Válassza ki, hová szeretné áthelyezni a file-okat!</p>
+              <div class="form-group row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="form-group mb-0">
+                    <select class="form-control" id="inputChooseFolder">
+                      <option value="" disabled="" selected="">Válassza ki hová kerüljenek mentésre a fájlok
+                      </option>
+                      <option value="termek-foto">Termékfotók</option>
+                      <option value="bonusz-foto">Bónuszok</option>
+                      <option value="ajanlatok-foto">Ajánlatok</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mentés</button>
+              <button type="button" class="btn btn-danger">Mégsem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="fajlMozgatasSingle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shuffle"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Kijelölt file áthelyezése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0 pb-3">Válassza ki, hová szeretné áthelyezni a file-t!</p>
+              <div class="form-group row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="form-group mb-0">
+                    <select class="form-control" id="inputChooseFolder">
+                      <option value="" disabled="" selected="">Válassza ki hová kerüljön mentésre a file
+                      </option>
+                      <option value="termek-foto">Termékfotók</option>
+                      <option value="bonusz-foto">Bónuszok</option>
+                      <option value="ajanlatok-foto">Ajánlatok</option>
+
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mentés</button>
+              <button type="button" class="btn btn-danger">Mégsem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="fajAtnevezes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-speech"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">File átnevezése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group row">
+                <div class="col-sm-12 col-md-12">
+                  <div class="form-group mb-0">
+                    <input type="text" class="form-control" placeholder="Írja át a file nevét" value="bex.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mentés</button>
+              <button type="button" class="btn btn-danger">Mégsem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="biztosTorli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="container d-flex pl-0"><i class="icon-shield"></i>
+                <h5 class="modal-title ml-2" id="exampleModalLabel">Bónusz törlése</h5>
+              </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                  aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <p class="m-0">Biztosan törli ezt a bónuszt? Ez a művelet nem visszavonható.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Mégsem</button>
+              <button type="button" class="btn btn-danger">Törlés</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- IMG PREVIEW -->
+  <script src="https://unpkg.com/file-upload-with-preview@4.1.0/dist/file-upload-with-preview.min.js"></script>
+
+  <script>
+    var upload = new FileUploadWithPreview("myUniqueUploadId");
+  </script>
+
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
+  <script src="../node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../node_modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../node_modules/selectric/public/jquery.selectric.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/forms-advanced-forms.js"></script>
+</body>
+
+</html>

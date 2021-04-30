@@ -3087,10 +3087,13 @@ button.btn.btn-remove.btn-danger {
   }
 
 
-  .modal-header i.icon-shield {
+  .modal-header i {
     font-size: 2rem;
     font-weight: 600;
     color: #EC7623;
+    padding-right: .5rem;
+    position: relative;
+    bottom: 2px;
 }
 
 .close:hover {
@@ -3573,23 +3576,21 @@ button.close {
   user-select: none;
   border-bottom: 1px solid #efefef;
   padding: 1rem;
+  font-size: 13px;
+  font-weight: 800;
 }
 .file-list th:hover {
   cursor: pointer;
-  color: #121212;
+  color: #ec7623;
 }
 .file-list td {
   padding: 0.3333333333rem 1rem;
 }
 .file-list td:hover {
   cursor: pointer;
-  color: #121212;
+  color: #ec7623;
 }
-.file-list__header {
-  font-size: 0.6875rem;
-  letter-spacing: 1px;
-  line-height: 1;
-}
+
 .overlay {
   display: none;
   position: fixed;
@@ -3668,4 +3669,161 @@ button.close {
 
 .file-tree__item--open .folder.folder--open i {
   color: #ec7623;
+}
+
+.file-search-btn {
+  font-size: 1rem !important;
+  background-color: #ec7623 !important;
+  color: #fff !important;
+  height: 29px !important;
+  padding: 0 1rem !important;
+}
+
+.file-search-input {
+  background-color: #ec7623 !important;
+  height: 31px !important;
+  padding: 0 1rem !important;
+  min-height: 31px !important;
+  color: #fff;
+}
+
+.file-search-input:focus {
+  color: #fff !important;
+}
+
+.file-search-input::placeholder {
+  color: #fff !important;
+}
+
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url(/assets/img/close-ikon.svg) no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  input[type="search"].dark::-webkit-search-cancel-button {
+    filter: invert(1);
+  }
+
+  .file-list-photo {
+    width: 1rem;
+  }
+
+  #fajFeltoltes .imagecheck-figure {
+    border: none;
+  }
+
+  #fajFeltoltes img {
+    max-width: 50%;
+  }
+
+  .custom-file-container__image-preview {
+    overflow: hidden !important;
+    background-image: url('/assets/img/upload.svg') !important;
+    background-size: 60% !important;
+  }
+
+  .custom-file-container__custom-file__custom-file-control__button {
+    background-color: #ec7623 !important;
+    color: #fff !important;
+  }
+
+  .custom-file-container__image-multi-preview__single-image-clear {
+    background-color: #ec7623 !important;
+  }
+
+  .custom-file-container__image-multi-preview__single-image-clear__icon {
+    color: #fff !important;
+}
+
+
+/* CHECKBOX */ 
+
+
+.control {
+  position: relative;
+}
+  .control input {
+      z-index: -1;
+      opacity: 0;
+  }
+.control_indicator {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border: 0px solid #ec7623;
+  border-radius: 3px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #ec7623;
+}
+
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #ec7623;
+}
+
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-checkbox .control_indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+  border-color: #7b7b7b;
+}
+.control-checkbox .control_indicator::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-left: -1.3rem;
+  margin-top: -1.3rem;
+  background: #ec7623;
+  border-radius: 3rem;
+  opacity: 0.6;
+  z-index: 99999;
+  transform: scale(0);
+}
+
+.ColorChange{
+  background-color: #CCFFCC;
 }
