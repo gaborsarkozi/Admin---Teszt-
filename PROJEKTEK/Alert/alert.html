@@ -1,85 +1,210 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>aruhaz.bearing.hu - Alert</title>
-      
-        <link rel="stylesheet" href="alert.css">
-        <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
-      
-        <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-      
-        <!-- Icons -->
-        <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
-        <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-      
-        <!-- Argon CSS -->
-        <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
-      
-        <!-- Core -->
-        <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      
-        <link rel="stylesheet" type="text/css"
-          href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
-      
-        <!-- Argon JS -->
-        <script src="/assets/js/argon.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-          crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-          crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
-      
-        <script src="interchange.js"></script>
-      </head>
-      
-<body>
-    <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <div class="row">
-            <div class="col-12">
-                <button type="button" class="btn btn-bearing" data-toggle="modal" data-target="#exampleModal">
-                   Figyelmeztetés
-                  </button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>aruhaz.bearing.hu - Alert</title>
+
+  <link rel="stylesheet" href="alert.css">
+  <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+
+  <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+  <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+  <!-- Core -->
+  <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+  <!-- Argon JS -->
+  <script src="/assets/js/argon.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="interchange.js"></script>
+</head>
+
+<body>
+  <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModal">
+          <img src="danger_orange.svg" class="mr-2" style="max-width: 16px;" alt="">
+          Figyelmeztetés
+        </button>
+        <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModalKedvencek">
+          <i class="icon-star mr-2"></i> Kedvencekhez adás
+        </button>
+        <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModalAjanlat">
+          <i class="icon-briefcase mr-2"></i> Ajánlatkérés
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="col-12 container p-0">
-            <div class="alert py-4" role="alert">
-                <div class="d-flex row"> 
-                    <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
-                        <img src="danger_orange.svg" class="danger-alert" alt="">
-                    </div>
-                    <div class="col-10">
-                        <h5 class="alert-heading">Figyelem!</h5>
-                        <p class="mb-0 alert-body-p">Az elérhető készleten felüli mennyiséget adott meg, a maradékot ajánlatkérésre módosítottuk!</p>  
-                </div>
-                <div class="gomb-hely">
-                    <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Rendben <i class="icon-check ml-2"></i></a>
-                </div>
-                    
+          <div class="alert py-4" role="alert">
+            <div class="d-flex row">
+              <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
+                <img src="danger_orange.svg" class="danger-alert" alt="">
+              </div>
+              <div class="col-10">
+                <h5 class="alert-heading">Figyelem!</h5>
+                <p class="mb-0 alert-body-p">Az elérhető készleten felüli mennyiséget adott meg, a maradékot
+                  ajánlatkérésre módosítottuk!</p>
+              </div>
+              <div class="gomb-hely">
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Rendben <i
+                    class="icon-check ml-2"></i></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalKedvencek" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="col-12 container p-0">
+          <div class="alert py-4" role="alert">
+            <div class="d-flex row">
+              <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
+                <img src="done.svg" class="danger-alert" alt="">
+              </div>
+              <div class="col-10">
+                <h5 class="alert-heading">Siker!</h5>
+                <p class="mb-0 alert-body-p"> A terméket sikeresen hozzáadta a kedvencek listához!</p>
+              </div>
+              <div class="gomb-hely">
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Megnézem a
+                  listát<i class="icon-star ml-2"></i></a>
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Vásárolok
+                  még<i class="icon-action-undo ml-2"></i></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalAjanlat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="card shadow urlap-bejelentkezve">
+          <div class="card-header bg-white border-0 card-header-arajanlat">
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h3 class="mb-0"> <i class="icon-briefcase fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Árajánlat küldése</h3>
                 </div>
             </div>
+        </div>
+          <div class="card-body">
+           <form class="px-3">
+            <div class="row py-2">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-control-label" for="termekek">Az Ön által keresett termék</label>
+                  <input type="text" class="form-control form-control-alternative" disabled value="6205.N.R.Z (SNR)">
+                </div>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-control-label" for="termekek">Az Ön neve</label>
+                  <input type="text" class="form-control form-control-alternative" value="Sárközi Gábor">
+                </div>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-control-label" for="termekek">Az Ön email címe</label>
+                  <input type="text" class="form-control form-control-alternative" value="gabor.sarkozi@bearing.hu">
+                </div>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-control-label" for="termekek">Az Ön telefonszáma</label>
+                  <input type="text" class="form-control form-control-alternative" placeholder="Írja be a telefonszámát" value="">
+                </div>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label class="form-control-label" for="termekek">Darabszám</label>
+                  <input type="number" class="form-control form-control-alternative" placeholder="Írja be a darabszámot" required value="">
+                </div>
+              </div>
+            </div>
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="exampleFormControlTextarea1">Ajánlatkérés szövege</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                      placeholder="Pl.: &quot;Szeretném, ha az Önök kínálatában rendelkezésre állna az XY csapágy.&quot; vagy &quot;Szeretnék Önöktől rendelni egy XY csapágyat, de nem találtam meg a kínálatban&quot;"
+                      rows="3"></textarea>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                  <div class="offer_request_btn_box mt-5 urlap-elohivas-gomb"><a href="#"
+                      class="sendButtonKeres offer_request_btn">Ajánlatkérés küldése<i class="icon-briefcase ml-2"
+                        aria-hidden="true"></i></a></div>
+                </div>
+                <div class="alert fade" id="myDIV" role="alert">
+                  <div class="main">
+
+                    <div class="popup success">
+                      <img src="success_send.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </form> 
+          </div>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>
