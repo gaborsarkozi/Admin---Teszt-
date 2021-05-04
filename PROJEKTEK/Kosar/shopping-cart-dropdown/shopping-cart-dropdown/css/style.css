@@ -987,6 +987,9 @@ td i.icon-close.icon-merete {
     top: 3px;
 }
 
+
+
+
 .szallitas-kedvezmeny-kosar {
     max-width: max-content;
     font-size: 13px !important;
@@ -1144,4 +1147,55 @@ i.icon-info.mr-2 {
 
 .nav-link:hover {
     color: #eb7625 !important;
+}
+
+
+
+
+/* KOSÁR TÖRLÉSE */ 
+
+.remove-btn-cart {
+ width: 24px;
+}
+
+
+.delete_cart_button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 44rem;
+    top: 1.75rem;
+    z-index: 999999999;
+}
+
+.delete_cart_button_02 {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 29.5rem;
+    top: 1.75rem;
+    z-index: 999999999;
+}
+
+
+.icon-plus {
+    color: #EC7623;
+    font-size: 19px;
+    margin-left: .25rem;
+    cursor: pointer;
+    font-weight: 700 !important;
+    position: relative;
+    top: 3px;
+}
+
+.opacity-new-btn {
+    opacity: .5;
+    box-shadow: none !important;
+}
+
+.opacity-new-btn:hover {
+    opacity: 1;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
