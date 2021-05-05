@@ -4499,3 +4499,38 @@ button.close {
   font-weight: 300;
   line-height: 1.7;
 }
+
+
+
+/* GRAPH DESIGN */ 
+#my-chart {
+  height: 300px;
+  max-width: 90%;
+  margin: 0 auto;
+  --color-1: #ec7623;
+}
+
+#staticsLineCard th {
+color: #ec7623;
+}
+
+#staticsLineCard td span {
+  color: #8898aa;
+  font-weight: 500;
+  padding-bottom: 10rem;
+  padding-right: .25rem;
+  border-right: 2px solid #8898aa;
+  transform: translateX(0);
+}
+
+ .charts-css.show-labels  {
+  --labels-size: 3.5rem !important;
+}
+
+.charts-css.line {
+  --line-size: 5px;
+}
+
+.charts-css.line:not(.reverse):not(.reverse-data) tbody tr td::after {
+  height: calc(0%*var(--size)) !important;
+}

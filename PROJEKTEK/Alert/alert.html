@@ -48,7 +48,7 @@
 </head>
 
 <body>
-  <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 50vh;">
     <div class="row">
       <div class="col-12">
         <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModal">
@@ -61,6 +61,29 @@
         <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModalAjanlat">
           <i class="icon-briefcase mr-2"></i> Ajánlatkérés
         </button>
+      </div>
+    </div>
+  </div>
+  <div class="container alert-gomb d-flex justify-content-center align-items-center" style="height: 50vh;">
+    <div class="row">
+      <div class="col-12">
+        <a class="delete_cart_button" data-toggle="modal" data-target="#modalDeleteCart" href="modalDeleteCart"><img
+            src="remove 1.svg" class="remove-btn-cart" alt=""></a>
+        <button type="button" class="btn btn-bearing mx-5 kosar-btn">
+          Kosár 1 <span class="cart-item-number">(18 termék)</span>
+        </button>
+
+
+        <a class="delete_cart_button_02" data-toggle="modal" data-target="#modalDeleteCart" href="modalDeleteCart"><img
+            src="remove 1.svg" class="remove-btn-cart" alt=""></a>
+        <button type="button" class="btn btn-bearing mx-5">
+          Kosár 2 <span class="cart-item-number">(23 termék)</span>
+        </button>
+
+        <button type="button" class="btn btn-bearing mx-5 opacity-new-btn" data-toggle="modal" data-target="#modalNewCart">
+          Új kosár hozzáadása <i class="icon-plus"></i>
+        </button>
+
       </div>
     </div>
   </div>
@@ -92,6 +115,65 @@
       </div>
     </div>
   </div>
+  <!-- Modal Delete -->
+  <div class="modal fade" id="modalDeleteCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="col-12 container p-0">
+          <div class="alert py-4" role="alert">
+            <div class="d-flex row">
+              <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
+                <img src="danger_orange.svg" class="danger-alert" alt="">
+              </div>
+              <div class="col-10">
+                <h5 class="alert-heading">Figyelem!</h5>
+                <p class="mb-0 alert-body-p">Ön biztosan törölni szeretné a kosarat?</p>
+              </div>
+              <div class="gomb-hely">
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Igen<i
+                    class="icon-check ml-2"></i></a>
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Mégsem<i
+                    class="icon-close ml-2"></i></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal New Cart -->
+  <div class="modal fade" id="modalNewCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="col-12 container p-0">
+          <div class="alert py-4" role="alert">
+            <div class="d-flex row">
+              <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
+                <img src="danger_orange.svg" class="danger-alert" alt="">
+              </div>
+              <div class="col-10 pb-4">
+                <h5 class="alert-heading">Figyelem!</h5>
+                <p class="mb-0 alert-body-p pb-0">A kosár létrehozásához adja meg a kosár nevét.</p>
+                <div class="form-group py-3">
+                  <input type="text" class="form-control form-control-alternative" placeholder="Pl.: Példa KFt">
+                </div>
+              </div>
+              <div class="gomb-hely">
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Létrehozás<i
+                    class="icon-check ml-2"></i></a>
+                <a href="#" class="btn btn-bearing" data-dismiss="modal" aria-label="close" data-abc="true">Mégsem<i
+                    class="icon-close ml-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Favorit-->
   <div class="modal fade" id="exampleModalKedvencek" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -119,6 +201,7 @@
       </div>
     </div>
   </div>
+  <!-- Modal Offer -->
   <div class="modal fade" id="exampleModalAjanlat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -126,53 +209,56 @@
         <div class="card shadow urlap-bejelentkezve">
           <div class="card-header bg-white border-0 card-header-arajanlat">
             <div class="row align-items-center">
-                <div class="col-12">
-                    <h3 class="mb-0"> <i class="icon-briefcase fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Árajánlat küldése</h3>
-                </div>
+              <div class="col-12">
+                <h3 class="mb-0"> <i class="icon-briefcase fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Árajánlat
+                  küldése</h3>
+              </div>
             </div>
-        </div>
+          </div>
           <div class="card-body">
-           <form class="px-3">
-            <div class="row py-2">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label class="form-control-label" for="termekek">Az Ön által keresett termék</label>
-                  <input type="text" class="form-control form-control-alternative" disabled value="6205.N.R.Z (SNR)">
+            <form class="px-3">
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="termekek">Az Ön által keresett termék</label>
+                    <input type="text" class="form-control form-control-alternative" disabled value="6205.N.R.Z (SNR)">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row py-2">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label class="form-control-label" for="termekek">Az Ön neve</label>
-                  <input type="text" class="form-control form-control-alternative" value="Sárközi Gábor">
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="termekek">Az Ön neve</label>
+                    <input type="text" class="form-control form-control-alternative" value="Sárközi Gábor">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row py-2">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label class="form-control-label" for="termekek">Az Ön email címe</label>
-                  <input type="text" class="form-control form-control-alternative" value="gabor.sarkozi@bearing.hu">
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="termekek">Az Ön email címe</label>
+                    <input type="text" class="form-control form-control-alternative" value="gabor.sarkozi@bearing.hu">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row py-2">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label class="form-control-label" for="termekek">Az Ön telefonszáma</label>
-                  <input type="text" class="form-control form-control-alternative" placeholder="Írja be a telefonszámát" value="">
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="termekek">Az Ön telefonszáma</label>
+                    <input type="text" class="form-control form-control-alternative"
+                      placeholder="Írja be a telefonszámát" value="">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row py-2">
-              <div class="col-lg-12">
-                <div class="form-group">
-                  <label class="form-control-label" for="termekek">Darabszám</label>
-                  <input type="number" class="form-control form-control-alternative" placeholder="Írja be a darabszámot" required value="">
+              <div class="row py-2">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="form-control-label" for="termekek">Darabszám</label>
+                    <input type="number" class="form-control form-control-alternative"
+                      placeholder="Írja be a darabszámot" required value="">
+                  </div>
                 </div>
               </div>
-            </div>
               <div class="row py-2">
                 <div class="col-lg-12">
                   <div class="form-group">
@@ -199,7 +285,7 @@
                   </div>
                 </div>
               </div>
-          </form> 
+            </form>
           </div>
         </div>
       </div>

@@ -73,6 +73,12 @@ body {
     top: 1px;
 }
 
+.icon-close {
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+}
+
 
 .form-control-label {
     font-weight: 500;
@@ -139,4 +145,60 @@ h3, .h3 {
 
 .btn {
     background-color: #fff !important;
+}
+
+.kosar-btn {
+    background-color: #EC7623 !important;
+    color: white !important;
+}
+.kosar-btn:hover {
+    color: white !important;
+}
+
+.remove-btn-cart {
+    width: 24px;
+}
+
+.delete_cart_button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 37.85rem;
+    top: -.85rem;
+    z-index: 999999999;
+}
+
+.delete_cart_button_02 {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 21.5rem;
+    top: -.85rem;
+}
+
+.icon-plus {
+    color: #EC7623;
+    font-size: 19px;
+    margin-left: .25rem;
+    cursor: pointer;
+    font-weight: 700 !important;
+    position: relative;
+    top: 3px;
+}
+
+.opacity-new-btn {
+    opacity: .5;
+    -webkit-transition: all 0.1s ease-in;
+    color: #EC7623 !important;
+}
+
+.opacity-new-btn:hover {
+    opacity: 1;
+}
+
+.kosarneve {
+    border-radius: 5px;
+    border: 4px solid #f8f9fa;
 }

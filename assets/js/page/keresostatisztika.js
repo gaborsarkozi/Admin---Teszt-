@@ -1,4 +1,6 @@
 
+
+
 // BTN ANIMATION // 
 
     function tovabbiStatisztika() {
