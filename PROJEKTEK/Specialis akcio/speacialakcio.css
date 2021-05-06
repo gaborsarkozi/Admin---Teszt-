@@ -2700,34 +2700,9 @@ th .py-2 {
 .progress-bar {
     display: block;
     height: 100%;
-    background: linear-gradient(90deg,#e0894b,#ff6b01 17%,#ec7623 34%,#ff8833 51%,#e0894b 68%,#ff6b01 85%,#ec7623);
-    background-size: 300% 100%;
-    animation: progress-animation 4s linear infinite;
-    border-radius: 10px 0 0;
-}
-.progress-bar-2 {
-    display: block;
-    height: 100%;
     background: linear-gradient(90deg, #e1701a, #f7a440 17%,#ec7623 34%,#ffb056 51%,#e1701a 68%,#f7a440 85%,#ec7623);
     background-size: 300% 100%;
-    animation: progress-animation 4s linear infinite;
-    border-radius: 10px 0 0;
-}
-
-.progress-bar-3 {
-    display: block;
-    height: 100%;
-    background: linear-gradient(90deg, 	#4ae54a, #30cb00 17%,	#84ff86 34%,#0f9200 51%,	#4ae54a 68%,#30cb00 85%,	#84ff86);
-    background-size: 300% 100%;
-    animation: progress-animation 4s linear infinite;
-    border-radius: 10px 0 0;
-}
-
-.progress-bar-4 {
-    display: block;
-    height: 100%;
-    background: linear-gradient(90deg, 	#ff3d02 20%,	#fffb01 50%,	#1aff00);
-    background-size: 100% 100%;
+    animation: load 3s normal forwards, progress-animation 4s linear infinite;
     border-radius: 10px 0 0;
 }
 
@@ -2744,13 +2719,45 @@ th .py-2 {
   margin-bottom: .25rem;
 }
 
+.haladasdetail {
+  font-weight: 400;
+  color: #f9f9f9;
+  font-size: 14px;
+}
+
+.haladasdetaildata {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 800;
+}
+
     
 @keyframes progress-animation {
   0% {background-position: 100%;}
   100% {background-position: 0;}
 }
 
+@keyframes load {
+  0% { width: 0; }
+}
+
 .card-border {
-  border-left: 5px solid #f17a27;
+  border-left: 5px solid #ec7623;
   border-radius: 4px;
+}
+
+.disabled-content {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.card-body-2 {
+  background: rgb(236,118,35);
+  background: linear-gradient(90deg, rgba(236,118,35,1) 50%, rgba(242,153,84,1) 100%);
+  border-radius: 0 0 5px 5px;
+}
+
+.icon-clock {
+  position: relative;
+  top: 1px;
 }
