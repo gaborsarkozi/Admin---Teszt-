@@ -2714,6 +2714,23 @@ th .py-2 {
     border-radius: 10px 0 0;
 }
 
+.progress-bar-3 {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, 	#4ae54a, #30cb00 17%,	#84ff86 34%,#0f9200 51%,	#4ae54a 68%,#30cb00 85%,	#84ff86);
+    background-size: 300% 100%;
+    animation: progress-animation 4s linear infinite;
+    border-radius: 10px 0 0;
+}
+
+.progress-bar-4 {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, 	#ff3d02 16%,	#ffd901 34%, #d9ff00 51%, #66ff00 85%,	#1aff00);
+    background-size: 100% 100%;
+    border-radius: 10px 0 0;
+}
+
 .haladasicm {
   font-weight: 700;
   color: #ec7623;
