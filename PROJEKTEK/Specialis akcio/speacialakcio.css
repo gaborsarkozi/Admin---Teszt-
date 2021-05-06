@@ -2726,7 +2726,7 @@ th .py-2 {
 .progress-bar-4 {
     display: block;
     height: 100%;
-    background: linear-gradient(90deg, 	#ff3d02 16%,	#ffd901 34%, #d9ff00 51%, #66ff00 85%,	#1aff00);
+    background: linear-gradient(90deg, 	#ff3d02 20%,	#fffb01 50%,	#1aff00);
     background-size: 100% 100%;
     border-radius: 10px 0 0;
 }
