@@ -2761,3 +2761,147 @@ th .py-2 {
   position: relative;
   top: 1px;
 }
+
+/* VOUCHER */ 
+
+.voucher-left {
+  background-image: url(voucher.png);
+  border-radius: 5px 0 0 5px;
+  background-position-x: 20%;
+  color: #fff;
+  background-position-y: 61%;
+  background-repeat: no-repeat;
+}
+
+.vouchercim {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.voucherhead {
+  color: #f9f9f9 !important;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: .25rem;
+}
+
+.vouchercode {
+  color: #ec7623 !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+.store-offer-item .coupon-detail {
+    float: right;
+  margin-top: 25px;
+}
+.coupon-button-type .coupon-deal, .coupon-button-type .coupon-print, .coupon-button-type .coupon-code {
+    line-height: 1;
+    padding: 14px 38px;
+    background: #ec7623;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    min-width: 195px;
+    text-align: center;
+}
+.coupon-button-type .coupon-code {
+  color: #ec7623;
+  background: linear-gradient(315deg, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.06) 40%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.06) 90%) repeat scroll 0 0/6px 6px rgba(0, 0, 0, 0);
+  text-align: right;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+.coupon-button-type .coupon-code .code-text {
+  text-transform: uppercase;
+}
+.coupon-button-type .coupon-code .get-code {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 14px 90px 14px 14px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  background: linear-gradient(90deg, rgba(236,118,35,1) 75%, rgba(242,153,84,0.38699229691876746) 100%);
+  cursor: pointer;
+}
+
+.coupon-button-type .coupon-code .get-code:hover {
+  padding-right: 65px;
+  transition: all 0.5s ease;
+}
+.coupon-detail .exp-text {
+    font-size: 13px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: -2px;
+    color: #888888;
+}
+
+.c-coupon__tearaway {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  border-right: 11px dotted #f0f0f0;
+}
+
+#voucherDisable {
+  opacity: 0.45;
+  filter: blur(0.1px) grayscale(1);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+/* Tépett TORN */ 
+
+
+.voucher .left::before {
+  content: '';
+  position: absolute;
+  height: 17%;
+  width: 6px;
+  /* left: 0; */
+  /* top: 0; */
+  background-image: radial-gradient(circle at 0px 10px, white 6px, #f76260 6px);
+  background-size: 6px 20px;
+}
+
+.voucher-left-used::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 6px;
+  left: 0;
+  top: 0;
+  background-image: radial-gradient(circle at 0px 10px, #eeeeee 6px, #ffffff 6px);
+  background-size: 6px 20px;
+}
+
+.voucher-right-used::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  right: -1px;
+  top: 0;
+  transform: scaleX(-1);
+  background-image: radial-gradient(circle at 0px 10px, #eeeeee 6px, #ffffff 6px);
+  background-size: 6px 20px;
+}
+
