@@ -2786,6 +2786,20 @@ th .py-2 {
   margin-bottom: .25rem;
 }
 
+.voucherdetails {
+  color: #ec7623 !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: .25rem;
+}
+
+.voucherdetailshead {
+  color: #cacaca !important;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: .25rem;
+}
+
 .vouchercode {
   color: #ec7623 !important;
   font-size: 14px;
@@ -2800,19 +2814,18 @@ th .py-2 {
 }
 .coupon-button-type .coupon-deal, .coupon-button-type .coupon-print, .coupon-button-type .coupon-code {
     line-height: 1;
-    padding: 14px 38px;
+    padding: 10px 38px;
     background: #ec7623;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 600;
     display: inline-block;
     letter-spacing: 1px;
-    text-transform: uppercase;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     margin-bottom: 2px;
-    min-width: 195px;
+/*     min-width: 195px; */
     text-align: center;
 }
 .coupon-button-type .coupon-code {
@@ -2820,20 +2833,18 @@ th .py-2 {
   background: linear-gradient(315deg, rgba(0, 0, 0, 0.06) 10%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.06) 40%, rgba(0, 0, 0, 0.06) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.06) 90%) repeat scroll 0 0/6px 6px rgba(0, 0, 0, 0);
   text-align: right;
   padding: 10px 12px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
   position: relative;
 }
-.coupon-button-type .coupon-code .code-text {
-  text-transform: uppercase;
-}
+
 .coupon-button-type .coupon-code .get-code {
   position: absolute;
   left: -2px;
   top: -2px;
   color: #FFFFFF;
   font-size: 16px;
-  padding: 14px 90px 14px 14px;
+  padding: 11px 90px 11px 14px;
   border-radius: 5px;
   transition: all 0.5s ease;
   background: linear-gradient(90deg, rgba(236,118,35,1) 75%, rgba(242,153,84,0.38699229691876746) 100%);
@@ -2855,7 +2866,7 @@ th .py-2 {
 .c-coupon__tearaway {
   display: block;
   position: absolute;
-  right: 5px;
+  right: 0;
   top: 0;
   border-right: 11px dotted #f0f0f0;
 }
