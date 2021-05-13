@@ -63,7 +63,11 @@ body {
 .card-faq-topic {
     box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
     border: none !important;
-    border-radius: 6px !important;
+    border-radius: 6px !important; 
+}
+
+.card-faq-topic .box-part {
+    z-index: -1;
 }
 
 .faq-topic-container{
@@ -73,7 +77,7 @@ body {
 
 .faq-title {
     font-weight: 600;
-    color: #ee8439;
+    color: #211061;
     margin: auto;
 }
 
@@ -92,7 +96,6 @@ body {
 	background: none;
 	border: none;
 	padding: .4rem 1rem;
-	font-family: "Roboto", sans-serif;
 }
 .accordion .card-header h2 span {
 	float: left;
@@ -139,4 +142,91 @@ body {
 }
 .accordion .highlight i {
 	transform: rotate(180deg);
+}
+
+
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    top: -3px;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 57.5rem;
+    overflow: auto;
+    z-index: 1001;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0px 10px 8px 0px rgb(0 0 0 / 15%);
+    border: none !important;
+  }
+  
+  .dropdown-content a {
+    color: #EC7623;
+    padding: 9px 20px;
+    margin: 0 15px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #ee8439;
+    text-decoration: none;
+}
+
+  .dropdown a:hover {background-color: #ddd;}
+  
+  .show {display: block;}
+
+
+  /* Accordion */ 
+
+  .collapsible-link {
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.collapsible-link::before {
+    content: '\f107';
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    display: block;
+    font-family: 'FontAwesome';
+    font-size: 1rem;
+    color: #ec7623;
+}
+
+.collapsible-link[aria-expanded='true']::before {
+    content: '\f106';
+}
+
+.zIndexBack {
+    z-index: -1;
+}
+
+.cim-category {
+    font-weight: 600;
+    color: #EC7623;
+}
+
+#hogyanTudokVasarolni .card {
+    border-radius: 5px;
+    border-left: 4px solid #ec7623;
+}
+
+.accordion .card-header .btn {
+    color: #211061 !important;
+    font-size: 14px !important;
+}
+
+.collapsible-link:focus {
+    box-shadow: none !important;
 }
