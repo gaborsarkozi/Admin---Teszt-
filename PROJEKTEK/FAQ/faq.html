@@ -108,7 +108,7 @@
                         <a href="#custom"><i class="icon-drawer mr-2"></i> Honnan értesülhetek az akciókról,
                             újdonságokról?</a>
                         <a onclick="return kinyitniOdamenni();" href="#hogyanTudokVasarolni"><i
-                                class="icon-basket-loaded mr-2"></i> Hogyan tudok vásárolni az?</a>
+                                class="icon-basket-loaded mr-2"></i> Hogyan tudok vásárolni?</a>
                         <a href="#support"><i class="icon-user-following mr-2"></i> Kell regisztrálnom a
                             vásárláshoz?</a>
                         <a href="#tools"><i class="icon-wallet mr-2"></i> Mik az elfogadott kártyatípusok
@@ -125,9 +125,9 @@
     </section>
     <div class="container faq-topic-container nav" id="pills-tab" role="tablist">
         <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-3 col-sm-3s col-xs-12 card-faq-topic py-4 mx-4" id="faqDispalyOff1">
-                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                    aria-controls="pills-home" aria-selected="true">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 card-faq-topic py-4 mx-2" id="faqDispalyOff1">
+                <a class="nav-link" id="pills-order-tab" data-toggle="pill" href="#pills-order" role="tab"
+                    aria-controls="pills-order" aria-selected="true">
                     <div class="box-part text-center">
                         <img src="delivery.svg" class="faq-img" alt="shopping">
                         <div class=" mt-3">
@@ -136,248 +136,253 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-2 col-md-3 col-sm-3s col-xs-12 card-faq-topic py-4 mx-4" id="faqDispalyOff2">
-                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                    aria-controls="pills-profile" aria-selected="true">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 card-faq-topic py-4 mx-2" id="faqDispalyOff2">
+                <a class="nav-link" id="pills-delivery-tab" data-toggle="pill" href="#pills-delivery" role="tab"
+                    aria-controls="pills-delivery" aria-selected="true">
                     <div class="box-part text-center">
-                        <img src="truck.svg" class="faq-img" alt="shopping">
+                        <img src="BEX_delivery.svg" class="faq-img" alt="shopping">
                         <div class=" mt-3">
                             <h5 class="faq-title">Szállítás</h5>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-2 col-md-3 col-sm-3s col-xs-12 card-faq-topic py-4 mx-4" id="faqDispalyOff3">
-                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                    aria-controls="pills-contact" aria-selected="true">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 card-faq-topic py-4 mx-2" id="faqDispalyOff3">
+                <a class="nav-link" id="pills-payment-tab" data-toggle="pill" href="#pills-payment" role="tab"
+                    aria-controls="pills-payment" aria-selected="true">
                     <div class="box-part text-center">
-                        <img src="fizetés.svg" class="faq-img" alt="shopping">
-                        <div class=" mt-4">
+                        <img src="payment.svg" class="faq-img" alt="shopping">
+                        <div class=" mt-3">
                             <h5 class="faq-title">Fizetés</h5>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="col-lg-2 col-md-3 col-sm-3s col-xs-12 card-faq-topic py-4 mx-4" id="faqDispalyOff4">
-                <div class="box-part text-center">
-                    <img src="product.svg" class="faq-img" alt="shopping">
-                    <div class="mt-4">
-                        <h5 class="faq-title">Termékek</h5>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 card-faq-topic py-4 mx-2" id="faqDispalyOff4">
+                <a class="nav-link" id="pills-products-tab" data-toggle="pill" href="#pills-products" role="tab"
+                    aria-controls="pills-products" aria-selected="true">
+                    <div class="box-part text-center">
+                        <img src="product_bearings.svg" class="faq-img" alt="shopping">
+                        <div class="mt-4">
+                            <h5 class="faq-title">Termékek</h5>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12 card-faq-topic py-4 mx-2" id="faqDispalyOff5">
+                <a class="nav-link" id="pills-help-tab" data-toggle="pill" href="#pills-help" role="tab"
+                    aria-controls="pills-help" aria-selected="true">
+                    <div class="box-part text-center">
+                        <img src="product_shop_02.svg" class="faq-img" alt="shopping">
+                        <div class="mt-4">
+                            <h5 class="faq-title">Útmutató</h5>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
     <div class="container faq-section">
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade" id="pills-home" name="pills-home" role="tabpanel"
-                aria-labelledby="pills-home-tab">
-                <div class="page-content page-container" id="page-content">
-                    <div class="padding">
-                        <div class="row container d-flex justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="card-faq-topic p-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                                                aria-orientation="vertical">
-                                                <a class="nav-link active" data-toggle="pill" href="#v-pills-home"
-                                                    role="tab">Home</a>
-                                                <a class="nav-link" data-toggle="pill" href="#v-pills-profile"
-                                                    role="tab">My Profile</a>
-                                                <a class="nav-link" data-toggle="pill" href="#v-pills-messages"
-                                                    role="tab">Notifications</a>
-                                                <a class="nav-link" data-toggle="pill" href="#v-pills-settings"
-                                                    role="tab">My Settings</a>
-                                                <a class="nav-link" data-toggle="pill" href="#v-pills-payment"
-                                                    role="tab">Payments</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="tab-content" id="v-pills-tabContent">
-                                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                                    aria-labelledby="v-pills-home-tab">
-                                                    <p>Nam vestibulum auctor fringilla. Aenean sit amet magna eu erat
-                                                        mollis bibendum a a elit. Etiam ornare ipsum quis ligula
-                                                        facilisis, ac fermentum lorem maximus. Suspendisse id elit eget
-                                                        elit eleifend dapibus. In imperdiet risus at vestibulum
-                                                        sollicitudin. Pellentesque dictum augue nibh. Sed vel commodo
-                                                        nisi. Quisque mauris justo, mattis ac ligula at, hendrerit
-                                                        maximus lacus. Ut malesuada, leo id mollis facilisis, lectus
-                                                        quam iaculis risus, sed finibus quam ipsum eu justo. Sed egestas
-                                                        euismod dui, ut hendrerit risus convallis eu. Aenean
-                                                        pellentesque venenatis vestibulum. Fusce sed elit non purus
-                                                        pretium dignissim quis nec massa.
-
-                                                        Phasellus ultricies finibus vulputate. In at velit lobortis,
-                                                        ullamcorper ipsum ac, rutrum turpis. Aenean et tempor velit.
-                                                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                                                        posuere cubilia curae; Cras iaculis, mauris ut pharetra
-                                                        ultricies, ipsum sem finibus nibh, mattis volutpat nibh est
-                                                        placerat lectus. Cras tellus turpis, consequat quis nisl eu,
-                                                        rutrum mollis odio. Aliquam semper ante iaculis, tristique orci
-                                                        eu, molestie dolor. Nulla at augue pharetra, aliquam purus ut,
-                                                        convallis lacus. Nam sit amet ex nibh. Curabitur pulvinar mauris
-                                                        augue, non ullamcorper elit interdum sit amet.
-
-                                                        Nunc et pellentesque purus. Aenean dui sem, accumsan quis erat
-                                                        eget, fringilla ultrices nisi. Quisque nec arcu a orci sodales
-                                                        feugiat. Suspendisse et mollis lorem. Vivamus facilisis quam vel
-                                                        pulvinar aliquet. Pellentesque sit amet gravida mauris. Cras ut
-                                                        luctus enim, non tempor eros. Mauris tempus ipsum sed nibh
-                                                        mollis, sit amet pretium felis placerat. Sed nec nibh dictum,
-                                                        tempor erat sagittis, luctus justo. Donec lacinia semper dolor,
-                                                        eget placerat quam consequat sed. Nam mauris magna, placerat
-                                                        vitae dui non, efficitur blandit libero. Etiam lobortis dolor
-                                                        sit amet tellus euismod, eget volutpat nunc sagittis.
-
-                                                        Morbi vel mollis orci. Integer sollicitudin, ipsum nec sagittis
-                                                        rhoncus, risus neque porta eros, vitae sagittis orci tellus at
-                                                        nibh. Duis posuere libero ut eros mollis consectetur. Mauris
-                                                        malesuada feugiat sodales. Sed sed mattis est. Morbi arcu
-                                                        lectus, sollicitudin vel lorem laoreet, sagittis luctus elit.
-                                                        Phasellus sit amet interdum quam, vitae ornare magna. Praesent
-                                                        semper bibendum lorem, ut viverra nulla varius sed. Suspendisse
-                                                        non auctor odio, nec vehicula enim. Mauris bibendum laoreet
-                                                        rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et
-                                                        ultrices posuere cubilia curae; Cras cursus convallis tincidunt.
-                                                        Morbi varius nec urna at auctor.
-                                                    </p>
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                                    aria-labelledby="v-pills-profile-tab">
-                                                    <p>it be advisable for me to think about business content?</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                                    aria-labelledby="v-pills-messages-tab">
-                                                    <p>For what reason would it be advisable for me to think</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                                    aria-labelledby="v-pills-settings-tab">
-                                                    <p>For what reason would me to think about business content?</p>
-                                                </div>
-                                                <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
-                                                    aria-labelledby="v-pills-settings-tab">
-                                                    <p>For what it for me to think about business?</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" name="pills-profile"
-                aria-labelledby="pills-profile-tab">
-                <div class="container-lg">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1 class="page-title">Szállítás</h1>
-                            <div class="accordion" id="accordionExample">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h2 class="clearfix mb-0">
-                                            <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                                aria-expanded="true" aria-controls="collapseOne"><i
-                                                    class="fa fa-chevron-circle-down"></i> What is Bootstrap
-                                                Framework?</a>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus
-                                            nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
-                                            scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
-                                            tincidunt orci sit amet elementum vestibulum.</div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h2 class="mb-0">
-                                            <a class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo"><i class="fa fa-chevron-circle-down"></i>
-                                                How to Create Responsive Website with Bootstrap?</a>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                            life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
-                                            cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et.</div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h2 class="mb-0">
-                                            <a class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseThree" aria-expanded="false"
-                                                aria-controls="collapseThree"><i class="fa fa-chevron-circle-down"></i>
-                                                Does Bootstrap Framework Provide Cross-browser Support?</a>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus
-                                            nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum
-                                            scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In
-                                            tincidunt orci sit amet elementum vestibulum.</div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFour">
-                                        <h2 class="mb-0">
-                                            <a class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseFour" aria-expanded="false"
-                                                aria-controls="collapseFour"><i class="fa fa-chevron-circle-down"></i>
-                                                Can I Use Bootstrap for Mobile App Development?</a>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                        data-parent="#accordionExample">
-                                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high
-                                            life accusamus terry richardson ad squid. 3 wolf moon officia aute, non
-                                            cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" name="pills-contact"
-                aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade" id="pills-order" name="pills-order" role="tabpanel"
+                aria-labelledby="pills-order-tab">
                 <div class="container">
 
 
                     <div class="row justify-content-center">
-                        <div class="col-3 px-0">
-                            <h4 class="cim-category">Fizetéssel kapcsolatos kérdések</h4>
+                        <div class="col-10">
+                            <h4 class="cim-category text-center pb-5">Rendeléssel kapcsolatos kérdések</h4>
                         </div>
-                        <div class="col-lg-7">
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="accordion">
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingSzamla" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSzamla"
+                                                aria-expanded="false" aria-controls="collapseSzamla"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hol
+                                                találom a számlámat?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSzamla" aria-labelledby="headingSzamla"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingGyartoiKatalogus" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseGyartoiKatalogus" aria-expanded="false"
+                                                aria-controls="collapseGyartoiKatalogus"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Találok
+                                                valahol gyártói katalógust?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseGyartoiKatalogus" aria-labelledby="headingGyartoiKatalogus"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingMaganvasarlo" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseMaganvasarlo" aria-expanded="false"
+                                                aria-controls="collapseMaganvasarlo"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Magánvásárlóként
+                                                is rendelhetek?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseMaganvasarlo" aria-labelledby="headingMaganvasarlo"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingHogyanRegisztral" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseHogyanRegisztral" aria-expanded="false"
+                                                aria-controls="collapseHogyanRegisztral"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok regisztrálni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseHogyanRegisztral" aria-labelledby="headingHogyanRegisztral"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingJotallas" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseJotallas"
+                                                aria-expanded="false" aria-controls="collapseJotallas"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Van
+                                                a termékekre jótállás?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseJotallas" aria-labelledby="headingJotallas"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingNagyMennyiseg" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseNagyMennyiseg" aria-expanded="false"
+                                                aria-controls="collapseNagyMennyiseg"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Mit
+                                                kell figyelembe venni a nagy mennyiségű megrendeléseknél?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseNagyMennyiseg" aria-labelledby="headingNagyMennyiseg"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingArakWebaruhaz" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseArakWebaruhaz" aria-expanded="false"
+                                                aria-controls="collapseArakWebaruhaz"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                árakat jelennek meg a webáruházban?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseArakWebaruhaz" aria-labelledby="headingArakWebaruhaz"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                            </div><!-- End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-delivery" role="tabpanel" name="pills-delivery"
+                aria-labelledby="pills-delivery-tab">
+                <div class="container">
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h4 class="cim-category text-center pb-5">Szállítással kapcsolatos kérdések</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
                             <!-- Accordion -->
-                            <div  class="accordion">
+                            <div class="accordion">
 
                                 <!-- Accordion item 1 -->
-                               
+
 
                                 <!-- Accordion item 2 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingTwo" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Hogyan működik a Paypal?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                működik a Paypal?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
@@ -394,11 +399,12 @@
 
                                 <!-- Accordion item 3 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingThree" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingThree" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Hogyan tudok bankkártyával fizetni?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok bankkártyával fizetni?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseThree" aria-labelledby="headingThree"
@@ -415,11 +421,12 @@
 
                                 <!-- Accordion item 4 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingFour" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseFour"
                                                 aria-expanded="false" aria-controls="collapseFour"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Milyen típusú kárytát tudok fizetni?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                típusú kárytát tudok fizetni?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
@@ -436,11 +443,237 @@
 
                                 <!-- Accordion item 5 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFive" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingFive" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseFive"
                                                 aria-expanded="false" aria-controls="collapseFive"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Tudok hitelre vásárolni?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
+                                                hitelre vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingOne" class="card-header bg-white shadow-sm">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#"
+                                                aria-expanded="false" aria-controls="collapseOne"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 6 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
+                                                van mód?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 7 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingSeven" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
+                                                működik a banki előreutalás?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                            </div><!-- End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-payment" role="tabpanel" name="pills-payment"
+                aria-labelledby="pills-payment-tab">
+                <div class="container">
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h4 class="cim-category text-center pb-5">Fizetéssel kapcsolatos kérdések</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <!-- Accordion -->
+                            <div class="accordion">
+
+                                <!-- Accordion item 1 -->
+
+
+                                <!-- Accordion item 2 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingPayPal" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapsePayPal"
+                                                aria-expanded="false" aria-controls="collapsePayPal"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                működik a Paypal?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapsePayPal" aria-labelledby="headingPayPal"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Bankkártyával való fizetéshez válassza a PayPal fizetési módot. Ha nincs
+                                                bankkártyája, de a bankszámlájáról szeretne utalni, azt is megteheti
+                                                PayPal segítségével. PayPal-lal történő fizetés esetén átirányítjuk a
+                                                PayPal weboldalára.
+                                            </p>
+
+                                            <div class="d-flex justify-content-center p-5">
+                                                <img src="paypal.svg">
+                                            </div>
+
+                                            <p><strong>Hogyan működik a fizetés?</strong><br>
+                                                <br>
+                                                Amikor PayPal-lal szeretné kifizetni a rendelését, a fizetés utolsó
+                                                fázisában átirányítjuk a PayPal oldalára, ahol lehetőség van:
+                                            </p>
+
+                                            <ul>
+                                                <li class="faq-list">Ha már rendelkezik PayPal fiókkal, akkor csak be
+                                                    kell jelentkeznie felhasználó nevével (e-mail cím) és jelszavával,
+                                                    majd a fizetés részleteinek áttekintése után jóváhagyni azt.</li>
+                                                <li class="faq-list">Ha még nem rendelkezik PayPal fiókkal, akkor
+                                                    először létre kell hoznia egyet. A fiók létrehozásához néhány
+                                                    alapadaton felül a dombornyomott bankkártya adatait is meg kell
+                                                    adni.</li>
+                                            </ul>
+
+                                            <p><strong>Tipp:</strong> PayPal fiók létrehozásakor bankkártya adatait
+                                                nyugodtan megadhatja, hiszen a bankkártyához tartozó számlát a PayPal
+                                                csak akkor terheli meg, ha, ha PayPal egyenlege nem nyújt fedezetet a
+                                                kívánt termék kifizetéséhez.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 3 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingKartyasFizetes" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseKartyasFizetes" aria-expanded="false"
+                                                aria-controls="collapseKartyasFizetes"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok banki előreutalással fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseKartyasFizetes" aria-labelledby="headingKartyasFizetes"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Banki előreutalással történő fizetés esetén a megrendelt áru kézbesítését
+                                                a rendelés ellenértékének bankszámlánkra történő megérkezését követően
+                                                indítjuk el. Kérjük, hogy az átutalásnál a megjegyzés rovatban tüntesse
+                                                fel a rendelés azonosítóját, amelyet a rendelést visszaigazoló e-mailben
+                                                talál.
+                                            </p>
+                                            <p><strong>Átutaláshoz szükséges adatok: </strong>
+                                            </p>
+                                            <p>MKB Bank Zrt.<br>
+                                                Kedvezményezett neve: Bearing Kft.<br>
+                                                Adószám: 1083988-2-13 <br>
+                                                Cégjegyzékszám: 13-09-088-995<br>
+                                                Bankkód: MKB<br>
+                                                Bankszámla: <span
+                                                    id="bankszamlaSzamMasolas">10300002-20351638-00003285</span> <button
+                                                    class="copy-paste-btn"
+                                                    onclick="copyToClipboard02('#bankszamlaSzamMasolas')"><i
+                                                        id="masolhatoAdat" class="icon-docs"></i><span
+                                                        class="d-none ml-2" id="masolhatoAdatText">Szöveg
+                                                        kimásolva</span></button> <br>
+                                                SWIFT-KÓD: <span id="swiftKodMasolas">MKKBHUHB</span> <button
+                                                    class="copy-paste-btn"
+                                                    onclick="copyToClipboard('#swiftKodMasolas')"><i
+                                                        id="masolhatoAdat02" class="icon-docs"></i><span
+                                                        class="d-none ml-2" id="masolhatoAdatText02">Szöveg
+                                                        kimásolva</span></button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 4 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                típusú kárytát tudok fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 5 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFive" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
+                                                hitelre vásárolni?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
@@ -459,12 +692,13 @@
                                     <div id="headingOne" class="card-header bg-white shadow-sm">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseMinta"
-                                                aria-expanded="true" aria-controls="collapseOne"
-                                                class="btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">Hogyan
+                                                aria-expanded="false" aria-controls="collapseOne"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
                                                 tudok vásárolni?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseMinta" aria-labelledby="headingOne" data-parent="#accordionExample"class="collapse">
+                                    <div id="collapseMinta" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                        class="collapse">
                                         <div class="card-body p-5">
                                             <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
                                                 eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
@@ -477,11 +711,12 @@
 
                                 <!-- Accordion item 6 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingFour" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseSix"
                                                 aria-expanded="false" aria-controls="collapseSix"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Részletfizetésre van mód?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
+                                                van mód?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
@@ -498,11 +733,374 @@
 
                                 <!-- Accordion item 7 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingSeven" class="card-header bg-white shadow-sm border-0">
+                                    <div id="headingSeven" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseSeven"
                                                 aria-expanded="false" aria-controls="collapseSeven"
-                                                class="btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">Hogy
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
+                                                működik a banki előreutalás?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                            </div><!-- End -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-products" role="tabpanel" name="pills-products"
+                aria-labelledby="pills-products-tab">
+                <div class="container">
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h4 class="cim-category text-center pb-5">Termékekkel kapcsolatos kérdések</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <!-- Accordion -->
+                            <div class="accordion">
+
+                                <!-- Accordion item 1 -->
+
+
+                                <!-- Accordion item 2 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingTwo" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                működik a Paypal?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 3 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingThree" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok bankkártyával fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 4 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                típusú kárytát tudok fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 5 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFive" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
+                                                hitelre vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingOne" class="card-header bg-white shadow-sm">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#"
+                                                aria-expanded="false" aria-controls="collapseOne"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 6 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
+                                                van mód?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 7 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingSeven" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
+                                                működik a banki előreutalás?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                            </div><!-- End -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="pills-help" role="tabpanel" name="pills-help"
+                aria-labelledby="pills-products-tab">
+                <div class="container">
+
+
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <h4 class="cim-category text-center pb-5">Videós útmutató a webáruház használatához</h4>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <!-- Accordion -->
+                            <div class="accordion">
+
+                                <!-- Accordion item 1 -->
+
+
+                                <!-- Accordion item 2 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingVideoTeszt" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseVideoTeszt" aria-expanded="false"
+                                                aria-controls="collapseVideoTeszt"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Teszt
+                                                videó útmutatás</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseVideoTeszt" aria-labelledby="headingVideoTeszt"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                            </p>
+
+                                            <div class="py-5">
+                                                <video src="video/Teszt_02.mp4" autoplay loop
+                                                    class="video-utmutatas"></video>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 3 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingThree" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok bankkártyával fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" aria-labelledby="headingThree"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 4 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseFour"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                típusú kárytát tudok fizetni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 5 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFive" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
+                                                hitelre vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingOne" class="card-header bg-white shadow-sm">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#"
+                                                aria-expanded="false" aria-controls="collapseOne"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
+                                                tudok vásárolni?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 6 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingFour" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
+                                                van mód?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
+                                        class="collapse">
+                                        <div class="card-body p-5">
+                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
+                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
+                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 7 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingSeven" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
+                                                aria-expanded="false" aria-controls="collapseSeven"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
                                                 működik a banki előreutalás?</button>
                                         </h2>
                                     </div>
@@ -529,10 +1127,45 @@
 
 </body>
 
+<script>
+
+
+    function copyToClipboard02(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+
+        var element = document.getElementById("masolhatoAdat");
+        element.classList.remove("icon-docs");
+        var element = document.getElementById("masolhatoAdatText");
+        element.classList.remove("d-none");
+        var element = document.getElementById("masolhatoAdat");
+        element.classList.add("icon-check")
+    }
+</script>
+
+<script>
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+
+        var element = document.getElementById("masolhatoAdat02");
+        element.classList.remove("icon-docs");
+        var element = document.getElementById("masolhatoAdatText02");
+        element.classList.remove("d-none");
+        var element = document.getElementById("masolhatoAdat02");
+        element.classList.add("icon-check")
+    }
+</script>
 
 <script>
     function kinyitniOdamenni() {
-        var element = document.getElementById("pills-contact");
+        var element = document.getElementById("pills-payment");
         element.classList.add("show", "active");
         var element = document.getElementById("myDropdown");
         element.classList.remove("show");
@@ -542,6 +1175,7 @@
     }
 
 </script>
+
 <script>
     $('.nav-tabs li a').click(function (e) {
         e.preventDefault();
@@ -602,6 +1236,7 @@
         document.getElementById("faqDispalyOff2").classList.toggle("zIndexBack");
         document.getElementById("faqDispalyOff3").classList.toggle("zIndexBack");
         document.getElementById("faqDispalyOff4").classList.toggle("zIndexBack");
+        document.getElementById("faqDispalyOff5").classList.toggle("zIndexBack");
     }
 
     function filterFunction() {

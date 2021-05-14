@@ -71,7 +71,7 @@ body {
 }
 
 .faq-topic-container{
-    padding-top: 10rem;
+    padding: 9rem 0rem 0rem !important;
     display: block !important;
 }
 
@@ -91,6 +91,8 @@ body {
 .accordion .card {
 	background: none;
 	border: none;
+    border-radius: 6px !important;
+    border-left: 5px solid #ec7623 !important;
 }
 .accordion .card .card-header {
 	background: none;
@@ -153,6 +155,7 @@ body {
   
   .dropdown-content {
     display: none;
+    max-height: 21rem;
     top: -3px;
     position: absolute;
     background-color: #ffffff;
@@ -162,6 +165,7 @@ body {
     border-radius: 0 0 6px 6px;
     box-shadow: 0px 10px 8px 0px rgb(0 0 0 / 15%);
     border: none !important;
+    overflow-y: hidden !important;
   }
   
   .dropdown-content a {
@@ -217,6 +221,7 @@ body {
     color: #EC7623;
 }
 
+
 #hogyanTudokVasarolni .card {
     border-radius: 5px;
     border-left: 4px solid #ec7623;
@@ -229,4 +234,37 @@ body {
 
 .collapsible-link:focus {
     box-shadow: none !important;
+}
+
+.video-utmutatas {
+    width: 100% !important;
+}
+
+
+.copy-paste-btn {
+        color: #ec7623;        
+        border: none !important;
+        background: none !important;
+}
+
+.copy-paste-btn:focus {
+    outline: none;
+}
+
+#masolhatoAdatText {
+    color: #ec7623;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#masolhatoAdatText02 {
+    color: #ec7623;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+.faq-list {
+    margin-bottom: 1rem;
+    padding-right: 2rem;
 }
