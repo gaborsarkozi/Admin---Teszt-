@@ -109,7 +109,6 @@ body {
 	text-align: left;
 	position: relative;
 	font-weight: 500;
-	padding-left: 2rem;
 }
 .accordion .card-header i {
 	font-size: 1.2rem;
@@ -146,8 +145,13 @@ body {
 	transform: rotate(180deg);
 }
 
+.card a {
+    color: #EC7623;
+}
+.card a:hover {
+    color: #EC7623;
+}
 
-  
   .dropdown {
     position: relative;
     display: inline-block;
@@ -212,7 +216,7 @@ body {
     content: '\f106';
 }
 
-.zIndexBack {
+.zIndexAdd {
     z-index: -1;
 }
 
@@ -229,7 +233,7 @@ body {
 
 .accordion .card-header .btn {
     color: #211061 !important;
-    font-size: 14px !important;
+    font-size: 15px !important;
 }
 
 .collapsible-link:focus {
@@ -267,4 +271,72 @@ body {
 .faq-list {
     margin-bottom: 1rem;
     padding-right: 2rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #ec7623 !important;
+}
+
+.nav-pills .nav-link.active .faq-title, .nav-pills .show>.nav-link {
+    color: #fff;
+}
+
+.link-faq {
+    color: #ec7623 !important;
+}
+
+.link-faq a{
+    color: #ec7623 !important;
+}
+
+.list-category-img {
+    width: 20px;
+    margin-right: 1rem;
+}
+
+.accordion .card-body {
+   color: #211061 !important
+}
+
+.form-control-label {
+    font-weight: 500;
+    color: #211061;
+    font-size: 15px;
+    text-transform: initial;
+}
+
+.submit-btn-faq {
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    color: #211061 !important;
+    font-weight: 600 !important;
+}
+
+.faq-urlap {
+    box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+    border: none !important;
+    border-radius: 6px !important;
+}
+
+.faq-urlap-head {
+    color: #ec7623;
+    font-weight: 600;
+}
+
+.faq-urlap-par {
+    color: #211061;
+    font-weight: 600;
+}
+
+.form-control {
+    border: none !important;
+    box-shadow: 1px 1px 7px gainsboro;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.faq-kepek {
+    max-width: 100%;
 }
