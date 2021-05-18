@@ -111,8 +111,8 @@
                         <a href="#custom"><img src="product_bearings.svg" class="list-category-img" alt=""> Honnan
                             értesülhetek az akciókról,
                             újdonságokról?</a>
-                        <a onclick="return kinyitniOdamenni();" href="#hogyanTudokVasarolni"><img src="delivery.svg"
-                                class="list-category-img" alt=""> Hogyan tudok vásárolni?</a>
+                        <a href="#"><img src="delivery.svg" class="list-category-img" alt=""> Hogyan tudok
+                            vásárolni?</a>
                         <a href="#support"><img src="delivery.svg" class="list-category-img" alt=""> Kell regisztrálnom
                             a
                             vásárláshoz?</a>
@@ -122,7 +122,8 @@
                         <a href="#tools"><img src="product_bearings.svg" class="list-category-img" alt=""> Panasszal
                             vagy észrevétellel hová
                             fordulhatok?</a>
-                        <a href="#tools"><img src="BEX_delivery.svg" class="list-category-img" alt=""> Mennyibe kerül a
+                        <a onclick="return kinyitniOdamenni();" href="#mennyiASzallitas"><img src="BEX_delivery.svg"
+                                class="list-category-img" alt=""> Mennyibe kerül a
                             szállítás?</a>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                 aria-selected="false">
                 <div class="box-part text-center">
                     <img src="product_bearings.svg" class="faq-img" alt="shopping">
-                    <div class="mt-4">
+                    <div class="mt-3">
                         <h5 class="faq-title">Termékek</h5>
                     </div>
                 </div>
@@ -180,8 +181,8 @@
                 data-toggle="pill" href="#pills-help" role="tab" aria-controls="pills-help" aria-selected="false">
                 <div class="box-part text-center">
                     <img src="product_shop_02.svg" class="faq-img" alt="shopping">
-                    <div class="mt-4">
-                        <h5 class="faq-title">Útmutató</h5>
+                    <div class="mt-3">
+                        <h5 class="faq-title">Áruház</h5>
                     </div>
                 </div>
             </a>
@@ -201,22 +202,25 @@
                             <h4 class="cim-category text-center pb-5">Rendeléssel kapcsolatos kérdések</h4>
                         </div>
                     </div>
-                    <div class="row justify-content-center pb-5">
+                    <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="accordion">
 
                                 <div class="card shadow mb-3">
                                     <div id="headingAlacsonyArak" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseAlacsonyArak"
-                                                aria-expanded="false" aria-controls="collapseAlacsonyArak"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan jönnek létre az alacsony árak?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseAlacsonyArak" aria-expanded="false"
+                                                aria-controls="collapseAlacsonyArak"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
+                                                jönnek létre az alacsony árak?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseAlacsonyArak" aria-labelledby="headingAlacsonyArak"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p>A termékeket általánosságban véve nagy mennyiségben szerezzük be, aminek következtében árelőnyt tudunk elérni. Ezt az árelőnyt tovább 
+                                            <p>A termékeket általánosságban véve nagy mennyiségben szerezzük be, aminek
+                                                következtében árelőnyt tudunk elérni. Ezt az árelőnyt tovább
                                                 tudjuk adni a nálunk vásárló ügyfelek számára is.
                                             </p>
                                         </div>
@@ -254,86 +258,34 @@
                                                 <img src="faq-kepek/megrendelt_fizetes.png" class="faq-kepek py-3"
                                                     alt="">
                                             </div>
-
-
-
-
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <div class="card shadow mb-3">
-                                    <div id="headingGyartoiKatalogus" class="card-header bg-white border-0">
+                                    <div id="headingNincsEmail" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse"
-                                                data-target="#collapseGyartoiKatalogus" aria-expanded="false"
-                                                aria-controls="collapseGyartoiKatalogus"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Találok
-                                                valahol gyártói katalógust?</button>
+                                                data-target="#collapseNincsEmail" aria-expanded="false"
+                                                aria-controls="collapseNincsEmail"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Nem
+                                                kaptam visszaigazoló emailt, mit tegyek?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseGyartoiKatalogus" aria-labelledby="headingGyartoiKatalogus"
+                                    <div id="collapseNincsEmail" aria-labelledby="headingNincsEmail"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p>A csapágyak kiválasztása gyakran komoly
-                                                nehézségekbe ütközik, mert minden gyártó saját jelölésekkel látja el a
-                                                csapágyakat. A BEX által kifejlesztett információs rendszer segít
-                                                kiválasztani a megfelelő terméket.
+                                            <p>Amennyiben a rendelést követően nem kap visszaigazoló emailt, kérjük
+                                                nézze meg elektronikus postafiókja spam mappáját. Amennyiben nem találta
+                                                meg levelünket kérjük nézze meg, hogy helyesen adta-e meg email címét
+                                                rendelési adatai között. Amennyiben ezek után sem oldódott meg a
+                                                próbléma,
+                                                kérjük vegye fel munkatársunkkal a kapcsolatot.
                                             </p>
-
-                                            <p>Rendszerünk korrekt segítséget nyújt ipari, mezőgazdasági
-                                                és autóipari csapágyak beazonosításához, amely több mint 300
-                                                csapágykatalógust tartalmaz elektronikus
-                                                változatban.
-                                            </p>
-
-                                            <p class="link-faq py-3 text-center">
-                                                <i class="icon-book-open mr-3"></i>
-                                                <a
-                                                    href="https://gaborsarkozi.github.io/PROJEKTEK/Gy%C3%A1rt%C3%B3i%20katal%C3%B3gus/gyartoikatalogus.html">Gyártói
-                                                    katalógusok</a>
-                                            </p>
-
-                                            <p><strong>Útmutató az oldal használatához</strong>
-                                            </p>
-
-                                            <p>
-                                                A szűrési feltételek között beállíthatja, hogy milyen paraméterek
-                                                alapján szeretne katalógust keresni.
-                                            <ul>
-                                                <li>Keresett kifejezés: Adjon meg egy kifejezést amiről azt gondolja,
-                                                    hogy a katalógus tartalmazza.</li>
-                                                <li>Gyártó: Válasszon egy gyártót, amellyel kapcsolatban szeretne
-                                                    informálódni.</li>
-                                                <li>Termék: Válasszon egy árucsoportot, amelybe tartozik az Ön által
-                                                    keresett termék.</li>
-                                                <li>Kiadvány típus: Válassza ki milyen típusú kiadványt keres.</li>
-                                                <li>Termék keresés: A keresés gombra kattintva táblázatunk az Ön által
-                                                    megszűrt találatok jeleníti meg.</li>
-                                            </ul>
-                                            </p>
-                                            <div class="text-center">
-                                                <img src="faq-kepek/utojelkatalogus_kereso.png" class="faq-kepek py-3"
-                                                    alt="">
-                                            </div>
-
-                                            <p class="pt-3">
-                                                Az Ön által megadott paraméterek alapján rendeszerünk leszűkíti a
-                                                dokumentumok listáját. A listán láhthatja, hogy
-                                                melyik gyártóhoz tartozik, milyen nyelven elérhető, mi a pontos címe és
-                                                hogy mi a kiadvány típusa. A katalógust
-                                                a táblázat sor végén látható letöltés gombra kattintva mentheti saját
-                                                készülékén.
-                                            </p>
-
-                                            <div class="text-center">
-                                                <img src="faq-kepek/utojelkatalogus_tabla.png" class="faq-kepek py-3"
-                                                    alt="">
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div><!-- End -->
+
 
                                 <div class="card shadow mb-3">
                                     <div id="headingMaganvasarlo" class="card-header bg-white border-0">
@@ -349,7 +301,8 @@
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
                                             <p>Nem. Nagykereskedelmi áruházunkban csak regisztrációt követően van
-                                                lehetőség vásárlásra. Ha még nem regisztrált nagykereskedelmi webáruházunkba ezen a linken
+                                                lehetőség vásárlásra. Ha még nem regisztrált nagykereskedelmi
+                                                webáruházunkba ezen a linken
                                                 keresztül megteheti: </p>
                                             <p class="link-faq py-3 text-center">
                                                 <i class="icon-user-follow mr-3"></i>
@@ -357,13 +310,37 @@
                                                     href="https://gaborsarkozi.github.io/PROJEKTEK/Fooldal_belepes_elott/Shade%2007%20HTML/index.html">Regisztráció</a>
                                             </p>
 
-                                            <p> Magánszemélyként és/vagy néhány db termék vásárlása esetén, válassza cégünk
-                                                kiskereskedelmi webáruházát, ahol könnyedén lebonyolíthatja vásárlását, akár regisztráció nélkül is! </p>
+                                            <p> Magánszemélyként és/vagy néhány db termék vásárlása esetén, válassza
+                                                cégünk
+                                                kiskereskedelmi webáruházát, ahol könnyedén lebonyolíthatja vásárlását,
+                                                akár regisztráció nélkül is! </p>
 
-                                                <p class="link-faq py-3 text-center">
-                                               
-                                                    <a href="https://www.csapagy.hu/"><img src="product_bearings.svg" class="mr-2" width="32px" alt="">csapagy.hu</a>
-                                                </p> 
+                                            <p class="link-faq py-3 text-center">
+
+                                                <a href="https://www.csapagy.hu/"><img src="product_bearings.svg"
+                                                        class="mr-2" width="32px" alt="">csapagy.hu</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingMaganvasarlo" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseMaganvasarlo" aria-expanded="false"
+                                                aria-controls="collapseMaganvasarlo"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hol
+                                                tart a rendelésem?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseMaganvasarlo" aria-labelledby="headingMaganvasarlo"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Rendelését a "Fiókom" menüpont alatt, a rendelés állapota pontban
+                                                követheti nyomon.
+                                            </p>
+
                                         </div>
                                     </div>
                                 </div><!-- End -->
@@ -381,13 +358,17 @@
                                     <div id="collapseHogyanRegisztral" aria-labelledby="headingHogyanRegisztral"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p>Regisztrációs felületünket a főoldalon található "Belépés/Regisztráció" gombra kattintva érhető el. Ezek után válaszd a "Nem regisztrált még? Itt megteheti!" linkre kattintva 
+                                            <p>Regisztrációs felületünket a főoldalon található "Belépés/Regisztráció"
+                                                gombra kattintva érhető el. Ezek után válaszd a "Nem regisztrált még?
+                                                Itt megteheti!" linkre kattintva
                                                 jelenik meg a regisztrációs felület. </p>
 
-                                                <p class="link-faq py-3 text-center">
-                                                    <a href="https://gaborsarkozi.github.io/PROJEKTEK/Fooldal_belepes_elott/Shade%2007%20HTML/index.html"> <i class="icon-user-follow mr-2"></i>Regisztráció</a>
-                                                </p>
-                                            
+                                            <p class="link-faq py-3 text-center">
+                                                <a
+                                                    href="https://gaborsarkozi.github.io/PROJEKTEK/Fooldal_belepes_elott/Shade%2007%20HTML/index.html">
+                                                    <i class="icon-user-follow mr-2"></i>Regisztráció</a>
+                                            </p>
+
                                             <div class="py-5">
                                                 <video src="video/regisztracio.mp4" autoplay loop
                                                     class="video-utmutatas"></video>
@@ -400,41 +381,50 @@
                                                 <li>Név: Írja be a felhasználóhoz tartozó nevet.</li>
                                                 <li>Cégnév: Adja meg a regisztrálni kívánt cég nevét.</li>
                                                 <li>Adószám: Adja meg a regisztrálni kívánt cég adószámát.</li>
-                                                <li>Irányítószám: Adja meg a regisztrálni kívánt cég irányítószámát.</li>
-                                                <li>Város: Adja meg, melyik városban található a regisztrálni kívánt cég.</li>
+                                                <li>Irányítószám: Adja meg a regisztrálni kívánt cég irányítószámát.
+                                                </li>
+                                                <li>Város: Adja meg, melyik városban található a regisztrálni kívánt
+                                                    cég.</li>
                                                 <li>Cím: Adja meg a regisztrálni kívánt cég bejelentett címét.</li>
-                                                <li>E-mail: Adja meg a regiszrálni kívánt cég elektronikus elérhetőségét.</li>
-                                                <li>Telefonszám: Adja meg a regisztrálni kívánt cég telefonos elérhetőségét.</li>
+                                                <li>E-mail: Adja meg a regiszrálni kívánt cég elektronikus
+                                                    elérhetőségét.</li>
+                                                <li>Telefonszám: Adja meg a regisztrálni kívánt cég telefonos
+                                                    elérhetőségét.</li>
                                                 <li>Felhasználónév: Adjon meg egy belépési azonosítót.</li>
 
                                             </ul>
-                                        </p>
+                                            </p>
 
-                                        <div class="text-center">
-                                            <img src="faq-kepek/regisztracio.png" class="faq-kepek py-3"
-                                                alt="regisztracio_01">
-                                        </div>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/regisztracio.png" class="faq-kepek py-3"
+                                                    alt="regisztracio_01">
+                                            </div>
 
-                                        <p class="pt-5">Amennyiben szállítási és számlázási címe megyezik, kérjük jelölje be. Amennyiben a szállítási 
-                                            címe eltérő a számlázási címétől, adja meg a pontos szállítási címét.
-                                        </p>
+                                            <p class="pt-5">Amennyiben szállítási és számlázási címe megyezik, kérjük
+                                                jelölje be. Amennyiben a szállítási
+                                                címe eltérő a számlázási címétől, adja meg a pontos szállítási címét.
+                                            </p>
 
-                                        <div class="text-center">
-                                            <img src="faq-kepek/regisztracio_szallitasicim.png" class="faq-kepek py-3"
-                                                alt="regisztracio_01">
-                                        </div>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/regisztracio_szallitasicim.png"
+                                                    class="faq-kepek py-3" alt="regisztracio_01">
+                                            </div>
 
-                                        <p class="pt-5">Kérjük olvassa el alaposan <a href="">Általános Szerződési Feltételeinket</a>, illetve cégünk <a href="">Adatvédelmi</a>
-                                            nyilatkozatát, majd ha egyetért az ebben foglaltakkal, akkor pipálja ki az előttük álló csúszkát. Ezek után hitelesítse magát a Google reCapcha 
-                                            rendszerén keresztül azáltal, hogy kipipálja a "Nem vagyok robot" szöveg előtt álló dobozt. Végül nyomja meg a "Regisztráció" gombot. Sikeres
-                                            regisztrációt követően kollégáink hamarosan felveszik Önnel a kapcsolatot.
-    
-                                        </p>
+                                            <p class="pt-5">Kérjük olvassa el alaposan <a href="">Általános Szerződési
+                                                    Feltételeinket</a>, illetve cégünk <a href="">Adatvédelmi</a>
+                                                nyilatkozatát, majd ha egyetért az ebben foglaltakkal, akkor pipálja ki
+                                                az előttük álló csúszkát. Ezek után hitelesítse magát a Google reCapcha
+                                                rendszerén keresztül azáltal, hogy kipipálja a "Nem vagyok robot" szöveg
+                                                előtt álló dobozt. Végül nyomja meg a "Regisztráció" gombot. Sikeres
+                                                regisztrációt követően kollégáink hamarosan felveszik Önnel a
+                                                kapcsolatot.
 
-                                        <div class="text-center">
-                                            <img src="faq-kepek/regisztracio_vege.png" class="faq-kepek py-3"
-                                                alt="regisztracio_01">
-                                        </div>
+                                            </p>
+
+                                            <div class="text-center">
+                                                <img src="faq-kepek/regisztracio_vege.png" class="faq-kepek py-3"
+                                                    alt="regisztracio_01">
+                                            </div>
 
                                         </div>
                                     </div>
@@ -445,18 +435,14 @@
                                         <h2 class="mb-0">
                                             <button type="button" data-toggle="collapse" data-target="#collapseJotallas"
                                                 aria-expanded="false" aria-controls="collapseJotallas"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Van
-                                                a termékekre jótállás?</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Jár
+                                                valamilyen árelőnnyel, ha nagyobb mennyiségben vásárolok?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseJotallas" aria-labelledby="headingJotallas"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p class="font-weight-light m-0">Bónusz, speciális ajánlat</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
@@ -505,92 +491,213 @@
                                     </div>
                                 </div><!-- End -->
 
+                                <div class="card shadow mb-3">
+                                    <div id="headingTelefonRendeles" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseTelefonRendeles" aria-expanded="false"
+                                                aria-controls="collapseTelefonRendeles"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Leadhatom
+                                                telefonon a rendelésem?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTelefonRendeles" aria-labelledby="headingTelefonRendeles"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Csapágy nagykereskedésünk áttekinthető, könnyen használható webáruházzal
+                                                rendelkezik. Azért dolgozunk, hogy Ön minél egyszerűbben és könnyebben
+                                                megrendelhesse
+                                                a termékeket áruházunkon keresztül. Ha elakadt az online vásárlási
+                                                folyamatban, tekintse meg áruházunk használatáról szóló útmutatónkat!
+                                            </p>
+                                            <p class="link-faq py-3 text-center">
+
+                                                <a href="#"><img src="product_shop_02.svg" class="mr-2" width="32px"
+                                                        alt="">Áruház útmutató</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingVisszakuldes" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseVisszakuldes" aria-expanded="false"
+                                                aria-controls="collapseVisszakuldes"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Vásároltam
+                                                Önöktől 4 hónappal ezelőtt, még mindig visszaküldhetem?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseVisszakuldes" aria-labelledby="headingVisszakuldes"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Nem, ez nem lehetséges ennyi időre visszamenőleg. A termék kézhezvételét
+                                                követően 90 nap áll a rendelkezésre a csomag visszaküldésére. Az
+                                                alkalmazott elállási jogra vonatkozó további információkat áruházunk
+                                                Általános Szerződési Feltételek szabályzatában találod meg.
+                                            </p>
+
+                                            <p class="link-faq py-3 text-center">
+                                                <i class="icon-printer mr-3"></i>
+                                                <a href="https://aruhaz.bearing.hu/szerzodesi_feltetelek.pdf"
+                                                    target="_blank">Általános Szerződési Feltételek</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingTermekArKedvezmeny" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseTermekArKedvezmeny" aria-expanded="false"
+                                                aria-controls="collapseTermekArKedvezmeny"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Az
+                                                ár tartalmazza a kedvezményemet?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTermekArKedvezmeny" aria-labelledby="headingTermekArKedvezmeny"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>A terméktáblán megjelenő termékek két árat mutatnak. A táblázat
+                                                fejlécében lévő ikonra való egér ráhúzást követően
+                                                megjelenik a cím is.
+                                            </p>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/artablazat.png" class="faq-kepek py-3" alt="">
+                                            </div>
+                                            <p>Az első oszlop a listaárat jelenti, kedvezmény nélkül. Ez HUF-ban és
+                                                darabszámra értendő.
+                                            </p>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/artablazat_listaar.png" class="faq-kepek py-3"
+                                                    alt="">
+                                            </div>
+                                            <p>A második oszlop a kedvezménnyel együtt vett árat mutatja, ugyancsak
+                                                HUF-ban és darabszám alapján.
+                                            </p>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/artablazat_kedvezmeny.png" class="faq-kepek py-3"
+                                                    alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <div class="card shadow mb-3">
+                                    <div id="headingSerultTermek" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseSerultTermek" aria-expanded="false"
+                                                aria-controls="collapseSerultTermek"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Sérült
+                                                a termék, mit tehetek?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseSerultTermek" aria-labelledby="headingSerultTermek"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Abban az esetben, ha egy általunk kiszállított termék megsérült vagy
+                                                bármilyen más módon nincs rendben Önnek lehetősége van visszaküldeni.
+                                                Minden reklamációt egyedileg elemezünk, valamint az ügyfél által
+                                                visszaküldött terméket hiánytalanul (csapágy, gyűrűk,
+                                                tömítések, gördülőelemek) és a kitöltött visszaküldési
+                                                űrlappal/panaszbejelentővel együtt kell
+                                                visszaküldeni.
+                                            </p>
+
+
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
                             </div><!-- End -->
                         </div>
                     </div>
-                    <div class="row mt-5">
+                    <!--                     <div class="row faq-section">
                         <div class="col-md-12 px-0">
                             <div class="table-box">
                                 <div class="container">
                                     <div class="card card-body faq-urlap" id="collapseExample">
-                                        <form>
-                                                <div class="row">
-                                                    <div class="col-12 py-5 justify-content-center">
-                                                        <h4 class="text-center faq-urlap-head">Továbbra sem találta meg
-                                                            amit keres?</h4>
-                                                        <p class="text-center faq-urlap-par">Írjon nekünk üzenetet!</p>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label"
-                                                                for="exampleFormControlSelect1">Mivel kapcsolatos az Ön
-                                                                kérdése?</label>
-                                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                                <option>Termék rendelés</option>
-                                                                <option>Termék információ</option>
-                                                                <option>Termék kérés</option>
-                                                                <option>Szállítás</option>
-                                                                <option>Fizetés</option>
-                                                                <option>Hibabejelentés</option>
-                                                                <option>Javaslat, ötlet</option>
-                                                                <option>Egyéb</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label" for="termekek">Mi az Ön
-                                                                neve?</label>
-                                                            <input type="text"
-                                                                class="form-control form-control-alternative"
-                                                                value="Sárközi Gábor">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label" for="termekek">Az Ön email
-                                                                címe</label>
-                                                            <input type="email"
-                                                                class="form-control form-control-alternative"
-                                                                placeholder="pelda@pelda.hu">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label" for="termekek">Az Ön
-                                                                telefonszáma</label>
-                                                            <input type="number"
-                                                                class="form-control form-control-alternative"
-                                                                placeholder="+36301234567">
-                                                        </div>
+                                        <form class="p-5">
+                                            <div class="row">
+                                                <div class="col-12 pb-5 justify-content-center">
+                                                    <h4 class="text-center faq-urlap-head">Továbbra sem találta meg
+                                                        amit keres?</h4>
+                                                    <p class="text-center faq-urlap-par">Írjon nekünk üzenetet!</p>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label"
+                                                            for="exampleFormControlSelect1">Mivel kapcsolatos az Ön
+                                                            kérdése?</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>Termék rendelés</option>
+                                                            <option>Termék információ</option>
+                                                            <option>Termék kérés</option>
+                                                            <option>Szállítás</option>
+                                                            <option>Fizetés</option>
+                                                            <option>Hibabejelentés</option>
+                                                            <option>Javaslat, ötlet</option>
+                                                            <option>Egyéb</option>
+                                                        </select>
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-lg-12">
-                                                        <div class="form-group">
-                                                            <label class="form-control-label"
-                                                                for="exampleFormControlTextarea1">Az Ön
-                                                                megjegyzése</label>
-                                                            <textarea class="form-control"
-                                                                id="exampleFormControlTextarea1"
-                                                                placeholder="Pl.: Nem tudok bejelentkezni a profilomba, mit lehet a gond?"
-                                                                rows="3"></textarea>
-                                                        </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="termekek">Mi az Ön
+                                                            neve?</label>
+                                                        <input type="text" class="form-control form-control-alternative"
+                                                            value="Sárközi Gábor">
                                                     </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="termekek">Az Ön email
+                                                            címe</label>
+                                                        <input type="email"
+                                                            class="form-control form-control-alternative"
+                                                            placeholder="pelda@pelda.hu">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label" for="termekek">Az Ön
+                                                            telefonszáma</label>
+                                                        <input type="number"
+                                                            class="form-control form-control-alternative"
+                                                            placeholder="+36301234567">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label class="form-control-label"
+                                                            for="exampleFormControlTextarea1">Az Ön
+                                                            megjegyzése</label>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                            placeholder="Pl.: Nem tudok bejelentkezni a profilomba, mit lehet a gond?"
+                                                            rows="3"></textarea>
+                                                    </div>
+                                                </div>
 
+                                            </div>
+                                            <div class="row pt-5">
+                                                <div class="col-lg-12 d-flex justify-content-center">
+                                                    <button class="btn submit-btn-faq">Kérdés küldése <i
+                                                            class="icon-earphones-alt ml-1"></i></button>
                                                 </div>
-                                                <div class="row py-5">
-                                                    <div class="col-lg-12 d-flex justify-content-center">
-                                                        <button class="btn submit-btn-faq">Kérdés küldése <i
-                                                                class="icon-earphones-alt ml-1"></i></button>
-                                                    </div>
-                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -614,157 +721,147 @@
 
                                 <!-- Accordion item 2 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingTwo" class="card-header bg-white border-0">
+                                    <div id="headingRendelesMegerkezes" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
-                                                működik a Paypal?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseRendelesMegerkezes" aria-expanded="false"
+                                                aria-controls="collapseRendelesMegerkezes"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Mennyi
+                                                idő alatt ér ide a rendelésem?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseRendelesMegerkezes" aria-labelledby="headingRendelesMegerkezes"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Jellemzően csomagjaink
+                                                Magyarország területén 1-3 munkanapon belül kézbesítésre kerülnek. Az EU
+                                                területén belülre címzett
+                                                küldemények normál kézbesítési ideje 2-5 munkanapon belül mozog. Az EU-n
+                                                kívüli
+                                                nemzetközi szállítások a célországtól függően általában hosszabb ideig
+                                                tarthatnak. A feltüntetett szállítási határidők kizárólag munkanapokon,
+                                                délután 15:30-ig leadott, raktáron lévő termékek kiszállítására
+                                                vonatkoznak.
+                                            </p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 3 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingThree" class="card-header bg-white border-0">
+                                <div class="card shadow mb-3" id="mennyiASzallitas">
+                                    <div id="headingSzallitasDij" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok bankkártyával fizetni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseSzallitasDij" aria-expanded="false"
+                                                aria-controls="collapseSzallitasDij"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Mennyibe
+                                                kerül a szállítás?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseThree" aria-labelledby="headingThree"
+                                    <div id="collapseSzallitasDij" aria-labelledby="headingSzallitasDij"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Csomagjaink kiszállítási díját nagy mértékben meghatározza a csomag
+                                                össztömege. Kiszállítási díjaink ezen felül a kiszállítás módja alapján
+                                                is eltérhetnek:</p>
+                                            <p>
+                                            <ul>
+                                                <li>Házhozszállítás GLS utánvét kiszállítással: 1.300 Ft-tól</li>
+                                                <li>Házhozszállítás GLS normál kiszállítással: 800 Ft-tól</li>
+                                                <li>GLS csomagpont kiszállítás: 900 Ft-tól</li>
+                                            </ul>
+                                            </p>
+                                            <p><strong> Megjegyzés:</strong> A fenti szállítási költségek kizárólag
+                                                Magyarországon belüli
+                                                kiszállításra vonatkoznak! Európa egyéb országai, illetve Európán kívüli
+                                                célország esetén szállítási díjainkra a nemzetközi szállítási díjak
+                                                érvényesek.</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
+
                                 <!-- Accordion item 4 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
+                                    <div id="headingSzallitasHely" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
-                                                típusú kárytát tudok fizetni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseSzallitasHely" aria-expanded="false"
+                                                aria-controls="collapseSzallitasHely"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hová
+                                                szállítanak ki?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseSzallitasHely" aria-labelledby="headingSzallitasHely"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Igen. A csomagok szállítását Magyarország egész területén vállaljuk
+                                                utánvétes és normál csomagként, GLS futárszolgálattal. Magyarországon
+                                                kívüli rendelés esetén csomagainkat nemzetközi futárszolgálattal
+                                                szállítjuk.
+                                                Amennyiben bármilyen kívánsága van a rendeléssel, szállítással
+                                                kapcsolatban, kérjük a rendeléskor a megjegyzés rovatban feltüntetni.
+                                                Kiszállításkor szükség esetén a kézbesítő megpróbálja Önt telefonon is
+                                                elérni, ezért kérjük rendeléskor közvetlenül elérhető
+                                                mobiltelefonszámot adjon meg. A gyors, zökkenőmentes kiszállítás
+                                                érdekében kérjük pontosan adja meg a szállítási címét.</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 5 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFive" class="card-header bg-white border-0">
+                                    <div id="headingIngyenesSzallitas" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
-                                                aria-expanded="false" aria-controls="collapseFive"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
-                                                hitelre vásárolni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseIngyenesSzallitas" aria-expanded="false"
+                                                aria-controls="collapseIngyenesSzallitas"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Van
+                                                ingyenes szállítás?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <div class="card shadow mb-3">
-                                    <div id="headingOne" class="card-header bg-white shadow-sm">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#"
-                                                aria-expanded="false" aria-controls="collapseOne"
-                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok vásárolni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 6 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
-                                                aria-expanded="false" aria-controls="collapseSix"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
-                                                van mód?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 7 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingSeven" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
-                                                aria-expanded="false" aria-controls="collapseSeven"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
-                                                működik a banki előreutalás?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                    <div id="collapseIngyenesSzallitas" aria-labelledby="headingIngyenesSzallitas"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>A szállítás alapvetően nem ingynes. Bizonyos mennyiséget meghaladó
+                                                vásrálás esetén a szállítás költségeit cégünk magára válallja.</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
+                                <div class="card shadow mb-3">
+                                    <div id="headingKiSzallit" class="card-header bg-white">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseKiSzallit" aria-expanded="false"
+                                                aria-controls="collapseKiSzallit"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Milyen
+                                                futárcégek végzik a szállítást?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseKiSzallit" aria-labelledby="headingKiSzallit"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Az Ön megrendelését a DPD, DHL, GLS vagy UPS futárcég fogja kézbesíteni.
+                                            </p>
+                                            <div class="text-center">
+                                                <a href="https://www.dhl.com/hu-hu/home.html?locale=true"
+                                                    target="_blank" class="no-underline"> <img src="delivery/dhl.svg"
+                                                        class="faq-delviery-comp py-3 mx-3" alt=""> </a>
+                                                <a href="https://www.dpd.com/hu/hu/" target="_blank"
+                                                    class="no-underline"> <img src="delivery/dpd.svg"
+                                                        class="faq-delviery-comp py-3 mx-3" alt=""> </a>
+                                                <a href="https://gls-group.eu/HU/hu/home" target="_blank"
+                                                    class="no-underline"> <img src="delivery/gls.svg"
+                                                        class="faq-delviery-comp py-3 mx-3" alt=""> </a>
+                                                <a href="https://www.ups.com/hu/hu/Home.page" target="_blank"
+                                                    class="no-underline"> <img src="delivery/ups.svg"
+                                                        class="faq-delviery-comp py-3 mx-3" alt=""> </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
                             </div><!-- End -->
                         </div>
                     </div>
@@ -883,112 +980,36 @@
 
                                 <!-- Accordion item 4 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
+                                    <div id="headingMilyenKartyaval" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour"
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseMilyenKartyaval" aria-expanded="false"
+                                                aria-controls="collapseMilyenKartyaval"
                                                 class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
-                                                típusú kárytát tudok fizetni?</button>
+                                                típusú kárytával tudok fizetni?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 5 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFive" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
-                                                aria-expanded="false" aria-controls="collapseFive"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
-                                                hitelre vásárolni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <div class="card shadow mb-3" id="hogyanTudokVasarolni">
-                                    <div id="headingOne" class="card-header bg-white shadow-sm">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseMinta"
-                                                aria-expanded="false" aria-controls="collapseOne"
-                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok vásárolni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseMinta" aria-labelledby="headingOne" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 6 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
-                                                aria-expanded="false" aria-controls="collapseSix"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
-                                                van mód?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 7 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingSeven" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
-                                                aria-expanded="false" aria-controls="collapseSeven"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
-                                                működik a banki előreutalás?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                    <div id="collapseMilyenKartyaval" aria-labelledby="headingMilyenKartyaval"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Webáruházunkban az alábbi kártyatípusok elfogadottak:</p>
+                                            <p>
+                                            <ul>
+                                                <li>VISA dombornyomott kártya</li>
+                                                <li>VISA Electron kártyák, (a kártyát kibocsátó bank döntésétől függően)
+                                                </li>
+                                                <li>V PAY kártyák, (a kártyát kibocsátó bank döntésétől függően)</li>
+                                                <li>MasterCard dombornyomott kártya</li>
+                                                <li>MasterCard Electronic kártyák, (a kártyát kibocsátó bank döntésétől
+                                                    függően)</li>
+                                                <li>Maestro kártyák (a kártyát kibocsátó bank döntésétől függően)</li>
+                                                <li>Kizárólag internetes fizetésre kibocsátott kártyák</li>
+                                            </ul>
+                                            </p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
+
 
                             </div><!-- End -->
                         </div>
@@ -1016,153 +1037,327 @@
 
                                 <!-- Accordion item 2 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingTwo" class="card-header bg-white border-0">
+                                    <div id="headingTermekKep" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseTwo"
-                                                aria-expanded="false" aria-controls="collapseTwo"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
-                                                működik a Paypal?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseTermekKep" aria-expanded="false"
+                                                aria-controls="collapseTermekKep"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">A
+                                                termékképek megfelelnek a valós cikkeknek?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseTermekKep" aria-labelledby="headingTermekKep"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>A termékképek megfelelnek a cikkcsoportnak. Termékeink nagy számának
+                                                következtében az
+                                                egyes cikkek egyedi fotója nem áll rendelkezésre. Ebből kifolyólag
+                                                előfordulhatnak
+                                                a méret, a szín vagy a geometria tekintetében eltérések. Áruházunkban
+                                                arra törekszünk, hogy olyan termékfotót válasszunk, amely
+                                                a lehető legközelebb áll a tényleges termékhez.</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
-                                <!-- Accordion item 3 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingThree" class="card-header bg-white border-0">
+                                    <div id="headingCsapagyKeszul" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok bankkártyával fizetni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseCsapagyKeszul" aria-expanded="false"
+                                                aria-controls="collapseCsapagyKeszul"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hol
+                                                készülnek a termékek?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseThree" aria-labelledby="headingThree"
+                                    <div id="collapseCsapagyKeszul" aria-labelledby="headingCsapagyKeszul"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p> Termékeink jellemzően a világ minden tájáról kerülnek hozzánk. Bizonyára
+                                                Önnek is fontos, hogy a szükséges
+                                                csapágyak, kenőanyagok, tömítésidőben és megfelelő minőségben célba
+                                                érjenek, ennek érdekében fejlesztjük a Bearing Express nagykereskedelmi
+                                                hálózatát, melynek segítségével minőségi golyóscsapágyak,
+                                                gördülőcsapágyak, sikló csapágyak, lineáris csapágyak vagy akár komplex
+                                                csapágyipari eszközök elégedett birtokosa lehet</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 4 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
+                                    <div id="headingRosszTermek" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
-                                                típusú kárytát tudok fizetni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseRosszTermek" aria-expanded="false"
+                                                aria-controls="collapseRosszTermek"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Rossz
+                                                méretben vásároltam, megváltoztatnám vagy lemondanám a rendelése, mit
+                                                tehet?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseRosszTermek" aria-labelledby="headingRosszTermek"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Abban az esetben, ha még nem küldtük el Önnek a megrendelését, akkor van
+                                                lehetősége megváltoztatni vagy lemondani.
+                                                Ha ilyen probléma merülne fel, kérjük hívja fel ügyfélszolgálatunkat
+                                                vagy írjon nekünk levelet!
+                                            </p>
+
+                                            <p class="link-faq py-3 text-center">
+                                                <i class="icon-envelope mr-3"></i>
+                                                <a href="https://aruhaz.bearing.hu/kapcsolat"
+                                                    target="_blank">Kapcsolat</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 5 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFive" class="card-header bg-white border-0">
+                                    <div id="headingRadialEsAxial" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
-                                                aria-expanded="false" aria-controls="collapseFive"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
-                                                hitelre vásárolni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseRadialEsAxial" aria-expanded="false"
+                                                aria-controls="collapseRadialEsAxial"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Mit
+                                                jelent a radiális és axiális terhelhetőség?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseRadialEsAxial" aria-labelledby="headingRadialEsAxial"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Radiális terhelésről beszélünk, ha a tengelyre ható erő hatásvonala
+                                                merőleges a tengelyvonalra, ezáltal a radiális
+                                                golyóscsapágyak optimálisan elnyelik a tengelyre merőlegesen ható erőket
+                                            </p>
+
+                                            <p>Axiális terhelésről beszélünk, ha a tengelyre ható erő hatásvonala a
+                                                tengelyvonallal egybeesik. Ebben az esetben a terhelés a tengely
+                                                hosszmetszetével egyirányban hat.</p>
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <div class="card shadow mb-3">
-                                    <div id="headingOne" class="card-header bg-white shadow-sm">
+                                    <div id="headingRozsdamentesMagnes" class="card-header bg-white">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#"
-                                                aria-expanded="false" aria-controls="collapseOne"
-                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok vásárolni?</button>
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseRozsdamentesMagnes" aria-expanded="false"
+                                                aria-controls="collapseRozsdamentesMagnes"
+                                                class="btn btn-link text-dark font-weight-bold collapsible-link">A
+                                                rozsdamentes acélból készült csapágyak lehetnek mágnesesek?</button>
                                         </h2>
                                     </div>
-                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseRozsdamentesMagnes" aria-labelledby="headingRozsdamentesMagnes"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Igen, az atomszerkezettől függően a rozsdamentes acél mágneses lehet. Az
+                                                úgynevezett martenzites és ferrites krómacélok mágnesezhetőek, az
+                                                ausztenites rozsdamentes acélok általában nem mágnesezhetőek.</p>
+
+                                            <p>
+                                                A magas hőmérsékleten való alakíthatóság biztosítása érdekében az ipari
+                                                rozsdamentes acélhoz nikkelt és mangánt adnak. Ez az oka annak, hogy az
+                                                ipari rozsdamentes acél gyakran mágnesezhető. A rozsdamentes acélból
+                                                készült csapágyak teherbírása alacsonyabb, mint a krómacélból készült
+                                                csapágyaké. Az ausztenites acélhoz képest, amely nem mágnesezhető, a
+                                                martenzites acél keményíthető. Így nagyobb teherbírást lehet elérni, ami
+                                                számos olyan alkalmazásnál számít, ahol csapágyakat használnak.
+
+                                                A mágnesesség nincs összefüggésben a korrózióállósággal.
+                                            </p>
+
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 6 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
+                                    <div id="headingKorrozio" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
-                                                aria-expanded="false" aria-controls="collapseSix"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
-                                                van mód?</button>
+                                            <button type="button" data-toggle="collapse" data-target="#collapseKorrozio"
+                                                aria-expanded="false" aria-controls="collapseKorrozio"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">A
+                                                rozsdamentes acélból készült csapágyak 100%-ban korrózióállóak?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
-                                        class="collapse">
+                                    <div id="collapseKorrozio" aria-labelledby="headingKorrozio"
+                                        data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Az ötvözetlen acél és a rozsdamentes acél közötti különbség a
+                                                rozsdamentes acélban lévő legalább 10,5%-os krómtartalom.
+                                                A krómtartalom miatt az acél felületén az oxigénnel érintkezve vékony
+                                                réteg képződik. Ezt a réteget passzív rétegnek nevezzük,
+                                                amely megvédi az alapanyagot a korrózió ellen. Ha azonban a passzív
+                                                réteg külső hatások miatt megsérül, korrózió alakul ki.
+                                                Az általános vélekedéssel ellentétben a rozsdamentes acél 100%-ban
+                                                rozsdamentes, a rozsdásodás folyamata lehetséges.</p>
+                                            <p>
+                                                Néhány tényező felgyorsítja a korrózió kialakulását a rozsdamentes
+                                                acélból készült csapágyakon:
+                                            </p>
+
+                                            <p>
+                                            <ul>
+                                                <li>Oxigénszegény vagy oxigénmentes környezet: Itt a passzív réteg újra
+                                                    kialakulhat, és biztosíthatja a korrózióvédelmet. Az anyag
+                                                    kiválasztásakor feltétlenül figyelembe kell venni, hogy a
+                                                    felhasználás milyen környezetben történik.</li>
+                                                <li>Helytelen csapágykezelés: Feltétlenül kerülni kell az agresszív
+                                                    savakkal vagy acélgyapottal történő tisztítást.</li>
+                                            </ul>
+                                            </p>
+
+
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
                                 <!-- Accordion item 7 -->
                                 <div class="card shadow mb-3">
-                                    <div id="headingSeven" class="card-header bg-white border-0">
+                                    <div id="headingTomites" class="card-header bg-white border-0">
                                         <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
-                                                aria-expanded="false" aria-controls="collapseSeven"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
-                                                működik a banki előreutalás?</button>
+                                            <button type="button" data-toggle="collapse" data-target="#collapseTomites"
+                                                aria-expanded="false" aria-controls="collapseTomites"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
+                                                típusú tömítést válasszak?</button>
                                         </h2>
                                     </div>
-                                    <div id="collapseSeven" aria-labelledby="headingSeven"
+                                    <div id="collapseTomites" aria-labelledby="headingTomites"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                                            <p>Az optimális tömítés kiválasztásához figyelembe kell venni azt az
+                                                alkalmazási területet, ahol a csapágyat használni kell, így nem lehet
+                                                általánosító kijelentést tenni.</p>
+                                            <p>
+                                                Abban az esetben, ha a csapágy nyitott, az alkalmazásnak kell
+                                                gondoskodnia a tömítésről annak érdekében, hogy ne juthasson bele kosz
+                                                vagy szennyeződés, ami időelőtti meghibásodáshoz vezet.
+                                            </p>
+                                            <p>
+                                                Az érintkezésmentes tömítések nagy sebességű és alacsony üzemi
+                                                hőmérsékletű alkalmazásokhoz lettek kifejlesztve. Súrlódásmentesek, így
+                                                lényegében örökéletűek. Az érintkezésmentes tömítéssel ellátott
+                                                mélyhornyú golyóscsapágyak attól függően, hogy egy vagy két oldaltól
+                                                zártak RZ és 2RZ vagy BRS és 2 BRS utójelet kapnak. A Z vagy 2Z
+                                                utójellel jelölt csapágyak egy, illetve két oldalról fémtárcsával
+                                                zártak.
+                                            </p>
+                                            <p>
+                                            <ul>
+                                                <li>A Z utójellel ellátott csapágyak tömítése acéllemezből készül,
+                                                    standard
+                                                    és C generációs mélyhornyú golyóscsapágyaknál alkalmazzák.
+                                                    Biztonságosan
+                                                    ül a külső gyűrűben, és keskeny, érintésmentes tömítő rést képez a
+                                                    belső
+                                                    gyűrű felületéhez képest. Ez a tömítőelrendezés különösen alkalmas
+                                                    forgó
+                                                    belső gyűrűt igénylő, nagy vagy nagyon nagy sebességgel és alacsony
+                                                    szennyeződéssel járó alkalmazásokhoz.</li>
+                                                <li>Az RZ tömítések csupán abban térnek el a Z tömítésektől, hogy
+                                                    acéllemezzel megerősített gumiból készülnek, valamint C generáció
+                                                    helyett a 618-os és 619-es sorozatú standard csapágyakhoz
+                                                    használják.</li>
+                                                <li>
+                                                    A BRS tömítés C generációs csapágyakhoz fejlesztett, acéllemezzel
+                                                    megerősített gumírozott tömítés az RZ-hez hasonlóan. Azonban itt a
+                                                    belső gyűrűbe beépített mélyedés a zsírral töltött tömítő ajakkal
+                                                    együtt labirintust képez. Ennek a tömítésnek a súrlódási viselkedése
+                                                    hasonló a Z fémtárcsáéval, viszont a por behatolása és a kenőanyag
+                                                    kijutása ellen nagyobb védelmet nyújt.
+                                                </li>
+                                                <li>
+                                                    Az RSR tömítések elasztomer ajaktömítések, acéllemez megerősítéssel.
+                                                    Az egyik tömítő ajak sugárirányban érintkezik a belső gyűrűvel.
+                                                </li>
+
+                                                <li>
+                                                    A HRS és ELS tömítések C generációs csapágyakhoz lettek
+                                                    kifejlesztve. Biztonságosan rögzülnek a külső gyűrű mélyedésében. A
+                                                    tömítőanyagot acéllemez megerősítéssel vulkanizálják. A tömítő
+                                                    alátét a belső gyűrűvel együtt axiális tömítőrendszert alkot.
+                                                    Ezenkívül a külső érintésmentes ajak védő labirintust képez a belső
+                                                    gyűrűvel. A védelem további növelését a két tömítőajak közötti
+                                                    zsírréteg biztosítja. Ezzel a tömítési elrendezéssel nagyobb
+                                                    sebesség érhető el, mint a hagyományos RSR tömítésekkel, mivel a
+                                                    súrlódási nyomaték és így a csapágy hőtermelése is kisebb.
+                                                </li>
+                                            </ul>
+
+                                            </p>
+
+                                            <p>
+                                                Forrás: <a
+                                                    href="https://medias.schaeffler.hu/hu/deep-groove-ball-bearings#19836572939">medias.schaeffler.hu</a>
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
+
+                                <!-- Accordion item 6 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingTerhelhetoseg" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseTerhelhetoseg" aria-expanded="false"
+                                                aria-controls="collapseTerhelhetoseg"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Mekkora
+                                                a radiális betétes golyóscsapágyak axiális terhelhetősége?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTerhelhetoseg" aria-labelledby="headingTerhelhetoseg"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>Ferde hatásvonalú csapágyak esetében az erő egy meghatározott érintkezési
+                                                szögben hat a csapágyra (a radiális síkra nézve), mely az egyik
+                                                futópályáról a másikra továbbítja azt. Ezt úgy kivitelezhető, hogy a két
+                                                futópálya a csapágy tengelyéhez viszonyítva síkban eltolva helyezkedik
+                                                el, így a csapágy képes elviselni egyidejűleg a radiális és axiális
+                                                terheléseket.</p>
+                                            <p>
+                                                A hatásszög növekedésével növekszik az axiális teherbírás, ezért a ferde
+                                                hatásvonalú csapágyak optimálisabbak a nagy axiális erők elviselésére,
+                                                mint a mélyhornyú golyóscsapágyak.
+                                                Elérhetők egysoros kivitelben önálló csapágyként vagy univerzális
+                                                csapágypárként, valamint kétsoros kivitelben is.
+                                            </p>
+
+                                            <p>Válassza az egysoros, ferde hatásvonalú golyóscsapágyakat, ha:</p>
+                                            <p>
+                                            
+                                            <ul>
+                                                <li>A csapágyazásoknak támogatniuk kell a kombinált terheléseket</li>
+                                                <li>Az egyik oldalon közepes vagy nagy axiális terhelés áll fent</li>
+                                                <li>Merev axiális vezetésre van szükség</li>
+                                                <li>A csapágyazásnak tengelyirányban szabadnak vagy előre terheltnek kell lennie</li>
+                                                <li>A nagy sebesség mellett a nagy axiális és radiális teherbírás is szükséges</li>
+                                                <li>A csapágyazásnak csendesen kell működnie, a fenti követelmények teljesítése mellett</li>
+                                            </ul>
+                                            </p>
+
+                                            <p>Válassza a kétsoros, ferde hatásvonalú golyóscsapágyakat, ha:</p>
+                                            <p>
+                                            
+                                            <ul>
+                                                <li>Az alkalmazásban nincs elég hely egy ferde hatásvonalú golyóscsapágypárhoz</li>
+                                                <li>A nagy radiális és axiális terhelések egyszerre hatnak</li>
+                                                <li>A billentési momentumokat is támogatni kell</li>
+                                                <li>Viszonylag merev csapágyelrendezésre van szükség</li>
+                                                <li>A csapágyazásnak csendesen kell működnie, a fenti követelmények teljesítése mellett</li>
+                                            </ul>
+                                            </p>
+                                            
+                                            <p>
+                                                Forrás: <a
+                                                    href="https://medias.schaeffler.hu/hu/plp/AngularContactBallBearings">medias.schaeffler.hu</a>
+                                            </p>
+
+
+
                                         </div>
                                     </div>
                                 </div><!-- End -->
@@ -1180,7 +1375,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-10">
-                            <h4 class="cim-category text-center pb-5">Videós útmutató a webáruház használatához</h4>
+                            <h4 class="cim-category text-center pb-5">Útmutató a webáruház használatához</h4>
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -1188,7 +1383,78 @@
                             <!-- Accordion -->
                             <div class="accordion">
 
-                                <!-- Accordion item 1 -->
+                                <div class="card shadow mb-3">
+                                    <div id="headingGyartoiKatalogus" class="card-header bg-white border-0">
+                                        <h2 class="mb-0">
+                                            <button type="button" data-toggle="collapse"
+                                                data-target="#collapseGyartoiKatalogus" aria-expanded="false"
+                                                aria-controls="collapseGyartoiKatalogus"
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
+                                                keresni gyártói katalógusban?</button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseGyartoiKatalogus" aria-labelledby="headingGyartoiKatalogus"
+                                        data-parent="#accordionExample" class="collapse">
+                                        <div class="card-body p-5">
+                                            <p>A csapágyak kiválasztása gyakran komoly
+                                                nehézségekbe ütközik, mert minden gyártó saját jelölésekkel látja el a
+                                                csapágyakat. A BEX által kifejlesztett információs rendszer segít
+                                                kiválasztani a megfelelő terméket.
+                                            </p>
+
+                                            <p>Rendszerünk korrekt segítséget nyújt ipari, mezőgazdasági
+                                                és autóipari csapágyak beazonosításához, amely több mint 300
+                                                csapágykatalógust tartalmaz elektronikus
+                                                változatban.
+                                            </p>
+
+                                            <p class="link-faq py-3 text-center">
+                                                <i class="icon-book-open mr-3"></i>
+                                                <a
+                                                    href="https://gaborsarkozi.github.io/PROJEKTEK/Gy%C3%A1rt%C3%B3i%20katal%C3%B3gus/gyartoikatalogus.html">Gyártói
+                                                    katalógusok</a>
+                                            </p>
+
+                                            <p><strong>Útmutató az oldal használatához</strong>
+                                            </p>
+
+                                            <p>
+                                                A szűrési feltételek között beállíthatja, hogy milyen paraméterek
+                                                alapján szeretne katalógust keresni.
+                                            <ul>
+                                                <li>Keresett kifejezés: Adjon meg egy kifejezést amiről azt gondolja,
+                                                    hogy a katalógus tartalmazza.</li>
+                                                <li>Gyártó: Válasszon egy gyártót, amellyel kapcsolatban szeretne
+                                                    informálódni.</li>
+                                                <li>Termék: Válasszon egy árucsoportot, amelybe tartozik az Ön által
+                                                    keresett termék.</li>
+                                                <li>Kiadvány típus: Válassza ki milyen típusú kiadványt keres.</li>
+                                                <li>Termék keresés: A keresés gombra kattintva táblázatunk az Ön által
+                                                    megszűrt találatok jeleníti meg.</li>
+                                            </ul>
+                                            </p>
+                                            <div class="text-center">
+                                                <img src="faq-kepek/utojelkatalogus_kereso.png" class="faq-kepek py-3"
+                                                    alt="">
+                                            </div>
+
+                                            <p class="pt-3">
+                                                Az Ön által megadott paraméterek alapján rendeszerünk leszűkíti a
+                                                dokumentumok listáját. A listán láhthatja, hogy
+                                                melyik gyártóhoz tartozik, milyen nyelven elérhető, mi a pontos címe és
+                                                hogy mi a kiadvány típusa. A katalógust
+                                                a táblázat sor végén látható letöltés gombra kattintva mentheti saját
+                                                készülékén.
+                                            </p>
+
+                                            <div class="text-center">
+                                                <img src="faq-kepek/utojelkatalogus_tabla.png" class="faq-kepek py-3"
+                                                    alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div><!-- End -->
 
 
                                 <!-- Accordion item 2 -->
@@ -1198,160 +1464,23 @@
                                             <button type="button" data-toggle="collapse"
                                                 data-target="#collapseVideoTeszt" aria-expanded="false"
                                                 aria-controls="collapseVideoTeszt"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Teszt
-                                                videó útmutatás</button>
+                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">A
+                                                kosaram a kijelentkezés után is elmentésre kerül?</button>
                                         </h2>
                                     </div>
                                     <div id="collapseVideoTeszt" aria-labelledby="headingVideoTeszt"
                                         data-parent="#accordionExample" class="collapse">
                                         <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                            <p>Igen, de a kosárban lévő termékek nem kerülnek lefoglalásra, ezáltal
+                                                időközben eladhatók.
+                                                Ebből kifolyólag előfordulhat, hogy már nem állnak rendelkezésre mikor
+                                                újra visszatér az oldalra.
                                             </p>
-
-                                            <div class="py-5">
-                                                <video src="video/Teszt_02.mp4" autoplay loop
-                                                    class="video-utmutatas"></video>
-                                            </div>
-
-
                                         </div>
                                     </div>
                                 </div><!-- End -->
 
-                                <!-- Accordion item 3 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingThree" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok bankkártyával fizetni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseThree" aria-labelledby="headingThree"
-                                        data-parent="#accordionExample" class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
 
-                                <!-- Accordion item 4 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFour"
-                                                aria-expanded="false" aria-controls="collapseFour"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Milyen
-                                                típusú kárytát tudok fizetni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFour" aria-labelledby="headingFour" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 5 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFive" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseFive"
-                                                aria-expanded="false" aria-controls="collapseFive"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Tudok
-                                                hitelre vásárolni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <div class="card shadow mb-3">
-                                    <div id="headingOne" class="card-header bg-white shadow-sm">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#"
-                                                aria-expanded="false" aria-controls="collapseOne"
-                                                class="btn btn-link text-dark font-weight-bold collapsible-link">Hogyan
-                                                tudok vásárolni?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="" aria-labelledby="headingOne" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 6 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingFour" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSix"
-                                                aria-expanded="false" aria-controls="collapseSix"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Részletfizetésre
-                                                van mód?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample"
-                                        class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
-
-                                <!-- Accordion item 7 -->
-                                <div class="card shadow mb-3">
-                                    <div id="headingSeven" class="card-header bg-white border-0">
-                                        <h2 class="mb-0">
-                                            <button type="button" data-toggle="collapse" data-target="#collapseSeven"
-                                                aria-expanded="false" aria-controls="collapseSeven"
-                                                class="btn btn-link collapsed text-dark font-weight-bold collapsible-link">Hogy
-                                                működik a banki előreutalás?</button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseSeven" aria-labelledby="headingSeven"
-                                        data-parent="#accordionExample" class="collapse">
-                                        <div class="card-body p-5">
-                                            <p class="font-weight-light m-0">Anim pariatur cliche reprehenderit, enim
-                                                eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-                                                officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a
-                                                bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
-                                        </div>
-                                    </div>
-                                </div><!-- End -->
 
                             </div><!-- End -->
                         </div>
@@ -1402,11 +1531,11 @@
 
 <script>
     function kinyitniOdamenni() {
-        var element = document.getElementById("pills-payment");
+        var element = document.getElementById("pills-delivery");
         element.classList.add("show", "active");
         var element = document.getElementById("myDropdown");
         element.classList.remove("show");
-        var element = document.getElementById("collapseMinta");
+        var element = document.getElementById("collapseSzallitasDij");
         element.classList.add("show");
 
     }

@@ -179,6 +179,7 @@ body {
     text-decoration: none;
     display: block;
     border-radius: 5px;
+    font-weight: 500;
   }
   
   .dropdown-content a:hover {
@@ -290,7 +291,7 @@ body {
 }
 
 .list-category-img {
-    width: 20px;
+    width: 30px;
     margin-right: 1rem;
 }
 
@@ -339,4 +340,12 @@ body {
 
 .faq-kepek {
     max-width: 100%;
+}
+
+.faq-delviery-comp {
+    max-width: 128px;
+}
+
+.no-underline {
+    text-decoration: none !important;
 }
