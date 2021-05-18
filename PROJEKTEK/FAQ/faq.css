@@ -66,6 +66,16 @@ body {
     border-radius: 6px !important; 
 }
 
+@media (max-width: 991.98px) {
+    .card-faq-topic {
+    margin-bottom: 3rem;
+}}
+@media (max-width: 575.98px) {
+    .nav-link.col-lg-2.col-md-3.col-sm-3.col-xs-12.card-faq-topic.py-4.mx-2 {
+    margin: 0 3rem !important;
+    margin-bottom: 3rem !important;
+}}
+
 .card-faq-topic .box-part {
     z-index: -1;
 }
@@ -171,6 +181,35 @@ body {
     border: none !important;
     overflow-y: hidden !important;
   }
+  @media (max-width: 1199.98px) { 
+      .dropdown-content {
+        min-width: 48.1rem;
+  }}
+  @media (max-width: 989.98px) { 
+      .dropdown-content {       
+        min-width: 35.6rem;
+  }}
+
+  @media (max-width: 766.98px) {
+.dropdown-content {
+    min-width: 31.9rem;
+    left: -1.85rem;
+}}
+
+
+  @media (max-width: 575.98px) {
+.dropdown-content {
+    min-width: 33.9rem;
+    left: -2rem;
+}}
+
+
+@media (max-width: 375.98px) {
+    .dropdown-content {
+        min-width: 21.55rem;
+        left: -1rem;
+    }}
+  
   
   .dropdown-content a {
     color: #EC7623;
