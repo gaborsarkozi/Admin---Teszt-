@@ -26157,16 +26157,8 @@ article {
 
 .cim-laptop-bemutatas {
   text-align: left !important;
-}
-
-.cim-laptop-bemutatas-span::before {
-  content: "";
-  border-radius: 5px;
-  width: 8px;
-  height: 55px;
-  background: #ec7623;
-  position: absolute;
-  bottom: 0px;
+  color: #EC7623;
+  font-weight: 600;
 }
 
 .alcim-laptop-bemutata {
