@@ -599,18 +599,18 @@ h3.widget__heading.h6 {
   .timeline__event:before {
     content: "";
     position: absolute;
-    background: #f6a4ec;
+/*     background: #f6a4ec; */
     top: 50%;
     transform: translateY(-50%);
     display: block;
     width: 86px;
-    border-radius: 50px;
+  /*   border-radius: 50px; */
     height: 87px;
-    background-image: url(https://image.flaticon.com/icons/png/512/3612/3612651.png);
+    background-image: url(/PROJEKTEK/Bemutatkozas/step_01_a.svg);
     background-size: cover;
     left: -160px;
     pointer-events: none;
-    box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%), 0 -12px 36px -8px rgb(0 0 0 / 3%);
+   /*  box-shadow: 0 30px 60px -12px rgb(50 50 93 / 25%), 0 18px 36px -18px rgb(0 0 0 / 30%), 0 -12px 36px -8px rgb(0 0 0 / 3%); */
   }
   
   .timeline__event--type2:before {
@@ -683,6 +683,26 @@ h3.widget__heading.h6 {
     transform: translateX(5px);
 }
 
+  .link-bemutatkozas-orange{
+    background: linear-gradient(90deg, rgb(231, 138, 66) 50%, rgba(236,118,35,1) 100%);
+    padding: .75rem 1.25rem;
+    color: white;
+    margin-bottom: 1.25rem;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+    text-align: left;
+    transition: 0.4s cubic-bezier(.22,.93,.23,.93);
+}
+
+.link-bemutatkozas-orange:hover {
+    text-decoration: none;
+    background: white !important;
+    color: #211061;
+    transform: translateX(5px);
+}
+
 .gallery-wrap {
     display: flex;
     flex-direction: row;
@@ -740,7 +760,7 @@ h3.widget__heading.h6 {
 }
 
 .full-width-bg-par {
-    width: 50%;
+    width: 65%;
 }
 
 .full-width-bg-content {
@@ -756,4 +776,33 @@ h3.widget__heading.h6 {
     background-size: cover; 
     background-position-y: 14%;
     background-position-x: 10%;
+}
+
+
+/* Előnyök kártyák */ 
+
+.card-elony {
+  border-radius: 10px !important;
+  border: none !important;
+  box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 15%);
+  transition: 1s ease-in-out;
+}
+
+.card-elony:hover {
+transform: translateY(-10px);
+}
+
+.card-elony .img-fluid {
+  border-radius: 9px 9px 0 0 ;
+}
+
+.card-elony .card-footer{
+  border-radius: 0 0 9px 9px !important;
+  border: none;
+}
+
+
+.card-elony .card-body {
+  color: #211061 !important;
+  text-align: left;
 }
