@@ -8,6 +8,7 @@
   <title>aruhaz.bearing.hu - Alert</title>
 
   <link rel="stylesheet" href="alert.css">
+<!--   <link rel="stylesheet" href="/PROJEKTEK/Pénztár oldal/penztar.css"> -->
   <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
 
   <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -80,13 +81,192 @@
           Kosár 2 <span class="cart-item-number">(23 termék)</span>
         </button>
 
-        <button type="button" class="btn btn-bearing mx-5 opacity-new-btn" data-toggle="modal" data-target="#modalNewCart">
+        <button type="button" class="btn btn-bearing mx-5 opacity-new-btn" data-toggle="modal"
+          data-target="#modalNewCart">
           Új kosár hozzáadása <i class="icon-plus"></i>
         </button>
 
       </div>
     </div>
   </div>
+  <div class="container link-popover d-flex justify-content-center align-items-center" style="height: 50vh;">
+    <div class="row">
+      <div class="col-12 tool-tip">
+        <a class="d-inline popver-link tool-tip__icon"  data-toggle="modal" data-target="#modalDeleteCart" href="modalDeleteCart">6205 
+        </a>
+        <p class="tool-tip__info">
+          <span class="info szallitas-kedvezmeny-kosar">
+            <a href="#" class="text-white">6205-TVH </a> <br>
+            <a href="#" class="text-white">6205 </a> <br>
+            <a href="#" class="text-white">6205-TB </a> <br>
+            <a href="#" class="text-white">6205 ETN9 </a> <br>
+          </span>
+      </p>
+        <i class="icon-settings"></i>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container link-popover d-flex justify-content-center align-items-center py-5" style="height: 100vh;">
+ <div class="container card shadow d-flex justify-content-center mt-5 p-5">
+
+     <!-- nav options -->
+     <div class="tab-header">
+       <div class="row">
+         <div class="col-2"><h3 class="p-3 d-flex d-inline">6304 2R S</h3></div>
+         <div class="col-10">      
+           <ul class="nav nav-pills shadow-sm" id="pills-tab" role="tablist">
+          <li class="nav-item"> <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Előtag</a> </li>
+          <li class="nav-item"> <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Utójel</a> </li>
+      </ul>
+    </div>
+       </div>
+      
+ <!-- content -->
+    </div>
+     
+     <div class="tab-content py-5" id="pills-tabContent p-3">
+         <!-- 1st card -->
+         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+             <form class="search"> <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search..." /> </form>
+             <div class="tbl text-sm">
+              <table class="tbl__table border-bottom border-2" aria-label="Table Example">
+                <thead class="tbl__header border-bottom border-2">
+                  <tr class="tbl__row">
+                    <th class="tbl__cell text-left" scope="col">
+                      <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Name</span>
+                    </th>
+            
+                    <th class="tbl__cell text-left" scope="col">
+                      <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Job</span>
+                    </th>
+            
+                    <th class="tbl__cell text-left" scope="col">
+                      <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Country</span>
+                    </th>
+                    
+                    <th class="tbl__cell text-left" scope="col">
+                      <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Status</span>
+                    </th>
+            
+                    <th class="tbl__cell text-right" scope="col">
+                      <span class="text-xs text-uppercase letter-spacing-lg font-semibold">Salary</span>
+                    </th>
+                  </tr>
+                </thead>
+                
+                <tbody class="tbl__body">
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex items-center">
+                        <figure class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs">
+                          <img class="block width-100% height-100% object-cover" src="../../../app/assets/img/table-v2-img-1.jpg" alt="Author picture">
+                        </figure>
+            
+                        <div class="line-height-xs">
+                          <p class="margin-bottom-xxxxs">Olivia Saturday</p>
+                          <p class="color-contrast-medium">olivia@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+            
+                    <td class="tbl__cell" role="cell">Senior Data Engineer</td>
+            
+                    <td class="tbl__cell" role="cell">USA</td>
+            
+                    <td class="tbl__cell" role="cell">
+                      <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                    </td>
+            
+                    <td class="tbl__cell text-right" role="cell">$320,000</td>
+                  </tr>
+            
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex items-center">
+                        <figure class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs">
+                          <img class="block width-100% height-100% object-cover" src="../../../app/assets/img/table-v2-img-2.jpg" alt="Author picture">
+                        </figure>
+            
+                        <div class="line-height-xs">
+                          <p class="margin-bottom-xxxxs">David Smith</p>
+                          <p class="color-contrast-medium">david@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+            
+                    <td class="tbl__cell" role="cell">Strategic Finance Manager</td>
+            
+                    <td class="tbl__cell" role="cell">United Kingdom</td>
+            
+                    <td class="tbl__cell" role="cell">
+                      <span class="inline-block text-sm bg-error bg-opacity-20% color-error-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Offline</span>
+                    </td>
+            
+                    <td class="tbl__cell text-right" role="cell">$180,000</td>
+                  </tr>
+            
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex items-center">
+                        <figure class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs">
+                          <img class="block width-100% height-100% object-cover" src="../../../app/assets/img/table-v2-img-3.jpg" alt="Author picture">
+                        </figure>
+            
+                        <div class="line-height-xs">
+                          <p class="margin-bottom-xxxxs">Marta Rossi</p>
+                          <p class="color-contrast-medium">marta@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+            
+                    <td class="tbl__cell" role="cell">Lead Software Engineer</td>
+            
+                    <td class="tbl__cell" role="cell">Italy</td>
+            
+                    <td class="tbl__cell" role="cell">
+                      <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                    </td>
+            
+                    <td class="tbl__cell text-right" role="cell">$250,000</td>
+                  </tr>
+            
+                  <tr class="tbl__row">
+                    <td class="tbl__cell" role="cell">
+                      <div class="flex items-center">
+                        <figure class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs">
+                          <img class="block width-100% height-100% object-cover" src="../../../app/assets/img/table-v2-img-4.jpg" alt="Author picture">
+                        </figure>
+            
+                        <div class="line-height-xs">
+                          <p class="margin-bottom-xxxxs">Paul Brown</p>
+                          <p class="color-contrast-medium">paul@email.com</p>
+                        </div>
+                      </div>
+                    </td>
+            
+                    <td class="tbl__cell" role="cell">Digital Content Writer</td>
+            
+                    <td class="tbl__cell" role="cell">USA</td>
+            
+                    <td class="tbl__cell" role="cell">
+                      <span class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap">Online</span>
+                    </td>
+            
+                    <td class="tbl__cell text-right" role="cell">$145,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+         </div> <!-- 2nd card -->
+         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+             <div class="form-group addinfo"> <label for="exampleFormControlTextarea1">Write additional info.</label> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> </div>
+         </div>
+     </div>
+ </div>
+  </div>
+
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

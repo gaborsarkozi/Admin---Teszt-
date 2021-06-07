@@ -202,3 +202,165 @@ h3, .h3 {
     border-radius: 5px;
     border: 4px solid #f8f9fa;
 }
+
+.popver-link {
+color: #211061;
+text-decoration: none;
+font-size: 20px;
+}
+.popver-link:hover {
+    color: #211061;
+    }
+.icon-settings{
+    color: #EC7623;
+    font-size: 20px;
+}
+
+.tool-tip .tool-tip__info {
+    top: 15px !important;
+    left: 20px !important;
+}
+
+.tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
+    left: 26px !important;
+    transform: rotateZ(90deg);
+    top: 4px !important;
+}
+
+.info.szallitas-kedvezmeny-kosar a:hover {
+    color: #fff !important;
+}
+
+
+.card {
+    max-width: 25rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem
+}
+
+
+.nav-link {
+    color: rgb(110, 110, 110);
+    font-weight: 500
+}
+
+.nav-pills .nav-link.active {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.tab-content {
+    padding-bottom: 1.3rem
+}
+
+.nav-item a {
+    min-width: 3rem !important;
+}
+
+.form-control {
+    background-color: rgb(241, 243, 247);
+    border: none
+}
+
+span {
+    margin-left: 0.5rem;
+    padding: 1px 10px;
+    color: white;
+    background-color: rgb(143, 143, 143);
+    border-radius: 4px;
+    font-weight: 600
+}
+
+.third {
+    padding: 0 1.5rem 0 1.5rem
+}
+
+label {
+    font-weight: 500;
+    color: rgb(104, 104, 104)
+}
+
+.btn-success {
+    float: right
+}
+
+.form-control:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 7px rgba(0, 0, 0, 0.2)
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: ""
+}
+
+ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding-inline-start: 0
+}
+
+.search {
+    padding: 0 1rem 0 1rem
+}
+
+.ccontent li .wrapp {
+    padding: 0.3rem 1rem 0.001rem 1rem
+}
+
+.ccontent li .wrapp div {
+    font-weight: 600
+}
+
+.ccontent li .wrapp p {
+    font-weight: 360
+}
+
+.ccontent li:hover {
+    background-color: rgb(117, 93, 255);
+    color: white
+}
+
+.addinfo {
+    padding: 0 1rem
+}
+
+
+/* -------------------------------- File#: _1_table-v2 Title: Table v2 Descr: Basic table template Usage: codyhouse.co/license -------------------------------- */
+.tbl {
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tbl::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+.tbl::-webkit-scrollbar-track {
+    background-color: var(--color-contrast-lower);
+}
+.tbl::-webkit-scrollbar-thumb {
+    background-color: alpha(var(--color-contrast-higher), 0.9);
+    border-radius: 50em;
+}
+.tbl::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-contrast-higher);
+}
+.tbl__table {
+    width: 100%;
+}
+.tbl__body .tbl__row {
+    border-bottom: 1px solid alpha(var(--color-contrast-higher), 0.15);
+    transition: 0.2s;
+}
+.tbl__body .tbl__row:hover {
+    background-color: alpha(var(--color-contrast-higher), 0.025);
+}
+.tbl__body .tbl__row:last-child {
+    border-bottom: none;
+}

@@ -2266,19 +2266,6 @@ h3 i {
   bottom: 0;
 } */
 
-.alert{
-  display: none;
-  position: fixed !important;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-.alert-02{
-  display: none;
-  position: fixed !important;
-  bottom: 2rem;
-  right: 2rem;
-}
 
 .alert.fade.show {
   z-index: 9999;
@@ -2712,4 +2699,72 @@ td i.icon-close.icon-merete {
   -ms-flex-align: center;
   padding: 3px 10px;
   align-items: center;
+}
+
+.modal {
+  top: 25% !important;
+}
+
+.alert {
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  background-color: white;
+  border-left: 7px solid #EC7623 !important;
+}
+
+.gomb-hely {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.alert-heading {
+  color: #EC7623 !important;
+  font-weight: 700;
+}
+
+.alert-body-p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #211061;
+  padding-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn {
+  background-color: #fff !important;
+}
+.btn-bearing {
+  border: 1px solid transparent;
+  border-radius: 4px !important;
+  color: #211061 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  margin: 0 4px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
+
+.alert-body-p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #211061;
+  padding-bottom: 2.5rem;
 }
