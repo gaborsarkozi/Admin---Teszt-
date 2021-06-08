@@ -8,7 +8,7 @@
     <title>aruhaz.bearing.hu - Interchange</title>
 
     <link rel="stylesheet" href="interchange_extra.css">
-    
+
 
     <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -49,2115 +49,315 @@
 
     <div class="main-content">
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="col-12 container p-0">
-              <div class="alert py-4" role="alert">
-                <div class="d-flex row">
-                  <div class="col-2 px-0 d-flex align-items-center justify-content-center ">
-                    <img src="danger_orange.svg" class="danger-alert" alt="">
-                  </div>
-                  <div class="col-10 pb-4">
-                    <h5 class="alert-heading">Figyelem!</h5>
-                    <p class="mb-0 alert-body-p pb-0">A táblázat megtekintéséhez adja meg a jelszót!</p>
-                    <div class="form-group py-3">
-                      <input type="password" required class="form-control form-control-alternative">
-                    </div>
-                  </div>
-                  <div class="gomb-hely">
-                    <a href="#" class="btn btn-bearing" data-toggle="collapse" href="#collapseExample" role="button"
-     aria-controls="collapseExample" class="collapsed" data-dismiss="modal" onclick="listaMutato();">Megtekintés<i class="icon-check ml-2"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-</div>
-        <div class="container pt-5">
+        <!-- Modal -->
+        <div class="container px-0" id="eloutojelkatalogus">
             <div class="row">
-                <div class="col-xl-12" id="megrendelesekLista">
+                <div class="col-xl-12 fixed-height">
                     <div class="card shadow">
                         <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
                             <div class="row align-items-center">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-6 d-flex align-items-end">  <h3 class="mb-0">
-                                            <a  data-toggle="modal" data-target="#exampleModal" href="#exampleModal" role="button"
-                                                aria-expanded="false" aria-controls="collapseExample" class="collapsed"> 
-                                                <h3 class="toltes-korok-szoveg px-3">Keresett cikk NTN / SNR gyártmányú
-                                                    helyettesítője <img src="helyettesito_pipa_pipa.svg"
-                                                        class="ml-3 helyettesito-pipa" alt=""> 
-                                                    </h3>
-                                            </a>
-                                            <!-- <a data-toggle="collapse" href="#collapseExample" role="button"
-                                                aria-expanded="false" aria-controls="collapseExample" class="collapsed">
-                                                <h3 class="toltes-korok-szoveg px-3">Keresett cikk NTN / SNR gyártmányú
-                                                    helyettesítője <img src="helyettesito_pipa_pipa.svg"
-                                                        class="ml-3 helyettesito-pipa" alt=""> 
-                                                    </h3>
-                                            </a> -->
-                                        </h3></div>
-<!--                                         <div class="col-6 d-flex align-items-end justify-content-end">
-                                          <div>
-                                            <button type="button" class="btn btn-bearing mx-5" data-toggle="modal" data-target="#exampleModal">
-                                                Lista megtekintése
-                                                <i class="icon-plus ml-2"></i>
-                                              </button>
+                                        <div class="col-12 d-flex align-items-end">
+                                            <div class="col-3">
+                                                <h3 class="toltes-korok-szoveg px-3">6304 2 RS <i
+                                                        class="icon-settings ml-2"> </i>
+                                                </h3>
+                                            </div>
+                                            <div class="col-9">
+                                                <ul class="nav nav-pills shadow-sm" id="pills-tab" role="tablist">
+                                                    <li class="nav-item"> <a class="nav-link m-0 active"
+                                                            id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                                            role="tab" aria-controls="pills-home"
+                                                            aria-selected="true">Előtag <i class="ml-2 
+                                                icon-arrow-left"></i></a> </li>
+                                                    <li class="nav-item"> <a class="nav-link m-0" id="pills-profile-tab"
+                                                            data-toggle="pill" href="#pills-profile" role="tab"
+                                                            aria-controls="pills-profile"
+                                                            aria-selected="false">Utójel <i class="ml-2 
+                                                            icon-arrow-right"></i></a> </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        </div> -->
-                                      </div>
-                                  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collapse" id="collapseExample">
-                            <div class="col-xl-12">
-                                <div class="card-body">
-                                    <div class="col-lg-12 p-0 shadow mb-5">
-                                        <!-- Shopping cart table -->
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-magnifier-add"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Keresett
-                                                                            gyártó és jelölése</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-cursor-move"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Méret</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-refresh"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Helyettesítő
-                                                                            gyártó és jelölése</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-printer"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Leírás</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-crop"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Műszaki
-                                                                            rajz</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <img src="square 1.svg" style="width: 17px;"
-                                                                        class="tool-tip__icon" alt="">
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Egyezés</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-social-dropbox"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Raktárak</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-tag"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Kedvezményes
-                                                                            ár (HUF)</span>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-grid"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Készlet
-                                                                            (db)</span>
-                                                                    </p>
-                                                                </div>
-
-                                                            </div>
-                                                        </th>
-                                                        <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                            <div class="py-2">
-                                                                <div class="tool-tip">
-                                                                    <i class="tool-tip__icon icon-basket"></i>
-                                                                    <p class="tool-tip__info">
-                                                                        <span
-                                                                            class="info szallitas-kedvezmeny-kosar">Kosár</span>
-                                                                    </p>
-                                                                </div>
-
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bow-wrap-body">
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                    <tr class="box-tr">
-
-                                                        <td class="border-0 align-middle">FAG / 6205
-                                                        </td>
-                                                        <td class="border-0 align-middle">25X52X15
-                                                        </td>
-
-                                                        <td class="border-0 align-middle">
-                                                            <a href="">INA / 6205</a>
-                                                        </td>
-
-
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <a href=""><i
-                                                                        class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i>
-                                                                </a>
-
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <a onclick="return false;" class="preview"
-                                                                href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"
-                                                                title=""><img class="mediaspic" style="width: 30px;"
-                                                                    src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                                        </td>
-                                                        <td class="border-0 align-middle allapot-td">
-
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <img src="square 1.svg"
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount"
-                                                                    alt="">
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle" style="font-size: 15px;">
-                                                            KRX016<br>BP-001<br>DB-001</td>
-                                                        <td class="border-0 align-middle">
-                                                            <div class="tool-tip tool-tip-price-discount">
-                                                                <i
-                                                                    class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                                <p class="tool-tip__info tool-tip__info-price-discount">
-                                                                    <span
-                                                                        class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                                        listaár: 68222 (-10%)</span>
-                                                                </p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="border-0 align-middle">62
-                                                        </td>
-
-
-                                                        <td style="white-space:nowrap" class="border-0 align-middle">
-                                                            <input type="number" class="span1" value="2">
-                                                            <input type="hidden" name="orders.id:records"
-                                                                value="01-07-01-00002">
-                                                            <input type="hidden" name="orders.price:records"
-                                                                id="p_01-07-01-00002" value="9814.44">
-                                                            <label class="piece_label">DB</label>
-                                                            <button class="add_cart_button"
-                                                                onclick="addToCart('01-07-01-00002', 'HUF')"><i
-                                                                    class="icon-basket icon-merete"></i></button>
-                                                        </td>
-
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <!-- End -->
                                     </div>
-                                    <div class="row d-flex justify-content-end">
+                                </div>
+                            </div>
+                            <div class="container">
 
+                                <div class="tab-content py-5" id="pills-tabContent p-3">
+                                    <!-- 1st card -->
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
+                                        <div class="row">
+                                            <div class="col-lg-12 mx-auto">
+                                                <div class="card rounded shadow">
+                                                    <div class="card-body bg-white rounded">
+                                                        <div class="table-responsive">
+                                                            <table id="example" style="width:100%" class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th width="10%">
+                                                                            <input type="text"
+                                                                                class="form-control form-control-alternative"
+                                                                                placeholder="Keresés">
+                                                                        </th>
+                                                                        <th><select id="gyartoT" class="form-control"
+                                                                                name="gyarto:ignore_empty">
+                                                                                <option value="">gyarto</option>
+                                                                                <option> -</option>
+                                                                                <option>-</option>
+                                                                                <option>BEX</option>
+                                                                                <option>BLT</option>
+                                                                                <option selected="selected">CX</option>
+                                                                                <option>EZO</option>
+                                                                                <option>FAG</option>
+                                                                                <option>FBJ</option>
+                                                                                <option>HIWIN</option>
+                                                                                <option>INA</option>
+                                                                                <option>KOK</option>
+                                                                                <option>KOYO</option>
+                                                                                <option>LDI</option>
+                                                                                <option>MLX</option>
+                                                                                <option>MYT</option>
+                                                                                <option>NACHI</option>
+                                                                                <option>NIS</option>
+                                                                                <option>NIS/Y</option>
+                                                                                <option>NKS</option>
+                                                                                <option>NSK</option>
+                                                                                <option>NSK </option>
+                                                                                <option>NTN</option>
+                                                                                <option>RHP</option>
+                                                                                <option>SAMICK</option>
+                                                                                <option>SKF</option>
+                                                                                <option>SNR</option>
+                                                                                <option>THP</option>
+                                                                                <option>TIM</option>
+                                                                            </select></th>
+                                                                        <th><select id="productLine"
+                                                                                class="form-control"
+                                                                                name="productLine:ignore_empty">
+                                                                                <option value="" selected="selected">
+                                                                                    Típus</option>
+                                                                                <option> Hengergörgős csapágyak</option>
+                                                                                <option> Hordógörgős csapágyak</option>
+                                                                                <option> Tűgörgős csapágyak</option>
+                                                                                <option>Axiális golyóscsapágyak</option>
+                                                                                <option>Beálló golyóscsapágyak</option>
+                                                                                <option>Csapágyegységek</option>
+                                                                                <option>Egyéb termékek</option>
+                                                                                <option>Ferde hatásvonalú golyóscsapágy
+                                                                                </option>
+                                                                                <option>Ferde hatásvonalú
+                                                                                    golyóscsapágyak</option>
+                                                                                <option>Golyóscsapágyak</option>
+                                                                                <option>Golyóspersely</option>
+                                                                                <option>Görgős csapágyak</option>
+                                                                                <option>Hengergörgős csapágyak</option>
+                                                                                <option>Hengergörgős csapágyak </option>
+                                                                                <option>Hordógörgős csapágyak</option>
+                                                                                <option>Hordógörgős csapágyak </option>
+                                                                                <option>Kúpgörgős csapágyak</option>
+                                                                                <option>Lineáris csapágyak</option>
+                                                                                <option>Mélyhornyú golyóscsapágyak
+                                                                                </option>
+                                                                                <option>Precíziós ferde hatásvonalú
+                                                                                    golyóscsapágyak</option>
+                                                                                <option>Precíziós ferdehatásvonalú
+                                                                                    golyóscsapágyak</option>
+                                                                                <option>Profilsín vezetés</option>
+                                                                                <option>Profilsínvezetés</option>
+                                                                                <option>Tűgörgős csapágyak</option>
+                                                                                <option>Y-csapágyak</option>
+                                                                            </select></th>
+                                                                        <th width="20%"><select id="characteristic"
+                                                                                class="form-control">
+                                                                                <option value="" selected="selected">
+                                                                                    Amire vonatkozik</option>
+                                                                                <option>Anyag</option>
+                                                                                <option>Egyéb</option>
+                                                                                <option>Komponens</option>
+                                                                                <option>Méret</option>
+                                                                                <option>Szerkezet</option>
 
-                                        <div class="pagination-box">
-                                            <ul class="pagination" role="menubar" aria-label="Pagination">
-                                                <li class="pag-icon"><a rel="nofollow"
-                                                        href="https://aruhaz.bearing.hu/search?termekekNG=kr&amp;meta_type=BearingCsapagy&amp;raktaron:int=1&amp;b_start:int=0&amp;logsearch=on"><i
-                                                            class="icon-control-rewind"></i></a>
-                                                </li>
-
-                                                <li class="pag-icon"><a rel="nofollow" href=""><i id="icon-control-play"
-                                                            class="icon-control-play"></i></a></li>
-                                                <li><a class="current" rel="nofollow" href="">1</a></li>
-                                                <li><a rel="nofollow"
-                                                        href="https://aruhaz.bearing.hu/search?termekekNG=kr&amp;meta_type=BearingCsapagy&amp;raktaron:int=1&amp;b_start:int=10&amp;logsearch=on">2</a>
-                                                </li>
-                                                <li><a rel="nofollow"
-                                                        href="https://aruhaz.bearing.hu/search?termekekNG=kr&amp;meta_type=BearingCsapagy&amp;raktaron:int=1&amp;b_start:int=10&amp;logsearch=on">3</a>
-                                                </li>
-                                                <li class="pag-icon"><a rel="nofollow"
-                                                        href="https://aruhaz.bearing.hu/search?termekekNG=kr&amp;meta_type=BearingCsapagy&amp;raktaron:int=1&amp;b_start:int=10&amp;logsearch=on"><i
-                                                            class="icon-control-play"></i></a>
-                                                </li>
-
-                                                <li class="pag-icon"><a rel="nofollow"
-                                                        href="https://aruhaz.bearing.hu/search?termekekNG=kr&amp;meta_type=BearingCsapagy&amp;raktaron:int=1&amp;b_start:int=11&amp;logsearch=on"><i
-                                                            class="icon-control-forward"></i></a>
-                                                </li>
-
-                                            </ul>
+                                                                            </select></th>
+                                                                        <th>Mit jelent?</th>
+                                                                        <th  width="20%">Kép</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>K</td>
+                                                                        <td>-<br>BEX<br>CX<br>FBJ<br>INA<br>NIS/Y<br>NTN<br>SKF<br>TIM
+                                                                        </td>
+                                                                        <td>Görgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">tűgörgős kosár jelölése
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>R</td>
+                                                                        <td>-<br>BEX<br>CX<br>FBJ<br>NIS/Y</td>
+                                                                        <td>Golyóscsapágyak</td>
+                                                                        <td>Méret</td>
+                                                                        <td class="lowercase">miniatűr golyóscsapágy
+                                                                            collos méretekkel </td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LM</td>
+                                                                        <td>-<br>BEX<br>CX<br>MLX<br>NIS/Y<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Kúpgörgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">könnyű-közepes széria
+                                                                            (teherbírás) (light medium)</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>M</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>MLX<br>NTN<br>SKF<br>TIM
+                                                                        </td>
+                                                                        <td>Kúpgörgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">közepes széria
+                                                                            (teherbírás) (medium)</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>L</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>MLX<br>NIS/Y<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Kúpgörgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">könnyű széria (teherbírás)
+                                                                            (light)</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>HM</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>MLX<br>NIS/Y<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Kúpgörgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">nehéz-közepes széria
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>NU</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>NACHI<br>NIS/Y<br>NSK<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Görgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">az NU hengergörgős csapágy
+                                                                            kialakítás a külső gyűrűn két fix
+                                                                            vezetővállal rendelkezik, a belső gyűrűn
+                                                                            nincs vezetőváll</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>NJ</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>NACHI<br>NIS/Y<br>NSK<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Görgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">az NJ hengergörgős csapágy
+                                                                            változatnál a külső gyűrűnek két fix válla
+                                                                            van, a belső gyűrűnek pedig egy. Ez lehetővé
+                                                                            teszi a tengely axiális irányú vezetését is.
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>N</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>NACHI<br>NIS/Y<br>NSK<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Görgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">az N típusú hengergörgős
+                                                                            csapágy esetén a belső gyűrűnek van két
+                                                                            vezetőválla, a külső gyűrűnek pedig egy
+                                                                            sincs</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>NUP</td>
+                                                                        <td>-<br>BEX<br>CX<br>FAG<br>FBJ<br>NIS/Y<br>NSK<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Görgős csapágyak</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">Az NUP típusú hengergörgős
+                                                                            csapágyaknak két fix vezetőválla van a külső
+                                                                            gyűrűn és egy a belső gyűrűn. Továbbá a
+                                                                            belső gyűrűhöz egy levehető vezetőtárcsa is
+                                                                            tartozik. Az NUP típus vezető csapágyként
+                                                                            kerül beépítésre, mivel a tengelyt mindkét
+                                                                            irányban axiálisan megvezeti</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>J</td>
+                                                                        <td>-<br>BEX<br>CX<br>FBJ<br>KOYO<br>MLX<br>NIS/Y<br>NSK<br>NTN<br>SKF<br>SNR<br>TIM
+                                                                        </td>
+                                                                        <td>Kúpgörgős csapágyak</td>
+                                                                        <td>Méret</td>
+                                                                        <td class="lowercase">önmagában, vagy más
+                                                                            előjellel együtt használatos, metrikus belső
+                                                                            átmérő, és/vagy külső átmérő</td>
+                                                                            <td>
+                                                                                <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                            </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LM</td>
+                                                                        <td>BLT<br>CX<br>FBJ<br>HIWIN<br>MYT<br>NTN<br>SAMICK
+                                                                        </td>
+                                                                        <td>Golyóspersely</td>
+                                                                        <td>Szerkezet</td>
+                                                                        <td class="lowercase">JIS szabványú széria,
+                                                                            egyéb utójel nélkül zárt golyós persely
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="https://www.qbcbearings.com/BuyRFQ/RFQimages/Ball_Bearings/BESRIX_draw.gif" alt="">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-
-
+                                    </div> <!-- 2nd card -->
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab">
+                                        <div class="form-group addinfo"> <label for="exampleFormControlTextarea1">Write
+                                                additional info.</label> <textarea class="form-control"
+                                                id="exampleFormControlTextarea1" rows="3"></textarea> </div>
                                     </div>
-
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <!-- <div class="table-title">
-                <h3 class="toltes-korok-szoveg px-3">Keresett cikk NTN / SNR gyártmányú helyettesítője <img src="helyettesito_pipa_pipa.svg" class="ml-3 helyettesito-pipa" alt=""></h3>
-            </div> -->
-            <!-- <div class="col-xl-12 py-5" id="helyettesitoTermekTabla">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <div class="col-lg-12 p-0 shadow mb-5">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-magnifier-add"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Keresett
-                                                                gyártó és jelölése</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-cursor-move"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Méret</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-refresh"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Helyettesítő
-                                                                gyártó és jelölése</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-printer"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Leírás</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-crop"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Műszaki
-                                                                rajz</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                           
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <img src="square 1.svg" style="width: 17px;" class="tool-tip__icon" alt="">
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Egyezés</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-social-dropbox"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Raktárak</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-tag"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Kedvezményes
-                                                                ár (HUF)</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-grid"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Készlet
-                                                                (db)</span>
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="border-0 bg-light" style="width: 15%;">
-                                                <div class="py-2">
-                                                    <div class="tool-tip">
-                                                        <i class="tool-tip__icon icon-basket"></i>
-                                                        <p class="tool-tip__info">
-                                                            <span class="info szallitas-kedvezmeny-kosar">Kosár</span>
-                                                        </p>
-                                                    </div>
-
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="bow-wrap-body sidebar-box">
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr">
-                                            <td class="read-more" id="showFadePart">
-                                                <a href="#" onclick="tobbetLatni()" class="button ">Többet szeretnék látni!</a>
-                                            </td>
-                                            
-                                        </tr>
-                                        <tr class="box-tr d-none" id="showTr01">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr d-none" id="showTr02">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr d-none" id="showTr03">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                        <tr class="box-tr d-none" id="showTr04">
-
-                                            <td class="border-0 align-middle">FAG / 6205
-                                            </td>
-                                            <td class="border-0 align-middle">25X52X15
-                                            </td>
-
-                                            <td class="border-0 align-middle">
-                                                <a href="">INA / 6205</a>
-                                            </td>
-                                            
-                                            
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <a href=""><i class="tool-tip__icon tool-tip__icon-price-discount icon-printer"></i> </a>
-                                                    
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <a onclick="return false;" class="preview" href="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif" title=""><img class="mediaspic" style="width: 30px;" src="https://interchange.schaeffler.com/interchange_documents/image/schaeffler/135215_aah_ind.gif"></a>
-                                            </td>
-                                            <td class="border-0 align-middle allapot-td">
-
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <img src="square 1.svg" class="tool-tip__icon tool-tip__icon-price-discount" alt="">
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Csereszabatos</span>
-                                                    </p>
-                                                </div>
-                                                </td>
-                                            <td class="border-0 align-middle" style="font-size: 15px;">
-                                                KRX016<br>BP-001<br>DB-001</td>
-                                            <td class="border-0 align-middle">
-                                                <div class="tool-tip tool-tip-price-discount">
-                                                    <i class="tool-tip__icon tool-tip__icon-price-discount">62020</i>
-                                                    <p class="tool-tip__info tool-tip__info-price-discount">
-                                                        <span class="info szallitas-kedvezmeny-kosar">Eredeti
-                                                            listaár: 68222 (-10%)</span>
-                                                    </p>
-                                                </div>
-                                            </td>
-                                            <td class="border-0 align-middle">62
-                                            </td>
-
-
-                                            <td style="white-space:nowrap" class="border-0 align-middle">
-                                                <input type="number" class="span1" value="2">
-                                                <input type="hidden" name="orders.id:records" value="01-07-01-00002">
-                                                <input type="hidden" name="orders.price:records" id="p_01-07-01-00002" value="9814.44">
-                                                <label class="piece_label">DB</label>
-                                                <button class="add_cart_button" onclick="addToCart('01-07-01-00002', 'HUF')"><i class="icon-basket icon-merete"></i></button>
-                                            </td>
-
-                                        </tr>
-                                   </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-xl-12" id="megrendelesekLista">
-                    <div class="card shadow">
-                        <div class="card-header bg-white border-0 card-header-megrendelesek">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                    <h3 class="mb-0">
-                                        <a  data-toggle="modal" data-target="#exampleModal" href="#exampleModal" role="button"
-                                            aria-expanded="false" aria-controls="collapseExample" class="collapsed"> 
-                                            <h3 class="toltes-korok-szoveg px-3">Keresett cikk INA / FAG gyártmányú helyettesítője<img src="helyettesito_pipa_pipa.svg"
-                                                    class="ml-3 helyettesito-pipa" alt=""> 
-                                                </h3>
-                                        </a>
-                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -2166,56 +366,10 @@
                 </div>
             </div>
         </div>
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-xl-12" id="megrendelesekLista">
-                    <div class="card shadow">
-                        <div class="card-header bg-white border-0 card-header-megrendelesek">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                    <h3 class="mb-0">
-                                        <a  data-toggle="modal" data-target="#exampleModal" href="#exampleModal" role="button"
-                                            aria-expanded="false" aria-controls="collapseExample" class="collapsed"> 
-                                            <h3 class="toltes-korok-szoveg px-3">EU Standard árszint statisztika<img src="helyettesito_pipa_pipa.svg"
-                                                    class="ml-3 helyettesito-pipa" alt=""> 
-                                                </h3>
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col-xl-12" id="megrendelesekLista">
-                    <div class="card shadow">
-                        <div class="card-header bg-white border-0 card-header-megrendelesek">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                    <h3 class="mb-0">
-                                        <a  data-toggle="modal" data-target="#exampleModal" href="#exampleModal" role="button"
-                                            aria-expanded="false" aria-controls="collapseExample" class="collapsed"> 
-                                            <h3 class="toltes-korok-szoveg px-3">Magyar piaci árszint statisztika<img src="helyettesito_pipa_pipa.svg"
-                                                    class="ml-3 helyettesito-pipa" alt=""> 
-                                                </h3>
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 
-  
-  <div class="modal fade show" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel">
 
-  </div>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
