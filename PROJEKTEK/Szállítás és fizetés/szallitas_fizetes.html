@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aruhaz.bearing.hu - Szállítás és fizetés</title>
+
+    <link rel="stylesheet" href="szallitas_fizetes.css">
+    <!--     <link rel="stylesheet" href="/PROJEKTEK/Keresotablazat/keresőtablazat/aruhaz.bearing.hu/style.css"> -->
+
+    <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="szallitas_fizetes.js"></script>
+</head>
+
+<body class="body-szallitas-fizetes">
+    <div class="main-content">
+        <div class="container pt-5 mt-5">
+
+            <div class="row">
+                <div class="col-xl-12" id="fizetesEsSzallitas">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <h3 class="mb-0">
+                                        <i
+                                            class="icon-plane fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Szállítási
+                                        és fizetési módok
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse show" id="collapseExample">
+                            <div class="card-body">
+                                <form>
+                                    <div class="pl-lg-4">
+                                        <div class="row">
+                                            <div class="col-12 pb-5">
+                                                <p class="leiras-szallitas-desc">
+                                                    Bizonyára Önnek is fontos, hogy a szükséges csapágyak, kenőanyagok,
+                                                    tömítésidőben és megfelelő minőségben célba érjenek. Ennek érdekében
+                                                    fejlesztjük a BEX nagykereskedelmi hálózatát, melynek
+                                                    segítségével minőségi golyóscsapágyak, gördülőcsapágyak, sikló
+                                                    csapágyak, lineáris csapágyak vagy akár komplex csapágyipari
+                                                    eszközök elégedett birtokosa lehet!
+                                                    Szállítási és fizetési módjainkat úgy alakítottuk, hogy a fogyasztói
+                                                    igényeket széles körben kiszolgáljuk.
+                                                </p>
+                                                <p class="leiras-szallitas-desc">
+                                                    Ismerje meg milyen lehetőségeket kínál Önnek a Bearing Kft!
+                                                </p>
+                                                <div class="col-8 py-3 mt-5 figyelem-buborek">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-2 px-0 d-flex align-items-center justify-content-center">
+                                                            <img src="danger_orange.svg" class="danger-alert" alt="">
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <div class="popup-title mb-2">Figyelem!</div>
+                                                            <div class="popup-content">A világjárvány okozta helyzet
+                                                                kisebb eltéréseket idézhet elő a szállításban!</div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-xl-12">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="mb-0">
+                                        <i class="icon-wallet fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Fizetési módok
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-12 mb-5">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img class="fizetes-szallitas-kepek-svg" src="utalas.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li>Banki előreutalással történő fizetés esetén a megrendelt áru kézbesítését a
+                                            rendelés ellenértékének bankszámlánkra történő megérkezését követően
+                                            indítjuk el.</li>
+                                        <br>
+                                        <li>Átutaláshoz szükséges adatok:
+                                            <p class="mt-3">
+                                                <div class="row">
+                                                    <div class="col-4">MKB Bank Zrt.</div>
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">Kedvezményezett neve:</div>
+                                                    <div class="col-8">Bearing Kft.</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">Adószám:</div>
+                                                    <div class="col-8">1083988-2-13</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">Cégjegyzékszám:</div>
+                                                    <div class="col-8">13-09-088-995</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">Bankkód:</div>
+                                                    <div class="col-8">MKB</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">Bankszámla:</div>
+                                                    <div class="col-8">10300002-20351638-00003285</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-4">SWIFT-KÓD:</div>
+                                                    <div class="col-8"> MKKBHUHB</div>
+                                                </div>
+                                            </p>
+
+                                        </li>
+
+                                        <li>Kérjük, hogy az átutalásnál a megjegyzés rovatban tüntesse fel a rendelés
+                                            azonosítóját, amelyet a rendelést visszaigazoló e-mailben talál.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-5">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img class="fizetes-szallitas-kepek" src="mastercard.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li> <strong>Fizetés:</strong> A biztonságos fizetési felületen adjuk meg a kért
+                                            adatokat: kártyaszám, kártyán szereplő név, lejárat (hónap/év), CVC-kód (ez
+                                            a kártyánk hátoldalán található, az aláírás mellett).</li>
+                                        <li> <strong>Azonosítás:</strong> A Mastercard ID Check biztosítja, hogy csak a
+                                            kártya használatára jogosult személy, vagyis a kártyabirtokos hitelesíthesse
+                                            a tranzakciót. A jóváhagyás során egy sms-ben kapott kódot kell beírnunk a
+                                            kereskedő oldalán, vagy a bankunk mobilalkalmazásában az ujjlenyomatunkkal,
+                                            illetve arcmásunkkal hagyhatjuk jóvá a tranzakciót.</li>
+                                        <li> <strong>Jóváhagyás:</strong> Az azonosításkor megadott kódot vagy az
+                                            ujjlenyomat/arcmás azonosságát bankunk ellenőrzi, és sikeres azonosítás után
+                                            elbírálja a fizetést. A vásárlás befejezése után a rendszer átirányít minket
+                                            a webáruház oldalára, ahol visszaigazolást kapunk a vásárlás sikerességéről,
+                                            amit általában e-mailben is megerősítenek.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-5">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img class="fizetes-szallitas-kepek" src="paypal.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li>Bankkártyával való fizetéshez válassza a PayPal fizetési módot. Ha nincs
+                                            bankkártyája, de a
+                                            bankszámlájáról szeretne utalni, azt is megteheti PayPal segítségével.</li>
+                                        <li>Amikor PayPal-lal szeretné kifizetni a rendelését, a fizetés utolsó
+                                            fázisában átirányítjuk a
+                                            PayPal oldalára.</li>
+                                    </ul>
+
+                                    <p class="bg-megjegyzes-fizetes-szallitas p-3"><strong>Tipp:</strong> PayPal fiók
+                                        létrehozásakor
+                                        bankkártya adatait nyugodtan megadhatja, hiszen a bankkártyához tartozó számlát
+                                        a PayPal csak
+                                        akkor terheli meg, ha PayPal egyenlege nem nyújt fedezetet a kívánt termék
+                                        kifizetéséhez.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 mb-5">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img class="fizetes-szallitas-kepek" src="logo_uni.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li>Banki előreutalással történő fizetés esetén a megrendelt áru kézbesítését a
+                                            rendelés ellenértékének bankszámlánkra történő megérkezését követően
+                                            indítjuk el.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 last-card">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img style="max-width: 90%;" src="cards.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li>Webáruházunkban az alábbi kártyatípusok elfogadottak:
+                                            <p class="mt-3">
+                                                VISA dombornyomott kártya <br>
+                                                VISA Electron kártyák, (a kártyát kibocsátó bank döntésétől függően)
+                                                <br>
+                                                V PAY kártyák, (a kártyát kibocsátó bank döntésétől függően) <br>
+                                                MasterCard dombornyomott kártya <br>
+                                                MasterCard Electronic kártyák, (a kártyát kibocsátó bank döntésétől
+                                                függően) <br>
+                                                Maestro kártyák (a kártyát kibocsátó bank döntésétől függően) <br>
+                                                Kizárólag internetes fizetésre kibocsátott kártyák <br>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-xl-12">
+                    <div class="card shadow">
+                        <div class="card-header bg-white border-0 card-header-megrendelesek">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="mb-0">
+                                        <i class="icon-plane fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Szállítási díjak Magyarország területén belül
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-lg-12 mb-5">
+                    <div class="card shadow mb-3 szallitas-fizetes-card">
+                        <div class="card-body py-0 px-5">
+                            <div class="row my-3">
+                                <div class="col-sm-4 p-3 justify-content-center align-items-center text-center d-flex">
+                                    <img class="fizetes-szallitas-kepek-svg" src="ingyenes_szall.svg">
+                                </div>
+
+                                <div class="col-sm-8 p-3">
+                                    <ul class="pipak">
+                                        <li><strong>Ingyens szállítás:</strong>
+                                        A 20.000 Ft értékhatárt meghaladó rendelések esetén, amennyiben a fizetés módja előreutalással történik, a szállítás ingyenes. 
+                                        </li>
+                                        <li>Minden más esetben a szállítás összege a kiszállító cég díjszabása alapján módosul. 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
