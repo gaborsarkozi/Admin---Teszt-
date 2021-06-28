@@ -118,3 +118,18 @@ $(".card-header .close").click(function() {
     $(".popout-2 .btn").removeClass("active");
 });
 
+
+function kovetkezoLepesFv() {
+    var element = document.getElementById("kovetkezoLepes");
+    element.classList.remove("d-none");
+    var element = document.getElementById("elozoLepes");
+    element.classList.add("d-none");
+  }
+
+
+  function visszaLepesFv() {
+    var element = document.getElementById("elozoLepes");
+    element.classList.remove("d-none");
+    var element = document.getElementById("kovetkezoLepes");
+    element.classList.add("d-none");
+  }

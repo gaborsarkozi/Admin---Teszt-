@@ -1,0 +1,75 @@
+<tr id="headerth">
+    <th class="hide-mobil"><i class="icon-settings"><span class="tooltip">Keresett gyártó és jelölés</span></i></th>
+    <th class="hide-tablet" tal:condition="see_meret"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i>
+    </th>
+    <th><i class="icon-wrench"><span class="tooltip">Helyettesítő gyártó és jelölés</span></i></th>
+    <th class="hide-tablet"></th>
+    <th class="hide-tablet"></th>
+    <th><i class="icon-bulb"><span class="tooltip">Egyezés</span></i></th>
+    <th class="justify-right-content" tal:content="string:Ár (${currency})"><i class="icon-list"><span
+                class="tooltip">Listaár (HUF/DB)</span></i></th>
+    <th class="hide-tablet justify-right-content" tal:condition="not:noraktar"><i class="icon-grid"><span
+                class="tooltip">Készlet</span></i></th>
+    <th><i class="icon-basket"><span class="tooltip">Kosár</span></i></th>
+</tr>
+
+
+
+<tr id="headerth">
+    <th class="hide-mobil">Keresett gyártó és<br>
+        jelölés</th>
+    <th tal:condition="see_meret" class="hide-tablet">Méret</th>
+    <th>Helyettesítő gyártó és<br>
+        jelölés</th>
+    <th class="hide-tablet">Leírás</th>
+    <th class="hide-tablet">Kép, Műszaki rajz</th>
+    <th>Egyezés</th>
+    <th tal:content="string:Ár (${currency})">Ár (HUF)>Ár</th>
+    <th tal:condition="not:noraktar" class="hide-tablet">Készlet</th>
+    <th>Kosár</th>
+</tr>
+
+
+
+<tr id="headerth">
+    <th class="hide-tablet"><i class="icon-picture"><span class="tooltip">Termékfotó</span></i></th>
+    <th class="sorton" data-sorton="title"><i class="icon-settings"><span class="tooltip">Termék</span></i></th>
+    <th class="hide-tablet sorton" data-sorton="gyarto"><i class="icon-wrench"><span class="tooltip">Gyártó</span></i>
+    </th>
+
+    <th class="hide-mobil"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i></th>
+    <th class="hide-mobil"><i class="icon-shuffle"><span class="tooltip">Helyettesítő termékek</span></i></th>
+
+    <th class="hide-tablet sorton justify-right-content" data-sorton="kisker_ar"><i class="icon-list"><span
+                class="tooltip">Listaár (HUF/DB)</span></i></th>
+    <th class="hide-tablet justify-right-content"><i class="icon-percent">%<span class="tooltip">Online kedvezmény %-os
+                formában</span></i></th>
+    <th class="justify-right-content sorton" data-sorton="kisker_ar"><i class="icon-tag"><span
+                class="tooltip">Kedvezményes ár (HUF)</span></i></th>
+    <th class="hide-tablet sorton justify-right-content" data-sorton="keszlet"><i class="icon-grid"><span
+                class="tooltip">Készlet</span></i></th>
+    <th class="hide-tablet"><i class="icon-social-dropbox"><span class="tooltip">Raktárak</span></i></th>
+    <th><i class="icon-basket"><span class="tooltip">Kosár</span></i></th>
+</tr>
+
+
+
+
+
+
+
+
+
+
+<!--///////////////////// SNR INTERCHANGE ///////////////////////-->
+
+<tr id="headerth">
+    <th class="hide-mobil"><i class="icon-settings"><span class="tooltip">Keresett gyártó és jelölés</span></i></th>
+    <th class="hide-tablet" tal:condition="see_meret"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i></th>
+    <th><i class="icon-wrench"><span class="tooltip">Helyettesítő gyártó és jelölés</span></i></th>
+    <th><i class="icon-book-open"><span class="tooltip">Leírás</span></i></th>
+    <th><i class="icon-doc"><span class="tooltip">Technikai információ</span></i></th>
+    <th class="justify-right-content"><i class="icon-list"><span class="tooltip">Listaár (HUF/DB)</span></i></th>
+    <th class="hide-tablet justify-right-content" tal:condition="not:noraktar"><i class="icon-grid"><span class="tooltip">Készlet</span></i></th>
+    <th><i class="icon-basket"><span class="tooltip">Kosár</span></i></th>
+</tr>

@@ -2915,3 +2915,18 @@ li:before {
 .last-card {
   margin-bottom: 10rem !important;
 }
+
+.h-sok{
+  padding: 25vh 0;
+}
+
+.kosar-page {
+  background: url(../image/kosar_bg.png) no-repeat top center;
+}
+.gyartoikatalogus-page {
+  background: url(../image/gyartoikatalogus_bg.png) no-repeat top center;
+}
+
+.bonus-page {
+  background: url(../image/bonus_bg.png) no-repeat top center;
+}

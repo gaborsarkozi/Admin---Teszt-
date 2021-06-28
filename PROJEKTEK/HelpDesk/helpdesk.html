@@ -1,121 +1,158 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>aruhaz.bearing.hu - HelpDesk</title>
-    
-        <link rel="stylesheet" href="helpdesk.css">
 
-    
-        <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    
-        <!-- Icons -->
-        <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
-        <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    
-        <!-- Argon CSS -->
-        <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
-    
-        <!-- Core -->
-        <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
-        <link rel="stylesheet" type="text/css"
-            href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
-    
-        <!-- Argon JS -->
-        <script src="/assets/js/argon.min.js"></script>
-    
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    
-        <!-- Hierarchy Select CSS -->
-        <link rel="stylesheet" href="css/hierarchy-select.min.css">
-    
-        <!-- Hierarchy Select Js -->
-        <script src="js/hierarchy-select.min.js"></script>
-    
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
-        <!-- Popper Js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    
-        <!-- Bootstrap JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
-    
-        <!-- Bootstrap CSS -->
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
-    
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aruhaz.bearing.hu - HelpDesk</title>
+
+    <link rel="stylesheet" href="helpdesk.css">
+
+
+    <link href="/assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="/assets/vendor/nucleo/css/nucleo.min.css" rel="stylesheet">
+    <link href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Argon CSS -->
+    <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Hierarchy Select CSS -->
+    <link rel="stylesheet" href="css/hierarchy-select.min.css">
+
+    <!-- Hierarchy Select Js -->
+    <script src="js/hierarchy-select.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
-      
 
-<div class="popout">
-    <img src="logo_small.png" class="btn" alt="">
-    <div class="card mt-2 mb-3 panel">
-        <div class="card-header p-4">
-            <button type="button" class="close" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            <h5>Üdvözöljük!</h5>
-            <p class="mb-4">Milyen témában érdeklődik?</p>
-        </div>
-        <div class="card-body pb-0 text-center px-4">
-            <div class="row justify-content-center">
-                <div class="col-11">             
-                    <a href="#" class="d-block">
-                        <div class="row">
-                            <div class="col-10"><i class="icon-notebook mr-2"></i> Gyakori Kérdések</div>
-                            <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i></div>
-                        </div>  
-                    </a>
-                    <a href="#" class="d-block">
-                        <div class="row">
-                            <div class="col-10"><i class="icon-book-open mr-2"></i>Utójel katalógus</div>
-                            <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i></div>
-                        </div>  
-                    </a>
-                    <a href="#" class="d-block">
-                        <div class="row">
-                            <div class="col-10"> <i class="icon-present mr-2"></i>Bónusz oldal</div>
-                            <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i></div>
-                        </div>  
-                    </a>
+
+    <div class="popout">
+        <img src="logo_small.png" class="btn" alt="">
+        <div id="elozoLepes" class="card mt-2 mb-3 panel">
+            <div class="card-header p-4">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5>Üdvözöljük!</h5>
+                <p class="mb-4">Milyen témában érdeklődik?</p>
+            </div>
+            <div class="card-body pb-0 text-center px-4">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <a href="#" class="d-block">
+                            <div class="row">
+                                <div class="col-10"><i class="icon-notebook mr-2"></i> Gyakori Kérdések</div>
+                                <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" onclick="kovetkezoLepesFv()" class="d-block">
+                            <div class="row">
+                                <div class="col-10"><i class="icon-book-open mr-2"></i>Utójel katalógus</div>
+                                <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" onclick="kovetkezoLepesFv()" class="d-block">
+                            <div class="row">
+                                <div class="col-10"> <i class="icon-present mr-2"></i>Bónusz oldal</div>
+                                <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
 
                         <div class="card-body-also">
                             <p class="mb-2">Nem talál valamit?</p>
                             <p>Vegye fel velünk a kapcsolatot, kollégáink válaszolnak!</p>
                             <a href="#" class="d-block kapcsolat-a text-center">Elérhetőségek</span>
-                             </a>
+                            </a>
                         </div>
+                    </div>
                 </div>
-            </div>
-         
 
+
+            </div>
         </div>
-      </div>
-  </div>
+        <div id="kovetkezoLepes" class="card mt-2 mb-3 panel d-none">
+            <div class="card-header p-4">
+                <button type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5>Hoppá!</h5>
+                <p class="mb-4">A menüpontnak a megtekintése csak regisztrált felhasználóink számára lehetséges.</p>
+            </div>
+            <div id="elozoLepes" class="card-body pb-0 text-center px-4">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <a href="#" class="d-block">
+                            <div class="row">
+                                <div class="col-10"><i class="icon-user-follow mr-2"></i>Regisztrálok</div>
+                                <div class="col-2"><i class="fa fa-long-arrow-right arrow1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" onclick="visszaLepesFv()" class="d-block">
+                            <div class="row">
+                                <div class="col-10"><i class="icon-logout mr-2"></i>Visszalépés</div>
+                                <div class="col-2"><i class="fa fa-long-arrow-left arrow1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 </body>
 <script src="helpdesk.js"></script>
+
 </html>

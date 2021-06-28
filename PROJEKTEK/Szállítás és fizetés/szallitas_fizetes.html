@@ -48,6 +48,44 @@
 </head>
 
 <body class="body-szallitas-fizetes">
+    <div class="h-sok">
+        <span class="h-sok">
+            <iframe class="h-sok" src="https://stock.picard.de/ltech/v8/#/en/picardblue/" style="height: 500vh;
+            width: 100%; border: none"></iframe>
+            <script>// Bind the event handler to catch the data
+                window.addEventListener("message", receiveEvent, false);
+                // Your custom catch function
+                function receiveEvent(event) {
+                    LineatoSDK.getStockData(event).then((data) => {
+                        // Add your individual implementation code
+                        // For this demonstration, we will just output the data in an alert message
+                        alert('received Data: ' + JSON.stringify(data));
+                    })
+                        .catch((error) => {
+                            console.log(error.message);
+                        });
+                }
+                class LineatoSDK {
+                    static bindEventHandler(receiver) {
+                        window.addEventListener("message", receiver, false);
+                    }
+                    static getStockData(event) {
+                        return new Promise((resolve, reject) => {
+                            if (event.origin.includes('https://stock.picard.de') === false) return; // Check for the correct origin
+                            if (event.data === null) return; // Data exists?
+                            var receivedData = event.data;
+                            if (receivedData !== undefined) {
+                                resolve(receivedData);
+                            } else {
+                                reject()
+                            }
+                        });
+                    }
+                }
+            </script>
+        </span>
+    </div>
+
     <div class="main-content">
         <div class="container pt-5 mt-5">
 
@@ -114,7 +152,9 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h3 class="mb-0">
-                                        <i class="icon-wallet fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Fizetési módok
+                                        <i
+                                            class="icon-wallet fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Fizetési
+                                        módok
                                     </h3>
                                 </div>
                             </div>
@@ -139,34 +179,34 @@
                                         <br>
                                         <li>Átutaláshoz szükséges adatok:
                                             <p class="mt-3">
-                                                <div class="row">
-                                                    <div class="col-4">MKB Bank Zrt.</div>
-                                                    
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">Kedvezményezett neve:</div>
-                                                    <div class="col-8">Bearing Kft.</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">Adószám:</div>
-                                                    <div class="col-8">1083988-2-13</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">Cégjegyzékszám:</div>
-                                                    <div class="col-8">13-09-088-995</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">Bankkód:</div>
-                                                    <div class="col-8">MKB</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">Bankszámla:</div>
-                                                    <div class="col-8">10300002-20351638-00003285</div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-4">SWIFT-KÓD:</div>
-                                                    <div class="col-8"> MKKBHUHB</div>
-                                                </div>
+                                            <div class="row">
+                                                <div class="col-4">MKB Bank Zrt.</div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">Kedvezményezett neve:</div>
+                                                <div class="col-8">Bearing Kft.</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">Adószám:</div>
+                                                <div class="col-8">1083988-2-13</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">Cégjegyzékszám:</div>
+                                                <div class="col-8">13-09-088-995</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">Bankkód:</div>
+                                                <div class="col-8">MKB</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">Bankszámla:</div>
+                                                <div class="col-8">10300002-20351638-00003285</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4">SWIFT-KÓD:</div>
+                                                <div class="col-8"> MKKBHUHB</div>
+                                            </div>
                                             </p>
 
                                         </li>
@@ -296,7 +336,9 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h3 class="mb-0">
-                                        <i class="icon-plane fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Szállítási díjak Magyarország területén belül
+                                        <i
+                                            class="icon-plane fa-2x p-4 rounded bg-light rounded-circle mr-3"></i>Szállítási
+                                        díjak Magyarország területén belül
                                 </div>
                             </div>
                         </div>
@@ -315,9 +357,11 @@
                                 <div class="col-sm-8 p-3">
                                     <ul class="pipak">
                                         <li><strong>Ingyens szállítás:</strong>
-                                        A 20.000 Ft értékhatárt meghaladó rendelések esetén, amennyiben a fizetés módja előreutalással történik, a szállítás ingyenes. 
+                                            A 20.000 Ft értékhatárt meghaladó rendelések esetén, amennyiben a fizetés
+                                            módja előreutalással történik, a szállítás ingyenes.
                                         </li>
-                                        <li>Minden más esetben a szállítás összege a kiszállító cég díjszabása alapján módosul. 
+                                        <li>Minden más esetben a szállítás összege a kiszállító cég díjszabása alapján
+                                            módosul.
                                         </li>
                                     </ul>
                                 </div>
@@ -328,6 +372,54 @@
             </div>
         </div>
     </div>
+
+
+
+    <ul>        
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Hétfő:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+            </div> 
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Kedd:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+            </div> 
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Szerda:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+            </div> 
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Csütörtök:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+            </div>   
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Péntek:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">8:00 - 16:00</div>
+            </div> 
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Szombat:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">zárva</div>
+            </div> 
+        </li>
+        <li>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-sm-5">Vasárnap:</div>
+                <div class="col-xl-6 col-lg-7 col-sm-7">zárva</div>
+            </div> 
+        </li>
+      </ul>
+
 </body>
 
 </html>
