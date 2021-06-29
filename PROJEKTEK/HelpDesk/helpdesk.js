@@ -124,6 +124,8 @@ function kovetkezoLepesFv() {
     element.classList.remove("d-none");
     var element = document.getElementById("elozoLepes");
     element.classList.add("d-none");
+    var element = document.getElementById("logoBearingMan");
+    element.setAttribute("src", "logo_small_alert.png");
   }
 
 
@@ -132,4 +134,6 @@ function kovetkezoLepesFv() {
     element.classList.remove("d-none");
     var element = document.getElementById("kovetkezoLepes");
     element.classList.add("d-none");
+    var element = document.getElementById("logoBearingMan");
+    element.setAttribute("src", "logo_small_succes.png");
   }
