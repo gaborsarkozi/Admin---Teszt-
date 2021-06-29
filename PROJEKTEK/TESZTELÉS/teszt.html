@@ -73,3 +73,25 @@
     <th class="hide-tablet justify-right-content" tal:condition="not:noraktar"><i class="icon-grid"><span class="tooltip">Készlet</span></i></th>
     <th><i class="icon-basket"><span class="tooltip">Kosár</span></i></th>
 </tr>
+
+
+<!--///////////////////// ROLLING INTERCHANGE ///////////////////////-->
+
+<tr id="headerth">
+    <th><i class="icon-picture"><span class="tooltip">Termékfotó</span></i></th>
+    <th><i class="icon-settings"><span class="tooltip">Termék és jelölése</span></i></th>
+    <th><i class="icon-wrench"><span class="tooltip">Gyártó</span></i></th>
+    <th tal:condition="see_meret"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i></th>
+    <th class="justify-right-content" tal:condition="not:noraktar"><i class="icon-grid"><span class="tooltip">Készlet</span></i></th>
+    <th class="justify-right-content"><i class="icon-list"><span class="tooltip">Listaár (HUF/DB)</span></i></th>
+    <th class="justify-right-content "><i class="icon-tag"><span class="tooltip">Kedvezményes ár (HUF)</span></i></th>
+</tr>
+
+<!--///////////////////// KUGELLAGER INTERCHANGE ///////////////////////-->
+
+<tr id="headerth">
+    <th><i class="icon-picture"><span class="tooltip">Termékfotó</span></i></th>
+    <th><i class="icon-settings"><span class="tooltip">Termék és jelölése</span></i></th>
+    <th tal:condition="see_meret"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i></th>
+    <th class="justify-right-content"><i class="icon-list"><span class="tooltip">Listaár (HUF/DB)</span></i></th>
+</tr>
