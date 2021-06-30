@@ -357,7 +357,7 @@
               </a>
             </div>
 
-      
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <a href="/PROJEKTEK/Gyártói katalógus/gyartoikatalogus.html">
                 <div class="card card-statistic-1 shadow task-done">
@@ -460,7 +460,7 @@
                 </div>
               </a>
             </div>
-            
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
               <a href="/PROJEKTEK/Árverések/arveres.html">
                 <div class="card card-statistic-1 shadow">
@@ -551,6 +551,7 @@
           </div>
         </section>
 
+
         <section class="py-5">
           <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-sm-12 ">
@@ -560,32 +561,32 @@
                 </div>
                 <div class="card-body d-flex justify-content-center">
 
-                    <div class="pieID pie">
-              
-                    </div>
-                    <ul class="pieID legend align-self-center">
-                      <li>
-                        <em>Elkészült már </em>
-                        <span>27</span>
-                        <em>(89%) oldal</em>
-                      </li>
-                      <li>
-                        <em>Hátravan még </em>
-                        <span>4</span>
-                        <em>(11%) oldal</em>
-                      </li>
-                    </ul>
+                  <div class="pieID pie">
+
+                  </div>
+                  <ul class="pieID legend align-self-center">
+                    <li>
+                      <em>Elkészült már </em>
+                      <span>27</span>
+                      <em>(89%) oldal</em>
+                    </li>
+                    <li>
+                      <em>Hátravan még </em>
+                      <span>4</span>
+                      <em>(11%) oldal</em>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            
+
 
           </div>
         </section>
 
         <section>
           <section>
-            
+
           </section>
         </section>
       </div>
@@ -616,164 +617,177 @@
 
 <style>
   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
- @keyframes bake-pie {
-	 from {
-		 transform: rotate(0deg) translate3d(0, 0, 0);
-	}
-}
 
- main {
-	 width: 400px;
-	 margin: 30px auto;
-}
+  @keyframes bake-pie {
+    from {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
 
- .pieID {
-	 display: inline-block;
-	 vertical-align: top;
-}
- .pie {
-	 height: 200px;
-	 width: 200px;
-	 position: relative;
-	 margin: 0 30px 30px 0;
-}
- .pie::before {
-	 content: "";
-	 display: block;
-	 position: absolute;
-	 z-index: 1;
-	 width: 100px;
-	 height: 100px;
-	 background: rgb(255, 255, 255);
-	 border-radius: 50%;
-	 top: 50px;
-	 left: 50px;
-}
- .pie::after {
-	 content: "";
-	 display: block;
-	 width: 120px;
-	 height: 2px;
-	 background: rgba(0, 0, 0, 0.1);
-	 border-radius: 50%;
-	 box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
-	 margin: 220px auto;
-}
- .slice {
-	 position: absolute;
-	 width: 200px;
-	 height: 200px;
-	 clip: rect(0px, 200px, 200px, 100px);
-	 animation: bake-pie 2s;
-}
- .slice span {
-	 display: block;
-	 position: absolute;
-	 top: 0;
-	 left: 0;
-	 background-color: black;
-	 width: 200px;
-	 height: 200px;
-	 border-radius: 50%;
-	 clip: rect(0px, 200px, 200px, 100px);
-}
- .legend {
-	 list-style-type: none;
-	 padding: 0;
-	 margin: 0;
-	 background: #fff;
-	 padding: 15px;
-	 font-size: 13px;
-}
+  main {
+    width: 400px;
+    margin: 30px auto;
+  }
 
-p, ul:not(.list-unstyled), ol {
+  .pieID {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .pie {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 0 30px 30px 0;
+  }
+
+  .pie::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+  }
+
+  .pie::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: 220px auto;
+  }
+
+  .slice {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip: rect(0px, 200px, 200px, 100px);
+    animation: bake-pie 2s;
+  }
+
+  .slice span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 100px);
+  }
+
+  .legend {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  p,
+  ul:not(.list-unstyled),
+  ol {
     line-height: inherit;
-}
- .legend li {
-	 /* width: 110px; */
-	 height: 1.25em;
-	 margin-bottom: 1em;
-	 padding-left: 0.5em;
-	 border-left: 1.25em solid black;
-}
- .legend em {
-	 font-style: normal;
-   font-weight: 600;
+  }
+
+  .legend li {
+    /* width: 110px; */
+    height: 1.25em;
+    margin-bottom: 1em;
+    padding-left: 0.5em;
+    border-left: 1.25em solid black;
+  }
+
+  .legend em {
+    font-style: normal;
+    font-weight: 600;
     font-size: 13px;
     letter-spacing: .5px;
-}
- .legend span {
-	 /* float: right; */
-   font-weight: 600;
+  }
+
+  .legend span {
+    /* float: right; */
+    font-weight: 600;
     font-size: 13px;
     letter-spacing: .5px;
-}
- footer {
-	 position: fixed;
-	 bottom: 0;
-	 right: 0;
-	 font-size: 13px;
-	 background: #ddd;
-	 padding: 5px 10px;
-	 margin: 5px;
-}
- 
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 13px;
+    background: #ddd;
+    padding: 5px 10px;
+    margin: 5px;
+  }
 </style>
 
 <script>function sliceSize(dataNum, dataTotal) {
-  return (dataNum / dataTotal) * 360;
-}
-function addSlice(sliceSize, pieElement, offset, sliceID, color) {
-  $(pieElement).append("<div class='slice "+sliceID+"'><span></span></div>");
-  var offset = offset - 1;
-  var sizeRotation = -179 + sliceSize;
-  $("."+sliceID).css({
-    "transform": "rotate("+offset+"deg) translate3d(0,0,0)"
-  });
-  $("."+sliceID+" span").css({
-    "transform"       : "rotate("+sizeRotation+"deg) translate3d(0,0,0)",
-    "background-color": color
-  });
-}
-function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
-  var sliceID = "s"+dataCount+"-"+sliceCount;
-  var maxSize = 179;
-  if(sliceSize<=maxSize) {
-    addSlice(sliceSize, pieElement, offset, sliceID, color);
-  } else {
-    addSlice(maxSize, pieElement, offset, sliceID, color);
-    iterateSlices(sliceSize-maxSize, pieElement, offset+maxSize, dataCount, sliceCount+1, color);
+    return (dataNum / dataTotal) * 360;
   }
-}
-function createPie(dataElement, pieElement) {
-  var listData = [];
-  $(dataElement+" span").each(function() {
-    listData.push(Number($(this).html()));
-  });
-  var listTotal = 0;
-  for(var i=0; i<listData.length; i++) {
-    listTotal += listData[i];
+  function addSlice(sliceSize, pieElement, offset, sliceID, color) {
+    $(pieElement).append("<div class='slice " + sliceID + "'><span></span></div>");
+    var offset = offset - 1;
+    var sizeRotation = -179 + sliceSize;
+    $("." + sliceID).css({
+      "transform": "rotate(" + offset + "deg) translate3d(0,0,0)"
+    });
+    $("." + sliceID + " span").css({
+      "transform": "rotate(" + sizeRotation + "deg) translate3d(0,0,0)",
+      "background-color": color
+    });
   }
-  var offset = 0;
-  var color = [
-    "#47c363", 
-    "#ec7623", 
-    "orange", 
-    "tomato", 
-    "crimson", 
-    "purple", 
-    "turquoise", 
-    "forestgreen", 
-    "navy", 
-    "gray"
-  ];
-  for(var i=0; i<listData.length; i++) {
-    var size = sliceSize(listData[i], listTotal);
-    iterateSlices(size, pieElement, offset, i, 0, color[i]);
-    $(dataElement+" li:nth-child("+(i+1)+")").css("border-color", color[i]);
-    offset += size;
+  function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
+    var sliceID = "s" + dataCount + "-" + sliceCount;
+    var maxSize = 179;
+    if (sliceSize <= maxSize) {
+      addSlice(sliceSize, pieElement, offset, sliceID, color);
+    } else {
+      addSlice(maxSize, pieElement, offset, sliceID, color);
+      iterateSlices(sliceSize - maxSize, pieElement, offset + maxSize, dataCount, sliceCount + 1, color);
+    }
   }
-}
-createPie(".pieID.legend", ".pieID.pie");
+  function createPie(dataElement, pieElement) {
+    var listData = [];
+    $(dataElement + " span").each(function () {
+      listData.push(Number($(this).html()));
+    });
+    var listTotal = 0;
+    for (var i = 0; i < listData.length; i++) {
+      listTotal += listData[i];
+    }
+    var offset = 0;
+    var color = [
+      "#47c363",
+      "#ec7623",
+      "orange",
+      "tomato",
+      "crimson",
+      "purple",
+      "turquoise",
+      "forestgreen",
+      "navy",
+      "gray"
+    ];
+    for (var i = 0; i < listData.length; i++) {
+      var size = sliceSize(listData[i], listTotal);
+      iterateSlices(size, pieElement, offset, i, 0, color[i]);
+      $(dataElement + " li:nth-child(" + (i + 1) + ")").css("border-color", color[i]);
+      offset += size;
+    }
+  }
+  createPie(".pieID.legend", ".pieID.pie");
 </script>
+
 </html>
