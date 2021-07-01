@@ -2853,3 +2853,59 @@ outline: none;
 a:focus + .tool-tip-reverse .tool-tip__info {
   display: inline-block;
 }
+
+p.tool-tip__info.tool-tip__info-price-discount.elso-tooltip {
+  left: -191px;
+}
+
+.tool-tip__info.tool-tip__info-price-discount.elso-tooltip:before, .tool-tip__info.tool-tip__info-price-discount.elso-tooltip:after {
+  content: "";
+  position: absolute;
+  left: 177px;
+  top: 20px;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eb7624;
+  transform: rotate(180deg) !important;
+}
+p.tool-tip__info.tool-tip__info-price-discount.masodik-tooltip {
+  left: -348px;
+}
+
+.tool-tip__info.tool-tip__info-price-discount.masodik-tooltip:before, .tool-tip__info.tool-tip__info-price-discount.masodik-tooltip:after {
+  content: "";
+  position: absolute;
+  left: 335px;
+  top: 20px;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #eb7624;
+  transform: rotate(180deg) !important;
+}
+
+.change-table-view-btn {
+  color: #EC7623;
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.tool-tip-reverse {
+  position: relative;
+  top: 2px;
+}
+
+.tool-tip-reverse .tool-tip__icon {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.change-table-view-btn i {
+  position: relative;
+  right: 10px;
+}
