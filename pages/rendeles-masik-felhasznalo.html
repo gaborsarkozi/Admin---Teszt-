@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>BEX Admin - Rendelés másik felhasználó nevében</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="../node_modules/selectric/public/selectric.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+
+</head>
+
+<body>
+
+  <!-- MODAL HOZZADÁS MÁSIK KOSÁRHOZ TERMÉK -->
+
+  <div class="modal fade" id="hozzadasMasikFelhasznalohoz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container d-flex pl-0"><i class="icon-basket-loaded"></i>
+          <h5 class="modal-title ml-2" id="exampleModalLabel">Kosár termékek</h5>
+        </div> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+            aria-hidden="true">&times;</span> </button>
+      </div>
+      <div class="modal-body">
+        <p class="m-0 modal-text">A kosaradban már vannak termékek. Szeretnék ezeket hozzáadni a másik felhasználó kosarához?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn px-4 btn-primary">Igen</button>
+        <button type="button" class="btn px-4 btn-danger">Nem</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i
+                  class="fas fa-search"></i></a></li>
+          </ul>
+        </form>
+        <ul class="navbar-nav navbar-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <div class="d-sm-none d-lg-inline-block">Üdv, Sárközi Gábor</div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a href="/pages/munkak-menu.html" class="dropdown-item has-icon">
+                <i class="fas fa-project-diagram"></i> Többi projekt
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="/index.html">BEX - Admin</a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="/index.html">BEX</a>
+          </div>
+          <ul class="sidebar-menu">
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas icon-user-following"></i><span>Rendelés
+                  másik felhasználó nevében</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Felhasználók
+                  adminisztrációja</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-pie-chart"></i><span>Statisztikai
+                  adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier-add"></i><span>Kereső
+                  statisztikai adatok lekérdezése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-info"></i><span>Információs oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-wrench "></i><span>Gyártói info oldalak
+                  mutatása</span></a></li>
+            <li class="nav-item bg-primary"><a href="#" class="nav-link"><i class="fas icon-tag text-white"></i><span class="text-white">Akciók / Újdonságok
+                  szerkesztése</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-cloud-download"></i><span>Kedvezmények
+                  frissítése az SAP-ból</span></a></li>
+            <li class="nav-item bg-primary"><a href="/pages/fenykepkezelo.html" class="nav-link"><i class="fas icon-picture text-white"></i><span class="text-white">Termékfotók
+                  kiválasztása</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-notebook"></i><span>Karrier
+                  admin</span></a></li>
+            <li class="nav-item bg-primary"><a href="/pages/bonusz.html" class="nav-link"><i class="fas icon-present text-white"></i><span class="text-white">Bónusz
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-fire"></i><span>Újdonság
+                  admin</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i
+                  class="fas icon-bag"></i><span>Árucsoportosítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-plane"></i><span>Ingyenes
+                  szállítás</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-target"></i><span>Árverés</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-basket"></i><span>Kosár oldal
+                  ajánlatok</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-note"></i><span>Külső raktár
+                  adminisztráció</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-puzzle"></i><span>Utójelek</span></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-magnifier"></i><span>Autós SNR csapágy
+                  kereső</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-settings"></i><span>SNR ipari
+                  csapágy</span></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas icon-eye"></i><span>Autós SKF csapágy
+                  keresö</span></a></li>
+            <li class="nav-item bg-primary"><a href="/pages/fajlkezelo.html" class="nav-link"><i class="fas icon-folder text-white"></i><span class="text-white">Fájlmenedzser</span></a></li>
+
+
+
+          </ul>
+
+          <div class="mt-4 mb-4 p-3 hide-sidebar-mini d-flex justify-content-center">
+            <a href="https://aruhaz.bearing.hu/" class="btn btn-primary btn-lg btn-block btn-icon-split">
+              <i class="fas icon-logout mr-3"></i>Vissza az áruházba
+            </a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Rendelés másik felhasználó nevében</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Admin oldali szerkesztő</a></div>
+              <div class="breadcrumb-item"><a>Rendelés másik felhasználó</a></div>
+
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <h2 class="section-title">Rendelés másik felhasználó nevében</h2>
+                <p class="section-lead">Itt beállíthat melyik felhasználó profiljából kíván rendelést leadni.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Felhasználó kiválasztása</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Felhasználó</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div id="menuArucsoport">
+                              <div class="form-group">
+                                <select class="form-control">
+                                  <option value="" disabled="" selected="">Válassza ki a felhasználó profilját</option>
+                                  <option value="">Felhasználó_01</option>
+                                  <option value="">Felhasználó_02</option>
+                                  <option value="">Felhasználó_03</option>
+                                  <option value="">Felhasználó_04</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <h2 class="section-title">Felhasználó aktiválása</h2>
+                <p class="section-lead">Hogy a felhasználó nevében vásároljon, aktiválja a fiókot.</p>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4>Felhasználó aktiválása</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group row mb-4">
+                          <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nyomja meg az aktiválás gombot</label>
+                          <div class="col-sm-12 col-md-7">
+                            <div class="col-6 col-sm-3 p-0">
+                              <label class="imagecheck text-white mb-4">
+                                <a class="btn btn-primary daterange-btn icon-left btn-icon" target="_blank" data-backdrop="static" href="#hozzadasMasikFelhasznalohoz" data-target="#hozzadasMasikFelhasznalohoz" data-toggle="modal" type="button"><i class="fas fa-user-secret mr-2"></i>Aktiválás</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- General JS Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
+  <script src="../node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
+  <script src="../node_modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+  <script src="../node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+  <script src="../node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+  <script src="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <script src="../node_modules/selectric/public/jquery.selectric.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/forms-advanced-forms.js"></script>
+</body>
+
+</html>
