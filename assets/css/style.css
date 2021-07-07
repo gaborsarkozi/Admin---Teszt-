@@ -641,8 +641,13 @@ a.btn {
         margin-top: 8px; }
     .card .card-body .section-title + .section-lead {
       margin-top: -5px; }
+
     .card .card-body p {
-      font-weight: 500; }
+      color: #25205e;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
   .card .card-header {
     border-bottom-color: #f9f9f9;
     line-height: 30px;
@@ -652,10 +657,19 @@ a.btn {
     min-height: 70px;
     padding: 15px 25px;
     display: flex;
-    align-items: center; }
-    .card .card-header .btn {
-      margin-top: 1px;
-      padding: 2px 15px; }
+    align-items: center;
+  }
+
+.card .card-header .btn {
+    margin-top: 1px;
+    padding: 2px 15px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    color: #ec7623;
+    font-weight: 800;
+    letter-spacing: .1px;
+  }
+
       .card .card-header .btn:not(.note-btn) {
         border-radius: 30px; }
       .card .card-header .btn:hover {
@@ -666,21 +680,28 @@ a.btn {
       border-radius: 30px; }
       .card .card-header .form-control + .input-group-btn .btn {
         margin-top: -1px; }
+
     .card .card-header h4 {
       font-size: 16px;
       line-height: 28px;
+      font-weight: 700;
       color: #EC7623;
       padding-right: 10px;
-      margin-bottom: 0; }
+      margin-bottom: 0; 
+    }
+
       .card .card-header h4 + .card-header-action,
       .card .card-header h4 + .card-header-form {
         margin-left: auto; }
-        .card .card-header h4 + .card-header-action .btn,
-        .card .card-header h4 + .card-header-form .btn {
-          font-size: 12px;
-          border-radius: 30px !important;
-          padding-left: 13px !important;
-          padding-right: 13px !important; }
+
+.card .card-header h4 + .card-header-action .btn,
+.card .card-header h4 + .card-header-form .btn {
+    font-size: 12px;
+    border-radius: 5px !important;
+    padding-left: 13px !important;
+    padding-right: 13px !important; 
+  }
+
           .card .card-header h4 + .card-header-action .btn.active,
           .card .card-header h4 + .card-header-form .btn.active {
             box-shadow: 0 2px 6px #df8342eb;
@@ -1125,7 +1146,7 @@ table tr:hover .table-links {
   vertical-align: middle;
   padding: 7px 12px;
   font-weight: 600;
-  letter-spacing: .3px;
+/*   letter-spacing: .3px; */
   border-radius: 4px;
   font-size: 12px; }
   .badge.badge-warning {
@@ -1135,8 +1156,16 @@ table tr:hover .table-links {
     background-color: #EC7623; }
   .badge.badge-secondary {
     background-color: #cdd3d8; }
+
   .badge.badge-success {
-    background-color: #47c363; }
+    background-color: #47c363; 
+  }
+
+  .badge.badge-success-light {
+    background-color: #7be794;
+    color: white; 
+  }
+
   .badge.badge-info {
     background-color: #3abaf4; }
   .badge.badge-danger {
@@ -1180,6 +1209,14 @@ h6 .badge {
   .btn .badge.badge-transparent {
     background-color: rgba(255, 255, 255, 0.25);
     color: #fff; }
+
+.badge-card-header {
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    color: #ec7623;
+    font-weight: 800;
+    padding: 10px 1rem;
+}
 
 /* 3.12 Button */
 .buttons .btn {
@@ -1582,8 +1619,8 @@ h6 .badge {
   top: 0;
   left: 0;
   width: 100%;
-  height: 115px;
-  background-color: #EC7623;
+  height: 75px;
+  background: linear-gradient(90deg, rgba(242,153,84,1)  50%,  rgba(236,118,35,1) 100%);
   z-index: -1; }
 
 .navbar {
@@ -1703,7 +1740,9 @@ h6 .badge {
       padding-bottom: 4px;
       font-weight: 600; }
       .navbar .nav-link.nav-link-user img {
-        width: 30px; }
+        width: 36px; 
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+      }
     .navbar .nav-link.nav-link-img {
       padding-top: 4px;
       padding-bottom: 4px;
@@ -2919,7 +2958,7 @@ body.layout-3 .main-footer {
 .main-content {
   padding-left: 330px;
   padding-right: 30px;
-  padding-top: 80px;
+  padding-top: 150px;
   width: 100%;
   position: relative; }
 
@@ -4539,4 +4578,65 @@ color: #ec7623;
 
 .charts-css.line:not(.reverse):not(.reverse-data) tbody tr td::after {
   height: calc(0%*var(--size)) !important;
+}
+
+.btn-sidebar-exit {
+  color: white;
+  border-radius: .3rem;
+}
+
+/* ----------------- Backgrounds start --------------------- */
+
+.faq-modul-header {
+  background-image: url(/assets/img/modul_bg/admin_faq_bg.png) !important;
+}
+
+.admin-hir-modul-header {
+  background-image: url(/assets/img/modul_bg/admin_hir_bg.png) !important;
+  background-size: cover !important;
+  background-position-y: 26%!important;
+}
+
+.admin-static-bg {
+  background-image: url(/assets/img/modul_bg/admin_static_bg.png) !important;
+  background-size: cover !important;
+  background-position-y: 26%!important;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  border-radius: 5px;
+}
+
+.admin-kereses-modul-header {
+  background-image: url(/assets/img/modul_bg/admin_kereses_bg.png) !important;
+  background-size: cover !important;
+  background-position-y: 26%!important;
+}
+
+/* ----------------- Backgrounds end --------------------- */ 
+
+
+
+.faq-modul-header i {
+  font-size: 32px;
+  position: relative;
+  top: -2px
+}
+
+
+/* DASHBOARD */ 
+
+.bex-dashboard-page .card .card-header {
+  background: linear-gradient( 90deg, rgba(242,153,84,1) 50%, rgba(236,118,35,1) 100%); 
+}
+
+.bex-dashboard-page .card .card-header h4 {
+  color: #ffffff;
+}
+
+.bex-dashboard-page #staticsCards .card {
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.bex-news-img {
+  max-width: 100%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }

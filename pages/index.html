@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>BEX - Bearing áruház</title>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>BEX Admin - Főoldal</title>
+  
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+  
+  
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="../node_modules/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="../node_modules/selectric/public/selectric.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" type="text/css"
+      href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+  
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+  
+  </head>
 
-  <!-- General CSS Files -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-  <!-- CSS Libraries -->
-  <link rel="stylesheet" href="../node_modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
-
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-</head>
-
-<body>
+<body class="bex-dashboard-page">
   <div id="app">
     <div class="main-wrapper">
       <div class="navbar-bg"></div>
@@ -30,7 +40,7 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
-          <div class="search-element">
+<!--           <div class="search-element">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
             <div class="search-backdrop"></div>
@@ -91,138 +101,14 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </form>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Messages
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Dedik Sugiharto</b>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Agung Ardiansyah</b>
-                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Ardian Rahardiansyah</b>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
-                    <div class="time">16 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Alfa Zulkarnain</b>
-                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-              <div class="dropdown-header">Notifications
-                <div class="float-right">
-                  <a href="#">Mark All As Read</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-icons">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-icon bg-primary text-white">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Template update is available now!
-                    <div class="time text-primary">2 Min Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="far fa-user"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
-                    <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-success text-white">
-                    <i class="fas fa-check"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Low disk space. Let's clean it!
-                    <div class="time">17 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="fas fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
-                    <div class="time">Yesterday</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
-            <div class="dropdown-menu dropdown-menu-right">
+
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg nav-link-user">
+            <img alt="image" src="/assets/img/avatar/bex_avatar.svg" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Üdvözöljük, Sárközi Gábor!</div></a>
+<!--             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
@@ -237,277 +123,132 @@
               <a href="#" class="dropdown-item has-icon text-danger">
                 <i class="fas fa-sign-out-alt"></i> Logout
               </a>
-            </div>
+            </div> -->
           </li>
         </ul>
       </nav>
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Stisla</a>
+            <a href="/index.html">BEX - Admin</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">St</a>
+            <a href="/index.html">BEX</a>
           </div>
           <ul class="sidebar-menu">
-              <li class="menu-header">Dashboard</li>
-              <li class="nav-item dropdown active">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                  <li class="active"><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-                </ul>
-              </li>
-              <li class="menu-header">Starter</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="layout-default.html">Default Layout</a></li>
-                  <li><a class="nav-link" href="layout-transparent.html">Transparent Sidebar</a></li>
-                  <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
-                  <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
-                  <li><a class="nav-link" href="bootstrap-breadcrumb.html">Breadcrumb</a></li>
-                  <li><a class="nav-link" href="bootstrap-buttons.html">Buttons</a></li>
-                  <li><a class="nav-link" href="bootstrap-card.html">Card</a></li>
-                  <li><a class="nav-link" href="bootstrap-carousel.html">Carousel</a></li>
-                  <li><a class="nav-link" href="bootstrap-collapse.html">Collapse</a></li>
-                  <li><a class="nav-link" href="bootstrap-dropdown.html">Dropdown</a></li>
-                  <li><a class="nav-link" href="bootstrap-form.html">Form</a></li>
-                  <li><a class="nav-link" href="bootstrap-list-group.html">List Group</a></li>
-                  <li><a class="nav-link" href="bootstrap-media-object.html">Media Object</a></li>
-                  <li><a class="nav-link" href="bootstrap-modal.html">Modal</a></li>
-                  <li><a class="nav-link" href="bootstrap-nav.html">Nav</a></li>
-                  <li><a class="nav-link" href="bootstrap-navbar.html">Navbar</a></li>
-                  <li><a class="nav-link" href="bootstrap-pagination.html">Pagination</a></li>
-                  <li><a class="nav-link" href="bootstrap-popover.html">Popover</a></li>
-                  <li><a class="nav-link" href="bootstrap-progress.html">Progress</a></li>
-                  <li><a class="nav-link" href="bootstrap-table.html">Table</a></li>
-                  <li><a class="nav-link" href="bootstrap-tooltip.html">Tooltip</a></li>
-                  <li><a class="nav-link" href="bootstrap-typography.html">Typography</a></li>
-                </ul>
-              </li>
-              <li class="menu-header">Stisla</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Components</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="components-article.html">Article</a></li>
-                  <li><a class="nav-link beep beep-sidebar" href="components-avatar.html">Avatar</a></li>
-                  <li><a class="nav-link" href="components-chat-box.html">Chat Box</a></li>
-                  <li><a class="nav-link beep beep-sidebar" href="components-empty-state.html">Empty State</a></li>
-                  <li><a class="nav-link" href="components-gallery.html">Gallery</a></li>
-                  <li><a class="nav-link beep beep-sidebar" href="components-hero.html">Hero</a></li>
-                  <li><a class="nav-link" href="components-multiple-upload.html">Multiple Upload</a></li>
-                  <li><a class="nav-link beep beep-sidebar" href="components-pricing.html">Pricing</a></li>
-                  <li><a class="nav-link" href="components-statistic.html">Statistic</a></li>
-                  <li><a class="nav-link" href="components-tab.html">Tab</a></li>
-                  <li><a class="nav-link" href="components-table.html">Table</a></li>
-                  <li><a class="nav-link" href="components-user.html">User</a></li>
-                  <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="forms-advanced-form.html">Advanced Form</a></li>
-                  <li><a class="nav-link" href="forms-editor.html">Editor</a></li>
-                  <li><a class="nav-link" href="forms-validation.html">Validation</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-map-marker-alt"></i> <span>Google Maps</span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="gmaps-advanced-route.html">Advanced Route</a></li>
-                  <li><a href="gmaps-draggable-marker.html">Draggable Marker</a></li>
-                  <li><a href="gmaps-geocoding.html">Geocoding</a></li>
-                  <li><a href="gmaps-geolocation.html">Geolocation</a></li>
-                  <li><a href="gmaps-marker.html">Marker</a></li>
-                  <li><a href="gmaps-multiple-marker.html">Multiple Marker</a></li>
-                  <li><a href="gmaps-route.html">Route</a></li>
-                  <li><a href="gmaps-simple.html">Simple</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>Modules</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="modules-calendar.html">Calendar</a></li>
-                  <li><a class="nav-link" href="modules-chartjs.html">ChartJS</a></li>
-                  <li><a class="nav-link" href="modules-datatables.html">DataTables</a></li>
-                  <li><a class="nav-link" href="modules-flag.html">Flag</a></li>
-                  <li><a class="nav-link" href="modules-font-awesome.html">Font Awesome</a></li>
-                  <li><a class="nav-link" href="modules-ion-icons.html">Ion Icons</a></li>
-                  <li><a class="nav-link" href="modules-owl-carousel.html">Owl Carousel</a></li>
-                  <li><a class="nav-link" href="modules-sparkline.html">Sparkline</a></li>
-                  <li><a class="nav-link" href="modules-sweet-alert.html">Sweet Alert</a></li>
-                  <li><a class="nav-link" href="modules-toastr.html">Toastr</a></li>
-                  <li><a class="nav-link" href="modules-vector-map.html">Vector Map</a></li>
-                  <li><a class="nav-link" href="modules-weather-icon.html">Weather Icon</a></li>
-                </ul>
-              </li>
-              <li class="menu-header">Pages</li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="auth-forgot-password.html">Forgot Password</a></li>
-                  <li><a href="auth-login.html">Login</a></li>
-                  <li><a class="beep beep-sidebar" href="auth-login-2.html">Login 2</a></li>
-                  <li><a href="auth-register.html">Register</a></li>
-                  <li><a href="auth-reset-password.html">Reset Password</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>Errors</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="errors-503.html">503</a></li>
-                  <li><a class="nav-link" href="errors-403.html">403</a></li>
-                  <li><a class="nav-link" href="errors-404.html">404</a></li>
-                  <li><a class="nav-link" href="errors-500.html">500</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-bicycle"></i> <span>Features</span></a>
-                <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="features-activities.html">Activities</a></li>
-                  <li><a class="nav-link" href="features-post-create.html">Post Create</a></li>
-                  <li><a class="nav-link" href="features-posts.html">Posts</a></li>
-                  <li><a class="nav-link" href="features-profile.html">Profile</a></li>
-                  <li><a class="nav-link" href="features-settings.html">Settings</a></li>
-                  <li><a class="nav-link" href="features-setting-detail.html">Setting Detail</a></li>
-                  <li><a class="nav-link" href="features-tickets.html">Tickets</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="utilities-contact.html">Contact</a></li>
-                  <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
-                  <li><a href="utilities-subscribe.html">Subscribe</a></li>
-                </ul>
-              </li>
-              <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
-            </ul>
-
-            <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-              <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-                <i class="fas fa-rocket"></i> Documentation
-              </a>
-            </div>
+            <li class="nav-item"><a href="/pages/rendeles-masik-felhasznalo.html" class="nav-link"><i class="fas icon-user-following"></i><span>Rendelés
+                  másik felhasználó nevében</span></a></li>
+            <li class="nav-item"><a href="/pages/bonusz.html" class="nav-link"><i class="fas icon-present"></i><span>Bónusz
+                  admin</span></a></li>
+            <li class="nav-item my-4 p-3">
+                <a href="https://aruhaz.bearing.hu/new" class="nav-link btn-primary btn-sidebar-exit"><i class="fas icon-logout text-white"></i><span class="text-white hide-sidebar-mini">Vissza az áruházba</span></a>
+            </li>
+          </ul>
         </aside>
       </div>
 
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-stats">
-                  <div class="card-stats-title">Order Statistics -
-                    <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
-                      <ul class="dropdown-menu dropdown-menu-sm">
-                        <li class="dropdown-title">Select Month</li>
-                        <li><a href="#" class="dropdown-item">January</a></li>
-                        <li><a href="#" class="dropdown-item">February</a></li>
-                        <li><a href="#" class="dropdown-item">March</a></li>
-                        <li><a href="#" class="dropdown-item">April</a></li>
-                        <li><a href="#" class="dropdown-item">May</a></li>
-                        <li><a href="#" class="dropdown-item">June</a></li>
-                        <li><a href="#" class="dropdown-item">July</a></li>
-                        <li><a href="#" class="dropdown-item active">August</a></li>
-                        <li><a href="#" class="dropdown-item">September</a></li>
-                        <li><a href="#" class="dropdown-item">October</a></li>
-                        <li><a href="#" class="dropdown-item">November</a></li>
-                        <li><a href="#" class="dropdown-item">December</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">Pending</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">Shipping</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">Completed</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Orders</h4>
-                  </div>
-                  <div class="card-body">
-                    59
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Balance</h4>
-                  </div>
-                  <div class="card-body">
-                    $187,13
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="sales-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-shopping-bag"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Sales</h4>
-                  </div>
-                  <div class="card-body">
-                    4,732
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
+          <div class="row mb-5">
+            <div class="col-12 col-xl-6">
               <div class="card">
-                <div class="card-header">
-                  <h4>Budget vs Sales</h4>
+                <div class="card-header justify-content-between admin-hir-modul-header">
+                  <h4>Üdvözöljük a BEX megújult admin oldalán!</h4>
+                  <span class="badge badge-card-header">Új főoldali hír!</span>
                 </div>
                 <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
+                  <p><strong>Megújult áruházunkhoz újragondolt admin felületet hoztunk létre.</strong></p>
+                  <p>
+                    Az áruház admin oldala funkcióiban biztosítja a régi admin oldal lehetőségeit, megjelenésében pedig igazodik az új áruház látványelemeihez. 
+                    A már meglévő funkciók mellé új elemek kerültek a rendszerben, valamint folyamatosan fejlesztjük a rendszert, hatékonyságát növeljük az optimális működés érdekében. Amennyiben az admin oldal kezelőfelületének használatában problémák merülnek fel, az admin oldal útmutatóban található leírások segítenek megkönnyíteni a működést. 
+                  </p>
+                  <div class="d-flex justify-content-center p-5">
+                    <img src="/assets/img/news/bex_new_img.png" class="bex-news-img" alt="">                 
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-12 col-xl-6">
+              <div id="staticsCards" class="admin-static-bg">
+                <div class="header py-5 px-5">
+                  <div class="container-fluid">
+                    <div class="header-body">
+                      <div class="row">
+                        <div class="col-12 mb-3 mb-lg-5">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Keresések száma</h5>
+                                    <span class="h2 font-weight-bold mb-0">356,076</span>
+                                    <p class="mt-3 mb-0 text-muted text-sm">
+                                      <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 3.48%</span>
+                                      <span class="text-nowrap">Előző hónaphoz képest</span>
+                                    </p>
+                                  </div>
+                                  <div class="col-auto d-flex align-items-center">
+                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow align-middle">
+                                      <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3 mb-lg-5">
+                          <div class="card card-stats mb-4 mb-xl-0">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col">
+                                  <h5 class="card-title text-uppercase text-muted mb-0">Keresési utáni kosárbahelyezés
+                                  </h5>
+                                  <span class="h2 font-weight-bold mb-0">2,356</span>
+                                  <p class="mt-3 mb-0 text-muted text-sm">
+                                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                                    <span class="text-nowrap">Előző hónaphoz képest</span>
+                                  </p>
+                                </div>
+                                <div class="col-auto d-flex align-items-center">
+                                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                    <i class="fas fa-shopping-cart"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3 mb-lg-5">
+                          <div class="card card-stats mb-4 mb-xl-0">
+                            <div class="card-body">
+                              <div class="row">
+                                <div class="col">
+                                  <h5 class="card-title text-uppercase text-muted mb-0">Keresett, de nem talált</h5>
+                                  <span class="h2 font-weight-bold mb-0">924</span>
+                                  <p class="mt-3 mb-0 text-muted text-sm">
+                                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                                    <span class="text-nowrap">Előző hónaphoz képest</span>
+                                  </p>
+                                </div>
+                                <div class="col-auto d-flex align-items-center">
+                                  <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                    <i class="fas fa-search-minus"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  <!--           <div class="col-lg-12">
               <div class="card gradient-bottom">
                 <div class="card-header">
-                  <h4>Top 5 Products</h4>
+                  <h4>Legtöbbet értékesített termékek</h4>
                   <div class="card-header-action dropdown">
                     <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
                     <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
@@ -619,210 +360,61 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Best Products</h4>
-                </div>
-                <div class="card-body">
-                  <div class="owl-carousel owl-theme" id="products-carousel">
-                    <div>
-                      <div class="product-item pb-3">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">iBook Pro 2018</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">67 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">oPhone S9 Limited</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                          </div>
-                          <div class="text-muted text-small">86 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">Headphone Blitz</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">63 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Top Countries</h4>
-                </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="text-title mb-2">July</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Malaysia</div>
-                            <div class="text-small text-muted">2,976 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">United States</div>
-                            <div class="text-small text-muted">1,576 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-6 mt-sm-0 mt-4">
-                      <div class="text-title mb-2">August</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,486 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Palestine</div>
-                            <div class="text-small text-muted">3,182 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Germany</div>
-                            <div class="text-small text-muted">2,317 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
           <div class="row">
             <div class="col-md-8">
               <div class="card">
-                <div class="card-header">
-                  <h4>Invoices</h4>
+                <div class="card-header admin-kereses-modul-header">
+                  <h4>Legutóbbi keresések</h4>
                   <div class="card-header-action">
-                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
+                    <a href="#" class="btn">Összes megtekintése <i class="fas fa-chevron-right"></i></a>
                   </div>
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive table-invoice">
                     <table class="table table-striped">
                       <tr>
-                        <th>Invoice ID</th>
-                        <th>Customer</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
-                        <th>Action</th>
+                        <th>Cég</th>
+                        <th>User</th>
+                        <th>Dátum</th>
+                        <th>Termék neve</th>
+                        <th>Akció</th>
                       </tr>
                       <tr>
-                        <td><a href="#">INV-87239</a></td>
+                        <td>SKF ÜZLETHÁZ CZEGLÉDI SÁNDOR</td>
                         <td class="font-weight-600">Kusnadi</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 19, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
+                        <td>2021/07/07 13:59:20 GMT+2</td>
+                        <td>6205</td>
+                        <td><div class="badge badge-success">Megrendelve</div></td>
                       </tr>
                       <tr>
-                        <td><a href="#">INV-48574</a></td>
-                        <td class="font-weight-600">Hasan Basri</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 21, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
+                        <td>Hulita és Társai Bt.</td>
+                        <td class="font-weight-600">bolt</td>
+                        <td>2021/07/07 12:10:23 GMT+2</td>
+                        <td>6705</td>
+                        <td><div class="badge badge-warning">Ajánlatkérés</div></td>
                       </tr>
                       <tr>
-                        <td><a href="#">INV-76824</a></td>
-                        <td class="font-weight-600">Muhamad Nuruzzaki</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
+                        <td>Hulita és Társai Bt.</td>
+                        <td class="font-weight-600">bolt</td>
+                        <td>2021/07/07 12:09:11 GMT+2</td>
+                        <td>ucf</td>
+                        <td><div class="badge badge-success-light">Kosárba téve</div></td>
                       </tr>
                       <tr>
-                        <td><a href="#">INV-84990</a></td>
-                        <td class="font-weight-600">Agung Ardiansyah</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
+                        <td>Goyo-Ladány Kft.</td>
+                        <td class="font-weight-600">	GOYOLADANY</td>
+                        <td>2021/07/07 12:05:51 GMT+2	</td>
+                        <td>7024</td>
+                        <td><div class="badge badge-danger">Csak keresés</div></td>
                       </tr>
                       <tr>
-                        <td><a href="#">INV-87320</a></td>
-                        <td class="font-weight-600">Ardian Rahardiansyah</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 28, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
+                        <td>SKF ÜZLETHÁZ CZEGLÉDI SÁNDOR</td>
+                        <td class="font-weight-600">Kusnadi</td>
+                        <td>2021/07/07 13:59:20 GMT+2</td>
+                        <td>6205</td>
+                        <td><div class="badge badge-success">Megrendelve</div></td>
                       </tr>
                     </table>
                   </div>
@@ -831,47 +423,41 @@
             </div>
             <div class="col-md-4">
               <div class="card card-hero">
-                <div class="card-header">
-                  <div class="card-icon">
-                    <i class="far fa-question-circle"></i>
-                  </div>
-                  <h4>14</h4>
-                  <div class="card-description">Customers need help</div>
+                <div class="card-header faq-modul-header">
+                  <h4>GYIK <i class="far fa-question-circle"></i></h4>
+                  <div class="card-description">Útmutató az admin kezeléséhez</div>
                 </div>
                 <div class="card-body p-0">
                   <div class="tickets-list">
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>My order hasn't arrived yet</h4>
+                        <h4>Hogyan tudok másik felhasználó nevében rendelni?</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>Laila Tazkiah</div>
+                        <div>Rendelés másik felhasználó nevében</div>
                         <div class="bullet"></div>
-                        <div class="text-primary">1 min ago</div>
                       </div>
                     </a>
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>Please cancel my order</h4>
+                        <h4>Hogyan lehet új bónuszt létrehozni?</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>Rizal Fakhri</div>
+                        <div>Bónusz</div>
                         <div class="bullet"></div>
-                        <div>2 hours ago</div>
                       </div>
                     </a>
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>Do you see my mother?</h4>
+                        <h4>Hogyan kezelhetem a meglévő bónuszokat?</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>Syahdan Ubaidillah</div>
+                        <div>Bónusz</div>
                         <div class="bullet"></div>
-                        <div>6 hours ago</div>
                       </div>
                     </a>
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
-                      View All <i class="fas fa-chevron-right"></i>
+                    <a href="#" class="ticket-item ticket-more">
+                      Összes megtekintése <i class="fas fa-chevron-right"></i>
                     </a>
                   </div>
                 </div>
@@ -880,14 +466,6 @@
           </div>
         </section>
       </div>
-      <footer class="main-footer">
-        <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-        </div>
-        <div class="footer-right">
-          2.3.0
-        </div>
-      </footer>
     </div>
   </div>
 
