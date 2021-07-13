@@ -2663,3 +2663,33 @@ td i.icon-close.icon-merete {
 .sendButtonRendeles {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+
+
+.ekko-lightbox.modal .modal-header {
+  position: absolute;
+  top: -1rem;
+  right: -.5rem;
+  z-index: 3;
+  border-bottom: none;
+}
+.ekko-lightbox.modal .modal-content {
+  border: none;
+}
+
+.ekko-lightbox.modal .modal-title {
+  display: none;
+}
+
+.ekko-lightbox.modal .ekko-lightbox-nav-overlay a {
+  opacity: 1;
+}
+
+.ekko-lightbox.modal .ekko-lightbox-nav-overlay a span {
+  color: #ec7623;
+}
+
+.ekko-lightbox.modal .modal-header .close {
+  margin: 0;
+  color: #ec7623;
+  font-size: 32px;
+}
