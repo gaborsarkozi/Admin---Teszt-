@@ -2664,7 +2664,9 @@ td i.icon-close.icon-merete {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
-
+.ekko-lightbox.modal {
+  background: rgb(0 0 0 / 50%);
+}
 .ekko-lightbox.modal .modal-header {
   position: absolute;
   top: -1rem;
@@ -2673,7 +2675,7 @@ td i.icon-close.icon-merete {
   border-bottom: none;
 }
 .ekko-lightbox.modal .modal-content {
-  border: none;
+  border: none; 
 }
 
 .ekko-lightbox.modal .modal-title {
