@@ -28,7 +28,25 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="shortcut icon" href="https://www.bearing.hu/wp-content/uploads/2018/02/favicon.png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookie.js/1.0.0/cookie.js" integrity="sha512-W2yLcU7suN2a6XWShXjLk2ceSC/MmwGZLgKA9yNGeeG5CkOX2XTrKYohJIn95JCgORqjAQR6hmvwdStiosIUSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript">
+    $(function() {
+    var COOKIE_NAME = 'splash-page-cookie';
+    $go = $.cookie(COOKIE_NAME);
+    if ($go == null) {
+      $.cookie(COOKIE_NAME, 'test', { path: '/', expires: 1 });
+      window.location = "https://aruhaz.bearing.hu/new/"
+    }
+    else {
+    }
+  });
+  </script>
 </head>
+
+
+
 
 <body>
   <div id="app">
@@ -77,8 +95,12 @@
 
 
       <!-- Main Content -->
+
+      
+
+
       <div class="main-content">
-        <section class="section">
+        <section class="section tabs-teszt">
           <div class="section-header">
             <h1>Bónusz</h1>
 

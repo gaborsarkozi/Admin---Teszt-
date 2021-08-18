@@ -1,0 +1,175 @@
+/* -------------------------------------------------------------------------- */
+
+/*                                sections.css                                */
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/*
+ *
+ * This file contain the base of each section: 
+ *
+ * Typewriting effect................base of typewriting.
+ *
+ */
+  
+ 
+
+/* -------------------------------------------------------------------------- */
+
+/*                              Typewriting effect                            */
+
+/* -------------------------------------------------------------------------- */
+
+
+ul,ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.window {
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  background-color: #000;
+  box-shadow: 0 0 25px -7px #000;
+}
+
+.window-top {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background-color: #202020;
+}
+
+.window__controls {
+  display: inline-flex;
+}
+
+.window__controls span {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.window__controls span:nth-child(1) {
+  background-color: #b22222;
+}
+.window__controls span:nth-child(2) {
+  background-color: #d6bf3e;
+}
+.window__controls span:nth-child(3) {
+  background-color: #4db434;
+}
+
+.window__title {
+  flex: 1;
+  text-align: center;
+  color: #b1b1b3;
+}
+
+.window-main {
+  padding: 0.5em;
+  color: #4e4e4e;
+}
+
+.window-main ol {
+  counter-reset: item;
+  font-family: "Source Code Pro", monospace;
+}
+
+.window-main ol li {
+  margin-bottom: 3px;
+}
+
+.window-main ol li:before {
+  content: counter(item) "  ";
+  counter-increment: item;
+  padding: 0 10px;
+}
+
+.tag {
+  color: #4d86b9;
+}
+.attr {
+  color: #8dc6e3;
+}
+.val {
+  color: #c58b74;
+}
+.text {
+  color: #d4d4d4;
+}
+.comment {
+  color: #517343;
+}
+
+@media only screen and (max-width: 601px) {
+  .window {
+    width: 350px;
+    height: 350px;
+    font-size: 0.65em;
+  }
+
+  .window__controls span {
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+  }
+
+  .window-main ol li:before {
+    padding: 0;
+  }
+}
+
+.line {
+    display: contents;
+}
+#demo .line,
+#demo span {
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+#demo span {
+    display: inline-block;
+    position: relative;
+}
+
+#demo span.head {
+    margin-left: 4px;
+}
+
+#demo span.space {
+    margin-right: 4px;
+}
+
+#demo span.current::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 0.9rem;
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%);
+    border-left: 2px solid #fff;
+    animation: blink-caret 0.9s step-end infinite;
+}
+
+#demo span.current.space::after {
+    right: -6px;
+}
+
+#demo span.past {
+    color: gray;
+}
+
+@keyframes blink-caret {
+    0% { border-color: #fff }
+    50% { border-color: transparent }
+    100% { border-color: #fff }
+}
