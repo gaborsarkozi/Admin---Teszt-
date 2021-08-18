@@ -10,26 +10,26 @@
  *
  * This file contain the base of each section: 
  *
- * Typewriting effect................base of typewriting.
+ * Code Editor Layout................base style of code editor.
  *
  */
   
- 
+
 
 /* -------------------------------------------------------------------------- */
 
-/*                              Typewriting effect                            */
+/*                              Code Editor Layout                            */
 
 /* -------------------------------------------------------------------------- */
 
 
-ul,ol {
+.window-editor-layout ul,ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.window {
+.window-editor-layout {
   width: 700px;
   height: 500px;
   margin: auto;
@@ -37,98 +37,101 @@ ul,ol {
   box-shadow: 0 0 25px -7px #000;
 }
 
-.window-top {
+.window-editor-layout .window-top {
   display: flex;
   align-items: center;
   height: 30px;
   background-color: #202020;
 }
 
-.window__controls {
+.window-editor-layout .window__controls {
   display: inline-flex;
 }
 
-.window__controls span {
+.window-editor-layout .window__controls span {
   width: 15px;
   height: 15px;
   margin-left: 10px;
   border-radius: 50%;
 }
 
-.window__controls span:nth-child(1) {
+.window-editor-layout .window__controls span:nth-child(1) {
   background-color: #b22222;
 }
-.window__controls span:nth-child(2) {
+.window-editor-layout .window__controls span:nth-child(2) {
   background-color: #d6bf3e;
 }
-.window__controls span:nth-child(3) {
+.window-editor-layout .window__controls span:nth-child(3) {
   background-color: #4db434;
 }
 
-.window__title {
+.window-editor-layout.window-editor-layout .window__title {
   flex: 1;
   text-align: center;
   color: #b1b1b3;
 }
 
-.window-main {
+.window-editor-layout .window-main {
   padding: 0.5em;
   color: #4e4e4e;
+  text-align: left;
 }
 
-.window-main ol {
+.window-editor-layout .window-main ol {
   counter-reset: item;
   font-family: "Source Code Pro", monospace;
 }
 
-.window-main ol li {
+.window-editor-layout .window-main ol li {
   margin-bottom: 3px;
 }
 
-.window-main ol li:before {
+.window-editor-layout .window-main ol li:before {
   content: counter(item) "  ";
   counter-increment: item;
   padding: 0 10px;
 }
 
-.tag {
+.window-editor-layout .tag {
   color: #4d86b9;
 }
-.attr {
+.window-editor-layout .attr {
   color: #8dc6e3;
 }
-.val {
+.window-editor-layout .val {
   color: #c58b74;
 }
-.text {
+.window-editor-layout .text {
   color: #d4d4d4;
 }
-.comment {
+.window-editor-layout .comment {
   color: #517343;
 }
 
 @media only screen and (max-width: 601px) {
-  .window {
+.window-editor-layout .window {
     width: 350px;
     height: 350px;
     font-size: 0.65em;
   }
 
-  .window__controls span {
+.window-editor-layout.window__controls span {
     width: 10px;
     height: 10px;
     margin-left: 5px;
   }
 
-  .window-main ol li:before {
+.window-editor-layout .window-main ol li:before {
     padding: 0;
   }
 }
 
-.line {
+.window-editor-layout .line {
     display: contents;
 }
-#demo .line,
+
+
+/* #demo .line,
 #demo span {
     height: 20px;
     line-height: 20px;
@@ -173,3 +176,4 @@ ul,ol {
     50% { border-color: transparent }
     100% { border-color: #fff }
 }
+ */

@@ -24,28 +24,25 @@
  */
 
 :root {
-    --color-main:       #0466C8;
-    --color-second:     #023E7D;
-    --color-dark:       #001233;
-    --color-temporary:  #33415C;
-    --color-grey:       #7D8597;
-    --color-lightGrey:  #979DAC;
-    --color-strong:     #b429f9;
-    --color-green:      #02c39a;
-    --color-light:      #26c5f3;
-
-
-
-    --bs-font-sans-serif: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --color-main:          #0466C8;
+    --color-second:        #023E7D;
+    --color-dark:          #001233;
+    --color-temporary:     #33415C;
+    --color-grey:          #7D8597;
+    --color-lightGrey:     #979DAC;
+    --color-strong:        #b429f9;
+    --color-green:         #02c39a;
+    --color-light:         #26c5f3;
+    --bs-font-sans-serif:   "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace:    "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient:          linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
 *,
 *::before,
 *::after {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing:         border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -55,15 +52,15 @@
 }
 
 body {
-    margin: 0;
-    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #616368;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin:                           0;
+    font-family:                      "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size:                        1rem;
+    font-weight:                      400;
+    line-height:                      1.5;
+    color:                          #616368;
+    background-color:               #fff;
+    -webkit-text-size-adjust:         100%;
+    -webkit-tap-highlight-color:    rgba(0, 0, 0, 0);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -71,35 +68,24 @@ body {
 }
 
 hr {
-    margin: 1rem 0;
-    color: #E1E0E4;
+    margin:           1rem 0;
+    color:          #E1E0E4;
     background-color: currentColor;
-    border: 0;
-    opacity: 1;
+    border:           0;
+    opacity:          1;
 }
 
 hr:not([size]) {
     height: 1px;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-family: "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 500;
-    line-height: 1.2;
-    color: #242F51;
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top:         0;
+    margin-bottom:      0.5rem;
+    font-family:        "Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight:        500;
+    line-height:        1.2;
+    color:            #242F51;
 }
 
 h1,
@@ -167,18 +153,18 @@ p {
 
 abbr[title],
 abbr[data-bs-original-title] {
-    text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-    cursor: help;
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
+    text-decoration:                    underline;
+    -webkit-text-decoration:            underline dotted;
+    text-decoration:                    underline dotted;
+    cursor:                             help;
+    -webkit-text-decoration-skip-ink:   none;
+    text-decoration-skip-ink:           none;
 }
 
 address {
-    margin-bottom: 1rem;
-    font-style: normal;
-    line-height: inherit;
+    margin-bottom:  1rem;
+    font-style:     normal;
+    line-height:    inherit;
 }
 
 ol,
@@ -189,8 +175,8 @@ ul {
 ol,
 ul,
 dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin-top:     0;
+    margin-bottom:  1rem;
 }
 
 ol ol,
@@ -205,8 +191,8 @@ dt {
 }
 
 dd {
-    margin-bottom: .5rem;
-    margin-left: 0;
+    margin-bottom:  .5rem;
+    margin-left:    0;
 }
 
 blockquote {
@@ -225,15 +211,15 @@ small,
 
 mark,
 .mark {
-    padding: 0.2em;
+    padding:            0.2em;
     background-color: #fcf8e3;
 }
 
 sub,
 sup {
-    position: relative;
-    font-size: 0.75em;
-    line-height: 0;
+    position:       relative;
+    font-size:      0.75em;
+    line-height:    0;
     vertical-align: baseline;
 }
 
@@ -246,72 +232,71 @@ sup {
 }
 
 a {
-    color: #2500F9;
+    color:         #2500F9;
     text-decoration: none;
 }
 
 a:hover {
-    color: #1e00c7;
+    color:         #1e00c7;
     text-decoration: underline;
 }
 
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
-    color: inherit;
-    text-decoration: none;
+    color:              inherit;
+    text-decoration:    none;
 }
 
 pre,
 code,
 kbd,
 samp {
-    font-family: var(--bs-font-monospace);
-    font-size: 1em;
-    direction: ltr/* rtl:ignore */
-    ;
-    unicode-bidi: bidi-override;
+    font-family:    var(--bs-font-monospace);
+    font-size:      1em;
+    direction:      ltr;
+    unicode-bidi:   bidi-override;
 }
 
 pre {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    overflow: auto;
-    font-size: 75%;
+    display:        block;
+    margin-top:     0;
+    margin-bottom:  1rem;
+    overflow:       auto;
+    font-size:      75%;
 }
 
 pre code {
-    font-size: inherit;
-    color: inherit;
-    word-break: normal;
+    font-size:      inherit;
+    color:          inherit;
+    word-break:     normal;
 }
 
 code {
-    font-size: 75%;
-    color: #f6458e;
-    word-wrap: break-word;
+    font-size:      75%;
+    color:        #f6458e;
+    word-wrap:      break-word;
 }
 
 a>code {
-    color: inherit;
+    color:          inherit;
 }
 
 kbd {
-    padding: 0.2rem 0.4rem;
-    font-size: 75%;
-    color: #fff;
-    background-color: #4F5665;
-    border-radius: 0.625rem;
+    padding:              0.2rem 0.4rem;
+    font-size:            75%;
+    color:              #fff;
+    background-color:   #4F5665;
+    border-radius:        0.625rem;
 }
 
 kbd kbd {
-    padding: 0;
-    font-size: 1em;
-    font-weight: 700;
+    padding:        0;
+    font-size:      1em;
+    font-weight:    700;
 }
 
 figure {
-    margin: 0 0 1rem;
+    margin:         0 0 1rem;
 }
 
 img,
@@ -320,15 +305,15 @@ svg {
 }
 
 table {
-    caption-side: bottom;
-    border-collapse: collapse;
+    caption-side:       bottom;
+    border-collapse:    collapse;
 }
 
 caption {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: #CDCCD1;
-    text-align: left;
+    padding-top:        0.5rem;
+    padding-bottom:     0.5rem;
+    color:            #CDCCD1;
+    text-align:         left;
 }
 
 th {
@@ -364,10 +349,10 @@ button,
 select,
 optgroup,
 textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    margin:         0;
+    font-family:    inherit;
+    font-size:      inherit;
+    line-height:    inherit;
 }
 
 button,
@@ -411,19 +396,19 @@ textarea {
 }
 
 fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+    min-width:  0;
+    padding:    0;
+    margin:     0;
+    border:     0;
 }
 
 legend {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 0.5rem;
-    font-size: calc(1.275rem + 0.3vw);
-    line-height: inherit;
+    float:          left;
+    width:          100%;
+    padding:        0;
+    margin-bottom:  0.5rem;
+    font-size:      calc(1.275rem + 0.3vw);
+    line-height:    inherit;
 }
 
 @media (min-width: 1200px) {
@@ -477,7 +462,7 @@ legend+* {
 }
 
 ::-webkit-file-upload-button {
-    font: inherit;
+    font:               inherit;
     -webkit-appearance: button;
 }
 
@@ -490,8 +475,8 @@ iframe {
 }
 
 summary {
-    display: list-item;
-    cursor: pointer;
+    display:    list-item;
+    cursor:     pointer;
 }
 
 progress {
@@ -503,14 +488,14 @@ progress {
 }
 
 .lead {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size:      1.2rem;
+    font-weight:    400;
 }
 
 .display-1 {
-    font-size: calc(1.55498rem + 3.65978vw);
-    font-weight: 900;
-    line-height: 1;
+    font-size:      calc(1.55498rem + 3.65978vw);
+    font-weight:    900;
+    line-height:    1;
 }
 
 @media (min-width: 1200px) {
@@ -580,31 +565,31 @@ progress {
 }
 
 .list-unstyled {
-    padding-left: 0;
-    list-style: none;
+    padding-left:   0;
+    list-style:     none;
 }
 
 .list-inline {
-    padding-left: 0;
-    list-style: none;
+    padding-left:   0;
+    list-style:     none;
 }
 
 .list-inline-item {
-    display: inline-block;
+    display:        inline-block;
 }
 
 .list-inline-item:not(:last-child) {
-    margin-right: 0.5rem;
+    margin-right:   0.5rem;
 }
 
 .initialism {
-    font-size: 75%;
+    font-size:      75%;
     text-transform: uppercase;
 }
 
 .blockquote {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    margin-bottom:  1rem;
+    font-size:      1.2rem;
 }
 
 .blockquote> :last-child {
@@ -612,10 +597,10 @@ progress {
 }
 
 .blockquote-footer {
-    margin-top: -1rem;
-    margin-bottom: 1rem;
-    font-size: 75%;
-    color: #C3C1C8;
+    margin-top:         -1rem;
+    margin-bottom:      1rem;
+    font-size:          75%;
+    color:            #C3C1C8;
 }
 
 .blockquote-footer::before {
@@ -623,31 +608,31 @@ progress {
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+    max-width:  100%;
+    height:     auto;
 }
 
 .img-thumbnail {
-    padding: 0.25rem;
+    padding:            0.25rem;
     background-color: #fff;
-    border: 1px solid #E1E0E4;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto;
+    border:             1px solid #E1E0E4;
+    border-radius:      0.25rem;
+    max-width:          100%;
+    height:             auto;
 }
 
 .figure {
-    display: inline-block;
+    display:            inline-block;
 }
 
 .figure-img {
-    margin-bottom: 0.5rem;
-    line-height: 1;
+    margin-bottom:      0.5rem;
+    line-height:        1;
 }
 
 .figure-caption {
-    font-size: 75%;
-    color: #C3C1C8;
+    font-size:       75%;
+    color:         #C3C1C8;
 }
 
 .container,
@@ -17814,19 +17799,19 @@ label {
 -----------------------------------------------*/
 
 .bg-holder {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    will-change: transform, opacity, filter;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background-repeat: no-repeat;
-    z-index: 0;
+    position:                       absolute;
+    width:                          100%;
+    min-height:                     100%;
+    top:                            0;
+    left:                           0;
+    background-size:                cover;
+    background-position:            center;
+    overflow:                       hidden;
+   /*  will-change:                    transform, opacity, filter;
+    -webkit-backface-visibility:    hidden;
+    backface-visibility:            hidden; */
+    background-repeat:              no-repeat;
+    z-index:                        0;
 }
 
 .bg-holder.bg-right {
