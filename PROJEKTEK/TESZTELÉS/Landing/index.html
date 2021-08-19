@@ -23,14 +23,13 @@
     <!--    JavaScript Plugins-->
     <!-- ===============================================-->
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/regular.min.js"/>
 
 
 </head>
 
 
-<body>
+<body class="light-theme">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -50,10 +49,13 @@
                         <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium"
                                 href="#features">About me</a></li>
                         <li class="nav-item" data-anchor="data-anchor"><a class="nav-link fw-medium"
-                                href="#pricing">Pricing</a></li>
+                                href="#pricing">Projects</a></li>
                     </ul>
                     <form class="ps-lg-5">
-                        <button class="btn btn-lg btn-primary rounded-pill order-0" type="submit">Night mode</button>
+                          <div class="toggle">
+                            <input type="checkbox" class="toggle-switch-theme" id="toggle" />
+                            <label for="toggle"></label>
+                          </div>
                     </form>
                 </div>
             </div>
@@ -255,8 +257,18 @@
                             <br />integration
                         </h6>
                         <p class="my-4 pe-xl-5"> The rise of mobile devices transforms the way we consume information
-                            entirely and the world's most elevant channels such as Facebook.</p><a
-                            class="btn btn-lg btn-primary rounded-pill hover-top" href="#" role="button">Learn more</a>
+                            entirely and the world's most elevant channels such as Facebook.</p>
+                            <fieldset class="color-swatches  js-color-swatches">
+                                <legend class="color-swatches__legend text-sm color-contrast-medium margin-bottom-xs" aria-live="polite" aria-atomic="true">Color: <span class="color-swatches__color color-contrast-high js-color-swatches__color">Jet</span></legend>
+                              
+                                <select class="js-color-swatches__select" aria-label="Select a color">
+                                  <option value="Jet" data-style="background-color: #34252F;">Jet</option>
+                                  <option value="Arsenic" data-style="background-color: #3B5249;">Arsenic</option>
+                                  <option value="Wintergreen" data-style="background-color: #519872;">Wintergreen</option>
+                                  <option value="Laurel Green" data-style="background-color: #A4B494;">Laurel Green</option>
+                                  
+                                </select>
+                              </fieldset>
                     </div>
                 </div>
             </div>
@@ -888,6 +900,9 @@
     <script src="assets/js/main.js"></script>
 <!--     <script src="assets/js/sections.js"></script> -->
     <script src="assets/js/logoTypeWrite.js"></script>
+
+
+
 
 
     <link

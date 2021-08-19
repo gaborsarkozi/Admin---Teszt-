@@ -416,3 +416,30 @@ docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
 //# sourceMappingURL=theme.js.map
+
+
+
+/* -------------------------------------------------------------------------- */
+
+/*                                Switch theme                                */
+
+/* -------------------------------------------------------------------------- */
+
+
+(function() {
+
+    const themeSwitch = document.querySelector('.toggle-switch-theme');
+
+    themeSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('dark-theme');
+    }); 
+
+})();
+
+
+
+
+
+
+
+

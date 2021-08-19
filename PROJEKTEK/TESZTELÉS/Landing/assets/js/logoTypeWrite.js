@@ -21,6 +21,9 @@
       .typeString('<span style="color: var(--color-strong);">design.</span>')
       .pauseFor(1000)
       .deleteChars(10)
+      .typeString('<span style="color: var(--color-red);">you.</span>')
+      .pauseFor(1000)
+      .deleteChars(10)
       .start();
 
   })();

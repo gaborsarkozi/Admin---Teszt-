@@ -11,10 +11,10 @@
  * This file contain the base of each section: 
  *
  * Code Editor Layout................base style of code editor.
+ * Toggle switch theme...............base style of toggle chechbox.
  *
  */
   
-
 
 /* -------------------------------------------------------------------------- */
 
@@ -24,159 +24,198 @@
 
 
 .window-editor-layout ul,ol {
-
   list-style-type:      none;
   margin:               0;
   padding:              0;
-
 }
 
 .window-editor-layout {
-
   width:                700px;
   height:               500px;
   margin:               auto;
   background-color:   #000;
   box-shadow:           0 0 25px -7px #000;
-
 }
 
 .window-editor-layout .window-top {
-
   display:              flex;
   align-items:          center;
   height:               30px;
   background-color:   #202020;
-
 }
 
 .window-editor-layout .window__controls {
-
   display:              inline-flex;
-
 }
 
 .window-editor-layout .window__controls span {
-
   width:                15px;
   height:               15px;
   margin-left:          10px;
   border-radius:        50%;
-
 }
 
 .window-editor-layout .window__controls span:nth-child(1) {
-
   background-color:   #b22222;
-
 }
 
 .window-editor-layout .window__controls span:nth-child(2) {
-
   background-color:   #d6bf3e;
-
 }
 
 .window-editor-layout .window__controls span:nth-child(3) {
-
   background-color:   #4db434;
-
 }
 
 .window-editor-layout.window-editor-layout .window__title {
-
   flex:                 1;
   text-align:           center;
   color:              #b1b1b3;
-
 }
 
 .window-editor-layout .window-main {
-
   padding:              0.5em;
   color:              #4e4e4e;
   text-align:           left;
-
 }
 
 .window-editor-layout .window-main ol {
-
   counter-reset:        item;
   font-family:          "Source Code Pro", monospace;
-
 }
 
 .window-editor-layout .window-main ol li {
-
   margin-bottom:        3px;
-
 }
 
 .window-editor-layout .window-main ol li:before {
-
   content:              counter(item) "  ";
   counter-increment:    item;
   padding:              0 10px;
-
 }
 
 .window-editor-layout .tag {
-
   color:              #4d86b9;
-
 }
 
 .window-editor-layout .attr {
-
   color:              #8dc6e3;
-
 }
 
 .window-editor-layout .val {
-
   color:              #c58b74;
-
 }
 
 .window-editor-layout .text {
-
   color:              #d4d4d4;
-
 }
 
 .window-editor-layout .comment {
-
   color:              #517343;
-
 }
 
 @media only screen and (max-width: 601px) {
 
     .window-editor-layout .window {
-
         width:              350px;
         height:             350px;
         font-size:          0.65em;
-    
     }
 
     .window-editor-layout.window__controls span {
-
         width:              10px;
         height:             10px;
         margin-left:        5px;
-
     }
 
     .window-editor-layout .window-main ol li:before {
-
         padding:            0;
-
     }
 }
 
 .window-editor-layout .line {
-
     display:            contents;
-
 }
+
+
+
+/* -------------------------------------------------------------------------- */
+
+/*                             Toggle switch theme                            */
+
+/* -------------------------------------------------------------------------- */
+
+
+
+.toggle {
+  display:                        flex;
+}
+
+.toggle label {
+  position:                       relative;
+  display:                        inline-block;
+  width:                          45px;
+  height:                         25px;
+  background-color:               #e1e1e1;
+  border-radius:                  50px;
+  transition:                     all 0.3s ease-in-out;
+  cursor:                         pointer;
+  box-shadow:                     inset 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color:    transparent;
+  margin-bottom:                  0;
+}
+
+.toggle label:before {
+  content:                        "";
+  position:                       absolute;
+  top:                            2px;
+  left:                           2px;
+  height:                         22px;
+  width:                          22px;
+  background-color:               #fff;
+  border-radius:                  46px;
+  box-shadow:                     1px 1px 5px rgba(0, 0, 0, 0.1);
+  transition:                     box-shadow 0.3s ease-in-out;
+  animation:                      moveLeft 0.3s ease-in-out;
+}
+
+.toggle input {
+  display:                        none;
+}
+
+.toggle input:checked + label {
+  background-color:               #57de72;
+}
+
+.toggle input:checked + label:before {
+  transform:                      translateX(20px);
+  box-shadow:                     -1px -1px 5px rgba(0, 0, 0, 0.1);
+  animation:                      moveRight 0.3s ease-in-out;
+}
+@keyframes moveRight {
+  0% {
+      width:                      23px;
+      transform:                  translateX(0);
+ }
+  45% {
+      width:                      26px;
+ }
+  100% {
+      width:                      23px;
+      transform:                  translateX(20px);
+ }
+}
+@keyframes moveLeft {
+  0% {
+      width:                      23px;
+      transform:                  translateX(20px);
+ }
+  45% {
+      width:                      26px;
+ }
+  100% {
+      width:                      23px;
+      transform:                  translateX(0);
+ }
+}
+
