@@ -1,0 +1,9 @@
+.project-card {
+    display:        flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 13%);
+    border: none;
+}
