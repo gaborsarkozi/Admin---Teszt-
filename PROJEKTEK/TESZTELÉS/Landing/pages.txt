@@ -1,0 +1,39 @@
+https://adriengervaix.com/index.html
+
+https://dribbble.com/shots/11583875-Agency-Website-Concept
+
+https://dribbble.com/shots/6660329-Personal-Website-Landing-Page/attachments/1423107?mode=media
+
+https://dribbble.com/shots/6982141-My-Personal-Portfolio-Web-Site
+
+https://dribbble.com/shots/10977400-Freelance-Projects-Dashboard
+
+https://dribbble.com/shots/9538003-Brickshare-Home-Source-sketch-file
+
+https://dribbble.com/shots/14253942-Selected-Works-2017-2020/attachments/5901228?mode=media
+
+https://dribbble.com/shots/6556841/attachments/6556841-How-it-works-responsive-page?mode=media
+
+https://dribbble.com/shots/12733271-FireHydrant-How-it-Works
+
+
+- Extras 
+
+	- Light / Dark theme switch 
+	- Colors theme switch
+	- HU / EN switch 
+
+
+- Content 
+	
+	- Main template: stack, refi, munkafolyamatok, future stack
+	- Projects-> main projects I participate in. 
+	- Single project.  
+
+
+- Stack: Shoprenter, Wordpress, Bulma, TailwandCSS, Bootstrap, Elementor, HTML5, CSS, CSS3, GitKraken
+- Refi: bexi.hu, shoprenteres szekciók, bence, bianka, ricsi, emailek
+- Munkafolyamatok: Tartalomkészítés, Design, Kódolás, Üzemeltetés, Tervezés
+- Future stack: JS, React
+- Tapasztalat: 1,5 év junior front end / site builder
+
