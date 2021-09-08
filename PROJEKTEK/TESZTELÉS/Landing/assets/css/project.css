@@ -1,31 +1,58 @@
+/* -------------------------------------------------------------------------- */
+
+/*                                  Project                                   */
+
+/* -------------------------------------------------------------------------- */
+
+
 .project-subhead {
     color:              var(--fontColor);
 }
 
-
 .project-head-section {
     height:             125rem;
     background-color: rgb(69, 111, 225);
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    z-index: 9 !important;
-
-  }
+    position:           fixed;
+    top:                0;
+    left:               0;
+    width:              100%;
+    height:             300px;
+    justify-content:    center;
+    align-items:        center;
+    display:            flex;
+}
 
 .project-content-section {
     height:             125rem;
-    box-shadow:         0 1rem 3rem rgba(0,0,0,.175)!important;
-    position: relative;
-    top:    30vh;
-    padding: 100px;
-    width: 100%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    z-index: 10 !important;
-  }
+    box-shadow:         0 1rem 3rem rgba(0,0,0,.175) !important;
+    position:           relative;
+    top:                30vh;
+    padding:            100px;
+    width:              100%;
+    min-height:         100vh;
+    box-sizing:         border-box;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+
+/*                      Vertical progress bar on scroll                       */
+
+/* -------------------------------------------------------------------------- */
+
+
+.progress-container {
+  position:     fixed;
+  bottom:       0;
+  left:         0;
+  width:        100%;
+  height:       8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height:       8px;
+  background: #04AA6D;
+  width:        0%;
+}

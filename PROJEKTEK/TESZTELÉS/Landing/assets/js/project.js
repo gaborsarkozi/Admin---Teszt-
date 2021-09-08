@@ -12,8 +12,38 @@ window.addEventListener('scroll', () => {
 
 
 
-$(document).ready(function(){
-   $(window).scroll(function(){
-       $('.project-head-section').css("opacity", 1- $(window).scrollTop() / 200)
-   })
+$(document).ready(function () {
+    $(window).scroll(function () {
+        $('.project-head-section').css("opacity", 1 - $(window).scrollTop() / 200)
+    })
 })
+
+
+
+/* ---------- Vertical progress bar --------------- */
+
+
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function () { myFunction() };
+
+function myFunction() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+
+
+    document.getElementById("myBar").style.width = scrolled + "%";
+
+
+}
+
+
+/* ---------- If rock the bottom --------------- */
+
+ $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        console.log("bottom!");
+    }
+ });
+
+
