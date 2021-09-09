@@ -11,26 +11,22 @@
 
 .project-head-section {
     height:             125rem;
-    background-color: rgb(69, 111, 225);
+    background-color: rgb(255, 255, 255);
     position:           fixed;
     top:                0;
     left:               0;
     width:              100%;
-    height:             300px;
+    height:             75vh;
     justify-content:    center;
     align-items:        center;
     display:            flex;
+    box-shadow:         rgb(50 50 93 / 0%) 0px 30px 60px -12px inset, rgb(0 0 0 / 65%) 1px -5px 36px -18px inset;
+
 }
 
 .project-content-section {
-    height:             125rem;
-    box-shadow:         0 1rem 3rem rgba(0,0,0,.175) !important;
-    position:           relative;
-    top:                30vh;
-    padding:            100px;
-    width:              100%;
-    min-height:         100vh;
-    box-sizing:         border-box;
+    background-color:  #fff;
+    top:                 75vh;
 }
 
 
@@ -56,3 +52,5 @@
   background: #04AA6D;
   width:        0%;
 }
+
+
