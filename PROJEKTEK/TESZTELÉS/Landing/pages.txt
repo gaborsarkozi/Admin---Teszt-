@@ -54,8 +54,33 @@ https://slite.com/learn/project-documentation-guide#toc-3
 
 
 - Stack: Shoprenter, Wordpress, Bulma, TailwandCSS, Bootstrap, Elementor, HTML5, CSS, CSS3, GitKraken
-- Refi: bexi.hu, shoprenteres szekciók, bence, bianka, ricsi, emailek
+- Refi: bexi.hu, shoprenteres szekciók, bence, bianka, ricsi, emailek, portfolio page
 - Munkafolyamatok: Tartalomkészítés, Design, Kódolás, Üzemeltetés, Tervezés
 - Future stack: JS, React
 - Tapasztalat: 1,5 év junior front end / site builder
+
+
+
+- Landing: Weboldal építés és fejlesztés. Fő fókuszban a digitális élmények létrehozása kliens oldalon. 
+
+
+
+- Komponens alapú fejlesztés: Applikációk, értesítő üzenet, webshopok, hírlevél vagy könyvbemutató oldal. Minden
+fejlesztés a felhasználói élményt és esztétikumot helyezi előtérbe: szekciókra bontva, egységesen létrehozni egy fenntarható és átlátható produktumot. 
+
+- Színes környezetben: legyen szó online áruház platformról, üzenetküldő alkalmazásról vagy ügyfélszolgálati rendszerek létrehozásáról. Rugalmasan alkalmazkodva a 
+felhasználók vagy a parner igényeihez.
+
+- Folyamatosan újat tanulva: Új technológiákkal megismerkedve, szélesítve az eddigi kompetenciákat előre haladva, tudásra éhesen. 
+
+
+- Segítség: Weboldalak tervezésében és építésében. Webáruházak funkcióbővítésében. Felhasználó élmény javításában. 
+
+
+
+
+
+
+
+
 
