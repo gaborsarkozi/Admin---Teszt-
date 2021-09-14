@@ -4,6 +4,11 @@
 
 /* -------------------------------------------------------------------------- */
 
+*:focus {
+  outline: 0 !important;
+  box-shadow: none;
+}
+
 .toast {
   width: 350px;
   max-width: 100%;
@@ -31,6 +36,13 @@
 }
 .toast-container > :not(:last-child) {
   margin-bottom: 0.75rem;
+}
+
+.toast .btn.close {
+  line-height: 1;
+  font-size: 1.5rem;
+  outline: none;
+  box-shadow: none;
 }
 
 .toast-header {
