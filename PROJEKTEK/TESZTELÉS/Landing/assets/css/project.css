@@ -211,3 +211,27 @@
 }
 
 
+
+/* -------------------------------------------------------------------------- */
+
+/*                                 Heart                                      */
+
+/* -------------------------------------------------------------------------- */
+
+.heart {
+  fill:       red;
+  top:          15px;
+  width:        23px;
+}
+
+#counterHeart {
+  position:     absolute;
+  bottom:       30px;
+  height:       10px;
+  padding-left: 0rem;
+  font-size:    13px;
+  width:        10px;
+  color:      #f44336;
+  font-weight:  700;
+  line-height:  0.8125rem;
+}

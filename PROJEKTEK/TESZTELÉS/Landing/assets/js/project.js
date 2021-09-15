@@ -47,6 +47,25 @@ $(window).scroll(function () {
         // Toast activity
         $("#myToast").toast({ delay: 5000 });
         $("#myToast").toast('show');
+
+
+
+        // Emoji confetti 
+        // https://github.com/loonywizard/js-confetti
+
+        const canvas = document.getElementById('custom_canvas')
+        const button = document.getElementById('buttonConfetti')
+
+        const jsConfetti = new JSConfetti({ canvas })
+
+        setTimeout(() => {
+            jsConfetti.addConfetti({
+                emojis: ['🦄', '✅', '🪐', '🙈', '🤸🏻‍♂️'],
+                emojiSize: 100,
+                confettiNumber: 50,
+            })
+        }, 250)
+
     }
 });
 
@@ -74,3 +93,40 @@ function readingTime() {
     document.getElementById("time").innerText = time;
   }
   readingTime();
+
+
+/* ---------- Like counter --------------- */
+
+
+document.querySelector("#buttonHeart").addEventListener("click", clickCounter);
+document.addEventListener("DOMContentLoaded", showValue);
+
+let counter = document.getElementById("counterHeart");
+
+function showValue() {
+	counter.innerHTML = `${localStorage.clickcount || 0}`;
+}
+
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    showValue();
+  } else {
+    counter.innerHTML = "Your browser does not support web storage...";
+  }
+}
+
+
+/* ---------- View counter --------------- */
+
+
+// https://countapi.xyz/
+// It have to registre myself
+
+function callbackName(response) {
+    document.getElementById('visits').innerText = response.value;
+}
