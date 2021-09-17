@@ -130,3 +130,12 @@ function clickCounter() {
 function callbackName(response) {
     document.getElementById('visits').innerText = response.value;
 }
+
+/* ---------- View counter --------------- */
+
+
+
+ScrollReveal().reveal('.headline', { delay: 3500 })
+ScrollReveal().reveal('.tagline', { delay: 1000 })
+ScrollReveal().reveal('.punchline', { delay: 5000 })
+
