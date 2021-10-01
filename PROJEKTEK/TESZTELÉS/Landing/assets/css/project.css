@@ -235,3 +235,41 @@
   font-weight:  700;
   line-height:  0.8125rem;
 }
+
+/* -------------------------------------------------------------------------- */
+
+/*                                Project nav                                 */
+
+/* -------------------------------------------------------------------------- */
+
+
+.project--nav{
+  background: #fff;
+}
+
+.nav .project--nav--link{
+  font-size: 12px;
+  background: #fff;
+  border-radius: 0;
+  padding: 5px 0;
+}
+
+.nav .project--nav--link:nth-child(1) {
+  margin-top: 1rem;
+}
+
+.nav .project--nav--link.active {
+  background-color: #fff;
+  color: #1e00c7;
+  font-weight: 700;
+}
+
+.nav .project--nav--link.active::after{
+  content: '';
+  position: absolute;
+  background-color: #1e00c7;
+  width: 3px;
+  height: 15px;
+  left: 9px;
+}
+}

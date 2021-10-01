@@ -52,7 +52,7 @@ $(window).scroll(function () {
 
         // Emoji confetti 
         // https://github.com/loonywizard/js-confetti
-
+/* 
         const canvas = document.getElementById('custom_canvas')
         const button = document.getElementById('buttonConfetti')
 
@@ -64,7 +64,7 @@ $(window).scroll(function () {
                 emojiSize: 100,
                 confettiNumber: 50,
             })
-        }, 250)
+        }, 250) */
 
     }
 });

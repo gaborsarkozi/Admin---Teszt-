@@ -89,6 +89,7 @@ body {
     color:                            var(--fontColor);
     -webkit-text-size-adjust:         100%;
     -webkit-tap-highlight-color:    rgba(0, 0, 0, 0);
+    position: relative; /* required */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -5003,13 +5004,13 @@ fieldset:disabled .btn {
     padding-top: -0.046rem;
     padding-bottom: -0.046rem;
     margin-right: 1rem;
-    font-size: calc(1.2978rem + 0.5736vw);
+    font-size: 16px;
     white-space: nowrap;
 }
 
 @media (min-width: 1200px) {
     .navbar-brand {
-        font-size: 1.728rem;
+        font-size: 16px;
     }
 }
 
@@ -7681,7 +7682,7 @@ fieldset:disabled .btn {
 .sticky-top {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 50px;
     z-index: 1020;
 }
 
@@ -7689,7 +7690,7 @@ fieldset:disabled .btn {
     .sticky-sm-top {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 50px;
         z-index: 1020;
     }
 }
@@ -7698,7 +7699,7 @@ fieldset:disabled .btn {
     .sticky-md-top {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 50px;
         z-index: 1020;
     }
 }
@@ -7707,7 +7708,7 @@ fieldset:disabled .btn {
     .sticky-lg-top {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 50px;
         z-index: 1020;
     }
 }

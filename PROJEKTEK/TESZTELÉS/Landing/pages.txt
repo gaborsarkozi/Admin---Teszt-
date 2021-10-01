@@ -57,7 +57,7 @@ https://slite.com/learn/project-documentation-guide#toc-3
 
 
 - Stack: Shoprenter, Wordpress, Bulma, TailwandCSS, Bootstrap, Elementor, HTML5, CSS, CSS3, GitKraken
-- Refi: bexi.hu, shoprenteres szekciók, bence, bianka, ricsi, emailek, portfolio page
+- Refi: bexi.hu, shoprenteres szekciók, bence, bianka, ricsi, emailek, portfolio page, 
 - Munkafolyamatok: Tartalomkészítés, Design, Kódolás, Üzemeltetés, Tervezés
 - Future stack: JS, React
 - Tapasztalat: 1,5 év junior front end / site builder
@@ -79,6 +79,15 @@ felhasználók vagy a parner igényeihez.
 
 - Segítség: Weboldalak tervezésében és építésében. Webáruházak funkcióbővítésében. Felhasználó élmény javításában. 
 
+
+
+
+
+--------------------------------
+
+
+- Refi: csapagy.hu
+- Codeberry készségek, kurzusok
 
 
 
