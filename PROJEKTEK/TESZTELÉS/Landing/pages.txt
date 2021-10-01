@@ -42,6 +42,11 @@ https://themes.getbootstrap.com/preview/?theme_id=4231
 https://slite.com/learn/project-documentation-guide#toc-3
 
 
+- Icons 
+
+https://iconscout.com/unicons
+
+
 - Extras 
 
 	- Light / Dark theme switch 
