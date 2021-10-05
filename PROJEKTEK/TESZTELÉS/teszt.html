@@ -1,20 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="teszt.css">
-</head>
+    <head>
+        <meta charset="iso-8859-2">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bearing</title>
+        <link rel="shortcut icon" href="/image/bexi_favicon.svg">
+        
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NJJFBW6"></script><script src="https://www.google.com/recaptcha/enterprise.js?render=6LfcrxkbAAAAAL1dxM5mn3VE_FoM2TiIuXI_Gx1i"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <script type="application/javascript" src="js/main.js"></script>
+        <script type="application/javascript" src="js/kosar.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+        <link rel="stylesheet" href="teszt.css">
+
+       
+        
+        
+        </head>
 
 <body>
+    <div class="container pt-5" >
 
-    <canvas id="myCanvas" width="450" height="350" style="border: 1px solid black"></canvas>
-
-
-    <script src="teszt.js"></script>
+        <div class="row wh-100">
+        </div>
+        <div class="row d-flex justify-content-center buying-first-content"><div class="col-md-12 col-lg-6"><h2 class="intro-title text-center">Vásárlás könnyedén</h2><p>Saját fejlesztésű nagykereskedelmi webáruház rendszerünket 30 év tapasztalatával teljesen a fogyasztói igényekre szabtuk. Kövesse végig a vásárlási folyamatot!</p></div></div>
+      <div class="row buying-items pulse-orange-big">
+        <div class="col-md-12 col-lg-6">
+          <div class="buying-items-content">
+            <h2 class="latszodik-box" >Regisztráció</h2>
+            <p>Regisztrációs folyamatunk csupán néhány lépcsőből áll. Ezeket végrehajtva megnyílik Önnek áruházunk vásárlási felülete.</p>
+            <a href="#pills-registration" data-toggle="tab" class="bemutatkozasRegisztracioBtn d-flex justify-content-between link-bemutatkozas aos-init aos-animate" data-aos="fade-zoom-in" data-aos-duration="500">
+            <div>Regisztrálni szeretne?</div>
+            <div class="d-flex justify-content-between align-items-center"><i class="icon-login mr-4"></i> </div>
+            </a></div>
+        </div>
+        <div class="col-md-12 col-lg-6"><img class="aos-init aos-animate" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_belepes.svg"></div>
+      </div>
+        <div class="row buying-items">
+        <div class="col-md-12 col-lg-6">
+          <div class="buying-items-content">
+            <h2>Keresés</h2>
+            <p>Szűrőrendszerünket fogyasztói igényekre alapozva fejlesztettük ki. Segítségével könnyedén megtalálhatja a keresett terméket.</p>
+            <a href="/new" class="d-flex justify-content-between link-bemutatkozas aos-init" data-aos="fade-zoom-in" data-aos-duration="500">
+            <div>Termékkereső</div>
+            <div class="d-flex justify-content-between align-items-center"><i class="icon-magnifier mr-4"></i> </div>
+            </a></div>
+        </div>
+        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_kereses.svg"></div>
+      </div>
+        <div class="row buying-items">
+        <div class="col-md-12 col-lg-6">
+          <div class="buying-items-content">
+            <h2>Termék kosárba helyezése</h2>
+            <p>A kiválasztott terméket helyezze a kosarába. Rendszerünk segítségével több kosár létrehozására is van lehetőség.</p>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_termekek.svg"></div>
+      </div>
+        <div class="row buying-items">
+        <div class="col-md-12 col-lg-6">
+          <div class="buying-items-content">
+            <h2>Kosár és rendelés áttekintése</h2>
+            <p>Kosár oldalunkon átnézheti mely termékeket helyezte be, módosíthat darabszámot és eltávolíthat nem szükséges elemeket.</p>
+            <a href="/new/kosar_oldal?cartId=-1" class="d-flex justify-content-between link-bemutatkozas aos-init" data-aos="fade-zoom-in" data-aos-duration="500">
+            <div>Kosár oldal</div>
+            <div class="d-flex justify-content-between align-items-center"><i class="icon-basket mr-4"></i> </div>
+            </a></div>
+        </div>
+        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_kosar.svg"></div>
+      </div>
+        <div class="row buying-items">
+        <div class="col-md-12 col-lg-6">
+          <div class="buying-items-content">
+            <h2>Rendelés leadása</h2>
+            <p>Rendelés összesítő oldalunkon nézze meg, hogy megadott adatai helyesek és nyomja meg a rendelés leadása gombot.</p>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_rendeles.svg"></div>
+      </div>
+      <div class="row wh-100">
+    </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+    $(window).on('scroll', function () {
+        var windowHeight = $(window).height(),
+            gridTop = windowHeight * .3,
+            gridBottom = windowHeight * .8;
+        $('.buying-items').each(function () {
+            var thisTop = $(this).offset().top - $(window).scrollTop();
+            if (thisTop > gridTop && (thisTop + $(this).height()) < gridBottom) {
+                $(this).addClass("pulse-orange-big");
+            } else {
+                $(this).removeClass("pulse-orange-big");
+            }
+        });
+    });
+    $(window).trigger('scroll');
+});
+    </script>
+    <script src="bubbles.js"></script>
 </body>
 
 </html>
