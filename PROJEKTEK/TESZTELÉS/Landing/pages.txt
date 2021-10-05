@@ -157,6 +157,7 @@ MORE ABOUT ME:
 🍻 Responsive, flexible 
 🍻 DRY principle, Clean Code 
 🍻 Style guide keeping in mind 
+🍻 Participation in planning and design processes
 🍻 Working quickly 
 🍻 Independent problem solving
 🍻 Autodidact self-education 
