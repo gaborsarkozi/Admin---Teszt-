@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAMA,AAAA,IAAI,CAAC;EACD,KAAK,EAPO,OAAc;EAQ1B,WAAW,EALC,GAAG;CAMlB;;AAED,AAAA,KAAK,CAAC;EACF,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;CASjB;;AAXD,AAII,KAJC,CAID,UAAU,CAAA;EACN,gBAAgB,EAhBR,OAAc;CAiBzB;;AANL,AAQI,KARC,AAQA,MAAM,CAAC;EACJ,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "../../PROJEKTEK/TESZTELÉS/Landing/assets/sass/scss/main.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
