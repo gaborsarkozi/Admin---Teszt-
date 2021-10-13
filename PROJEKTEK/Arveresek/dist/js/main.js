@@ -14,6 +14,7 @@
   const sikertelenLicitPopup = document.querySelector("#sikertelenLicit");
   const sikeresAutoLicitPopup = document.querySelector("#sikeresAutoLicit");
   const sikeresAutoLicitRemovePopup = document.querySelector("#sikeresAutoLicitRemove");
+  const sikeresVasarlasPopup = document.querySelector("#sikeresVasarlasPopup");
 
 
   const tesztAuctionDone = document.querySelector("#auctionCard");
@@ -56,6 +57,12 @@
 
     /* Befejezett aukció div hozzáadás */ 
     tesztAuctionDone.appendChild(closedAuction);
+
+    /* Sikeres vásárlás popup */
+    sikeresVasarlasPopup.classList.toggle("show");
+    setTimeout(function () {
+      sikeresVasarlasPopup.classList.toggle("show");
+    }, 5000);
 
   })
 
