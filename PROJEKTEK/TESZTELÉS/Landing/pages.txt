@@ -97,7 +97,74 @@ felhasználók vagy a parner igényeihez.
 
 
 
+-------------------------------- Linkedin ----------------------------------
 
+Junior Frontend Developer / Sitebuilder 
+
+ABOUT ME:
+💡 Having 1.5+ 𝘆𝗲𝗮𝗿𝘀 𝗼𝗳 𝗲𝘅𝗽𝗲𝗿𝗶𝗲𝗻𝗰𝗲 in frontend development and sitebuilding in corporate environment.
+💡 𝗛𝗧𝗠𝗟𝟱, 𝗖𝗦𝗦𝟯, 𝗝𝗮𝘃𝗮𝘀𝗰𝗿𝗶𝗽𝘁, Bootstrap, GIT, NPM, CDN.
+
+PROJECT ACHIEVEMENTS:
+💪 Building ecommerce webstores.
+💪 Building admin dashboard.
+💪 Building ecommerce pages (contact, faq, landing pages).
+💪 Building chat application user interface.
+💪 Building web application registration page. 
+💪 Building blog main page. 
+💪 Coding webstore payment interface.
+💪 Managing and moderate Shoprenter's webstores.
+
+PROJECT PARTICIPATED:
+💻 bexi.hu 
+💻 bearingexpress.shoprenter.hu
+💻 csapagy.hu
+💻 sarkoziklima.hu 
+💻 idée.hu 
+💻 nepijatektar.hu 
+💻 Codeberry school projects (chat application user interface, web application registration page, blog main page, company landing page) 
+💻 sarkozigabormunka.github.io 
+💻 sarkozigabor13.github.io 
+
+VERSION CONTROLS:
+🚀 𝗚𝗶𝘁𝗛𝘂𝗯, 𝗚𝗶𝘁, 𝗚𝗶𝘁Kraken
+
+ACHIEVEMENTS:
+🏅 Codeberry frontend basics certificate (HTML5, CSS, CSS3, JSBIN, META, CHROME-DEVTOOLS)
+🏆 Codeberry JS course certificate
+🥇 National Office VET and ALE - Frontend course certificate
+
+CODE EDITOR: 
+👨🏽‍💻 Virtual Studio Code
+
+STILL LEARNING:
+👷🏽‍♂️ Javascript
+👷🏽‍♂️ React
+
+I'VE USED:
+🧩 Figma
+🎨 Canva
+⌛️ Trello
+⌛️ Slack
+
+TECHNICAL COMPETENCIES:
+📌 Passionate about learning new technologies (VueJS, Angular)
+📌 Passionate about learning new sitebuilder tools (Elementor, Wordpress, Shopify)
+📌 Passionate about learning new css frameworks (Bulma, TailwandCSS, Codyhouse)
+
+MORE ABOUT ME:
+🍻 Mobile-first design concept  
+🍻 Responsive, flexible 
+🍻 DRY principle, Clean Code 
+🍻 Style guide keeping in mind 
+🍻 Participation in planning and design processes
+🍻 Working quickly 
+🍻 Independent problem solving
+🍻 Autodidact self-education 
+
+✉  mayank3141@gmail.com
+📞 +918983179108
+🏠 https://github.com/mayank31ag
 
 
 
