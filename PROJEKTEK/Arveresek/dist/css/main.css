@@ -56,6 +56,60 @@ a {
   vertical-align: top;
 }
 
+.badge-danger {
+  padding: .5rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background-color: red;
+  -webkit-animation: glowing 1500ms infinite;
+          animation: glowing 1500ms infinite;
+}
+
+.badge-danger .icon {
+  color: #fff;
+}
+
+.badge-danger span {
+  margin-right: .25rem;
+  vertical-align: top;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #bb0000;
+    -webkit-box-shadow: 0 0 3px #bb0000;
+            box-shadow: 0 0 3px #bb0000;
+  }
+  50% {
+    background-color: red;
+    -webkit-box-shadow: 0 0 10px red;
+            box-shadow: 0 0 10px red;
+  }
+  100% {
+    background-color: #bb0000;
+    -webkit-box-shadow: 0 0 3px #bb0000;
+            box-shadow: 0 0 3px #bb0000;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #bb0000;
+    -webkit-box-shadow: 0 0 3px #bb0000;
+            box-shadow: 0 0 3px #bb0000;
+  }
+  50% {
+    background-color: red;
+    -webkit-box-shadow: 0 0 10px red;
+            box-shadow: 0 0 10px red;
+  }
+  100% {
+    background-color: #bb0000;
+    -webkit-box-shadow: 0 0 3px #bb0000;
+            box-shadow: 0 0 3px #bb0000;
+  }
+}
+
 .circle {
   display: inline-block;
   position: relative;
@@ -165,6 +219,13 @@ a {
 
 .btn.btn-delete .icon {
   color: #fff;
+}
+
+.btn.printAuctionBtn {
+  color: #6c757d;
+  font-size: 12px;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 .collapsible-link {

@@ -61,6 +61,7 @@
   for (var i = 0; i < showAuctionProductsNumber.length; i++) {
     showAuctionProductsNumber[i].innerText = auctionProductsNumber + " termék";
   }
+
   
 
   /* -------------------------------------------------------------------------- */
@@ -81,7 +82,7 @@
       sikertelenReszvetelPopup.classList.toggle("show");
       setTimeout(function () {
         sikertelenReszvetelPopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
 
     }
 
@@ -96,11 +97,45 @@
       sikeresReszvetelPopup.classList.toggle("show");
       setTimeout(function () {
         sikeresReszvetelPopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
     }
 
-
   })
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                         Aukció adatlap nyomtatás                           */
+
+  /* -------------------------------------------------------------------------- */
+
+
+    const printThisAuction = document.getElementsByClassName('printAuctionBtn');
+
+    for (var i = 0; i < printThisAuction.length; i++) {
+        printThisAuction[i].addEventListener('click', function () {
+
+        var printContents  = this.parentNode.parentNode.parentNode.parentNode.innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+        location.reload();
+
+        });
+        
+    }
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                         Aukció random ID generálás                         */
+
+  /* -------------------------------------------------------------------------- */
+
+  let auctionID = document.getElementById("auctionID");
+  auctionID.innerText = Math.random().toString(36).slice(3);
+
+
+
 
 
   /* -------------------------------------------------------------------------- */
@@ -140,7 +175,7 @@
     sikeresVasarlasPopup.classList.toggle("show");
     setTimeout(function () {
       sikeresVasarlasPopup.classList.toggle("show");
-    }, 5000)
+    }, 4000)
 
   })
 
@@ -159,7 +194,7 @@
     sikeresAutoLicitPopup.classList.toggle("show");
     setTimeout(function () {
       sikeresAutoLicitPopup.classList.toggle("show");
-    }, 5000);
+    }, 4000);
 
 
 
@@ -183,7 +218,7 @@
       sikeresAutoLicitPopup.classList.toggle("show");
       setTimeout(function () {
         sikeresAutoLicitPopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
 
     });
 
@@ -197,7 +232,7 @@
       sikeresAutoLicitRemovePopup.classList.toggle("show");
       setTimeout(function () {
         sikeresAutoLicitRemovePopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
     })
 
   });
@@ -239,13 +274,13 @@
       sikeresLicitPopup.classList.toggle("show");
       setTimeout(function () {
         sikeresLicitPopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
 
       /* Sikeres gomb színváltás */
       bidButton.classList.toggle("btn-good");
       setTimeout(function () {
         bidButton.classList.toggle("btn-good");
-      }, 5000);
+      }, 4000);
     }
 
     else {
@@ -253,13 +288,13 @@
       sikertelenLicitPopup.classList.toggle("show");
       setTimeout(function () {
         sikertelenLicitPopup.classList.toggle("show");
-      }, 5000);
+      }, 4000);
 
       /* Sikertelen gomb színváltás */
       bidButton.classList.toggle("btn-bad");
       setTimeout(function () {
         bidButton.classList.toggle("btn-bad");
-      }, 5000);
+      }, 4000);
     }
 
     /* Új lista elem licit ár */
@@ -298,7 +333,7 @@
 /* -------------------------------------------------------------------------- */
 
 (function () {
-  var countDownDate = new Date("Oct 16, 2021 08:55:00").getTime();
+  var countDownDate = new Date("Oct 16, 2021 15:43:00").getTime();
   var auctionCard = document.getElementById('auctionCard');
   var auctionLink = document.getElementById('auctionLink');
 
@@ -320,6 +355,15 @@
     document.getElementById("mins").innerHTML = minutes + " perc "
     document.getElementById("secs").innerHTML = seconds + " mp "
 
+
+    // Ha 3p alá ér a számláló, akkor elkezd villognni //
+    var visszaszamlaloBadge = document.getElementById("end");
+
+    if (timeleft <= 179697) {
+      visszaszamlaloBadge.classList.add("badge-danger");
+      visszaszamlaloBadge.classList.remove("badge-primary");
+    }
+
     // Display the message when countdown is over
     if (timeleft < 0) {
       clearInterval(myfunc);
@@ -327,10 +371,12 @@
       document.getElementById("hours").innerHTML = ""
       document.getElementById("mins").innerHTML = ""
       document.getElementById("secs").innerHTML = ""
-      document.getElementById("end").innerHTML = "Az árverésnek vége!";
+      visszaszamlaloBadge.innerHTML = "Az árverésnek vége!";
       auctionCard.classList.add('disabled-card');
       auctionLink.classList.add('disabled-card');
       auctionLink.setAttribute('disabled', '');
+      visszaszamlaloBadge.classList.remove("badge-danger");
+      visszaszamlaloBadge.classList.add("badge-primary");
     }
   }, 1000);
 
@@ -355,9 +401,4 @@ for (var i = 0; i < userListArrow.length; i++) {
 
   });
 }
-
-
-
-
-
 

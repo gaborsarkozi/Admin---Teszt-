@@ -99,8 +99,13 @@
                     <div>
                       <h4 class="card-title">Csapágy kosár</h4>
                       <small class="text-muted cat">
-                        <i class="icon-basket-loaded icon"></i> <span class="showAuctionProductsNumber">6 termék</span>
+                        <i class="icon-basket-loaded icon"></i>
+                        <span class="showAuctionProductsNumber">6 termék</span>
                         <i class="icon-basket-loaded icon"></i> 2 gyártó
+                        <button class="ml-2 btn printAuctionBtn">
+                          <i class="icon icon-printer mr-2"></i>
+                          Aukció adatlapjának nyomtatása
+                        </button>
                       </small>
                     </div>
                     <div class="my-3">
@@ -168,6 +173,8 @@
                             HUF</span></div>
                         <div class="col-6 auction__details"><span class="text1">Licit lépcső: </span><span>2000
                             HUF</span></div>
+                        <div class="col-6 auction__details">
+                          <span class="text1">Licit azonosító: </span><span id="auctionID">365sda5d6as5d4s</span></div>
                         <div class="col-12 bg-light mt-4">
                           <p class="mb-0 py-3"> <i class="icon icon-info mr-1"></i> A leütési ár nem tartalmazza az
                             ÁFÁ-t, valamint a szállítási költségek a vásárlót terhelik.
@@ -279,7 +286,7 @@
                             <div class="col-6 d-flex align-items-center">
                               <div class="input-group form-group">
                                 <input type="number" name="numberInput" id="newBidInput" value="10000" min="10000"
-                                  step="2000" onkeydown="return false" class="form-control"
+                                  step="2000" onkeydown="return false" class="form-control usd_input"
                                   placeholder="Adja meg a licit értékét">
                                 <div class="input-group-append">
                                   <span class="input-group-text" id="basic-addon2">HUF</span>
@@ -300,12 +307,15 @@
                 <div id="auctionTermsConditions" class="row mt-5">
                   <div class="col-12 d-flex justify-content-end">
                     <form>
-                    <div class="form-group form-check">
-                      <input type="checkbox" class="form-check-input auction__checkbox" id="auctionTermsConditionsCheckbox" required>
-                      <label class="form-check-label auction__termstext" for="NewlettersCheck">Kijelentem, hogy az <a href="#">aukció részvételi feltételeit</a> elfogadom.</label>
-                      <button id="auctionTermsConditionsButton" type="button" class="btn btn-change">Részt veszek ezen az aukción <i class="icon-check"></i></button>
-                   </div>
-                  </form>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input auction__checkbox"
+                          id="auctionTermsConditionsCheckbox" required>
+                        <label class="form-check-label auction__termstext" for="NewlettersCheck">Kijelentem, hogy az <a
+                            href="#">aukció részvételi feltételeit</a> elfogadom.</label>
+                        <button id="auctionTermsConditionsButton" type="button" class="btn btn-change">Részt veszek ezen
+                          az aukción <i class="icon-check"></i></button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
