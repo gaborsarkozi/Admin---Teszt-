@@ -252,6 +252,10 @@ ul.timeline > li:nth-child(1)::before {
     box-shadow: 0 0 0 4px rgba(100, 197, 129, 0.2);
 }
 
+ul.timeline li:nth-child(n+4) {
+    display: none;
+}
+
 @media (max-width: 991.98px) {
     .card__headerinfo {
        justify-content: center;
@@ -307,6 +311,16 @@ input#auctionItemCurrentPrice{
 
 .auction__details {
     margin-bottom: .5rem;
+}
+
+.auction__checkbox {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.auction__termstext {
+    margin-right: 1rem;
 }
 
 .text1 {
@@ -532,12 +546,6 @@ input#auctionItemCurrentPrice{
 #requestPopupModal .white-btns {
     text-transform: none;
 }
-
-
-
-
-
-
 
 .popup-title {
     color:          #ec7623;

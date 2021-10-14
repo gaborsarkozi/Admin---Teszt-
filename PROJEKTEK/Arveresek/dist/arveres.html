@@ -16,6 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/table2excel@1.0.4/dist/table2excel.min.js"></script>
   <!-- Export -->
 
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                     <span id="secs">00</span>
                     <i class="icon icon-clock"></i>
                   </span>
-                  <span class="badge badge-primary ml-2 d-none d-lg-block">6 termék <i
+                  <span class="badge badge-primary ml-2 d-none d-lg-block showAuctionProductsNumber"> 6 termék <i
                       class="icon icon-basket-loaded"></i></span>
                 </div>
                 <div class="offset-lg-1 col-sm-5 col-lg-3 d-flex align-items-center mb-3 mb-lg-0 card__headerinfo">
@@ -98,7 +99,7 @@
                     <div>
                       <h4 class="card-title">Csapágy kosár</h4>
                       <small class="text-muted cat">
-                        <i class="icon-basket-loaded icon"></i> 6 termék
+                        <i class="icon-basket-loaded icon"></i> <span class="showAuctionProductsNumber">6 termék</span>
                         <i class="icon-basket-loaded icon"></i> 2 gyártó
                       </small>
                     </div>
@@ -111,7 +112,7 @@
                     </div>
                     <div class="my-3">
                       <h6>Csomag részletei:</h6>
-                      <ul class="py-3 bg-light">
+                      <ul id="auctionProductsList" class="py-3 bg-light">
                         <li>
                           <div class="row">
                             <div class="col-3"> <a href="#">6205 2Z</a></div>
@@ -176,13 +177,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="row mt-5 mt-lg-0">
+                <div id="auctionControlPanel" class="row mt-5 mt-lg-0 d-none">
                   <div class="col-12 col-lg-4">
-                    <h6 class="px-3">Eddig licitek</h6>
-                    <ul class="timeline">
+                    <h6 class="px-3">Utolsó három licit</h6>
+                    <ul class="timeline" id="auctionTimeline">
                       <li>
                         <div class="d-flex justify-content-between">
-                          <div class="auction__bidinfo auction__previousprice"> 36.000 HUF</div>
+                          <div class="auction__bidinfo auction__previousprice">36.000 HUF</div>
                           <div class="auction__bidinfo text-right">Szept. 12. 19:00 <i class="icon-clock icon"></i>
                           </div>
                         </div>
@@ -191,6 +192,30 @@
                         <div class="d-flex justify-content-between">
                           <span class="auction__bidinfo auction__previousprice">30.000 HUF</span>
                           <span class="auction__bidinfo">Szept. 12. 09:10 <i class="icon-clock icon"></i></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between">
+                          <span class="auction__bidinfo auction__previousprice">28.000 HUF</span>
+                          <span class="auction__bidinfo">Szept. 11. 16:32 <i class="icon-clock icon"></i></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between">
+                          <span class="auction__bidinfo auction__previousprice">28.000 HUF</span>
+                          <span class="auction__bidinfo">Szept. 11. 16:32 <i class="icon-clock icon"></i></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between">
+                          <span class="auction__bidinfo auction__previousprice">28.000 HUF</span>
+                          <span class="auction__bidinfo">Szept. 11. 16:32 <i class="icon-clock icon"></i></span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-flex justify-content-between">
+                          <span class="auction__bidinfo auction__previousprice">28.000 HUF</span>
+                          <span class="auction__bidinfo">Szept. 11. 16:32 <i class="icon-clock icon"></i></span>
                         </div>
                       </li>
                       <li>
@@ -251,8 +276,6 @@
                       <div class="col-12 d-flex justify-content-lg-end">
                         <div class="row">
                           <form class="form-inline">
-
-
                             <div class="col-6 d-flex align-items-center">
                               <div class="input-group form-group">
                                 <input type="number" name="numberInput" id="newBidInput" value="10000" min="10000"
@@ -271,7 +294,18 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
 
+                <div id="auctionTermsConditions" class="row mt-5">
+                  <div class="col-12 d-flex justify-content-end">
+                    <form>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input auction__checkbox" id="auctionTermsConditionsCheckbox" required>
+                      <label class="form-check-label auction__termstext" for="NewlettersCheck">Kijelentem, hogy az <a href="#">aukció részvételi feltételeit</a> elfogadom.</label>
+                      <button id="auctionTermsConditionsButton" type="button" class="btn btn-change">Részt veszek ezen az aukción <i class="icon-check"></i></button>
+                   </div>
+                  </form>
                   </div>
                 </div>
               </div>
@@ -280,272 +314,30 @@
         </div><!-- End -->
       </div><!-- End -->
     </div>
-    <div class="row mt-5">
-      <div class="col-lg-10 mx-auto">
-        <!-- Accordion -->
-        <div id="accordionExampleFinished" class="accordion shadow">
-          <!-- Accordion item 2 -->
-<!--           <div class="card" id="auctionCardTeszt">
-            <div class="auction__sold__div">
-              <div class="auction__sold__layer">
-                <h1 class="auction__sold__text">Ezt a termékét megvásárolták.</h1>
-                <h5 class="auction__sold__subtext mb-3">Az aukciónak vége!</h5>
-              </div>
-            </div>
-            <div id="headingTwo" class="card-header bg-white shadow-sm border-0">
-              <div class="row">
-                <div class="col-sm-6 col-lg-4 d-flex align-items-center mb-3 mb-lg-0 card__headerinfo">
-                  <span class="badge badge-primary" id="end">
-                    <span id="days">0 nap </span>
-                    <span id="hours">21 óra </span>
-                    <span id="mins">52 perc </span>
-                    <span id="secs">10 mp </span>
-                    <i class="icon icon-clock"></i>
-                  </span>
-                  <span class="badge badge-primary ml-2 d-none d-lg-block">6 termék <i
-                      class="icon icon-basket-loaded"></i></span>
-                </div>
-                <div class="offset-lg-1 col-sm-5 col-lg-3 d-flex align-items-center mb-3 mb-lg-0 card__headerinfo">
-                  <span class="badge badge-price ml-2">Jelenlegi ár: <input id="auctionItemCurrentPrice" readonly=""
-                      value="36000" type="number">HUF <span class="circle pulse green"></span>
-                  </span>
-                </div>
-                <div class="col-sm-12 col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
-                  <button id="auctionLink" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo" class="btn collapsible-link">Részletek
-                    megtekintése
-                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-arrow-down-circle-fill active"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z">
-                      </path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExampleFinished"
-              class="collapse show">
-              <div class="card-body">
-                <div class="row ">
-                  <div class="col-12 col-lg-4 align-items-center d-inline-grid">
-                    <div class="py-3 py-md-0">
-                      <img
-                        src="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/d5f351f9-c634-4b07-8a97-42e2901d6289.jpg?preset=fullsize"
-                        alt="auction_item">
-                    </div>
-                    <div class="d-flex">
-                      <a href="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/d2327b63-47cd-410e-aa7e-d5aaa75f9687.jpg?preset=fullsize"
-                        data-toggle="lightbox" data-gallery="my-gallery" class="auction__smallimg">
-                        <img alt="auction_item"
-                          src="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/d2327b63-47cd-410e-aa7e-d5aaa75f9687.jpg?preset=fullsize"
-                          class="img-fluid">
-                      </a>
-
-                      <a href="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/7f2b1f0b-fcd1-4150-ad41-cb33e2d6fd39.jpg?preset=fullsize"
-                        data-toggle="lightbox" data-gallery="my-gallery" class="auction__smallimg">
-                        <img alt="auction_item"
-                          src="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/7f2b1f0b-fcd1-4150-ad41-cb33e2d6fd39.jpg?preset=fullsize"
-                          class="img-fluid">
-                      </a>
-
-                      <a href="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/778f1cfc-ce10-41ac-84a2-e23c113b7e83.jpg?preset=fullsize"
-                        data-toggle="lightbox" data-gallery="my-gallery" class="auction__smallimg">
-                        <img alt="auction_item"
-                          src="https://auctionresource.azureedge.net/blob/images/auction-images/2019-02-22/778f1cfc-ce10-41ac-84a2-e23c113b7e83.jpg?preset=fullsize"
-                          class="img-fluid">
-                      </a>
-                    </div>
-
-                  </div>
-                  <div class="col-12 col-lg-8">
-                    <div>
-                      <h4 class="card-title">Csapágy kosár</h4>
-                      <small class="text-muted cat">
-                        <i class="icon-basket-loaded icon"></i> 6 termék
-                        <i class="icon-basket-loaded icon"></i> 2 gyártó
-                      </small>
-                    </div>
-                    <div class="my-3">
-                      <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita nisi et
-                        harum a provident placeat doloremque molestiae fugiat non quos impedit, corporis molestias
-                        dolore rem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita nisi et
-                        harum a provident placeat doloremque molestiae fugiat non quos impedit, corporis molestias
-                        dolore rem</p>
-                    </div>
-                    <div class="my-3">
-                      <h6>Csomag részletei:</h6>
-                      <ul class="py-3 bg-light">
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">6205 2Z</a></div>
-                            <div class="col-2">SKF</div>
-                            <div class="col-2">4 db</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">6205 2RS</a></div>
-                            <div class="col-2">FBJ</div>
-                            <div class="col-2">1 db</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">6200 2RS SS</a></div>
-                            <div class="col-2">FBJ</div>
-                            <div class="col-2">10 db</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">S6200-2RSR</a></div>
-                            <div class="col-2">NTN</div>
-                            <div class="col-2">4 db</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">W 6200-2RS1</a></div>
-                            <div class="col-2">SKF</div>
-                            <div class="col-2">2 db</div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="row">
-                            <div class="col-3"> <a href="#">S6200EE</a></div>
-                            <div class="col-2">SNR</div>
-                            <div class="col-2">3 db</div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="my-3">
-                      <h6 class="my-3" id="bidDigit">Technikai információk</h6>
-                      <div class="row">
-                        <div class="col-6 auction__details"><span class="text1">Árverés kezdete: </span><span>2021
-                            Október 8. 17:00</span></div>
-                        <div class="col-6 auction__details"><span class="text1">Árverés vége: </span><span>2021 Október
-                            10. 17:00</span></div>
-                        <div class="col-6 auction__details"><span class="text1">Kikiáltási ár: </span><span>26.000
-                            HUF</span></div>
-                        <div class="col-6 auction__details"><span class="text1">Licit lépcső: </span><span>2000
-                            HUF</span></div>
-                        <div class="col-12 bg-light mt-4">
-                          <p class="mb-0 py-3"> <i class="icon icon-info mr-1"></i> A leütési ár nem tartalmazza az
-                            ÁFÁ-t, valamint a szállítási költségek a vásárlót terhelik.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mt-5 mt-lg-0">
-                  <div class="col-12 col-lg-4">
-                    <h6 class="px-3">Eddig licitek</h6>
-                    <ul class="timeline">
-                      <li>
-                        <div class="d-flex justify-content-between">
-                          <div class="auction__bidinfo auction__previousprice"> 34.000 HUF</div>
-                          <div class="auction__bidinfo text-right">Szept. 12. 19:00 <i class="icon-clock icon"></i>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="d-flex justify-content-between">
-                          <span class="auction__bidinfo auction__previousprice">30.000 HUF</span>
-                          <span class="auction__bidinfo">Szept. 12. 09:10 <i class="icon-clock icon"></i></span>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="d-flex justify-content-between">
-                          <span class="auction__bidinfo auction__previousprice">28.000 HUF</span>
-                          <span class="auction__bidinfo">Szept. 11. 16:32 <i class="icon-clock icon"></i></span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-12 col-lg-8 d-flex align-items-end mt-5 mt-lg-0">
-                    <div class="row">
-                      <div class="col-12 d-flex justify-content-lg-end">
-                        <div class="row mb-4">
-                          <form class="form-inline">
-                            <div class="col-6 d-flex align-items-center">
-                              <div class="input-group form-group">
-                                <input type="text" class="form-control" id="inputFix" value="65000" readonly=""
-                                  aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-6 text-right">
-                              <button type="submit" class="btn btn-auction">Elviszem fix áron <i
-                                  class="icon-flag icon"></i></button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="col-12 d-flex justify-content-lg-end">
-                        <div class="row mb-4">
-                          <form class="form-inline">
-                            <div class="col-6 d-flex align-items-center">
-                              <i class="icon icon-info mr-3">
-                                <span class="tooltip-delivery tooltip">Az auto licittel beállíthat egy felső
-                                  értékhatárt, amely a licit lépcsővel megegyező összegért licitál automatikusan Önnek
-                                  minden beérkező licit esetén, amig az értékhatárt beállította. </span>
-                              </i>
-
-                              <div class="input-group form-group">
-                                <input type="text" class="form-control" id="inputOne"
-                                  placeholder="Adja meg az auto licit értékét">
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
-                                </div>
-                              </div>
-
-                            </div>
-                            <div class="col-6 text-right">
-                              <button type="submit" class="btn btn-auction">Auto licit <i
-                                  class="icon-cup icon"></i></button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="col-12 d-flex justify-content-lg-end">
-                        <div class="row">
-                          <form class="form-inline">
+  </div>
 
 
-                            <div class="col-6 d-flex align-items-center">
-                              <div class="input-group form-group">
-                                <input type="number" name="numberInput" id="numberInput" value="10000" min="38000"
-                                  step="2000" onkeydown="return false" class="form-control"
-                                  placeholder="Adja meg a licit értékét">
-                                <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-6 text-right">
-                              <button id="bidButton" type="button" class="btn btn-auction">Licitálok rá <i
-                                  class="icon-hourglass icon"></i></button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-        </div><!-- End -->
-      </div><!-- End -->
+  <!-- Popups -->
+
+  <div id="sikeresReszvetel" class="html-popups successful fade d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-start align-items-center">
+      <i class="icon-check mr-4"></i>
+      <div>
+        <span class="d-block html-popup-line-one">Sikeres részvétel!</span>
+        <span class="d-block html-popup-line-two">Kellemes licitálást kívánunk!</span>
+      </div>
     </div>
   </div>
 
-  <!-- Popups -->
+  <div id="sikertelenReszvetel" class="html-popups successful fade d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-start align-items-center">
+      <i class="icon-close mr-4"></i>
+      <div>
+        <span class="d-block html-popup-line-one">Sikertelen részvétel!</span>
+        <span class="d-block html-popup-line-two">Kérjük fogadja el az árverési szabályzatot!</span>
+      </div>
+    </div>
+  </div>
 
   <div id="sikeresLicit" class="html-popups successful fade d-flex justify-content-center align-items-center">
     <div class="d-flex justify-content-start align-items-center">
@@ -611,9 +403,12 @@
               <div class="popup-title mb-3">Megvásárolja az terméket?</div>
               <div id="favouritMsg" class="popup-content">A fix áron való megvásárlás estén a terméket azonnal
                 megvásárolja. Szeretné megvenni?</div>
-              <div class="d-flex justify-content-end mt-4"> 
-                <a href="#" class="white-btns mr-3" data-dismiss="modal" aria-label="close" data-abc="true">Mégsem<i class="icon-close ml-2"></i></a>
-                <a id="fixPriceBuyButton" href="#" class="white-btns" data-dismiss="modal" aria-label="close" data-abc="true">Igen<i class="icon-check ml-2"></i></a> </div>
+              <div class="d-flex justify-content-end mt-4">
+                <a href="#" class="white-btns mr-3" data-dismiss="modal" aria-label="close" data-abc="true">Mégsem<i
+                    class="icon-close ml-2"></i></a>
+                <a id="fixPriceBuyButton" href="#" class="white-btns" data-dismiss="modal" aria-label="close"
+                  data-abc="true">Igen<i class="icon-check ml-2"></i></a>
+              </div>
             </div>
           </div>
         </div>

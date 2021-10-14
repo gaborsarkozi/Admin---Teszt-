@@ -1,35 +1,113 @@
 
-/* Árverés app */
+/* -------------------------------------------------------------------------- */
+
+/*                               Árverés APP                                  */
+
+/* -------------------------------------------------------------------------- */
 
 
 (function () {
+
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                         DOM elemek összegyújtése                           */
+
+  /* -------------------------------------------------------------------------- */
 
   /* Gombok begyűjtése */
   const bidButton = document.getElementById("bidButton");
   const autoBidButton = document.getElementById("autoBidButton");
   const fixPriceBuyButton = document.getElementById("fixPriceBuyButton");
+  const auctionTermsConditionsButton = document.getElementById("auctionTermsConditionsButton");
 
   /* Popup ablakok begyűjtése */
+  const sikeresReszvetelPopup = document.querySelector("#sikeresReszvetel");
+  const sikertelenReszvetelPopup = document.querySelector("#sikertelenReszvetel");
   const sikeresLicitPopup = document.querySelector("#sikeresLicit");
   const sikertelenLicitPopup = document.querySelector("#sikertelenLicit");
   const sikeresAutoLicitPopup = document.querySelector("#sikeresAutoLicit");
   const sikeresAutoLicitRemovePopup = document.querySelector("#sikeresAutoLicitRemove");
   const sikeresVasarlasPopup = document.querySelector("#sikeresVasarlasPopup");
 
+  /* Aukció kontrol panelek begyűjtése */
+  const auctionTermsConditions = document.querySelector("#auctionTermsConditions");
+  const auctionControlPanel = document.querySelector("#auctionControlPanel");
+  const auctionTermsConditionsCheckbox = document.querySelector("#auctionTermsConditionsCheckbox");
 
-  const tesztAuctionDone = document.querySelector("#auctionCard");
+  /* Aukció kártya begyűjtése */
+  const auctionClosed = document.querySelector("#auctionCard");
 
+  /* Aukció előzmények */
+  const auctionTimeline = document.querySelector("#auctionTimeline");
 
+  /* Jelenlegi ár begyűjtése */
   const currentPrice = document.querySelector("#auctionItemCurrentPrice");
+
+  /* Input mezők begyűjtése */
   const fixPriceInput = document.querySelector("#inputFix");
   const autoLicitInput = document.querySelector("#inputAutoLicit");
-
   let newBidInput = document.getElementById("newBidInput");
 
+  /* Számra konvertálások begyűjtése */
   let fixPriceNumber = parseInt(fixPriceInput.value);
-
   let currentPriceNumber = parseInt(currentPrice.value);
   let biddingIncrementNumber = parseInt(newBidInput.step);
+
+  /* Termékek darabszámának kiírása */
+  const auctionProductsNumber = document.getElementById("auctionProductsList").childElementCount;
+  const showAuctionProductsNumber = document.querySelectorAll(".showAuctionProductsNumber")
+
+  for (var i = 0; i < showAuctionProductsNumber.length; i++) {
+    showAuctionProductsNumber[i].innerText = auctionProductsNumber + " termék";
+  }
+  
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                           Aukción való részvétel                           */
+
+  /* -------------------------------------------------------------------------- */
+
+
+  /* Aukcióban való részvételg gomb megnyomása */
+  auctionTermsConditionsButton.addEventListener("click", function () {
+
+
+    /* Ha nincsen kipipálva a szabályzat elfogadás, akkor popup megjelenik */
+    if (auctionTermsConditionsCheckbox.checked === false) {
+
+      /* Sikertelen részvétel popup megjelenés */
+      sikertelenReszvetelPopup.classList.toggle("show");
+      setTimeout(function () {
+        sikertelenReszvetelPopup.classList.toggle("show");
+      }, 5000);
+
+    }
+
+    else {
+      /* A feltételek elfogadása panel eltávolítása */
+      auctionTermsConditions.classList.add("d-none");
+
+      /* Az aukció kezeló panel megjelenítése */
+      auctionControlPanel.classList.remove("d-none")
+
+      /* Sikeres részvétel popup megjelenés */
+      sikeresReszvetelPopup.classList.toggle("show");
+      setTimeout(function () {
+        sikeresReszvetelPopup.classList.toggle("show");
+      }, 5000);
+    }
+
+
+  })
+
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                      Aukció kontroll panel, belépés után                   */
+
+  /* -------------------------------------------------------------------------- */
 
 
   /* Auto licit értékének állítása: fix ár - 5 x licitlépcső */
@@ -42,27 +120,27 @@
   newBidInput.setAttribute("min", (currentPriceNumber + biddingIncrementNumber));
 
 
-  /* Fix áron vásárlás gomb megnyomása */ 
+  /* Fix áron vásárlás gomb megnyomása */
   fixPriceBuyButton.addEventListener("click", function () {
 
-    /* Befejezett aukció div létrehozása */ 
+    /* Befejezett aukció div létrehozása */
     let closedAuction = document.createElement('div');
-    closedAuction.classList ="auction__sold__div";
-    closedAuction.innerHTML = 
-    `<div class="auction__sold__layer">
+    closedAuction.classList = "auction__sold__div";
+    closedAuction.innerHTML =
+      `<div class="auction__sold__layer">
     <h1 class="auction__sold__text">Ezt a termékét megvásárolták.</h1>
     <h5 class="auction__sold__subtext mb-3">Az aukciónak vége!</h5>
     </div>
     `;
 
-    /* Befejezett aukció div hozzáadás */ 
-    tesztAuctionDone.appendChild(closedAuction);
+    /* Befejezett aukció div hozzáadás */
+    auctionClosed.appendChild(closedAuction);
 
     /* Sikeres vásárlás popup */
     sikeresVasarlasPopup.classList.toggle("show");
     setTimeout(function () {
       sikeresVasarlasPopup.classList.toggle("show");
-    }, 5000);
+    }, 5000)
 
   })
 
@@ -82,6 +160,7 @@
     setTimeout(function () {
       sikeresAutoLicitPopup.classList.toggle("show");
     }, 5000);
+
 
 
     /* Automatikus licit gomb begyűjtése */
@@ -137,6 +216,25 @@
       let biddingIncrementNumber = parseInt(newBidInput.step);
       newBidInput.setAttribute("min", (currentTokenNumber + biddingIncrementNumber));
 
+
+      /* Új lista elem létrehozása az aukciók timeline-hoz */
+      let newBidTimeline = document.createElement('li');
+      newBidTimeline.innerHTML =
+        `<div class="d-flex justify-content-between">
+        <div id="newBidTimelinePrice" class="auction__bidinfo auction__previousprice">ÚJ!</div>
+        <div class="auction__bidinfo text-right"> 
+         <span id="timelineMonth">Szept.</span>
+         <span id="timelineDay">12.</span>
+         <span id="timelineHoursMinutes">19:00</span>
+         <i class="icon-clock icon"></i>
+        </div>
+      </div>
+    `;
+
+      /* Új lista elem hozzáadás a lista elejéhez */
+      auctionTimeline.prepend(newBidTimeline);
+
+
       /* Sikeres licit popup */
       sikeresLicitPopup.classList.toggle("show");
       setTimeout(function () {
@@ -164,54 +262,87 @@
       }, 5000);
     }
 
+    /* Új lista elem licit ár */
+    let newBidTimelinePrice = document.querySelector('#newBidTimelinePrice');
+
+    /* Aktuális ár konvertálása stringbe és pont rakás */
+    let currentPriceDot = currentPrice.value.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+    newBidTimelinePrice.innerText = currentPriceDot + " HUF";
+
+    /* Új lista elem hónap dátum */
+    let newBidTimelineMonth = document.querySelector('#timelineMonth');
+    let newBidMonths = new Date();
+    const monthNames = ["Jan.", "Feb.", "Már.", "Ápr.", "Máj.", "Jún.", "Júl.", "Aug.", "Szep.", "Okt.", "Nov.", "Dec."];
+    newBidTimelineMonth.innerText = monthNames[newBidMonths.getMonth()];
+
+    /* Új lista elem hónap dátum */
+    let newBidTimelineDay = document.querySelector('#timelineDay');
+    let newBidDay = new Date().getDate();
+    newBidTimelineDay.innerText = newBidDay + ".";
+
+    /* Új lista elem óra és perc dátum */
+    let newBidTimelineHoursMinutes = document.querySelector('#timelineHoursMinutes');
+    let newBidHours = new Date().getHours();
+    let newBidMinutes = new Date().getMinutes();
+    newBidTimelineHoursMinutes.innerText = newBidHours + ":" + newBidMinutes;
+
   });
 
 })();
 
 
+/* -------------------------------------------------------------------------- */
 
-/* Auction timer */
+/*                             Árverés időzítő                                */
+
+/* -------------------------------------------------------------------------- */
+
+(function () {
+  var countDownDate = new Date("Oct 16, 2021 08:55:00").getTime();
+  var auctionCard = document.getElementById('auctionCard');
+  var auctionLink = document.getElementById('auctionLink');
+
+  // Run myfunc every second
+  var myfunc = setInterval(function () {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = days + " nap "
+    document.getElementById("hours").innerHTML = hours + " óra "
+    document.getElementById("mins").innerHTML = minutes + " perc "
+    document.getElementById("secs").innerHTML = seconds + " mp "
+
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+      clearInterval(myfunc);
+      document.getElementById("days").innerHTML = ""
+      document.getElementById("hours").innerHTML = ""
+      document.getElementById("mins").innerHTML = ""
+      document.getElementById("secs").innerHTML = ""
+      document.getElementById("end").innerHTML = "Az árverésnek vége!";
+      auctionCard.classList.add('disabled-card');
+      auctionLink.classList.add('disabled-card');
+      auctionLink.setAttribute('disabled', '');
+    }
+  }, 1000);
+
+})();
 
 
-var countDownDate = new Date("Oct 14, 2021 08:55:00").getTime();
-var auctionCard = document.getElementById('auctionCard');
-var auctionLink = document.getElementById('auctionLink');
 
-// Run myfunc every second
-var myfunc = setInterval(function () {
+/* -------------------------------------------------------------------------- */
 
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
+/*                           Kinyitás nyíl ikon                               */
 
-  // Calculating the days, hours, minutes and seconds left
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-
-  // Result is output to the specific element
-  document.getElementById("days").innerHTML = days + " nap "
-  document.getElementById("hours").innerHTML = hours + " óra "
-  document.getElementById("mins").innerHTML = minutes + " perc "
-  document.getElementById("secs").innerHTML = seconds + " mp "
-
-  // Display the message when countdown is over
-  if (timeleft < 0) {
-    clearInterval(myfunc);
-    document.getElementById("days").innerHTML = ""
-    document.getElementById("hours").innerHTML = ""
-    document.getElementById("mins").innerHTML = ""
-    document.getElementById("secs").innerHTML = ""
-    document.getElementById("end").innerHTML = "Az árverésnek vége!";
-    auctionCard.classList.add('disabled-card');
-    auctionLink.classList.add('disabled-card');
-    auctionLink.setAttribute('disabled', '');
-  }
-}, 1000);
-
-
-
-/* Arrow icon change */
+/* -------------------------------------------------------------------------- */
 
 
 const userListArrow = document.getElementsByClassName('collapsible-link');
