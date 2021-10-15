@@ -24,6 +24,8 @@
   /* Popup ablakok begyűjtése */
   const sikeresReszvetelPopup = document.querySelector("#sikeresReszvetel");
   const sikertelenReszvetelPopup = document.querySelector("#sikertelenReszvetel");
+  const sikeresFeliratkozasMegfigyelesrePopup = document.querySelector("#sikeresFeliratkozasMegfigyelesre");
+  const sikeresLeiratkozasMegfigyelesrePopup = document.querySelector("#sikeresLeiratkozasMegfigyelesre");
   const sikeresLicitPopup = document.querySelector("#sikeresLicit");
   const sikertelenLicitPopup = document.querySelector("#sikertelenLicit");
   const sikeresAutoLicitPopup = document.querySelector("#sikeresAutoLicit");
@@ -54,6 +56,9 @@
   let currentPriceNumber = parseInt(currentPrice.value);
   let biddingIncrementNumber = parseInt(newBidInput.step);
 
+
+
+
   /* Termékek darabszámának kiírása */
   const auctionProductsNumber = document.getElementById("auctionProductsList").childElementCount;
   const showAuctionProductsNumber = document.querySelectorAll(".showAuctionProductsNumber")
@@ -62,7 +67,7 @@
     showAuctionProductsNumber[i].innerText = auctionProductsNumber + " termék";
   }
 
-  
+
 
   /* -------------------------------------------------------------------------- */
 
@@ -109,21 +114,66 @@
   /* -------------------------------------------------------------------------- */
 
 
-    const printThisAuction = document.getElementsByClassName('printAuctionBtn');
+  const printThisAuction = document.getElementsByClassName('printAuctionBtn');
 
-    for (var i = 0; i < printThisAuction.length; i++) {
-        printThisAuction[i].addEventListener('click', function () {
+  for (var i = 0; i < printThisAuction.length; i++) {
+    printThisAuction[i].addEventListener('click', function () {
 
-        var printContents  = this.parentNode.parentNode.parentNode.parentNode.innerHTML;
-        var originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-        location.reload();
+      var printContents = this.parentNode.parentNode.parentNode.parentNode.innerHTML;
+      var originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+      location.reload();
 
-        });
+    });
+
+  }
+
+  /* -------------------------------------------------------------------------- */
+
+  /*                            Aukció nyomonkövetése                          */
+
+  /* -------------------------------------------------------------------------- */
+
+  const followThisAuction = document.getElementsByClassName('followAuctionBtn');
+
+
+  for (var i = 0; i < followThisAuction.length; i++) {
+    followThisAuction[i].addEventListener('click', function () {
+
+      if (this.classList.contains("active-follow")) {
+
+        this.classList.remove("active-follow");
+        this.innerHTML = `
+        <i class="icon icon-magnifier mr-2"></i>
+        Aukció megfigyelése`;
+
+        /* Sikeres feliratkozás megfigyelésről popup */
+        sikeresLeiratkozasMegfigyelesrePopup.classList.toggle("show");
+        setTimeout(function () {
+          sikeresLeiratkozasMegfigyelesrePopup.classList.toggle("show");
+        }, 4000)
+      }
+
+      else {
         
-    }
+        this.classList.add("active-follow");
+        this.innerHTML = `
+        <i class="icon icon-magnifier-add mr-2"></i>
+        Aukció megfigyelése aktív`;
+
+        /* Sikeres leiratkozás megfigyelésre popup */
+        sikeresFeliratkozasMegfigyelesrePopup.classList.toggle("show");
+        setTimeout(function () {
+          sikeresFeliratkozasMegfigyelesrePopup.classList.toggle("show");
+        }, 4000)
+      }
+
+    });
+
+  }
+
 
   /* -------------------------------------------------------------------------- */
 
@@ -333,9 +383,13 @@
 /* -------------------------------------------------------------------------- */
 
 (function () {
-  var countDownDate = new Date("Oct 16, 2021 15:43:00").getTime();
+
+  var countDownDateAdd = new Date("Oct 21, 2021 14:49:00");
+  var countDownDate = countDownDateAdd.getTime();
   var auctionCard = document.getElementById('auctionCard');
   var auctionLink = document.getElementById('auctionLink');
+
+
 
   // Run myfunc every second
   var myfunc = setInterval(function () {
@@ -362,6 +416,13 @@
     if (timeleft <= 179697) {
       visszaszamlaloBadge.classList.add("badge-danger");
       visszaszamlaloBadge.classList.remove("badge-primary");
+
+      bidButton.addEventListener("click", function () {
+        console.log(countDownDateAdd);
+        countDownDateAdd.setTime(countDownDateAdd.getTime() + 1000 * 60);
+        console.log(countDownDateAdd);
+      })
+
     }
 
     // Display the message when countdown is over

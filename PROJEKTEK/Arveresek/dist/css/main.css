@@ -1,4 +1,9 @@
 /* Primary variables */
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 a {
   color: #ec7623;
 }
@@ -221,11 +226,21 @@ a {
   color: #fff;
 }
 
-.btn.printAuctionBtn {
+.btn.printAuctionBtn, .btn.followAuctionBtn {
   color: #6c757d;
   font-size: 12px;
   padding: 0;
   vertical-align: baseline;
+}
+
+.btn.followAuctionBtn.active-follow {
+  color: #33e822;
+  font-weight: 700;
+}
+
+.btn.followAuctionBtn.active-follow i {
+  color: #33e822;
+  font-weight: 700;
 }
 
 .collapsible-link {
