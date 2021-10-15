@@ -106,6 +106,10 @@
                           <i class="icon icon-printer mr-2"></i>
                           Aukció adatlapjának nyomtatása
                         </button>
+                        <button class="ml-2 btn followAuctionBtn">
+                          <i class="icon icon-magnifier mr-2"></i>
+                          Aukció megfigyelése
+                        </button>
                       </small>
                     </div>
                     <div class="my-3">
@@ -286,7 +290,7 @@
                             <div class="col-6 d-flex align-items-center">
                               <div class="input-group form-group">
                                 <input type="number" name="numberInput" id="newBidInput" value="10000" min="10000"
-                                  step="2000" onkeydown="return false" class="form-control usd_input"
+                                  step="2000" max="" onkeydown="return false" class="form-control usd_input"
                                   placeholder="Adja meg a licit értékét">
                                 <div class="input-group-append">
                                   <span class="input-group-text" id="basic-addon2">HUF</span>
@@ -326,7 +330,6 @@
     </div>
   </div>
 
-
   <!-- Popups -->
 
   <div id="sikeresReszvetel" class="html-popups successful fade d-flex justify-content-center align-items-center">
@@ -345,6 +348,26 @@
       <div>
         <span class="d-block html-popup-line-one">Sikertelen részvétel!</span>
         <span class="d-block html-popup-line-two">Kérjük fogadja el az árverési szabályzatot!</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="sikeresFeliratkozasMegfigyelesre" class="html-popups successful fade d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-start align-items-center">
+      <i class="icon-check mr-4"></i>
+      <div>
+        <span class="d-block html-popup-line-one">Sikeres feliratkozás!</span>
+        <span class="d-block html-popup-line-two">Az aukció eseményeiről emailben értesítjük!</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="sikeresLeiratkozasMegfigyelesre" class="html-popups successful fade d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-start align-items-center">
+      <i class="icon-check mr-4"></i>
+      <div>
+        <span class="d-block html-popup-line-one">Sikeres leiratkozás!</span>
+        <span class="d-block html-popup-line-two">Az aukció eseményeiről nem kap értesítést ezentúl!</span>
       </div>
     </div>
   </div>

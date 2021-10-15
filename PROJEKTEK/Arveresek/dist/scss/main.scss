@@ -1,6 +1,10 @@
 
 /* Primary variables */ 
 
+.btn:focus {
+    box-shadow: none;
+}
+
 $primary-color:  #ec7623;
 $primary-white:  #fff;
 $font-sizes: (
@@ -192,11 +196,21 @@ a {
         }
     }
 
-    &.printAuctionBtn {
+    &.printAuctionBtn, &.followAuctionBtn {
         color: #6c757d;
         font-size: 12px;
         padding: 0;
         vertical-align: baseline;
+    }
+
+    &.followAuctionBtn.active-follow {
+        color: #33e822;
+        font-weight: 700;
+
+        i {
+            color: #33e822;
+            font-weight: 700;
+        }
     }
 }
 
