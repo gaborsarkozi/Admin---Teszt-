@@ -16,6 +16,8 @@
   <script src="https://cdn.jsdelivr.net/npm/table2excel@1.0.4/dist/table2excel.min.js"></script>
   <!-- Export -->
 
+  <link rel="stylesheet" href="css/lib.css">
+
 
 </head>
 
@@ -245,15 +247,15 @@
                             <div class="col-6 d-flex align-items-center">
                               <div class="input-group form-group">
                                 <input type="text" class="form-control" id="inputFix" value="66000" readonly
-                                  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                  aria-label="Recipient's username" aria-describedby="basic-addon3">
                                 <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
+                                  <span class="input-group-text" id="basic-addon3">HUF</span>
                                 </div>
                               </div>
                             </div>
                             <div class="col-6 text-right">
                               <button type="button" class="btn btn-auction" data-toggle="modal"
-                                data-target="#exampleModalCenter">Elviszem fix áron <i
+                                data-target="#fixedPriceModal">Elviszem fix áron <i
                                   class="icon-flag icon"></i></button>
                             </div>
                           </form>
@@ -273,7 +275,7 @@
                                 <input type="number" class="form-control" id="inputAutoLicit"
                                   placeholder="Adja meg az auto licit értékét" step="2000">
                                 <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
+                                  <span class="input-group-text" id="basic-addon4">HUF</span>
                                 </div>
                               </div>
                             </div>
@@ -293,7 +295,7 @@
                                   step="2000" max="" onkeydown="return false" class="form-control usd_input"
                                   placeholder="Adja meg a licit értékét">
                                 <div class="input-group-append">
-                                  <span class="input-group-text" id="basic-addon2">HUF</span>
+                                  <span class="input-group-text" id="basic-addon6">HUF</span>
                                 </div>
                               </div>
                             </div>
@@ -424,7 +426,7 @@
 
   <!-- Modal -->
 
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  <div class="modal fade" id="fixedPriceModal" tabindex="-1" role="dialog" aria-labelledby="fixedPriceModalTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -450,6 +452,9 @@
   </div>
 
 
+
+
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -461,6 +466,61 @@
     crossorigin="anonymous"></script>
 
   <script src="./js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="lib.js"></script>
+
+  <script>
+    $(function(){
+      
+      let tourOptions = {
+        options : {
+          
+          darkLayerPersistence : true,
+          
+        },
+        tips    : [ {
+          title       : '<span class="tour-title-icon">😁</span>Here we go!',
+          description : 'Test the Product Tour JS now, click on the `Next` link to proceed to the next tip and see it in action.',
+          image       : "https://picsum.photos/300/200/?random",
+          selector    : 'h1',
+          x           : 50,
+          y           : 100,
+          offx        : 11,
+          offy        : 0,
+          position    : 'bottom',
+          onSelected  : false
+        }, {
+          title       : '<span class="tour-title-icon">😁</span>To the left',
+          description : 'You can choose where to place the tour tip, this is a `left` tip.',
+          image       : "https://picsum.photos/300/210/?random",
+          selector    : 'h2',
+          x           : 0,
+          y           : 0,
+          offx        : -20,
+          offy        : 25,
+          position    : 'left',
+          onSelected  : false
+        }, {
+          title       : '<span class="tour-title-icon">😁</span>And now to the right',
+          description : 'This is a `right` tip, you can set it to the `top` or `bottom` of your element as well.',
+          image       : "https://picsum.photos/310/200/?random",
+          selector    : 'p',
+          x           : 30,
+          y           : 0,
+          offx        : -20,
+          offy        : 25,
+          position    : 'right',
+          onSelected  : false
+        }]
+      };
+      
+      let tour = window.ProductTourJS;
+      tour.init(tourOptions);
+      
+      tour.start();
+      
+    });
+    </script>
 
 </body>
 

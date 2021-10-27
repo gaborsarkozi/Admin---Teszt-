@@ -384,7 +384,7 @@
 
 (function () {
 
-  var countDownDateAdd = new Date("Oct 21, 2021 14:49:00");
+  var countDownDateAdd = new Date("Oct 19, 2022 15:50:00");
   var countDownDate = countDownDateAdd.getTime();
   var auctionCard = document.getElementById('auctionCard');
   var auctionLink = document.getElementById('auctionLink');
@@ -414,13 +414,16 @@
     var visszaszamlaloBadge = document.getElementById("end");
 
     if (timeleft <= 179697) {
+       // Ha 3p alá ér a számláló, akkor elkezd villognni //
       visszaszamlaloBadge.classList.add("badge-danger");
       visszaszamlaloBadge.classList.remove("badge-primary");
 
+
+       // Ha 3p alá ér a számláló, és leütés van 3p-et hozzáad //
       bidButton.addEventListener("click", function () {
-        console.log(countDownDateAdd);
-        countDownDateAdd.setTime(countDownDateAdd.getTime() + 1000 * 60);
-        console.log(countDownDateAdd);
+
+        var minutesToAdd = 3;
+        countDownDate = new Date(countDownDate + minutesToAdd * 60000);
       })
 
     }

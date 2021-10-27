@@ -168,3 +168,56 @@ MORE ABOUT ME:
 
 
 
+Portfolió újragondolva
+
+Tervezés
+
+Korábban már létezett egy portfolió oldalam, azonban tapasztalatom, tudásom és a projektek bővülésével idejét láttam annak, hogy 
+megújítsam az oldalt, illetve Github-ról átköltöztessem egy saját domainre. Ennek alapján született meg a gondolat, hogy egy 
+alapjaiban másabb oldalt hozzak létre. 
+
+Az oldal megújítása mögött az a szándék húzódott, hogy egy olyan rendszert építsek ki, ami a későbbiekben tovább fejleszthető, fenntarthatóbb 
+és a korszerű megjelenés kellemesebb képet sugall rólam. Ezen felül célom volt, hogy egy helyen gyűjtsem azokat a projekteket, amikben tevékeny részt 
+vállaltam vagy az egész hozzám köthető, mintegy emléknapló, ahol a munkák alapján végigkövethető a saját fejlődésem is. Nemutolsó sorban pedig egy új oldal
+mindig remek alkalom gyakorlásra és a frissen megszerzett elvi tudás kódsorba átültetésére.
+
+A tervezés folyamán Bor Anna szolgáltatta a UX/UI látványterveket, amiket az elmondásaim alapján készített el. A korábbi oldal hangulatából szerettük volna
+megtartani a kedves illusztrációkat, illetve a letisztult, kevésbé bonyolult formákat. Ezen kívül a mostani trendvonatra felülve sötét módot is 
+készítettünk az oldalra. 
+
+
+UX/UI
+Bor Anna
+
+Link
+gaboor.hu
+
+Időtartalom
+1 hónap
+
+
+Fejlesztés
+
+A fejlesztés a kidolgozott látványtervek alapján gyorsan tudott haladni. A weboldal tartalmaz egy landoló oldalt, egy projekt összesítő oldalt és magukat 
+a konkrét projekteket, azok leírását. A fejlesztéshez Bootstrap frameworkot, illetve Sass prekompresszort használtam CSS oldalról. Ezen kívül Javascript tudásom is 
+több helyen kamatoztattam: Bootstrap toast callok, sötét és világos témaváltás local storageba, confetti js library, bankkártyák színváltoztatásánál vagy a tudás pimpelése. 
+
+A demó verziók követése Githubon keresztül történt, csak a végleges kód került fel a domainhez tartozó webtárhelyre.
+
+"Gáborral voltak véleménykülönbségek az oldal egyes szekcióinak megjelenésével kapcsolatban, de mindig sikerült kompromisszumra jutni"
+
+ Anna, UX/UI grafikus
+
+ Az oldalnál egyaránt fontos szerep jutott a mobile-first elvnek és a nagy átmérőjű kijelzőkre való ráhangolásnak is. Mivel elsősorban egy promóciós termékként, 
+ saját magam önbrandelésére jött létre az egész tartalom, így elsődleges volt a formai követelményeknek való megfelelés és az esztétikai élmény maximalizálása. 
+Ezen kívül, amire kifejezetten nagy figyelmet fordítottam, hogy minél több olyan dinamikát vigyek az oldalba, ami a szkriptekkel való ismereteim bővítését szolgálja. 
+ Annával való konzultációk során azonban így is több minden ötletet ki kellett szedni vagy el kellett vetni, amit szívesen alkalmaztam volna, hogy megtartsuk az oldal átláthatóságát
+ és ne szemeteljük tele mindennel feleslegesen. 
+
+
+Összegzés
+
+A munkafolyamatok közben sikerült jobban átlátom egy ügyfél szemszögéből, hogy milyen elvárásokkal tud nekiállni a saját oldalának elkészítéséhez. 
+Bővítettem a látványterv- és pixelalapú kódolási tapasztalatimat, valamint gyakorlatba átmenthettem az eddig többnyire csak fejemben létező Javascript tudásom. 
+
+Összeségében - a kisebb gyermekbetegségek ellenére - teljesen elégedett vagyok az oldallal és szerintem hangulatos alkotás született a végére.  
