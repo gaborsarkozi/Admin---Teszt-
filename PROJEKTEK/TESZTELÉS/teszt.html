@@ -1,102 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="iso-8859-2">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bearing</title>
-        <link rel="shortcut icon" href="/image/bexi_favicon.svg">
-        
-        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NJJFBW6"></script><script src="https://www.google.com/recaptcha/enterprise.js?render=6LfcrxkbAAAAAL1dxM5mn3VE_FoM2TiIuXI_Gx1i"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-        <script type="application/javascript" src="js/main.js"></script>
-        <script type="application/javascript" src="js/kosar.js"></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+<head>
+  <meta charset="iso-8859-2">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bearing</title>
+  <link rel="shortcut icon" href="/image/bexi_favicon.svg">
 
-        <link rel="stylesheet" href="teszt.css">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NJJFBW6"></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfcrxkbAAAAAL1dxM5mn3VE_FoM2TiIuXI_Gx1i"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="js/main.js"></script>
+  <script type="application/javascript" src="js/kosar.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 
-       
-        
-        
-        </head>
+  <link rel="stylesheet" href="teszt.css">
 
-<body>
-    <div class="container pt-5" >
 
-        <div class="row wh-100">
-        </div>
-        <div class="row d-flex justify-content-center buying-first-content"><div class="col-md-12 col-lg-6"><h2 class="intro-title text-center">Vásárlás könnyedén</h2><p>Saját fejlesztésű nagykereskedelmi webáruház rendszerünket 30 év tapasztalatával teljesen a fogyasztói igényekre szabtuk. Kövesse végig a vásárlási folyamatot!</p></div></div>
-      <div class="row buying-items pulse-orange-big">
-        <div class="col-md-12 col-lg-6">
-          <div class="buying-items-content">
-            <h2 class="latszodik-box" >Regisztráció</h2>
-            <p>Regisztrációs folyamatunk csupán néhány lépcsőből áll. Ezeket végrehajtva megnyílik Önnek áruházunk vásárlási felülete.</p>
-            <a href="#pills-registration" data-toggle="tab" class="bemutatkozasRegisztracioBtn d-flex justify-content-between link-bemutatkozas aos-init aos-animate" data-aos="fade-zoom-in" data-aos-duration="500">
-            <div>Regisztrálni szeretne?</div>
-            <div class="d-flex justify-content-between align-items-center"><i class="icon-login mr-4"></i> </div>
-            </a></div>
-        </div>
-        <div class="col-md-12 col-lg-6"><img class="aos-init aos-animate" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_belepes.svg"></div>
-      </div>
-        <div class="row buying-items">
-        <div class="col-md-12 col-lg-6">
-          <div class="buying-items-content">
-            <h2>Keresés</h2>
-            <p>Szűrőrendszerünket fogyasztói igényekre alapozva fejlesztettük ki. Segítségével könnyedén megtalálhatja a keresett terméket.</p>
-            <a href="/new" class="d-flex justify-content-between link-bemutatkozas aos-init" data-aos="fade-zoom-in" data-aos-duration="500">
-            <div>Termékkereső</div>
-            <div class="d-flex justify-content-between align-items-center"><i class="icon-magnifier mr-4"></i> </div>
-            </a></div>
-        </div>
-        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_kereses.svg"></div>
-      </div>
-        <div class="row buying-items">
-        <div class="col-md-12 col-lg-6">
-          <div class="buying-items-content">
-            <h2>Termék kosárba helyezése</h2>
-            <p>A kiválasztott terméket helyezze a kosarába. Rendszerünk segítségével több kosár létrehozására is van lehetőség.</p>
+
+
+</head>
+
+<body class='not-logged-in modal-open'>
+  <div class="container pt-5">
+    <div class="modal fade show" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-modal="true"
+      role="dialog" style="padding-right: 17px; display: block;">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="modal-content tab-pane fade" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+            <div class="modal-body">
+              <div class="form-title text-center"> <img class="login-logo" src="/image/logo.png" alt=""> </div>
+              <div class="d-flex flex-column text-center">
+                <form id="loginForm" action="belepett" method="post">
+                  <input type="hidden" name="came_from" value="https://bexi.hu/index_html">
+                  <input type="hidden" name="__ac_persistent" value="1">
+                  <div class="wrap-input100 validate-input mt-3 filled">
+                    <input id="username" name="__ac_name" class="input100" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Felhasználónév"></span>
+                  </div>
+                  <div class="wrap-input100 validate-input filled">
+                    <input id="passwd" name="__ac_password" class="input100" type="password" required="">
+                    <span class="focus-input100" data-placeholder="Jelszó"></span>
+                  </div>
+                  <button id="loginBtn" type="button" class="btn btn-bearing btn-block">Belépés</button>
+                </form>
+              </div>
             </div>
-        </div>
-        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_termekek.svg"></div>
-      </div>
-        <div class="row buying-items">
-        <div class="col-md-12 col-lg-6">
-          <div class="buying-items-content">
-            <h2>Kosár és rendelés áttekintése</h2>
-            <p>Kosár oldalunkon átnézheti mely termékeket helyezte be, módosíthat darabszámot és eltávolíthat nem szükséges elemeket.</p>
-            <a href="/new/kosar_oldal?cartId=-1" class="d-flex justify-content-between link-bemutatkozas aos-init" data-aos="fade-zoom-in" data-aos-duration="500">
-            <div>Kosár oldal</div>
-            <div class="d-flex justify-content-between align-items-center"><i class="icon-basket mr-4"></i> </div>
-            </a></div>
-        </div>
-        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_kosar.svg"></div>
-      </div>
-        <div class="row buying-items">
-        <div class="col-md-12 col-lg-6">
-          <div class="buying-items-content">
-            <h2>Rendelés leadása</h2>
-            <p>Rendelés összesítő oldalunkon nézze meg, hogy megadott adatai helyesek és nyomja meg a rendelés leadása gombot.</p>
+            <div class="modal-footer">
+              <ul class="login-more">
+                <li class="m-b-8"> <span class="txt1"> Elfelejtette a </span> <a href="#pills-forgotten-email"
+                    id="pills-forgotten-email-tab" role="tab" aria-controls="pills-forgotten-email"
+                    class="txt2 d-inline" data-toggle="pill"> jelszavát vagy felhasználónevét? </a> </li>
+                <li> <span class="txt1"> Nem regisztrált még? </span> <a class="txt2 d-inline active"
+                    id="pills-registration-tab" data-toggle="pill" href="#pills-registration" role="tab"
+                    aria-controls="pills-registration" aria-selected="true"> Itt megteheti! </a> </li>
+              </ul>
             </div>
+          </div>
+          <div class="modal-content tab-pane fade" id="pills-forgotten-email" role="tabpanel"
+            aria-labelledby="pills-forgotten-email-tab">
+            <div id="sticky">
+              <div class="card card-body border-light justify-content-between text-white shadow help-box-registration">
+                <div class="text-dark mb-5 mt-3"> <i
+                    class="icon-user-follow fa-2x p-4 rounded bg-light rounded-circle"></i>
+                  <h6 class="ml-3 d-inline szoveg-regisztracio-cim">Elfelejtett jelszó</h6>
+                </div>
+                <div class="modal-box-text">
+                  <p class="card-text mb-3 mb-0 szoveg-regisztracio"> Kérjük adja meg az email címét, amelyet a
+                    regisztrációkor használt. Erre az email
+                    címre hamarosan új jelszót küldünk Önnek! </p>
+                  <p class="card-text mb-1 mb-0 szoveg-regisztracio"> Köszönettel, <br>
+                    Bearing KFt. </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="mr-2"> <a class="" href="/new/faq"> <i class="fas fa-info m-1"></i>Gyakori Kérdések</a>
+                  </div>
+                  <div class="meta-item"> <a class="" href="/new/kapcsolat"> <i
+                        class="fas fa-headset m-1"></i>Ügyfélszolgálat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="form-title text-center"> <img class="login-logo" src="image/bearinglogo_web.png" alt="">
+              </div>
+              <div class="d-flex flex-column text-center">
+                <form action="sendNewPassword" method="post">
+                  <div class="wrap-input100 validate-input mt-3">
+                    <input id="newPasswodEmailField" name="email" class="input100" type="text">
+                    <span class="focus-input100" data-placeholder="E-mail"></span>
+                  </div>
+                  <button id="setNewPasswodBtn" type="button" class="btn btn-bearing btn-block my-3">Új jelszó
+                    kérése</button>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <ul class="login-more">
+                <li class="m-b-8"> <span class="txt1"> Szeretne visszalépni a </span> <a href="#pills-login"
+                    class="txt2 d-inline" id="pills-home-tab" data-toggle="pill" aria-controls="pills-login" role="tab">
+                    bejelentkezéshez? </a> </li>
+                <li> <span class="txt1"> Nem regisztrált még? </span> <a class="txt2 d-inline"
+                    id="pills-registration-tab" data-toggle="pill" href="#pills-registration" role="tab"
+                    aria-controls="pills-registration" aria-selected="true"> Itt megteheti! </a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-content tab-pane fade active show" id="pills-registration" role="tabpanel"
+            aria-labelledby="pills-registration-tab">
+            <div id="sticky">
+              <div class="card card-body border-light justify-content-between text-white shadow help-box-registration">
+                <div class="text-dark mb-5 mt-3"> <i
+                    class="icon-user-follow fa-2x p-4 rounded bg-light rounded-circle"></i>
+                  <h6 class="ml-3 d-inline szoveg-regisztracio-cim">Regisztráció</h6>
+                </div>
+                <div class="modal-box-text">
+                  <p class="card-text mb-3 mb-0 szoveg-regisztracio"> Ha még nem regisztrált nagykereskedelmi
+                    webáruházunkba, kérjük adja meg céges
+                    adatait és munkatársunk hamarosan felveszi Önnel a kapcsolatot! </p>
+                  <p class="card-text mb-4 mb-0 szoveg-regisztracio"> Magánszemélyként, és/vagy néhány db termék
+                    vásárlása
+                    esetén válassza
+                    kiskereskedelmi webáruházunkat <a href="https://www.csapagy.hu/">www.csapagy.hu</a> </p>
+                  <p class="card-text mb-1 mb-0 szoveg-regisztracio"> Köszönettel, <br>
+                    Bearing KFt. </p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="mr-2"> <a class="" href="/new/faq"> <i class="fas fa-info m-1"></i>Gyakori Kérdések</a>
+                  </div>
+                  <div class="meta-item"> <a class="" href="/new/kapcsolat"> <i
+                        class="fas fa-headset m-1"></i>Ügyfélszolgálat</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="form-title text-center" style="margin-top: 0;"> <img src="image/bex-lila.png" alt=""> </div>
+              <div class="form-title text-center" id="form-head-cim" style="margin: 1rem 0 2rem;">
+                <h4 class="form-head-cim">Regisztráció</h4>
+              </div>
+              <div class="d-flex flex-column text-center">
+                <form id="registrationForm" name="myregform" action="register_py" method="post" class="needs-validation"
+                  novalidate="">
+
+                  <div class="wrap-input100 validate-input mt-3 mb-5 form-group">
+                    <input id="regnevField" name="nev" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Név"></span>
+                    <div class="invalid-feedback">Helytelen név.</div>
+                  </div>
+
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regcegnevField" name="cegnev" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Cégnév"></span>
+                    <div class="invalid-feedback">Helytelen cégnév.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regadoszamField" name="adoszam" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Adószám"></span>
+                    <div class="invalid-feedback">Helytelen adószám.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regiranyitoField" name="iranyito" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Irányítószám"></span>
+                    <div class="invalid-feedback">Helytelen irányítószám.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regvarosField" name="varos" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Város"></span>
+                    <div class="invalid-feedback">Helytelen város név.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regcimField" name="cim" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Cím"></span>
+                    <div class="invalid-feedback">Helytelen cím.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regemailField" name="email" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="E-mail"></span>
+                    <div class="invalid-feedback">Helytelen email.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mt-3 mb-5">
+                    <input id="regtelefonField" name="telefon" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Telefon"></span>
+                    <div class="invalid-feedback">Helytelen telefonszám.</div>
+                  </div>
+                  <div class="wrap-input100 validate-input mb-5 mt-3">
+                    <input id="regusernameField" name="username" class="input100 form-control" type="text" required="">
+                    <span class="focus-input100" data-placeholder="Felhasználónév"></span>
+                    <div class="invalid-feedback">Helytelen felhasználónév.</div>
+                    <div id='xlRegistrationPopup'
+                      class="mb-5 registration-popup-xl registration-popup d-flex align-items-center">
+                      <div class="d-flex justify-content-start align-items-center">
+                        <i class="icon-user-following ml-2 mr-4"></i>
+                        <div>
+                          <span class="d-block html-popup-line-one">Felhasználónév infó!</span>
+                          <span class="d-block html-popup-line-two pt-2">Az áruház zavartalan működése értelmében csak
+                            ékezet néklküli felhasználónév adható meg.
+                            Rendszerünk a bevitt karaktereket automatikusan ékezet nélkülivé alakítja.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id='mobileRegistrationPopup' class="mb-5 registration-popup d-flex align-items-center">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <i class="icon-user-following ml-2 mr-4"></i>
+                      <div>
+                        <span class="d-block html-popup-line-one">Felhasználónév infó!</span>
+                        <span class="d-block html-popup-line-two pt-2">Az áruház zavartalan működése értelmében csak
+                          ékezet néklküli felhasználónév adható meg.
+                          Rendszerünk a bevitt karaktereket automatikusan ékezet nélkülivé alakítja.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="wrap-input100 mb-5" style="border: none;">
+                    <div class="toggle-wrapper">
+                      <input id="provide-muffins" name="mascim" class="toggle-none custom-switch-input" type="checkbox">
+                      <label for="provide-muffins" class="toggle--label"></label>
+                      <div class="foux-toggle"></div>
+                    </div>
+                    <span class="szallitasi-cim">Szállítási cím megegyezik a számlázási címmel</span>
+                  </div>
+                  <div id="menuSzallitasicim">
+                    <div class="wrap-input100 validate-input mt-3 mb-5">
+                      <input id="regnev2Field" name="nev2" class="input100" type="text">
+                      <span class="focus-input100" data-placeholder="Szállítási név"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input mt-3 mb-5">
+                      <input id="regiranyito2Field" name="iranyito2" class="input100" type="text">
+                      <span class="focus-input100" data-placeholder="Irányítószám"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input mt-3 mb-5">
+                      <input id="regvaros2Field" name="varos2" class="input100" type="text">
+                      <span class="focus-input100" data-placeholder="Város"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input mt-3 mb-5">
+                      <input id="regcim2Field" name="cim2" class="input100" type="text">
+                      <span class="focus-input100" data-placeholder="Szállítási cím"></span>
+                    </div>
+                  </div>
+                  <div class="kikapcsolt-resz-form" id="menuSzallitasicimKikapcs"> </div>
+                  <div class="wrap-input100 mb-5 registration-aszf" style="border: none;" id="aszftoggle">
+                    <label for="beethoven-joke" class="toggle-label-aszf" data-toggle="collapse"
+                      data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Adatvédelmi
+                      tájékoztató</label>
+                    <div class="collapse" id="collapseExample">
+                      <!-- Content to toggle -->
+                      <div role="toggle-aszf" class="toggle-content-aszf" id="aszfdiv"></div>
+                    </div>
+                  </div>
+                  <div class="wrap-input100 mb-5" style="border: none;">
+                    <div class="toggle-wrapper">
+                      <input id="provide-muffins-1" name="provide_muffins" class="toggle-none custom-switch-input"
+                        type="checkbox" checked="">
+                      <label for="provide-muffins-1" class="toggle--label"></label>
+                      <div class="foux-toggle"></div>
+                    </div>
+                    <span class="szallitasi-cim">Elfogadom az <a href="www.csapagy.hu" class="txt2">Általános
+                        Szerződési Feltételeket</a></span>
+                  </div>
+                  <div class="wrap-input100 mb-5" style="border: none;">
+                    <div class="toggle-wrapper">
+                      <input id="provide-muffins-2" name="provide_muffins" class="toggle-none custom-switch-input"
+                        type="checkbox" checked="">
+                      <label for="provide-muffins-2" class="toggle--label"></label>
+                      <div class="foux-toggle"></div>
+                    </div>
+                    <span class="szallitasi-cim">Elfogadom az <a href="www.csapagy.hu" class="txt2">Adatvédelmi
+                        nyilatkozatot</a></span>
+                  </div>
+                  <div class="wrap-input100 mb-5 d-flex justify-content-center" style="border: none;">
+                    <div class="g-recaptcha" data-sitekey="6LfMGqEaAAAAAHSziI9K6xzHd2ZogQqdkCiCw3vj">
+                      <div style="width: 304px; height: 78px;">
+                        <div>
+                          <iframe title="reCAPTCHA"
+                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LecW6AaAAAAAImoV_l0xAOEwA8LpMyJ9o95tSQR&amp;co=aHR0cDovL2JlYXJpbmcuanJ3ZWJkZXNpZ24uaHU6ODA.&amp;hl=hu&amp;v=539Evs44yecoSf-lkJBQzKKj&amp;size=normal&amp;cb=iilhwcs6ro43"
+                            width="304" height="78" role="presentation" name="a-1fngtsfe8df" frameborder="0"
+                            scrolling="no"
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                        </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                          class="g-recaptcha-response"
+                          style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                      </div><iframe style="display: none;"></iframe>
+                    </div>
+                  </div>
+                  <button id="registerBtn" type="submit" class="btn btn-bearing btn-block my-3">Regisztráció</button>
+                </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <ul class="login-more">
+                <li class="m-b-8"> <span class="txt1"> Van már regisztrációja? </span> <a href="#pills-login"
+                    class="txt2 d-inline" id="pills-login-tab" data-toggle="pill" role="tab" aria-controls="pills-login"
+                    aria-selected="false"> Jelentkezzen be! </a> </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-md-12 col-lg-6"><img class="aos-init" data-aos="fade-zoom-in" data-aos-offset="300" data-aos-duration="1500" src="../image/bem_rendeles.svg"></div>
       </div>
-      <div class="row wh-100">
-       
     </div>
-    </div>
-    <script src="bubbles.js"></script>
+  </div>
+
+
+  <script>
+
+(function () {
+
+  var usernameInput, infoBox, x, mobileMessage, xlMessage;
+
+  usernameInput = document.querySelector('#regusernameField');
+  infoBox = document.querySelectorAll('.registration-popup');
+  x = window.matchMedia("(min-width: 1300px)");
+  mobileMessage = document.querySelector('#mobileRegistrationPopup');
+  xlMessage = document.querySelector('#xlRegistrationPopup');
+
+  usernameInput.addEventListener('focusin', function () {
+
+    // If media query matches
+    if (x.matches) {
+      xlMessage.style.cssText += ';display:block !important;'
+    } else {
+      mobileMessage.style.cssText += ';display:block !important;'
+    }
+  });
+
+  // Remove accents/diacritics in string 
+  usernameInput.addEventListener('keyup', function () {
+    this.value = this.value.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+  });
+
+  usernameInput.addEventListener('focusout', function () {
+
+    // If media query matches
+    if (x.matches) {
+      xlMessage.style.cssText -= ';display:block !important;'
+    } else {
+      mobileMessage.style.cssText -= ';display:block !important;'
+    }
+  });
+})();
+
+  </script>
+
+
+
 </body>
 
 </html>

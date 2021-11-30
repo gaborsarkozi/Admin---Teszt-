@@ -1,0 +1,604 @@
+<html>
+
+<head>
+    <meta charset="iso-8859-2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bearing</title>
+    <link rel="shortcut icon" href="/image/bexi_favicon.svg">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NJJFBW6"></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6LfcrxkbAAAAAL1dxM5mn3VE_FoM2TiIuXI_Gx1i"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="js/main.js"></script>
+    <script type="application/javascript" src="js/kosar.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+    <!-- Lightbox -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+        integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+        integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body class="nepszerutermekek-page">
+
+
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobil-logo">
+                        <a href="/">
+                            <img src="/image/logo.png" alt="Bearing logo" class="hidden-xs-device">
+                            <img src="/image/mobile_logo_sm.svg" alt="Bearing logo" class="block-xs-device">
+                        </a>
+                    </div>
+                    <div class="mobil-profil">
+                        <div class="profil-btn"><i class="icon-list"></i> </div>
+                        <div class="cart-outer" data-toggle="modal" data-target="#cartModal"><a href="#" id="cart"><span
+                                    class="cart-text">Kosarak:</span><span class="kosarak-ikon"> 6 <i
+                                        class="fa fa-shopping-cart"></i> </span></a></div>
+
+                    </div>
+
+                    <div class="mobil-navigation">
+                        <div class="row">
+                            <div class="col-9 col-sm-10">
+                                <div class="row">
+                                    <div class="col-12 user-name mb-3">Sárközi Gábor</div>
+                                    <div class="col-12 user-name">Bearing Kft</div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-sm-2">
+                                <div class="close-menu"><i class="icon-close" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="main-menu">
+                                    <li class="menu-item active"><a href="/">
+                                            <div class="icon"> <i class="icon-home" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Kezdőlap</span> </div>
+                                        </a> </li>
+                                    <li class="menu-item"><a href="/fiokom">
+                                            <div class="icon"> <i class="icon-user" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Fiókom</span> </div>
+                                        </a> </li>
+                                    <li class="menu-item"><a href="/aktualis_ajanlatunk">
+                                            <div class="icon"> <i class="icon-tag" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Ajánlatunk</span> </div>
+                                        </a>
+                                        <span class="badge d-none">Új!</span>
+                                    </li>
+                                    <li><a href="/Admin">
+                                            <div class="icon"> <i class="icon-lock" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Admin</span> </div>
+                                        </a> </li>
+                                    <li><a href="/Arveres">
+                                            <div class="icon"> <i class="icon-hourglass" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Árverések</span> </div>
+                                        </a> </li>
+                                    <li><a href="kapcsolat">
+                                            <div class="icon"> <i class="icon-envelope" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Kapcsolat</span> </div>
+                                        </a> </li>
+                                    <li class="company-info"><a href="#">
+                                            <div class="icon"> <i class="icon-info" aria-hidden="true"></i></div>
+                                            <div class="icon"><span class="text-span">Cégünkről</span> </div>
+                                        </a>
+                                        <ul>
+                                            <li><a href="/bemutatkozo"><i class="icon-flag"></i>Bemutatkozás</a></li>
+                                            <li><i class="icon-docs"></i>Ált. szerződési feltételek</li>
+                                            <li><i class="icon-doc"></i>Adatvédelmi nyilatkozat</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="logout-btn"><i class="icon-power" aria-hidden="true"></i> <a
+                                href="/kilep">Kijelentkezés</a></div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="logo col-md-3 col-sm-3 col-xs-3"><a href="/"><img src="/image/logo.png"
+                            alt="Bearing logo"></a> </div>
+                <nav class="col-md-5 col-sm-1 col-xs-1">
+                    <div class="main-navigation">
+                        <ul class="main-menu">
+                            <li class="menu-item"><a href="/">
+                                    <div class="icon"> <i class="icon-home" aria-hidden="true"></i> <i class="icon-home"
+                                            aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Kezdőlap</span> </div>
+                                </a> </li>
+                            <li class="menu-item"><a href="/fiokom">
+                                    <div class="icon"> <i class="icon-user" aria-hidden="true"></i> <i
+                                            class="icon-user-follow" aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Fiókom</span> </div>
+                                </a> </li>
+                            <li class="menu-item"><a href="/aktualis_ajanlatunk">
+                                    <span class="badge position-absolute d-none">Új!</span>
+                                    <div class="icon"> <i class="icon-tag" aria-hidden="true"></i> <i class="icon-tag"
+                                            aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Ajánlatunk</span> </div>
+                                </a> </li>
+                            <li><a href="/Admin">
+                                    <div class="icon"> <i class="icon-lock" aria-hidden="true"></i> <i
+                                            class="icon-lock-open" aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Admin</span> </div>
+                                </a> </li>
+                            <li><a href="/Arveres">
+                                    <div class="icon"> <i class="icon-hourglass" aria-hidden="true"></i> <i
+                                            class="icon-hourglass" aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Árverések</span> </div>
+                                </a> </li>
+                            <li><a href="kapcsolat">
+                                    <div class="icon"> <i class="icon-envelope" aria-hidden="true"></i> <i
+                                            class="icon-envelope-letter" aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Kapcsolat</span> </div>
+                                </a> </li>
+                            <li><a href="/kilep">
+                                    <div class="icon"> <i class="icon-power" aria-hidden="true"></i> <i
+                                            class="icon-power" aria-hidden="true"></i> </div>
+                                    <div class="icon"> <span class="text-span"></span> <span
+                                            class="text-span">Kilépés</span> </div>
+                                </a> </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="col-md-4 col-sm-5 col-xs-5">
+                    <div class="main-profil">
+                        <div id="profilicon" class="profil-btn" data-isanon="false"><i class="icon-user-following"></i>
+                            <div class="profil-text-box">
+                                <div class="d-block mb-3">Bejelentkezve: <span>Sárközi Gábor</span></div>
+                                <div class="d-block">Cégnév: Bearing Kft</div>
+                            </div>
+                        </div>
+                        <div class="cart-outer" data-toggle="modal" data-target="#cartModal">
+                            <a href="#" id="cartBtn">
+                                <div>
+                                    Kosarak száma: <span class="kosarak-ikon"> <span id="kosarszam"
+                                            data-kosarszam="1">1</span> <i class="fa fa-shopping-cart"></i> </span>
+                                </div>
+                                <div style="font-size: 13px;">Főkosár: <span id="shopping_cart_text">1 tétel, 744
+                                        HUF</span></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <span>
+        <!-- Modal -->
+        <section class="search-section cart-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-box all-cart-box d-sm-none d-md-block">
+                            <div class="my-favourites-title"><i class="icon-fire"></i>Népszerű termékek</div>
+                            <section id="myfavourits" class="dynamic-table search_results results_after_login">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="table-overflow">
+                                                <table width="100%" border="0">
+                                                    <tbody>
+                                                        <tr id="headerth">
+                                                            <th><i class="icon-picture"><span
+                                                                        class="tooltip">Termékfotó</span></i></th>
+                                                            <th><i class="icon-settings"><span
+                                                                        class="tooltip">Termék</span></i></th>
+                                                            <th><i class="icon-wrench"><span
+                                                                        class="tooltip">Gyártó</span></i></th>
+                                                            <th><i class="icon-cursor-move"><span
+                                                                        class="tooltip">Méret</span></i></th>
+                                                            <th><i class="icon-social-dropbox"><span
+                                                                        class="tooltip">Raktárak</span></i></th>
+                                                            <th class="justify-right-content"><i class="icon-tag"><span
+                                                                        class="tooltip">Kedvezményes ár (HUF)</span></i>
+                                                            </th>
+                                                            <th class="justify-right-content"><i class="icon-grid"><span
+                                                                        class="tooltip">Készlet</span></i></th>
+                                                            <th><i class="icon-basket"><span
+                                                                        class="tooltip">Kosár</span></i></th>
+                                                        </tr>
+
+                                                        <tr data-currency="HUF" data-price="5975.348"
+                                                            data-internal_kod="01-19-02-00425" data-keszlet="840"
+                                                            listaar="6289.84" internal_kod="01-19-02-00425"
+                                                            id="row_01-19-02-00425">
+
+
+                                                            <td class="open_dialog">
+
+                                                                <a data-gallery="hidden-images" data-title="1"
+                                                                    class="preview" data-toggle="lightbox"
+                                                                    href="/static/arukepek/st_kor.jpg">
+                                                                    <img src="/static/arukepek/small/st_kor_s.jpg"
+                                                                        alt="" class="img-fluid">
+                                                                </a>
+
+
+                                                            </td>
+
+
+
+                                                            <td title="ST491A">
+                                                                <div class="product_name searchpage">ST491A</div>
+                                                            </td>
+                                                            <td>FBJ</td>
+                                                            <td>44,83X127X42,8</td>
+
+                                                            <td>
+                                                                <style>
+                                                                    .kulsoraktar {
+                                                                        background-color: #4CAFA154;
+                                                                        ;
+                                                                    }
+
+                                                                    .hl {
+                                                                        font-weight: bold;
+                                                                    }
+                                                                </style>BP-001: 539,<br>SO-001: 280,<br>SO-000:
+                                                                11,<br>DB-001: 10
+                                                            </td>
+
+
+                                                            <td class="discounted-price justify-right-content"
+                                                                id="avamp_01-19-02-00425">6.290 HUF</td>
+                                                            <td class="keszletcol justify-right-content"
+                                                                id="avam_01-19-02-00425">840</td>
+
+
+                                                            <td style="white-space:nowrap"><input id="am_01-19-02-00425"
+                                                                    placeholder="1" class="piece" autocomplete="off"
+                                                                    name="orders.quantity:records" type="text">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-19-02-00425">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="pr_01-19-02-00425" value="5975.348">
+                                                                <label class="piece_label">DB</label><button
+                                                                    class="add_cart_button add2cart"
+                                                                    data-dropship="yes"><i class="icon-basket"
+                                                                        data-dropship="yes"></i></button>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr data-currency="HUF" data-price="444.1155"
+                                                            data-internal_kod="1B62032RS00000000050" data-keszlet="1214"
+                                                            listaar="467.49" internal_kod="1B62032RS00000000050"
+                                                            id="row_1B62032RS00000000050">
+
+
+                                                            <td class="open_dialog">
+
+                                                                <a data-gallery="hidden-images" data-title="1"
+                                                                    class="preview" data-toggle="lightbox"
+                                                                    href="/static/arukepek/6000_2rs.jpg">
+                                                                    <img src="/static/arukepek/small/6000_2rs_s.jpg"
+                                                                        alt="" class="img-fluid">
+                                                                </a>
+
+
+                                                            </td>
+
+
+
+                                                            <td title="6203 2RS">
+                                                                <div class="product_name searchpage">6203 2RS</div>
+                                                            </td>
+                                                            <td>CX</td>
+                                                            <td>17X40X12</td>
+
+                                                            <td>
+                                                                <style>
+                                                                    .kulsoraktar {
+                                                                        background-color: #4CAFA154;
+                                                                        ;
+                                                                    }
+
+                                                                    .hl {
+                                                                        font-weight: bold;
+                                                                    }
+                                                                </style>BP-001: 1204,<br>DB-001: 10
+                                                            </td>
+
+
+                                                            <td class="discounted-price justify-right-content"
+                                                                id="avamp_1B62032RS00000000050">467 HUF</td>
+                                                            <td class="keszletcol justify-right-content"
+                                                                id="avam_1B62032RS00000000050">1214</td>
+
+
+                                                            <td style="white-space:nowrap"><input
+                                                                    id="am_1B62032RS00000000050" placeholder="1"
+                                                                    class="piece" autocomplete="off"
+                                                                    name="orders.quantity:records" type="text">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="1B62032RS00000000050">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="pr_1B62032RS00000000050" value="444.1155">
+                                                                <label class="piece_label">DB</label><button
+                                                                    class="add_cart_button add2cart"
+                                                                    data-dropship="yes"><i class="icon-basket"
+                                                                        data-dropship="yes"></i></button>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr data-currency="HUF" data-price="8496.211"
+                                                            data-internal_kod="01-19-02-00429" data-keszlet="629"
+                                                            listaar="8943.38" internal_kod="01-19-02-00429"
+                                                            id="row_01-19-02-00429">
+
+
+                                                            <td class="open_dialog">
+
+                                                                <a data-gallery="hidden-images" data-title="1"
+                                                                    class="preview" data-toggle="lightbox"
+                                                                    href="/static/arukepek/st_negyszog.jpg">
+                                                                    <img src="/static/arukepek/small/st_negyszog_s.jpg"
+                                                                        alt="" class="img-fluid">
+                                                                </a>
+
+
+                                                            </td>
+
+
+
+                                                            <td title="ST740 (39,625)">
+                                                                <div class="product_name searchpage">ST740 (39,625)
+                                                                </div>
+                                                            </td>
+                                                            <td>FBJ</td>
+                                                            <td>39,625X140X55,5</td>
+
+                                                            <td>
+                                                                <style>
+                                                                    .kulsoraktar {
+                                                                        background-color: #4CAFA154;
+                                                                        ;
+                                                                    }
+
+                                                                    .hl {
+                                                                        font-weight: bold;
+                                                                    }
+                                                                </style>BP-001: 399,<br>SO-001: 200,<br>SO-000:
+                                                                26,<br>DB-001: 4
+                                                            </td>
+
+
+                                                            <td class="discounted-price justify-right-content"
+                                                                id="avamp_01-19-02-00429">8.943 HUF</td>
+                                                            <td class="keszletcol justify-right-content"
+                                                                id="avam_01-19-02-00429">629</td>
+
+
+                                                            <td style="white-space:nowrap"><input id="am_01-19-02-00429"
+                                                                    placeholder="1" class="piece" autocomplete="off"
+                                                                    name="orders.quantity:records" type="text">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-19-02-00429">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="pr_01-19-02-00429" value="8496.211">
+                                                                <label class="piece_label">DB</label><button
+                                                                    class="add_cart_button add2cart"
+                                                                    data-dropship="yes"><i class="icon-basket"
+                                                                        data-dropship="yes"></i></button>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr data-currency="HUF" data-price="327.0185"
+                                                            data-internal_kod="01-01-02-00319" data-keszlet="1961"
+                                                            listaar="344.23" internal_kod="01-01-02-00319"
+                                                            id="row_01-01-02-00319">
+
+
+                                                            <td class="open_dialog">
+
+                                                                <a data-gallery="hidden-images" data-title="1"
+                                                                    class="preview" data-toggle="lightbox"
+                                                                    href="/static/arukepek/6000_2rs.jpg">
+                                                                    <img src="/static/arukepek/small/6000_2rs_s.jpg"
+                                                                        alt="" class="img-fluid">
+                                                                </a>
+
+
+                                                            </td>
+
+
+
+                                                            <td title="6200 2RS">
+                                                                <div class="product_name searchpage">6200 2RS</div>
+                                                            </td>
+                                                            <td>FBJ</td>
+                                                            <td>10X30X9</td>
+
+                                                            <td>
+                                                                <style>
+                                                                    .kulsoraktar {
+                                                                        background-color: #4CAFA154;
+                                                                        ;
+                                                                    }
+
+                                                                    .hl {
+                                                                        font-weight: bold;
+                                                                    }
+                                                                </style>BP-001: 1914,<br>DB-001: 25,<br>SO-000:
+                                                                16,<br>KG-300: 6
+                                                            </td>
+
+
+                                                            <td class="discounted-price justify-right-content"
+                                                                id="avamp_01-01-02-00319">344 HUF</td>
+                                                            <td class="keszletcol justify-right-content"
+                                                                id="avam_01-01-02-00319">1961</td>
+
+
+                                                            <td style="white-space:nowrap"><input id="am_01-01-02-00319"
+                                                                    placeholder="1" class="piece" autocomplete="off"
+                                                                    name="orders.quantity:records" type="text">
+                                                                <input type="hidden" name="orders.id:records"
+                                                                    value="01-01-02-00319">
+                                                                <input type="hidden" name="orders.price:records"
+                                                                    id="pr_01-01-02-00319" value="327.0185">
+                                                                <label class="piece_label">DB</label><button
+                                                                    class="add_cart_button add2cart"
+                                                                    data-dropship="yes"><i class="icon-basket"
+                                                                        data-dropship="yes"></i></button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </span>
+    <footer class="new-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                    <div><img class="bex-logo" src="/image/logo_white.svg" alt="Bearing kft."></div>
+                    <!-- <div class="footer-logos">
+              <img src="/image/megbizhato-bolt.png"/>
+              <img src="/image/megbizhato-bolt1.png"/>
+           </div> -->
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Webáruház</h3>
+                    <ul>
+                        <li><a href="/fiokom">Fiókom</a></li>
+                        <li><a href="/faq">Gyakran Ismételt Kérdések</a> </li>
+                        <li><a href="/bonusz">Bónuszok</a></li>
+                        <!-- <li tal:condition="python:ch2user.getProperty('see_arveres',False)"><a href="/Arveres">Árverés</a></li> -->
+                        <li><a href="/prefixesAndSuffixes">Utójel katalógus</a> </li>
+                        <li><a href="/interchange">Interchange</a> </li>
+                        <li><a href="/kepviselt">Képviselt gyártók</a> </li>
+                        <li><a href="/gyartoi_katalogus">Gyártói katalógusok</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Cégünkről</h3>
+                    <ul>
+                        <li><a href="kapcsolat">Kapcsolat</a></li>
+                        <li><a href="/kapcsolat#newsletterSectionProfile">Hírlevél</a> </li>
+                        <li><a href="/bemutatkozo">Bemutatkozás</a> </li>
+                        <li><a href="/aktualis_ajanlatunk">Aktuális ajánlatok</a> </li>
+                        <li><a href="/szerzodesi_feltetelek.pdf">Általános szerződési feltételek</a> </li>
+                        <li><a href="/adatvedelmi_tajekoztato.pdf">Adatvédelmi nyilatkozat</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Nyitvatartás</h3>
+                    <ul>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Hétfő:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Kedd:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Szerda:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Csütörtök:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">8:00 - 16:30</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Péntek:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">8:00 - 16:00</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Szombat:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">zárva</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-4 col-xl-4 col-lg-5 col-sm-5">Vasárnap:</div>
+                                <div class="col-5 col-xl-6 col-lg-7 col-sm-7">zárva</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Ügyfélszolgálatunk</h3>
+                    <ul>
+                        <li><i class="fas fa-phone-alt mr-2"></i><a href="tel:   +3612035000">+36 1 203 5000</a> </li>
+                        <li> <i class="fas fa-paper-plane mr-3"></i><a
+                                href="mailto:ugyfelszolgalat@bearing.hu">ugyfelszolgalat@bearing.hu</a> </li>
+                        <li> <i class="fas fa-map-marker-alt mr-3"></i>1033 Budapest, Szőlőkert u. 5.</li>
+                        <li class="mt-5">Webáruházunk: 0-24 nyitva!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 copyright-text">© 1993-2021 Bearing Express. A weboldalon található anyagok kizárólag
+                    a BearingKft. hozzájárulásával és a forrás megjelölésével használhatóak fel.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

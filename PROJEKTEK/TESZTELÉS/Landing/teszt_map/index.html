@@ -1,84 +1,1496 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="iso-8859-2">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bearing</title>
+        <link rel="shortcut icon" href="/image/bexi_favicon.svg">
+        
+            <link rel="stylesheet" href="css/jquery-ui.css">
+        
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/yZguKF1TiDm6F3yJWVhmOKQ9/recaptcha__hu.js" crossorigin="anonymous" integrity="sha384-NQm9fnz2aJ/ZHOOjd/YHskDoO0I/4xzat1AhDpUy4L0KP2ZtgtQnfWajsgaCLlO0"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NJJFBW6"></script><script src="https://www.google.com/recaptcha/enterprise.js?render=6LfcrxkbAAAAAL1dxM5mn3VE_FoM2TiIuXI_Gx1i"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+        <script type="application/javascript" src="js/main.js"></script>
+        <script type="application/javascript" src="js/kosar.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+        
+        <!-- Lightbox -->
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        
+        <!-- AOS Animation -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NJJFBW6');</script>
+        <!-- End Google Tag Manager -->
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-206376836-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-206376836-2');
+        </script>
+        
+        
+        <script>
+            $( document ).ready(function() {
+                    $(".piece.autoupdate").on("keyup", delayfunc(function(event) {
+                        updateCartAmount($(this));
+                    }, 500)); 
+                    $(".piece.autoupdate").on("change", function(event) {
+                        event.preventDefault();
+                        updateCartAmount($(this));
+                        $(this).blur();
+                    }); 
+                    $(".subcartbtn").on("click.updateCart", function(event) {
+                        event.preventDefault();
+                        var cartId = $(this).data("cartid");
+                        var href = $(this).attr("href");
+                        updateCart(cartId, href);
+                    });
+                    $(".cart-outer").on("click.updateCart", function(event) {
+                        event.preventDefault();
+                        var ico = $("#profilicon");
+                        var isAnon =ico.data("isanon");
+                        if (!isAnon)
+                            updateCart("-1", "#cart1");
+                    });
+                    $('#aszftoggle').click(function() {
+                        readAszf();
+                    });
+                    $("#registerBtn").off("click").on("click", function(event){
+                        event.preventDefault();
+                        doRegistration();
+                    })
+                    
+                    $("#setNewPasswodBtn").off("click").on("click", function(event){
+                        event.preventDefault();
+                        var email = $("#newPasswodEmailField").val();
+                        if (email) {
+                            $("#forgottenPasswordErrorPopup").removeClass("show");
+                            $("#forgottenPasswordPopup").removeClass("show");
+                            $.get("setNewPassword", {"email": email}, function(data) {
+                                if (data) {
+                                    $("#forgottenPasswordPopup").toggleClass("show");
+                                    setTimeout(function() {
+                                         $("#forgottenPasswordPopup").removeClass("show");
+                                    }, 5000);
+                                } else {
+                                    $("#forgottenPasswordErrorPopup").toggleClass("show");
+                                    
+                                    setTimeout(function() {
+                                         $("#forgottenPasswordErrorPopup").removeClass("show");
+                                    }, 5000);
+                                } 
+                            })
+                        }
+                    })
+                    $("#username").off("keyup").on("keyup", function(e){
+                        var code = (e.keyCode ? e.keyCode : e.which);
+                        if (code==13) {
+                            e.preventDefault();
+                            $("#loginBtn").click();
+                        }
+                    });
+                    $("#passwd").off("keyup").on("keyup", function(e){
+                        var code = (e.keyCode ? e.keyCode : e.which);
+                        if (code==13) {
+                            e.preventDefault();
+                            $("#loginBtn").click();
+                        }
+                    });
+                    $("#loginBtn").off("click").on("click", function(event){
+                        event.preventDefault();
+                        var username = $("#username").val();
+                        var passwd = $("#passwd").val();
+                        if (username) {
+                            $("#loginErrorPopup").removeClass("show");
+                            $.get("authUser_py", {"username": username, "password": passwd}, function(data) {
+                                if (data) {
+                                    $("#loginForm").submit();
+                                } else {
+                                    $("#loginErrorPopup").toggleClass("show");
+                                    setTimeout(function() {
+                                         $("#loginErrorPopup").removeClass("show");
+                                    }, 5000);
+                                } 
+                            })
+                        }
+                    })
+            });
+        </script>
+        <script>
+            function doRegistration(){
+                        var nev = $("#regnevField").val();
+                        var  cegnev = $("#regcegnevField").val();
+                        var  adoszam = $("#regadoszamField").val();
+                        var  iranyito = $("#regiranyitoField").val();
+                        var  varos = $("#regvarosField").val();
+                        var  cim = $("#regcimField").val();
+                        var  email = $("#regemailField").val();
+                        var  telefon = $("#regtelefonField").val();
+                        var  username = $("#regusernameField").val();
+                        var  nev2 = $("#regnev2Field").val();
+                        var  iranyito2 = $("#regiranyito2Field").val();
+                        var  varos2 = $("#regvaros2Field").val();
+                        var  cim2 = $("#regcim2Field").val();
+                        if (!(nev && cegnev && adoszam && iranyito && varos && cim && email && telefon && username)) {
+                            $("#registrationErrorFieldsPopup").removeClass("show");
+                            $("#registrationErrorFieldsPopup").toggleClass("show");
+                            setTimeout(function() {
+                                $("#registrationErrorFieldsPopup").removeClass("show");
+                            }, 5000);
+                            return;
+                        }
+                        if (!$("#provide-muffins").prop('checked') && !(nev2 && iranyito2 && varos2 && cim2)) {
+                            $("#registrationErrorFieldsPopup").removeClass("show");
+                            $("#registrationErrorFieldsPopup").toggleClass("show");
+                            setTimeout(function() {
+                                $("#registrationErrorFieldsPopup").removeClass("show");
+                            }, 5000);
+                            return;
+                        }
+                        if (!$("#provide-muffins-1").prop('checked')) {
+                            $("#registrationErrorConditionsMissing").removeClass("show");
+                            $("#registrationErrorConditionsMissing").toggleClass("show");
+                            setTimeout(function() {
+                                $("#registrationErrorConditionsMissing").removeClass("show");
+                            }, 5000);
+                            return;
+                        }
+                        if (!$("#provide-muffins-2").prop('checked')) {
+                            $("#registrationErrorStatementMissing").removeClass("show");
+                            $("#registrationErrorStatementMissing").toggleClass("show");
+                            setTimeout(function() {
+                                $("#registrationErrorStatementMissing").removeClass("show");
+                            }, 5000);
+                            return;
+                        }
+                        $.get("testEmail_py", {"email": email}, function(data) {
+                            $("#registrationErrorUserEmailPopup").removeClass("show");
+                            if (data) {
+                                $.get("testUserName_py", {"username": username}, function(tdata) {
+                                    $("#registrationErrorUserNamePopup").removeClass("show");
+                                    if (tdata) {
+                                        $("#registrationForm").submit();
+                                    } else {
+                                        $("#registrationErrorUserNamePopup").toggleClass("show");                            
+                                        setTimeout(function() {
+                                             $("#registrationErrorUserNamePopup").removeClass("show");
+                                        }, 5000);
+                                            }
+                                        });
+                            } else {
+                                $("#registrationErrorUserEmailPopup").toggleClass("show");                            
+                                setTimeout(function() {
+                                     $("#registrationErrorUserEmailPopup").removeClass("show");
+                                }, 5000);
+                            } 
+                        })
+            }
+            
+            function readAszf() {
+                if ($('#aszfdiv').is(':empty')) {
+                    $.get("adatvedelmi_tajekoztato", {}, function(data) {
+                    $("#aszfdiv").html(data);
+                      
+                })
+                  .fail(function() {
+                    alert( "error" );
+                });
+                }
+            }
+        </script>
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+          <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+        
+        <style>
+            .ui-autocomplete-loading {
+                background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+            }
+            .custom-zed { z-index: 10000;
+            }
+        
+        </style>
+          <script>
+            function uncheckTogle(toggle) {
+                if (toggle.is(':checked')) {
+                    toggle.prop('checked', false);
+                    if (toggle.parent().hasClass("orange-bg"))
+                        toggle.parent().toggleClass("orange-bg");
+                }
+            }
+            $(function () {
+              $(".input-select").on("change", function(event) {
+                $("#searchButton").click();
+        //        $("#searchButton").click();
+              })
+              $("#provide-muffins").click(function () {
+                if ($(this).is(":checked")) {
+                  $("#menuSzallitasicimKikapcs").show();
+                  $("#menuSzallitasicim").hide();
+                } else {
+                  $("#menuSzallitasicimKikapcs").hide();
+                  $("#menuSzallitasicim").show();
+                }
+              });
+            })
+            $(document).ready(function () {
+                $("#nagyito").off("click").on("click", function(event) {
+                    $("#searchButton").click();
+                })
+              $(".advance-search .toggle-state").click(function (event) {
+                $(this).parent().toggleClass("orange-bg");
+                var lt = "<";
+                if ($(event.target).attr("id") == "out_of_stock_checkbox") {
+                    $("#out_of_stock_checkboxTab").parent().toggleClass("orange-bg");
+                    $("#out_of_stock_checkboxTab").prop("checked",  $("#out_of_stock_checkbox").prop( "checked" ));
+                    $("#searchButton").click();
+                }
+                if ($(event.target).attr("id") == "out_of_stock_checkboxTab") {
+                    $("#out_of_stock_checkbox").parent().toggleClass("orange-bg");
+                    $("#out_of_stock_checkbox").prop("checked",  $("#out_of_stock_checkboxTab").prop( "checked" ));
+                    $("#searchButton").click();
+                }
+        
+                if ($(event.target).attr("id") == "premiumToggle"){
+                    $("#premiumToggleTab").parent().toggleClass("orange-bg");
+                    $("#premiumToggleTab").prop("checked",  $("#premiumToggle").prop( "checked" ));
+                    if (!$("#premiumToggle").is(':checked')){
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab').prop("selectedIndex", 0);
+                    } else {
+                        uncheckTogle($("#standardToggle"));
+                        uncheckTogle($("#standardToggleTab"));
+                        uncheckTogle($("#ecoToggle"));
+                        uncheckTogle($("#ecoToggleTab"));
+                        $('#arucsoport option[value="Prémium"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Prémium"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "Prémium")
+                            $("#arucsoport").append('<option value="Prémium">Prémium' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "Prémium")
+                            $("#arucsoportTab").append('<option value="Prémium">Prémium' + lt + '/option>');
+                        $('#arucsoport option[value="Prémium"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Prémium"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+                if ($(event.target).attr("id") == "premiumToggleTab"){
+                    $("#premiumToggle").parent().toggleClass("orange-bg");
+                    $("#premiumToggle").prop("checked",  $("#premiumToggleTab").prop( "checked" ));
+                    if (!$("#premiumToggleTab").is(':checked')){
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab').prop("selectedIndex", 0);
+                    } else {
+                        uncheckTogle($("#standardToggle"));
+                        uncheckTogle($("#standardToggleTab"));
+                        uncheckTogle($("#ecoToggle"));
+                        uncheckTogle($("#ecoToggleTab"));
+                        $('#arucsoport option[value="Prémium"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Prémium"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "Prémium")
+                            $("#arucsoport").append('<option value="Prémium">Prémium' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "Prémium")
+                            $("#arucsoportTab").append('<option value="Prémium">Prémium' + lt + '/option>');
+                        $('#arucsoport option[value="Prémium"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Prémium"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+        
+                if ($(event.target).attr("id") == "standardToggle"){
+                    $("#standardToggleTab").parent().toggleClass("orange-bg");
+                    $("#standardToggleTab").prop("checked",  $("#standardToggle").prop( "checked" ));
+                    if (!$("#standardToggle").is(':checked')) {
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab').prop("selectedIndex", 0);
+                    } else {
+                        uncheckTogle($("#premiumToggle"));
+                        uncheckTogle($("#premiumToggleTab"));
+                        uncheckTogle($("#ecoToggle"));
+                        uncheckTogle($("#ecoToggleTab"));
+                        $('#arucsoport option[value="Standard"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "Standard")
+                            $("#arucsoport").append('<option value="Standard">Standard' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "Standard")
+                            $("#arucsoportTab").append('<option value="Standard">Standard' + lt + '/option>');
+                        $('#arucsoport option[value="Standard"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+        
+                if ($(event.target).attr("id") == "standardToggleTab"){
+                    $("#standardToggle").parent().toggleClass("orange-bg");
+                    $("#standardToggle").prop("checked",  $("#standardToggleTab").prop( "checked" ));
+                    if (!$("#standardToggleTab").is(':checked')) {
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab').prop("selectedIndex", 0);
+                    } else {
+                        uncheckTogle($("#premiumToggle"));
+                        uncheckTogle($("#premiumToggleTab"));
+                        uncheckTogle($("#ecoToggle"));
+                        uncheckTogle($("#ecoToggleTab"));
+                        $('#arucsoport option[value="Standard"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "Standard")
+                            $("#arucsoport").append('<option value="Standard">Standard' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "Standard")
+                            $("#arucsoportTab").append('<option value="Standard">Standard' + lt + '/option>');
+                        $('#arucsoport option[value="Standard"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+        
+        
+                if ($(event.target).attr("id") == "ecoToggle"){
+                    $("#ecoToggleTab").parent().toggleClass("orange-bg");
+                    $("#ecoToggleTab").prop("checked",  $("#ecoToggle").prop( "checked" ));
+                    if (!$("#ecoToggle").is(':checked')) {
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                    } else {
+                        uncheckTogle($("#premiumToggle"));
+                        uncheckTogle($("#premiumToggleTab"));
+                        uncheckTogle($("#standardToggle"));
+                        uncheckTogle($("#standardToggleTab"));
+                        $('#arucsoport option[value="ECO"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="ECO"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "ECO")
+                            $("#arucsoport").append('<option value="ECO">ECO' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "ECO")
+                            $("#arucsoportTab").append('<option value="ECO">ECO' + lt + '/option>');
+                        $('#arucsoport option[value="ECO"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="ECO"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+        
+                if ($(event.target).attr("id") == "ecoToggleTab"){
+                    $("#ecoToggle").parent().toggleClass("orange-bg");
+                    $("#ecoToggle").prop("checked",  $("#ecoToggleTab").prop( "checked" ));
+                    if (!$("#ecoToggle").is(':checked')) {
+                        $('#arucsoport').prop("selectedIndex", 0);
+                        $('#arucsoportTab option[value="Standard"]').prop("selected", "selected");
+                    } else {
+                        uncheckTogle($("#premiumToggle"));
+                        uncheckTogle($("#premiumToggleTab"));
+                        uncheckTogle($("#standardToggle"));
+                        uncheckTogle($("#standardToggleTab"));
+                        $('#arucsoport option[value="ECO"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="ECO"]').prop("selected", "selected");
+                        if ($("#arucsoport").find(":selected").val() != "ECO")
+                            $("#arucsoport").append('<option value="ECO">ECO' + lt + '/option>');
+                        if ($("#arucsoportTab").find(":selected").val() != "ECO")
+                            $("#arucsoportTab").append('<option value="ECO">ECO' + lt + '/option>');
+                        $('#arucsoport option[value="ECO"]').prop("selected", "selected");
+                        $('#arucsoportTab option[value="ECO"]').prop("selected", "selected");
+                    }
+                    $("#searchButton").click();
+                }
+        
+              });
+              $(".mobil-navigation .close-menu").click(function () {
+                $(".mobil-navigation").animate({ right: '-390px' }, 1000, "easeInOutQuad");
+              });
+              $(".mobil-profil .profil-btn").click(function () {
+                $(".mobil-navigation").animate({ right: '0' }, 1000, "easeInOutQuad");
+              });
+              $(".tab-content a").click(function () {
+                var Id = $(this).attr("href");
+                $(".modal-content.tab-pane").removeClass("active show");
+                $(Id).addClass("active show");
+                //console.log(Id);
+              });
+              $('#interchangeButton').click(function (event) {
+                event.preventDefault();
+                runEquivalenceSearch();
+              });
+              $('#clear').click(function (event) {
+                event.preventDefault();
+                clearForm();
+              });
+              $('#delete').click(function (event) {
+                event.preventDefault();
+                clearForm(false);
+                $("#searchButton").click();
+              });
+        
+              /*$(".modal-body a").click(function() {
+                $(".modal-body a").removeClass("active");
+                $(this).addClass("active");
+              });*/
+              /*$("#loginModal").on("show.bs.modal", function () {
+                      //$('#tab2-btn').trigger("click");
+                $(".tab-pane").removeClass("active");
+                    });*/
+            });
+          </script>
+          <script src="js/search.js"></script>
+          <script src="js/utojel.js"></script>
+          <script src="/js/imgPreview.js"></script>
+          
+          <script src="js/newsearchjson.js?logsearch=on&amp;meta_type=BearingCsapagy&amp;submit=Keres%E9s&amp;termekekNG%3Aignore_empty=6200&amp;innerSize%3Aignore_empty=&amp;outerSize%3Aignore_empty=&amp;widthSize%3Aignore_empty=&amp;arucsoport%3Aignore_empty=&amp;gyarto%3Aignore_empty=&amp;selected_raktarak%3Alist%3Aignore_empty="> </script>
+        
+          <link rel="stylesheet" href="style.css">
+        </head>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="./style.css">
+<body class='not-logged-in'>
+    <div class="container">
+        <section class="dynamic-table search_results results_after_login">
 
 
-    <title>Hello, world!</title>
-</head>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
 
-<body>
-    <!-- Page Content -->
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="row">
-            <!-- Player 1 -->
-            <div class="col-lg-4">
-                <div class="card card__dice">
-                    <div class="card-body">
-                        <div class="player-0-panel active">
-                            <div class="player-name" id="name-0">Player 1</div>
-                            <!--  Player 1 points-->
-                            <div class="player-score" id="score-0">0</div>
-                            <div class="player-current-box">
-                                <div class="player-current-label">Aktuális</div>
-                                <div class="player-current-score" id="current-0">0</div>
+                        <div class="table-box" id="searchresults">
+                            <div class='mb-3'>
+                                <div class="toggle" id="showTableContent">
+                                    <input id="showFullTable" class="toggle-state" type="checkbox" name="check" value="">
+                                    <div class="indicator"></div>
+                                </div>
+                                <label class="form-check-label fulltable__label" for="showFullTable">
+                                    Teljes táblázat mutatása
+                                </label>
                             </div>
+                            <table id="searchResultsTable" width="100%" border="0">
+                                <tbody>
+                                 <tr id="headerth">
+                                  <th class="hide-tablet hide-element-switch"><i class="icon-picture"><span class="tooltip">Termékfotó</span></i></th>
+                                  <th class="sorton" data-sorton="title"><i class="icon-settings"><span class="tooltip">Termék</span></i></th>
+                                  <th class="hide-tablet hide-element-switch sorton" data-sorton="gyarto"><i class="icon-wrench"><span class="tooltip">Gyártó</span></i></th>
+                                  
+                                  <th class="hide-mobil hide-element-switch"><i class="icon-cursor-move"><span class="tooltip">Méret</span></i></th>
+                                  <th class="hide-mobil hide-element-switch"><i class="icon-shuffle"><span class="tooltip">Helyettesítő termékek</span></i></th>
+                                  
+                                  <th class="hide-tablet hide-element-switch sorton justify-right-content" data-sorton="kisker_ar"><i class="icon-list"><span class="tooltip">Listaár (HUF/DB)</span></i></th>
+                                  <th class="hide-tablet hide-element-switch justify-right-content"><i class="icon-percent">%<span class="tooltip">Online kedvezmény %-os formában</span></i></th>
+                                  <th class="justify-right-content sorton" data-sorton="kisker_ar"><i class="icon-tag"><span class="tooltip">Kedvezményes ár (HUF)</span></i></th>
+                                  <th class="hide-tablet hide-element-switch sorton justify-right-content" data-sorton="keszlet"><i class="icon-grid"><span class="tooltip">Készlet</span></i></th>
+                                  <th class="hide-tablet hide-element-switch"><i class="icon-social-dropbox"><span class="tooltip">Raktárak</span></i></th>
+                                  <th><i class="icon-basket"><span class="tooltip">Kosár</span></i></th>
+                                 </tr>
+                                
+                                 <tr gyarto="FBJ" data-currency="HUF" data-price="2867.53" data-internal_kod="1A7200B2RSTVP0000000" data-keszlet="0" internal_kod="1A7200B2RSTVP0000000" suppcatnum="7200-2RS-BTN" class="normal" azonosito="10X30X9" mytitle="7200 2RS" id="tr_1A7200B2RSTVP0000000" tipus="7200BA2RS">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                  <a data-gallery="hidden-images" data-title="1" class="preview" data-toggle="lightbox" href="/static/arukepek/71900.jpg">
+                                   <img src="/static/arukepek/small/71900_s.jpg" alt="" class="img-fluid">
+                                   </a>
+                                  
+                                      
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 2RS</div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><form style="margin-bottom: 0px;" id="frm_1A7200B2RSTVP0000000" target="_new" method="post" action="https://www.fbj-bearings.com/products.asp?search=1#Products">
+                          <input type="hidden" name="searchby" value="1">
+                          <input name="sSearch" type="hidden" value="7200-2RS-BTN">
+                          <p class="open-data-sheet" onclick="javascript:document.getElementById('frm_1A7200B2RSTVP0000000').submit()" title="">FBJ</p>
+                          </form>
+                          </div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      2868 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">2868 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200B2RSTVP0000000">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200ACDP4A00000020" data-keszlet="0" internal_kod="1A7200ACDP4A00000020" suppcatnum="7200 ACD/P4A" class="normal" azonosito="10X30X9" mytitle="7200 ACD/P4A" id="tr_1A7200ACDP4A00000020" tipus="7200HG1UJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 ACD/P4A<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200HG1UJ74">7200HG1UJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="B7200-E-T-P4S-UL">B7200-E-T-P4S-UL</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20ACD/P4A&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="7200HG1UJ74,
+                        B7200-E-T-P4S-UL" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200ACDP4A00000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200ACDGAP4A000020" data-keszlet="0" internal_kod="1A7200ACDGAP4A000020" suppcatnum="7200 ACDGA/P4A" class="normal" azonosito="10X30X9" mytitle="7200 ACDGA/P4A" id="tr_1A7200ACDGAP4A000020" tipus="7200HG1UJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 ACDGA/P4A<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200HG1UJ74">7200HG1UJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="B7200-E-T-P4S-UL">B7200-E-T-P4S-UL</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20ACDGA/P4A&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="7200HG1UJ74,
+                        B7200-E-T-P4S-UL" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200ACDGAP4A000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="FBJ" data-currency="HUF" data-price="2541.96" data-internal_kod="1B7200C0000000000050" data-keszlet="0" internal_kod="1B7200C0000000000050" suppcatnum="7200BW" class="normal" azonosito="10X30X9" mytitle="7200 B" id="tr_1B7200C0000000000050" tipus="7200B">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                  <a data-gallery="hidden-images" data-title="1" class="preview" data-toggle="lightbox" href="/static/arukepek/71900.jpg">
+                                   <img src="/static/arukepek/small/71900_s.jpg" alt="" class="img-fluid">
+                                   </a>
+                                  
+                                      
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 B<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200-B-JP">7200-B-JP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP">7200-B-TVP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP-UO">7200-B-TVP-UO</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP-UA">7200-B-TVP-UA</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><form style="margin-bottom: 0px;" id="frm_1B7200C0000000000050" target="_new" method="post" action="https://www.fbj-bearings.com/products.asp?search=1#Products">
+                          <input type="hidden" name="searchby" value="1">
+                          <input name="sSearch" type="hidden" value="7200BW">
+                          <p class="open-data-sheet" onclick="javascript:document.getElementById('frm_1B7200C0000000000050').submit()" title="7200-B-JP,
+                        7200-B-TVP,
+                        7200-B-TVP-UO,
+                        7200-B-TVP-UA">FBJ</p>
+                          </form>
+                          </div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      2542 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">2542 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1B7200C0000000000050">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="-" data-currency="HUF" data-price="1217.16" data-internal_kod="1B720000000000000050" data-keszlet="0" internal_kod="1B720000000000000050" suppcatnum="7200 B" class="normal" azonosito="10X30X9" mytitle="7200 B" id="tr_1B720000000000000050" tipus="7200B">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 B<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200-B-JP">7200-B-JP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP">7200-B-TVP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP-UO">7200-B-TVP-UO</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP-UA">7200-B-TVP-UA</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                     
+                                    <div>-</div> 
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      1217 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">1217 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1B720000000000000050">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="CX" data-currency="HUF" data-price="1014.27" data-internal_kod="01-02-02-00148" data-keszlet="0" internal_kod="01-02-02-00148" suppcatnum="7200-B" class="normal" azonosito="10X30X9" mytitle="7200 B" id="tr_01-02-02-00148" tipus="7200B">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 B</div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                     
+                                    <div>CX</div> 
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      1014 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">1014 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_01-02-02-00148">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="INA" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200BE000000000014" data-keszlet="0" internal_kod="1A7200BE000000000014" suppcatnum="7200 BE" class="normal" azonosito="10X30X9" mytitle="7200 BE" id="tr_1A7200BE000000000014" tipus="7200B">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 BE<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP">7200-B-TVP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200 BEP">7200 BEP</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://medias.schaeffler.hu/search/searchpage?text=7200%20BE" title="7200-B-TVP,
+                        7200 BEP" target="_new">INA</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200BE000000000014">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200BECBP000000020" data-keszlet="0" internal_kod="1A7200BECBP000000020" suppcatnum="7200BECBP" class="normal" azonosito="10X30X9" mytitle="7200 BECBP" id="tr_1A7200BECBP000000020" tipus="7200BGA">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 BECBP<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP-UA">7200-B-TVP-UA</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200BECBP&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="7200-B-TVP-UA" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200BECBP000000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200BEP00000000020" data-keszlet="0" internal_kod="1A7200BEP00000000020" suppcatnum="7200BEP" class="normal" azonosito="10X30X9" mytitle="7200 BEP" id="tr_1A7200BEP00000000020" tipus="7200BA">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 BEP<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="7200-B-TVP">7200-B-TVP</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200 BE">7200 BE</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200BEP&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="7200-B-TVP,
+                        7200 BE" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200BEP00000000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200CDP4A000000020" data-keszlet="0" internal_kod="1A7200CDP4A000000020" suppcatnum="7200 CD/P4A" class="normal" azonosito="10X30X9" mytitle="7200 CD/P4A" id="tr_1A7200CDP4A000000020" tipus="7200CG1UJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 CD/P4A<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="B7200-C-T-P4S-UL">B7200-C-T-P4S-UL</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200CG1UJ74">7200CG1UJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="S6200C TA A7UL">S6200C TA A7UL</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20CD/P4A&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="B7200-C-T-P4S-UL,
+                        7200CG1UJ74,
+                        S6200C TA A7UL" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200CDP4A000000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200CDP4ADBA000020" data-keszlet="0" internal_kod="1A7200CDP4ADBA000020" suppcatnum="7200 CD/P4ADBA" class="normal" azonosito="10X30X18" mytitle="7200 CD/P4ADBA" id="tr_1A7200CDP4ADBA000020" tipus="7200CG1DBJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 CD/P4ADBA<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="B7200-C-T-P4S-DUL">B7200-C-T-P4S-DUL</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200CG1DBJ74">7200CG1DBJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200CG1DUJ74">7200CG1DUJ74</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20CD/P4ADBA&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="B7200-C-T-P4S-DUL,
+                        7200CG1DBJ74,
+                        7200CG1DUJ74" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X18
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200CDP4ADBA000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200CDGAP4A0000020" data-keszlet="0" internal_kod="1A7200CDGAP4A0000020" suppcatnum="7200 CDGA/P4A" class="normal" azonosito="10X30X9" mytitle="7200 CDGA/P4A" id="tr_1A7200CDGAP4A0000020" tipus="7200CG1UJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 CDGA/P4A<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="B7200-C-T-P4S-UL">B7200-C-T-P4S-UL</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200CG1UJ74">7200CG1UJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="S6200C TA A7UL">S6200C TA A7UL</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20CDGA/P4A&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="B7200-C-T-P4S-UL,
+                        7200CG1UJ74,
+                        S6200C TA A7UL" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200CDGAP4A0000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="SKF" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200CDGBP4A0000020" data-keszlet="0" internal_kod="1A7200CDGBP4A0000020" suppcatnum="7200 CDGB/P4A" class="normal" azonosito="10X30X9" mytitle="7200 CDGB/P4A" id="tr_1A7200CDGBP4A0000020" tipus="7200CG1UJ74">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 CDGB/P4A<span class="tooltip">
+                        <a href="#" class="aliaslink" data-title="B7200-C-T-P4S-UL">B7200-C-T-P4S-UL</a>
+                        
+                        <a href="#" class="aliaslink" data-title="7200CG1UJ74">7200CG1UJ74</a>
+                        
+                        <a href="#" class="aliaslink" data-title="S6200C TA A7UL">S6200C TA A7UL</a>
+                        </span></div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://www.skf.com/group/search-results?q=7200%20CDGB/P4A&amp;searcher=all&amp;site=307&amp;language=en&amp;tridion_target=live&amp;language_preset=English" title="B7200-C-T-P4S-UL,
+                        7200CG1UJ74,
+                        S6200C TA A7UL" target="_new">SKF</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200CDGBP4A0000020">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="-" data-currency="HUF" data-price="4988.05" data-internal_kod="1C7200CP400000000099" data-keszlet="0" internal_kod="1C7200CP400000000099" suppcatnum="-" class="normal" azonosito="10X30X9" mytitle="7200 CP4" id="tr_1C7200CP400000000099" tipus="7200">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200 CP4</div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                     
+                                    <div>-</div> 
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      4988 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">4988 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1C7200CP400000000099">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                                
+                                 <tr gyarto="FAG" data-currency="HUF" data-price="1e-06" data-internal_kod="1A7200BTVP2RS0000001" data-keszlet="0" internal_kod="1A7200BTVP2RS0000001" suppcatnum="7200-B-XL-2RS-TVP" class="normal" azonosito="10X30X9" mytitle="7200-B-2RS-TVP" id="tr_1A7200BTVP2RS0000001" tipus="7200BA2RS">
+                                  <td class="open_dialog hide-tablet hide-element-switch">
+                                
+                                      <img src="../image/nincs_kep.jpg" alt="">
+                                  </td>
+                                  <td class="open-data-sheet"><div class="product_name searchpage">7200-B-2RS-TVP</div>
+                                            <div class="wrapper"> <i class="icon-settings info_icon_product"></i>
+                                              <div class="tooltip tooltip-utojelek">
+                                                <div class="info_icon_product">Elő és utójelek</div>
+                                              </div>
+                                            </div></td>
+                                  <td class="open_dialog hide-tablet hide-element-switch not-anon-href">
+                                    <div><a class="open-data-sheet" href="https://medias.schaeffler.hu/search/searchpage?text=7200-B-XL-2RS-TVP" title="" target="_new">FAG</a></div> 
+                                     
+                                  </td>
+                                  
+                                  
+                                  <td class="open_dialog hide-mobil hide-element-switch">
+                                10X30X9
+                                            <div class="wrapper"> <i class="icon-crop info_icon_similar_size" filterkey="azonosito"></i>
+                                            <div class="tooltip"> Méretben megegyező termékek. Figyelem a műszaki tartalom és a belső szerkezet eltérhet!</div>
+                                          </div>
+                              </td>
+                                  <td class="open_dialog hide-mobil hide-element-switch"><div class="wrapper"> <i class="icon-shuffle info_icon_replacement" filterkey="tipus"></i>
+                                            <div class="tooltip tooltip-helyettesito">
+                                              <div>Helyettesítő termékek</div>
+                                            </div>
+                                          </div></td>
+                                  
+                                  <td class="open_dialog justify-right-content">
+                                      0 HUF
+                                  </td>
+                                  
+                                    <td class="hide-tablet justify-right-content hide-element-switch">10.0</td>
+                                  
+                                  <td class="hide-tablet justify-right-content hide-element-switch">0 HUF
+                                          <div class="wrapper"> <i class="icon-tag"></i>
+                                            <div class="tooltip tooltip-kedvezmeny">
+                                              <div class="info_icon_discount">0% kedvezmény</div>
+                                            </div>
+                                          </div></td>
+                                  <td class="hide-tablet hide-element-switch keszletcol justify-right-content" id="k_1A7200BTVP2RS0000001">0</td>
+                                  
+                        
+                                  
+                                  <td class="hide-tablet hide-element-switch">
+                                  </td>
+                                  
+                        
+                                  
+                                  
+                                  <td style="white-space:nowrap">
+                                      <div class="offer_request_btn_box addoffer"><a href="#" class="offer_request_btn">Ajánlatkérés<i class="fa icon-briefcase ml-2" aria-hidden="true"></i></a></div>
+                                  </td>
+                                  
+                                  
+                                </tr>
+                                
+                              </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Dice -->
-            <div class="col-lg-4 d-flex justify-content-center align-items-center">
-                <div class="card">
-                    <div class="card-body">
-                        Dice
-                    </div>
-                </div>
-            </div>
-            <!-- Player 2 -->
-            <div class="col-lg-4">
-                <div class="card card__dice">
-                    <div class="card-body">
-                        <div class="player-1-panel">
-                            <div class="player-name" id="name-1">Player 2</div>
-                            <!-- Player 2 points -->
-                            <div class="player-score" id="score-1">0</div>
-                            <div class="player-current-box">
-                                <div class="player-current-label">Aktuális</div>
-                                <div class="player-current-score" id="current-1">0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="card mt-3">
-                    <div class="card-body">
-                       <div class="row">
-                           <div class="col-4 text-center">Player 1</div>
-                           <div class="col-4 text-center">Dashboard buttons</div>
-                           <div class="col-4 text-center">Player 2</div>
-                       </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </div>
+
+
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+
+
 </body>
 
 </html>
