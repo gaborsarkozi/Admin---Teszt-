@@ -1,47 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #box {
-            width: 100px;
-            height: 100px;
-            background-color: aqua;
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-            position: absolute;
-            top: 50%;
-            left: 48%;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .card {
-            padding: 1rem;
-            position: relative;
-            width: 50%;
-            margin: auto;
-            top: 15rem;
-            border-radius: 10px;
-            background-color: rgb(38, 45, 107);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-        }
-        p {
-            text-align: center;
-            color: white;
-            font-weight: 500;
-            font-size: 1.25rem;
-        }
-    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <title>Gradient generator</title>
 </head>
 
 <body>
-    <div id='box'></div>
-    <div class='card'>
-        <p></p>
+    <div class="d-flex align-items-center justify-content-center" style='min-height: 100vh;'>
+        <div class="container">
+            <section>
+                <div class="text-center mb-md-5 col-md-10 mx-auto pb-md-5 pt-5 pt-md-0">
+                    <h2 class="gradient-head display-4">Gradient <span>generator</span></h2>
+                    <p class="mx-md-5 mt-3 mt-md-0 gradient-desc">Véletlenszerű gradient átmenetek generálása, amivel teljesen egyedi
+                        színkeveréket
+                        kapsz. A kódmásoló segítségével a
+                        a kapott színhez tartozó rögtön beilleszhető a CSS file-odba.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 my-4 d-flex justify-content-center align-items-center">
+                        <div>
+                            <button class="btn btn__generate">Random szín generálása <i class="bi bi-arrow-repeat"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-8 my-4">
+                        <div class="card gradient__background"></div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 my-4">
+                        <div class="code-editor">
+                            <code>
+                                <div>
+                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='hex-lineargradient-code'>#c32bad</span>;</span>
+                                </div>
+                                <div>
+                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='moz-lineargradient-code'>-moz-linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
+                                </div>
+                                <div>
+                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='web-lineargradient-code'>-webkit-linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
+                                    </div>
+                                <div>
+                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='lineargradient-code'>linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
+                                </div>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn__copy">CSS kód másolása <i class="bi bi-clipboard"></i></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
     </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
     <script src="script.js"></script>
 </body>
 
