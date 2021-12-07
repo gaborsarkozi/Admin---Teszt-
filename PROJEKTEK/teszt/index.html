@@ -1,85 +1,125 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <!-- Optional CSS -->
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- Bootstrap ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
 
-    <title>Gradient generator</title>
-</head>
-
-<body>
-    <div class="d-flex align-items-center justify-content-center" style='min-height: 100vh;'>
-        <div class="container">
-            <section>
-                <div class="text-center mb-md-5 col-md-10 mx-auto pb-md-5 pt-5 pt-md-0">
-                    <h2 class="gradient-head display-4">Gradient <span>generator</span></h2>
-                    <p class="mx-md-5 mt-3 mt-md-0 gradient-desc">Véletlenszerű gradient átmenetek generálása, amivel teljesen egyedi
-                        színkeveréket
-                        kapsz. A kódmásoló segítségével a
-                        a kapott színhez tartozó rögtön beilleszhető a CSS file-odba.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 my-4 d-flex justify-content-center align-items-center">
-                        <div>
-                            <button class="btn btn__generate">Random szín generálása <i class="bi bi-arrow-repeat"></i></button>
-                        </div>
-                    </div>
-                    <div class="col-md-8 my-4">
-                        <div class="card gradient__background"></div>
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 my-4">
-                        <div class="code-editor">
-                            <code>
-                                <div>
-                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='hex-lineargradient-code'>#c32bad</span>;</span>
-                                </div>
-                                <div>
-                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='moz-lineargradient-code'>-moz-linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
-                                </div>
-                                <div>
-                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='web-lineargradient-code'>-webkit-linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
-                                    </div>
-                                <div>
-                                    <span class="code-editor__property">background:</span> <spanc class='code-editor__value'><span class='lineargradient-code'>linear-gradient(256deg, #c32bad 0%, #99feff 100%)</span>;</span>
-                                </div>
-                            </code>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn__copy">CSS kód másolása <i class="bi bi-clipboard"></i></button>
-                    </div>
-                </div>
-            </section>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="bi bi-bag"></i>
+          </button>
         </div>
+      </div>
+    </nav>
 
+    <!-- Offcanvas  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        </div>
+        <div class="dropdown mt-3">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- Optional JavaScript -->
-    <script src="script.js"></script>
-</body>
+    
 
+    <section class="page-section portfolio p-5" id="portfolio">
+      <div class="container">
+  
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Termékek:</h2>
+  
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-line"></div>
+        </div>
+  
+        <div class="row mb-3" id="product-list-component">
+        </div>
+        <h3>Új termék létrehozása:</h3>
+        <div class="row">
+          <form id="create-product" class="p-5">
+              <label class="w-100">
+                Név:
+                <input class="form-control" type="text" name="name">
+              </label>
+              <label class="w-100">
+                Ár:
+                <input class="form-control" type="number" name="price">
+              </label>
+              <label class="w-100">
+                Van készleten?
+                <input class="form-control" type="checkbox" name="isInStock">
+              </label>
+              <button class="btn btn-primary" type="submit">Küldés</button>
+          </form>
+        </div>
+        <div class="row">
+          <div id="edit-product">
+          </div>
+        </div>
+  
+  
+      </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
