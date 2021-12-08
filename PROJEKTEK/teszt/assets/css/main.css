@@ -1,0 +1,144 @@
+:hover, :focus, :active {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.bg-success {
+  background-color: #2bd156 !important;
+}
+
+.page-wrapper button {
+  position: relative;
+}
+
+.page-wrapper button .cart-item {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: -10px;
+  right: -10px;
+}
+
+.page-wrapper button .cart-item .span-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-wrapper button .cart-item:before {
+  content: '';
+  display: block;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #2bd156;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.page-wrapper button.sendtocart .cart-item {
+  display: block;
+  -webkit-animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
+          animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
+}
+
+.page-wrapper button.sendtocart .cart-item:before {
+  -webkit-animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+          animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: blue;
+  color: white;
+}
+
+.cart.shake {
+  -webkit-animation: shakeCart .4s ease-in-out forwards;
+          animation: shakeCart .4s ease-in-out forwards;
+}
+
+@-webkit-keyframes xAxis {
+  100% {
+    -webkit-transform: translateX(calc(50vw - 200px));
+            transform: translateX(calc(50vw - 200px));
+  }
+}
+
+@keyframes xAxis {
+  100% {
+    -webkit-transform: translateX(calc(50vw - 200px));
+            transform: translateX(calc(50vw - 200px));
+  }
+}
+
+@-webkit-keyframes yAxis {
+  100% {
+    -webkit-transform: translateY(calc(-64vh + 40px));
+            transform: translateY(calc(-64vh + 40px));
+  }
+}
+
+@keyframes yAxis {
+  100% {
+    -webkit-transform: translateY(calc(-64vh + 40px));
+            transform: translateY(calc(-64vh + 40px));
+  }
+}
+
+@-webkit-keyframes shakeCart {
+  25% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes shakeCart {
+  25% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  75% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */
